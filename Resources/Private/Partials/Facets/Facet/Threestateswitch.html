@@ -1,0 +1,43 @@
+<f:alias map="{
+  valueOpen:'{settings.facets.oa.values.Open}',
+  labelOpen:'{settings.facets.oa.labels.Open}',
+  valueAll:'{settings.facets.oa.values.All}',
+  labelAll:'{settings.facets.oa.labels.All}',
+  labelClose:'{settings.facets.oa.labels.Close}', 
+  valueClose:'{settings.facets.oa.values.Close}'
+  }">
+<f:for each="{config.activeFacets.OpenAccess}" as="item">
+    <f:variable name="filter" value="{item.term}" />
+</f:for>
+ 
+<div class="tx_discovery_3stateswitch"
+data-link="{settings.facets.oa.link}" data-toast="{settings.facets.oa.toast}">
+  <link href="{settings.facets.oa.csspath}" rel="stylesheet" />
+  <style>.facets .facet-id-OpenAccess h1 {display:none}</style> 
+  <div class="switch-toggle switch-3 switch-candy">
+  
+    <input id="on" name="state-d" type="radio" <f:if condition="{filter}=={valueOpen}">checked</f:if>> 
+    <label for="on" value="{valueOpen}">{labelOpen}</label>
+ 
+    <input id="na" name="state-d" type="radio" <f:if condition="{filter}=={valueAll} || {filter}==''">checked</f:if>>
+    <label for="na" value="{valueAll}">{labelAll}</label>
+
+    <input id="off" name="state-d" type="radio" <f:if condition="{filter}=={valueClose}">checked</f:if>>
+    <label for="off" value="{valueClose}">{labelClose}</label><a></a>
+  </div>
+</div>
+
+
+<script>
+$('.tx_discovery_3stateswitch label').click(function(e) {
+      const elem = $('.tx_discovery_3stateswitch');
+      const filter = $(this)[0].innerText;
+      if ($.toast) 
+        $.toast({
+              message: elem.attr('data-toast').replace('%s',filter),
+              timeout: 3000, 
+        });
+  self.location = elem.attr('data-link').replace('%s',$(this).attr('value'));
+});
+</script>
+</f:alias>
