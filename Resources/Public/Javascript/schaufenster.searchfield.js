@@ -8,24 +8,24 @@ var FIELDS = {
 }
 
 $(function() {
-    $('.searchForm').prepend('<a href="/suche" title="Zurück zum Start der Suche" class="bel-haus" id="home-button" onclick="self.location=\"/\";"> </a>')
+    $('.searchForm').prepend('<a href="/suche/" title="Zurück zum Start der Suche" class="bel-haus" id="home-button" onclick="self.location=\"/suche/\";"> </a>')
     // inserting fieldselectbox:
     var params = getQueries();
     var needle = $('#c1-field-all').val();
     if (needle) {
-      var suchURL = '/?tx_find_find[q][all]=%23%23%23NEEDLE%23%23%23';
+       var suchURL = '?tx_find_find[q][all]=%23%23%23NEEDLE%23%23%23';
     }
-    //$(".formFields").css('width','600px');
-    
     var selectedInput = params.field || 'all';
-    var selectHTML = '<div style="width:200px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' +
+    /* building the SELECTOR */
+    var selectHTML = '<div style="width:240px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' +
         '<select id="searchfieldselector">';
     Object.keys(FIELDS).forEach(function(field) {
         var selected = (field == selectedInput) ? 'selected' : '';
         selectHTML += '<option value="' + field + '" ' + selected + '>' + FIELDS[field] + '</option>'
     });
     selectHTML += '</select></div>';
-    $('.formFields .fieldContainer label').hide();
+    /* ------ */
+    //$('.formFields .fieldContainer label').hide();
     $('.controls').prepend(selectHTML);
     $('.submit').attr('value', 'Suche starten');
     $('#searchfieldselector').on('change', function(evt, item) {
@@ -37,9 +37,12 @@ $(function() {
     function renderInputFields() {
         $('.formFields .inputType-text').each(function() {
             var that = $(this);
+        
             that.attr('placeholder', 'Suchtext  hier eingeben …');
-            if (that.attr('id') == 'c1-field-' + selectedInput || that.attr('id') == 'c-field-' + selectedInput) that.show();
-            else {
+            that.show();
+            if (that.attr('id') == 'c10-field-' + selectedInput || that.attr('id') == 'c-field-' + selectedInput) { 
+            that.show();
+            } else {
                 that.hide();
                 that.val('');
             }
@@ -64,6 +67,7 @@ $(function() {
         }
         return res;
     }
+    
     // https://www.w3schools.com/howto/howto_custom_select.asp
     var x, i, j, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/

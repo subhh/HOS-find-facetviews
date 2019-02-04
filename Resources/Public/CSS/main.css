@@ -189,7 +189,7 @@ iframe,.webui-popover-content,webui-popover {
 .ce-textpic {background-color:white;padding:0 0 0 10px}
 
 
-/** CSS for AUROCOMPLETER */
+/** CSS for AUTOCOMPLETER */
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover
 {
@@ -324,4 +324,3 @@ margin-bottom:-2px;margin-left:10px}
 .facets article h1 {color:white;padding:3px;border-radius:
 3px;background-color:darkred;margin-bottom:10px!important}
 
-.inputContainer {display:inline}

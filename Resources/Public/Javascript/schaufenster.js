@@ -67,6 +67,20 @@ $(function() {
     ISOcountries_de.forEach(function(e) {
         languages[e.code] = e.name;
     });
+
+    // Iconen in Trefferliste
+     $('article .field-collection').each(function() {
+        
+        var PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
+        var that = $(this);
+        const txt = that.text().trim();
+        const link= '?tx_find_find%5Bfacet%5D%5BCollection%5D%5B###NEEDLE###%5D=1#tx_find'.replace('###NEEDLE###',txt);
+        that.html('<a title="'+txt+'" href="'+link+'">'+ CollectionToIcon(txt,'resultCollection')+'</a>');
+    });
+
+
+
+
     // facet list
     $('.facet-id-Sprache .facetList a').each(function() {
         var that = $(this);
@@ -87,7 +101,6 @@ $(function() {
             that.html(languages[code]);
         }
     });
-    
     
     $('.dd-language span').html(languages[$('.dd-language span').text()]);
 
@@ -131,11 +144,6 @@ $(function() {
     }
     
     
-    function CollectionToIcon(collection,classname) {
-     const PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
-     return '<img src="' + PATH + Collections[collection] + '.png" class="' + classname +'" />'; 
-    }
-    
     
     $('.facet-id-Sammlung a').each(function() {
         var that = $(this);
@@ -143,14 +151,12 @@ $(function() {
         that.prepend(CollectionToIcon(txt,'facetCollection'))
     });
 
-    // Iconen in Trefferliste
-     $('article .field-collection').each(function() {
-        var PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
-        var that = $(this);
-        const txt = that.text().trim();
-        const link= '?tx_find_find%5Bfacet%5D%5BCollection%5D%5B###NEEDLE###%5D=1#tx_find'.replace('###NEEDLE###',txt);
-        that.html('<a title="'+txt+'" href="'+link+'">'+ CollectionToIcon(txt,'resultCollection')+'</a>');
-    });
+
+        function CollectionToIcon(collection,classname) {
+         const PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
+         return '<img src="' + PATH + Collections[collection] + '.png" class="' + classname +'" />'; 
+        }
+    
 
     // Auto verlinkung
     $('.field-subject').each(function() {

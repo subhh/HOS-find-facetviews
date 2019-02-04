@@ -36,8 +36,8 @@ page {
     3=EXT:hosfindfacetviews/Resources/Private/Language/ISO-639-1.de.json
     4=EXT:hosfindfacetviews/Resources/Private/Language/locallang-facets.json
     0=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jquery/3.3.1/jquery.min.js
-    1=EXT:hosfindfacetviews/Resources/Public/ddc_de.js
-    2=EXT:hosfindfacetviews/Resources/Public/Cloudfare/spin.js/2.3.2/spin.min.js
+//    1=EXT:hosfindfacetviews/Resources/Public/ddc_de.js
+//   2=EXT:hosfindfacetviews/Resources/Public/Cloudfare/spin.js/2.3.2/spin.min.js
     5=EXT:hosfindfacetviews/Resources/Public/Cloudfare/qtip2/3.0.3/jquery.qtip.min.js
     6=EXT:hosfindfacetviews/Resources/Public/Cloudfare/flot/0.8.3/jquery.flot.js
     7=EXT:hosfindfacetviews/Resources/Public/Cloudfare/flot/0.8.3/jquery.flot.selection.js

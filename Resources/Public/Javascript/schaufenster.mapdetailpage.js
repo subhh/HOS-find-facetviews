@@ -17,7 +17,7 @@ function createMapView(latlng,id) {
   /* creating map */
 
   var map = L.map(id).setView(latlng, 15);
-  L.tileLayer('?eID=tile&provider=stamen&type=toner-lite&tile={z}/{x}/{y}{r}', {
+  L.tileLayer('?eID=tile&url=https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
   var creators = [];
