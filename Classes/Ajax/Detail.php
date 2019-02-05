@@ -36,7 +36,7 @@ function getOptionsFromTS() {
   $tsfc = GeneralUtility::makeInstance(
               'TYPO3\\CMS\\Frontend\\Controller\\TypoScriptFrontendController',
               $GLOBALS['TYPO3_CONF_VARS'],
-              GeneralUtility::_GET('id') ?: 6,
+              GeneralUtility::_GET('id') ?: 1,
               0,
               true
   );
