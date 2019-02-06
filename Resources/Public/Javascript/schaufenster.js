@@ -63,10 +63,6 @@ $(function() {
     $('body').show();
     $('body').append('<div class="alpha">αlpha</div>');
     /* Resolving language labels: */
-    var languages = {};
-    ISOcountries_de.forEach(function(e) {
-        languages[e.code] = e.name;
-    });
 
     // Iconen in Trefferliste
      $('article .field-collection').each(function() {
@@ -78,55 +74,10 @@ $(function() {
         that.html('<a title="'+txt+'" href="'+link+'">'+ CollectionToIcon(txt,'resultCollection')+'</a>');
     });
 
-
-
-
-    // facet list
-    $('.facet-id-Sprache .facetList a').each(function() {
-        var that = $(this);
-        var parts = that.text().trim().split(/\s/);
-        var code = parts[0],
-            count = parts[1];
-        if (languages[code]) {
-            that.html(languages[code] + ' <span class="facetCount">' + count + '</span>');
-        }
-    });
-    // detail page
-    $('.field-language').each(function() {
-        var that = $(this);
-        var parts = that.text().trim().split(/\s/);
-        var code = parts[0],
-            count = parts[1];
-        if (languages[code]) {
-            that.html(languages[code]);
-        }
-    });
-    
-    $('.dd-language span').html(languages[$('.dd-language span').text()]);
-
-    /* Localisation of Labels */
-
-    $('article.detail dl dt').each(function() {
-        var that = $(this);
-        var label = that.text().trim();
-        if (facets_de.de['facet.' + label]) {
-            var i18n = facets_de.de['facet.' + label];
-            that.text(i18n);
-        }
-    });
-    $('article.facet h1').each(function() {
-        var that = $(this);
-        var label = that.text().trim();
-        if (facets_de.de['facet.' + label]) {
-            var i18n = facets_de.de['facet.' + label];
-            that.text(i18n);
-        }
-    });
-
-
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
         var that = $(this);
+
         that.text(that.text().trim());
     });
 
@@ -143,15 +94,11 @@ $(function() {
         identifier.html('<a href="https://nbn-resolving.org/' + link + '">' + link + '</a>');
     }
     
-    
-    
-    $('.facet-id-Sammlung a').each(function() {
+    $('.facet-id-collection a').each(function() {
         var that = $(this);
         var txt = that.parent().attr('value');
         that.prepend(CollectionToIcon(txt,'facetCollection'))
     });
-
-
         function CollectionToIcon(collection,classname) {
          const PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
          return '<img src="' + PATH + Collections[collection] + '.png" class="' + classname +'" />'; 
@@ -209,7 +156,7 @@ $(function() {
     });
 
     // resourceType icon in facetList
-    $('.facet-id-resourceType li').not('.facetShowAll').each(function() {
+    $('.facet-id-type li').not('.facetShowAll').each(function() {
         var that = $(this);
         if (!that.hasClass('hidden')) that.css('display', 'block');
         that.prepend('<span class="resourcetype-icon ' + getResIcon(that.attr('value')) + '"></span>');
@@ -334,7 +281,6 @@ function renderMapview(id,doc) {
   L.tileLayer('?eID=tile&url=https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-  console.log(doc)
    var collection = Collections[doc.collection];
   var icon =  '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '.png';
   var logoUrl= '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '_big.png';

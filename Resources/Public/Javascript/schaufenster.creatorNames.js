@@ -11,7 +11,6 @@ $(function() {
     $('.field-creatorName_facet,.field-creatorName').each(function() {
         var that = $(this);
         var html = that.html();
-        //that.html('👤' + html)
     });
 
     function addOrcidPreview(elem, orcid) {
@@ -88,9 +87,7 @@ $(function() {
                     getOrcid(parts[2],parts[1],that, renderOrcids)
                 //      that.html('<li>  <span class="fa fa-male"></span> ' + html + orcidhtml);
                 }
-            } else {
-                that.html(M + html)  
-            }
+            } 
         });
     
         // results:

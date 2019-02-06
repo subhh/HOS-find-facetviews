@@ -504,6 +504,11 @@ const ISOcountries_de = [
     "name": "🇵🇹 Portugiesisch"
   },
   {
+    "code": "pt",
+    "name": "🇵🇹 Portugiesisch"
+  },
+  
+  {
     "code": "qu",
     "name": "Quechua"
   },

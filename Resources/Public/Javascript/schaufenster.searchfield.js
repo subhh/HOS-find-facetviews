@@ -37,11 +37,11 @@ $(function() {
     function renderInputFields() {
         $('.formFields .inputType-text').each(function() {
             var that = $(this);
-        
             that.attr('placeholder', 'Suchtext  hier eingeben …');
             that.show();
-            if (that.attr('id') == 'c10-field-' + selectedInput || that.attr('id') == 'c-field-' + selectedInput) { 
-            that.show();
+            const regex = new RegExp('-field-'+selectedInput+'$');
+            if (that.attr('id').match(regex)) { 
+                that.show();
             } else {
                 that.hide();
                 that.val('');
@@ -85,7 +85,7 @@ $(function() {
         b.setAttribute("class", "select-items select-hide");
 
         /* Reaction on click */
-        for (j = 1; j < selElmnt.length; j++) {
+        for (j = 0; j < selElmnt.length; j++) {
             /*for each option in the original select element,
             create a new DIV that will act as an option item:*/
             c = document.createElement("DIV");
