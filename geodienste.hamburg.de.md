@@ -27,6 +27,9 @@ The "Landesbetriebe für Geoinformation und Vermessung" offers a couple of tile 
 ```
 ![](https://i.imgur.com/Tt92dkC.jpg)
 
+## Potential pitfall
+The map will rendered by client in a grid of 256×256 pixel. If you request in same format then in some cases the quality don't satisfied your requests. In this case you can requests larger tiles, i.e. 512×512.  
+
 ## Endpoints
 
 Inside the [Transparenzportal of Hamburg](http://transparenz.hamburg.de/) you can find pointer to the WFS service. The WFS service shows all available data. Here a copy of this list:
