@@ -28,4 +28,14 @@ Obviously the client (leaflet, mapbox) adds the parameter `bbox` automatically d
 
 For addressing a layer you need the endpoint above and the layer and the crs (projection).
 
-
+### HH_WMS_ALKIS_Basiskarte
+### HH_WMS_ALKIS_Basiskarte_GB
+### HH_WMS_Schriftplatte
+### HH_WMS_Geobasisdaten
+### HH_WMS_Kombi_DISK_GB 
+### HH_WMS_Geobasisdaten_SG
+### HH_WMS_Geobasisdaten_SW
+### HH_WMS_DOP20 
+### HH_WMS_DOP20_belaubt
+### HH_WMS_Cache_Luftbilder 
+### HH_WMS_Cache_Stadtplan 
