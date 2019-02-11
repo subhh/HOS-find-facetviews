@@ -31,14 +31,18 @@ For addressing a layer you need the endpoint above and the layer and the crs (pr
 ### HH_WMS_ALKIS_Basiskarte
 * 0
 
-![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=0&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=0&styles=&format=image/png&transparent=false&version=1.1.1&width=128&height=128&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 
 * 1
-![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=1&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=1&styles=&format=image/png&transparent=false&version=1.1.1&width=128&height=128&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+* 2
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=2&styles=&format=image/png&transparent=false&version=1.1.1&width=128&height=128&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+* 3
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=3&styles=&format=image/png&transparent=false&version=1.1.1&width=128&height=128&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 ...
 * 32
 
-![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=32&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=32&styles=&format=image/png&transparent=false&version=1.1.1&width=128&height=128&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 
 
 ### HH_WMS_ALKIS_Basiskarte_GB
