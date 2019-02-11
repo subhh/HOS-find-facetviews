@@ -2,6 +2,30 @@
 
 The "Landesbetriebe für Geoinformation und Vermessung" offers a couple of tile services for [rendering of maps](https://geoportal-hamburg.de/Geoportal/geo-online/?mdid=2AE6D23E-48A5-4D85-BC0A-160737E0C8D2). This HOWTO shows the possibilites. There is a [live demo](https://geoportal-hamburg.de/Geoportal/geo-online/).
  
+## Sample usage
+
+### leaflet
+
+```javascript
+ const tileoptions = {
+     layers : 'ALKIS_Basiskarte_farbig',
+     attribution : 'Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung'
+ },
+   tileLayer = L.tileLayer.wms('https://geodienste.hamburg.de/HH_WMS_Cache_Stadtplan',tileoptions),
+   mapoptions = {
+      crs : L.CRS['EPSG4357'],
+      layers : [tileLayer],
+      maxZoom: 15,
+      minZoom : 9
+ };
+ L.map(id,mapoptions).setView(53.53,10.01, 12);
+```
+
+### mapbox
+
+```javascript
+```
+ 
 ## Endpoints
 
 Inside the [Transparenzportal of Hamburg](http://transparenz.hamburg.de/) you can find pointer to the WFS service. The WFS service shows all available data. Here a copy of this list:
