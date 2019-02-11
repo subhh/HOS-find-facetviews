@@ -13,7 +13,7 @@ The "Landesbetriebe für Geoinformation und Vermessung" offers a couple of tile 
  },
    tileLayer = L.tileLayer.wms('https://geodienste.hamburg.de/HH_WMS_Cache_Stadtplan',tileoptions),
    mapoptions = {
-      crs : L.CRS['EPSG4357'],
+      crs : L.CRS['EPSG4326'],
       layers : [tileLayer],
       maxZoom: 15,
       minZoom : 9
