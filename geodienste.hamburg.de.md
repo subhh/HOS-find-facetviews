@@ -34,8 +34,11 @@ For addressing a layer you need the endpoint above and the layer and the crs (pr
 ![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=0&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 
 * 1
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=1&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 ...
 * 32
+
+![](https://geodienste.hamburg.de/HH_WMS_ALKIS_Basiskarte?service=WMS&request=GetMap&layers=32&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
 
 
 ### HH_WMS_ALKIS_Basiskarte_GB
