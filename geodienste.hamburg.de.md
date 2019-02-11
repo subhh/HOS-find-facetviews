@@ -46,4 +46,5 @@ For addressing a layer you need the endpoint above and the layer and the crs (pr
 ### HH_WMS_Cache_Luftbilder 
 ### HH_WMS_Cache_Stadtplan
 * ALKIS_Basiskarte_farbig
-![](https://geodienste.hamburg.de/HH_WMS_Cache_Stadtplan?service=WMS&request=GetMap&layers=ALKIS_Basiskarte_farbig&styles=&format=image/png&transparent=false&version=1.1.1&width=456&height=456&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
+
+![](https://geodienste.hamburg.de/HH_WMS_Cache_Stadtplan?service=WMS&request=GetMap&layers=ALKIS_Basiskarte_farbig&styles=&format=image/png&transparent=false&version=1.1.1&width=256&height=256&srs=EPSG:4326&bbox=9.9591064453125,53.580322265625,9.964599609375,53.5858154296875)
