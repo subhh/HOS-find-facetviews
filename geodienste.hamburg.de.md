@@ -30,6 +30,13 @@ The "Landesbetriebe für Geoinformation und Vermessung" offers a couple of tile 
 ## Potential pitfall
 The map will rendered by client in a grid of 256×256 pixel. If you request in same format then in some cases the quality don't satisfied your requests. In this case you can requests larger tiles, i.e. 512×512.  
 
+
+|         |            |
+| ------------- |:-------------:|
+| 256x256      | right-aligned |
+| <img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=256&height=256&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=250 height=250 />      | centered      |
+| zebra stripes | are neat      |
+
 ## Endpoints
 
 Inside the [Transparenzportal of Hamburg](http://transparenz.hamburg.de/) you can find pointer to the WFS service. The WFS service shows all available data. Here a copy of this list:
