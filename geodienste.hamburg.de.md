@@ -31,9 +31,9 @@ The "Landesbetriebe für Geoinformation und Vermessung" offers a couple of tile 
 The map will rendered by client in a grid of 256×256 pixel. If you request in same format then in some cases the quality don't satisfied your requests. In this case you can requests larger tiles, i.e. 512×512.  
 
 
-|  256×256       |360×360            |512×512 |
+|  256×256       |360×360            |1024×1024 |
 | ------------- |-------------| -----------|
-| <img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=256&height=256&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |  <img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=360&height=360&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |<img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=1512&height=1512&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |
+| <img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=256&height=256&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |  <img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=360&height=360&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |<img src="https://geodienste.hamburg.de/HH_WMS_DISK60?service=WMS&request=GetMap&layers=1&styles=&format=image/jpeg&transparent=false&version=1.1.1&retina=1.5&width=1024&height=1024&srs=EPSG:3857&bbox=1110477.1469270408,7088464.255054105,1115369.1167372921,7093356.224864355" width=256 height=256 /> |
 
 
 ## Endpoints
