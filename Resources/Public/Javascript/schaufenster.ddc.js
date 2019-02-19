@@ -30,10 +30,11 @@ $(function() {
         var that = $(this);
         const ddcdata = JSON.parse(that.attr('data-ddcdata'));
         Object.keys(ddcdata).forEach(function(ddc){
+            const count = ddcdata[ddc];
             if (!ddc) return;
             ddc = ddc.replace(/\./, '').substring(0, 3);
             // Collecting all (creating and/or adding)
-            if (!facets[ddc]) facets[ddc] = parseInt(that.attr('count'));
+            if (!facets[ddc]) facets[ddc] = parseInt(count);
             else facets[ddc] += parseInt(count);
         });
         that.append('<div id="ddctree" style="width:100%;"/>');

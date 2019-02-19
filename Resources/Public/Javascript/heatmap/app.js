@@ -1,4 +1,3 @@
-var url = '/?eID=tile&provider=stamen&type=toner-lite&tile={z}/{x}/{y}{r}';
 
 /**
  * Leaflet vector features drag functionality
@@ -14,14 +13,33 @@ var myHeatMap = function(props) {
 		const k = p.split('=')[0];
 		params[k]=decodeURI(p.split('=')[1]); 	
 	});
-	const data = JSON.parse(params.data);
-	const positions = Object.keys(data);
+	const tileprovider = JSON.parse(params.tileprovider);
+	const foodata = JSON.parse(params.data);
+	const positions = Object.keys(foodata);
+	var data = positions.map(function(latlng) {
+                        return {
+                                lat : latlng.split(",")[0],
+                                lng : latlng.split(',')[1],
+                                value : Math.sqrt(foodata[latlng]),
+                                dist : 0,
+                                count : foodata[latlng]
+                        }
+	});
 	var nearestPoint= {lat:53.5665673,lng:9.9824308};
-	var OSM_Tiles = L.tileLayer(params.url, {
-   	     attribution : params.attribution || ''
-   	});
-	var useragent = navigator.userAgent;
-	var tileLayer = OSM_Tiles;
+	var tileLayer;
+	if (tileprovider.type=='wms') {
+                const endpoint = tileprovider.endpoint + tileprovider.service;
+                const tileoptions = {
+                        layers : tileprovider.layers,
+                        retina : tileprovider.size.replace('@','').replace('x','') || 1,
+                        attribution : tileprovider.attribution
+                }; 
+                tileLayer =  tileprovider.dsvgo || true 
+                        ? L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions)
+                        : L.tileLayer.wms(endpoint,tileoptions);
+        } else {
+        }
+	
 	var heatmapLayer = new HeatmapOverlay({
 		"radius" : 0.004,
 		"maxOpacity" : .7,
@@ -33,36 +51,26 @@ var myHeatMap = function(props) {
 	});
 	heatmapLayer.setData({
                 max : 4,
-                data : positions.map(function(latlng) {
-	                return {
-        	                lat : latlng.split(",")[0],
-                	        lng : latlng.split(',')[1],
-                	        value : Math.sqrt(data[latlng]),
-                	        dist : 0,
-                	        count : data[latlng]
-			};
-			})
-
+                data : data
         });
 	const bounds = L.latLngBounds(positions.map(function(p) {
 		return new L.latLng(p.split(','));
 	}));
-	console.log(bounds);
 	var map = new L.Map('map', {
-		layers : [tileLayer, heatmapLayer],
-		minZoom : 7,
+		layers : [tileLayer,heatmapLayer],
+		minZoom : tileprovider.minzoom || 7,
 		center : nearestPoint,
-		zoom:6,
-		maxZoom: 13,
+		zoom : 12,
+		crs : L.CRS[tileprovider.crs.replace(':','')],
+		maxZoom: tileprovider.maxzoom || 18,
 		touchZoom : false,
 		zoomControl : true
 	});
-	
 	var circle = L.circle(nearestPoint,{
-			weight:1,
+			weight:0.5,
 			clickable:true,
-			radius: 1000,
-			fillOpacity:.1,
+			radius: 600,
+			fillOpacity:.3,
 			draggable:true
 		}).addTo(map);
 	circle.dragging.enable();
@@ -74,22 +82,22 @@ var myHeatMap = function(props) {
 	circle.on('dragend',function(){
 			var count =0;
 		    	// looking for nearest point:
-		    	heatmapdata.forEach(function(item) {
+		    	data.forEach(function(item) {
 				item.dist = map.distance({
 					lat : item.lat,
 					lng : item.lng
 					}, circle.getLatLng());
 			});
-			heatmapdata.sort(function(a, b) {
+			data.sort(function(a, b) {
 				return a.dist > b.dist;
 			});
 			nearestPoint = {
-				lat : heatmapdata[0].lat,
-				lng : heatmapdata[0].lng
+				lat : data[0].lat,
+				lng : data[0].lng
 			};
 			circle.setLatLng(nearestPoint);
 			tooltipp.openTooltip();
-			tooltipp.setTooltipContent(heatmapdata[0].count +' Dokumente von diesem Standort');
+			tooltipp.setTooltipContent(data[0].count +' Dokumente von diesem Standort');
 			
 	});
 	circle.on('click',function(){
@@ -97,8 +105,15 @@ var myHeatMap = function(props) {
 		top.location= link.replace('###NEEDLE###',nearestPoint.lat+ ','+nearestPoint.lng);
 	});		
 	map.fitBounds(bounds);
-	
-
+	map.zoomIn();
+	$(function(){
+		L.control.scalefactor().addTo(map);		
+	});
+	L.control.betterscale({
+		metric:true,
+		maxWidth:500,
+		imperial:false
+	}).addTo(map);
 };
 
 $(function() {myHeatMap()});

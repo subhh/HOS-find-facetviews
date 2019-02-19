@@ -1,54 +1,4 @@
 
-const Collections = {
-            'E-Dissertationen Uni Hamburg': 'uhh',
-            'Publikationen Uni Hamburg':'uhh',
-            'Publikationen TU Hamburg':'tuhh',
-            'Forschungsdaten TU Hamburg':'tuhh',
-            'Publikationen HSU':'hsu',
-            'copernicus.org':'copernicus',
-            'Publikationen UKE Hamburg':'uke',
-            'Publikationen HAW Hamburg':'haw',
-            'Publikationen HCU Hamburg':'hcu'
-        };
-    
-
-function getResIcon(resourceType) {
-    //    resourceType = resourceType[0].toUpperCase() + resourceType.substring(1);
-    var RESOURCE_TYPES = {
-        "Dissertation": "bel-zertifikat",
-        "Report": "bel-buch",
-        "Article": "bel-artikel",
-        "Working Paper": "bel-artikel",
-        "WorkingPaper": "bel-artikel",
-        "Proceedings Part": "bel-artikel",
-        "Periodical Part": "bel-artikel",
-        "Preprint": "bel-schreiben",
-        "Book": "bel-buch",
-        "Book Part": "bel-artikel",
-        "Conference Object": "bel-leer",
-        "Master Thesis": "bel-zertifikat",
-        "Bachelor Thesis": "bel-zertifikat",
-        "Other": "bel-leer",
-        "Habilitation": "bel-zertifikat",
-        "Course Material": "bel-schreiben",
-        "Lecture": "bel-mkombo07",
-        "Study Thesis": "bel-zertifikat",
-        "Proceedings": "bel-buch",
-        "Journal": "bel-zeit",
-        "Dataset": "bel-tabelle",
-        "Festschrift": "bel-torte",
-        "Poster": "bel-foto",
-        "Presentation": "bel-pcfilm",
-        "InteractiveResource": "bel-papier",
-        "Learning Object": "bel-papier",
-        "Technical Report": "bel-buch",
-        "Journal Issue": "bel-zeit",
-        "Thesis": "bel-zertifikat",
-        "Software": "bel-pcliste"
-    }
-    return RESOURCE_TYPES[resourceType] || "bel-leer";
-}
-
 function getOpenAccessIcon(label) {
     var key = label.trim().substr(0, 4);
     switch (key) {
@@ -64,15 +14,6 @@ $(function() {
     $('body').append('<div class="alpha">αlpha</div>');
     /* Resolving language labels: */
 
-    // Iconen in Trefferliste
-     $('article .field-collection').each(function() {
-        
-        var PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
-        var that = $(this);
-        const txt = that.text().trim();
-        const link= '?tx_find_find%5Bfacet%5D%5BCollection%5D%5B###NEEDLE###%5D=1#tx_find'.replace('###NEEDLE###',txt);
-        that.html('<a title="'+txt+'" href="'+link+'">'+ CollectionToIcon(txt,'resultCollection')+'</a>');
-    });
 
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
@@ -94,17 +35,6 @@ $(function() {
         identifier.html('<a href="https://nbn-resolving.org/' + link + '">' + link + '</a>');
     }
     
-    $('.facet-id-collection a').each(function() {
-        var that = $(this);
-        var txt = that.parent().attr('value');
-        that.prepend(CollectionToIcon(txt,'facetCollection'))
-    });
-        function CollectionToIcon(collection,classname) {
-         const PATH = '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/';
-         return '<img src="' + PATH + Collections[collection] + '.png" class="' + classname +'" />'; 
-        }
-    
-
     // Auto verlinkung
     $('.field-subject').each(function() {
         var that = $(this);
@@ -113,12 +43,6 @@ $(function() {
         that.html(link.replace('###NEEDLE###', encodeURI(prop)));
     });
 
-    $('.field-geoLocationPoint').each(function() {
-        var that = $(this);
-        var prop = that.text();
-        var link = '<a href="https://www.google.de/maps/@###NEEDLE###">' + prop + '</a>';
-        that.html(link.replace('###NEEDLE###', encodeURI(prop)));
-    });
     $('.field-publisher_facet').each(function() {
         var that = $(this);
         var prop = that.text();
@@ -135,11 +59,6 @@ $(function() {
         that.html(link.replace('###NEEDLE###', encodeURI(ddc)) + ' (' + ddctext + ')');
     });
 
-    /* Hiding Solr internal keys and others */
-    $('.dd-collection, .dt-collection,.dd-collectionId, .dt-collectionId,.dd-collectionId_str, .dt-collectionId_str, .dd-all_suggest, .dt-all_suggest, .resultList span.field-resourceType, .dd-creatorName, .dt-creatorName,[class$="publisher"],[class$="rightsOA"],[class$="source"],[class$="identifierType"],[class$="alternateIdentifierType"],[class$="resourceTypeGeneral"],[class$="university"],[class$="institute"],[class$="date"],[class$="dateType"],[class$="id"],[class$="score"],[class$="_version_"],[class$="titleLang"]').each(function() {
-        $(this).hide();
-    });
-
     $('.facetShowAll a').html('<span style="font-size:8pt">… zeige alle Facetten</span>');
     $('.fieldLabel[for="c-field-Suche"]').each(function() {
         var that = $(this);
@@ -148,20 +67,6 @@ $(function() {
     // adding fancyBox container:
     $('<div id="largeheatmapcontainer" style="display: none;"><div class="largeheatmap" /></div>').appendTo('body');
 
-    // resourceType icon in resultList:
-    $('.resultList li').each(function() {
-        var that = $(this);
-        var type = that.find('.field-resourceType').text().trim();;
-        that.prepend('<span title="Ressourcentyp: ' + type + '" style="font-size:70px;margin-left:-.8em;display:inline"  class="' + getResIcon(type) + '"></span>');
-    });
-
-    // resourceType icon in facetList
-    $('.facet-id-type li').not('.facetShowAll').each(function() {
-        var that = $(this);
-        if (!that.hasClass('hidden')) that.css('display', 'block');
-        that.prepend('<span class="resourcetype-icon ' + getResIcon(that.attr('value')) + '"></span>');
-        //  that.addClass(getResIcon(that.attr('value')));
-    });
 
     // key icon for oa type:
     $('.facet-id-OpenAccess li ').each(function() {
@@ -195,26 +100,27 @@ $(function() {
     }
     $('.previewButton').click(function(){
         var that = $(this);
+        const tileprovider = JSON.parse($('.resultList').attr('data-tileprovider'));
         const container = that.parent().parent().children().last();
         //container.css('height',0);
         if (that.text()=='▼') {
             that.text('');
           //  container.animate({height:container.outerHeight(true)},400)
-            const url = '?eID=detail&document=' + that.attr('data-id').replace('document_','')+ '&pid='+that.attr('data-pid');
+            const url = '/?eID=detail&document=' + that.attr('data-id').replace('document_','')+ '&pid='+that.attr('data-pid');
             $.getJSON(url,function(doc){
                 that.text('▲');
                    const mapid = 'mapview_'+ 999999999*Math.random(); 
                    var html ='<dl style="min-height:300px;;padding:0 10px 0 0;">';
                    if (doc.publisher) html+= '<dt>Herausgeber</dt><dd>'+doc.publisher+'</dd>'
                    if (doc.resourceType) html+= '<dt>Ressourcentyp</dt><dd>'+doc.resourceType+'</dd>';
-                   if (doc.language) html+= '<dt>Sprache</dt><dd>'+languages[doc.language]+'</dd>'
+                  if (doc.language) html+= '<dt>Sprache</dt><dd>'+doc.language+'</dd>'
                    html +=  '<dt>Jahr der Veröffentlichung</dt><dd>'+doc.publicationYear+'</dd>';
                    if (doc.abstract) html+= '<dt>Inhalt</dt><dd>'+doc.abstract+'</dd>'
                    if (doc.rights) html+= '<dt>Lizenz</dt><dd>'+doc.rights+'</dd>'
                     if (doc.url) {
                      html+= '<dt>Link</dt><dd><ul>'+renderLinks(doc.url)+'</ul></dd>'
                    }
-                   html += '</dl>\n\n<div style=";display:table-cell;height:420px;width:45%" id="'+mapid+'"></div>';
+                   html += '</dl>\n\n<div style="display:table-cell;height:420px;width:45%" id="'+mapid+'"></div>';
                    container.html(html);
                    $('.screenshot_preview').each(function() {
                        const that = $(this);
@@ -234,7 +140,6 @@ $(function() {
                                   },
                                   success: function(data) {
                                       const img = $('.webpreview');
-                                      console.log(img);
                                       img.attr('src',data).attr('width',200).attr('height',160);
                                       
                                 }
@@ -244,8 +149,8 @@ $(function() {
                         },
                         style: {classes: 'qtip-dark qtip-shadow'}
                     });
-                    });
-                   renderMapview(mapid,doc);
+                });
+                renderMapview(mapid,doc,tileprovider);
             })
         } else {
           that.text('▼');
@@ -275,13 +180,31 @@ $(function() {
 
 
 
-function renderMapview(id,doc) {
+function renderMapview(id,doc,tileprovider) {
     const latlng= doc.geoLocationPoint;
-  var map = L.map(id).setView(latlng.split(','), 15);
-  L.tileLayer('?eID=tile&url=https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-   var collection = Collections[doc.collection];
+
+   if (tileprovider.type=='wms') {
+                const endpoint = tileprovider.endpoint + tileprovider.service;
+                const tileoptions = {
+                        layers : tileprovider.layers,
+                        retina : tileprovider.size.replace('@','').replace('x','') || 1,
+                        attribution : 'Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung'//props.tileprovider.attribution
+                };
+                tileLayer = tileprovider.dsvgo || true 
+                        ? L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions)
+                        : L.tileLayer.wms(endpoint,tileoptions);
+  }
+
+    const mapoptions = {
+      crs : L.CRS[tileprovider.crs.replace(':','')],
+      layers : [tileLayer],
+      maxZoom: tileprovider.maxzoom,
+      minZoom : tileprovider.minzoom
+   };
+   
+   const map = L.map(id,mapoptions).setView(latlng.split(','), 12);
+   
+  var collection = Collections[doc.collection];
   var icon =  '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '.png';
   var logoUrl= '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '_big.png';
   var Marker = L.icon({
@@ -289,8 +212,8 @@ function renderMapview(id,doc) {
        popupAnchor:  [0, -20],
        iconSize:     [48, 48],
   });
-  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="300" /><br/><br/>';
-    var popupContent = logo + doc.title;
+  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="240" /><br/><br/>';
+  var popupContent = logo + doc.title;
        L.marker(latlng.split(','), {
            icon: Marker
       }).addTo(map).bindPopup(popupContent).openPopup();

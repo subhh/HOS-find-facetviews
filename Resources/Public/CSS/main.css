@@ -85,13 +85,13 @@ header  {
 }
 
 .tx_find .results ol.resultList {
-  margin: 0  0 0  300px!important;
+  margin: 0  0 0 260px!important;
   padding-right: 3em;
   list-style-type: none;
 }
 .tx_find .results ol.resultList li article  {
-   margin-top: -3.6em;
-   margin-left: 0.5em
+   //margin-top: -3.6em;
+  // margin-left: 0.5em
 }
 a {
     color: darkblue;
@@ -306,6 +306,10 @@ opacity:0.9;
 background-color:red
 }
 
+header  {
+
+}
+
 .facetCollection {width:23px;border:1px solid silver}
 
 .resultCollection {
@@ -324,3 +328,4 @@ margin-bottom:-2px;margin-left:10px}
 .facets article h1 {color:white;padding:3px;border-radius:
 3px;background-color:darkred;margin-bottom:10px!important}
 
+.field-creatorName::before {content:"👤"}

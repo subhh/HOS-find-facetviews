@@ -33,8 +33,8 @@ plugin.tx_find.settings {
 
 page {
  includeJS {
-    3=EXT:hosfindfacetviews/Resources/Private/Language/ISO-639-1.de.json
-    4=EXT:hosfindfacetviews/Resources/Private/Language/locallang-facets.json
+//    3=EXT:hosfindfacetviews/Resources/Private/Language/ISO-639-1.de.json
+//    4=EXT:hosfindfacetviews/Resources/Private/Language/locallang-facets.json
     0=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jquery/3.3.1/jquery.min.js
 //    1=EXT:hosfindfacetviews/Resources/Public/ddc_de.js
 //   2=EXT:hosfindfacetviews/Resources/Public/Cloudfare/spin.js/2.3.2/spin.min.js
@@ -62,7 +62,7 @@ page {
     34=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.heatmap.js
     35=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.publisher.js
     36=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.mapdetailpage.js
-		37=typo3temp/hosfindfacetviews/ORCIDCACHE.js
+//		37=typo3temp/hosfindfacetviews/ORCIDCACHE.js
 		38=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.creatorNames.js
     39=EXT:find/Resources/Public/JavaScript/geohash.js
     40=EXT:find/Resources/Public/JavaScript/find.js

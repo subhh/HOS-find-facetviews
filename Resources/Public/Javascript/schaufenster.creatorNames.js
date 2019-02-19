@@ -3,7 +3,6 @@ const ORCID_ENABLED = false;
 const ORCID_ENDPOINT = 'https://orcid.org/';
 const M = '👤'; 
 if (!OrcidCache) {
-  console.log("OrcidCache undefined, create an empty one!");
   var OrcidCache={};
 }
 $(function() {
@@ -90,33 +89,18 @@ $(function() {
             } 
         });
     
-        // results:
-        $('.field-creatorName_facet,.field-creatorName').each(function() {
-            
-            var that = $(this);
-            var html = that.html();
-            var name = html.trim();
-            var a = '<a href="?tx_find_find[controller]=Search&tx_find_find[facet][Author][###NEEDLE###]=1">' + name + '</a>';
-            that.html(M + ' '+ a.replace('###NEEDLE###', encodeURI(name)));
-            if (ORCID_ENABLED)
-                getOrcid(name.split(', ')[1],name.split(', ')[0],that, renderOrcids);
-            else {
-                 //that.html(M +  html);  
-            }    
-
-        });
-   },200); // for accelerating of tile delivering     
+   },20); // for accelerating of tile delivering     
 
    // preloading of cache:
    // getting from cache or from net by eID
    function getOrcid(vname,fname,that,cb) {
+     return;
       var key = vname.trim() + ' ' + fname.trim().replace('👤', ''); //
       if (OrcidCache[key]) {
          cb(JSON.parse(OrcidCache[key]),that);
          return;
       } else {
         var url = '?eID=orcid&action=search&vname=' + vname + '&fname=' + fname.replace('👤', '');
-        console.log('not yet in cache, try to get from '+ url);
         $.getJSON(url, function(res) {
           cb(res,that);
         })

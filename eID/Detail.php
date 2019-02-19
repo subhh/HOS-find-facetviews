@@ -31,12 +31,12 @@ use TYPO3\CMS\Frontend\Utility\EidUtility;
 use Solarium\QueryType\Select\Query\Query as Select;
 
 
-function getOptionsFromTS() {
+function getSettingsFromTS() {
   /** @var TypoScriptFrontendController  $tsfc */
   $tsfc = GeneralUtility::makeInstance(
               'TYPO3\\CMS\\Frontend\\Controller\\TypoScriptFrontendController',
               $GLOBALS['TYPO3_CONF_VARS'],
-              GeneralUtility::_GET('id') ?: 1,
+              GeneralUtility::_GET('pid') ?: 1,
               0,
               true
   );
@@ -46,28 +46,36 @@ function getOptionsFromTS() {
   $tsfc->getConfigArray();
   /** @var TypoScriptService $typoScriptService */
   $typoScriptService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\TypoScriptService');
-  return $typoScriptService->convertTypoScriptArrayToPlainArray($tsfc->tmpl->setup['plugin.']['tx_find.']['settings.']['connections.']['default.']['options.']);
+  return $typoScriptService->convertTypoScriptArrayToPlainArray($tsfc->tmpl->setup['plugin.']['tx_find.']['settings.']);
 
 }
 
-function getConnectionSettings($options) {
+function getConnectionSettings($settings) {
   return [
       'endpoint' => [
           'localhost' => [
-              'host' => $options['host'],
-              'port' => intval($options['port']),
-              'path' => $options['path'],
-              'timeout' => $options['timeout'],
-              'scheme' => $options['scheme']
+              'host' => $settings['host'],
+              'port' => intval($settings['port']),
+              'path' => $settings['path'],
+              'timeout' => $settings['timeout'],
+              'scheme' => $settings['scheme']
           ]
       ]
   ];
 }
 
-// getting document id:
-$documentId = TYPO3\CMS\Core\Utility\GeneralUtility::_GP('document');
+function LLL($file,$path) {
+  GeneralUtility::readLLXMLfile($xmlPath, 'default');
+}
 
-$connectionSettings = getConnectionSettings(getOptionsFromTS());
+// getting document id:
+$documentId = GeneralUtility::_GP('document');
+
+//$settings = getSettingsFromTS()['connections']['default']['options'];
+//print_r($settings);
+//exit;
+$connectionSettings = getConnectionSettings(getSettingsFromTS()['connections']['default']['options']);
+
 $solrClient = GeneralUtility::makeInstance(Solarium\Client::class,$connectionSettings);
 $query= $solrClient->createSelect();
 $query->setQuery('id:'.$documentId);
@@ -82,9 +90,13 @@ foreach ($resultset as $document) {
         // this converts multivalue fields to a comma-separated string
         if (is_array($value)) {
             $elems = array();
-            //$value = implode(', ', $value);
+            $value = implode(', ', $value);
         }
-        $result->{$field}=$value;
+        if ($field == 'language') {
+          
+          $result->{$field} = $value;
+        } else
+        $result->{$field} = $value;
     }
     array_push($results,$result);  
 }
