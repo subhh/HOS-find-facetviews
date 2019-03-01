@@ -1,3 +1,27 @@
+function cleanFacetDataGeolocation(foo) {
+ const list = Object.keys(foo).map(function(latlng){
+ 	return {
+ 		key : latlng,
+ 		count:foo[latlng]
+ 		};
+ });
+ const latlng  = list.filter(function(item){
+ 	return (item.key.split(',')==null) ? false:true
+ }).filter(function(item){
+ 	const lat = item.key.split(',')[0];
+ 	const lng = item.key.split(',')[1];
+ 	return (!isNaN(parseFloat(lat)) && !isNaN(parseFloat(lng))) ? true : false;
+
+ });
+ return latlng.map(function(item){
+	return {	lat : item.key.split(",")[0],
+		lng : item.key.split(',')[1],
+		value : Math.round(Math.sqrt(item.count)),
+		count : item.count
+	};
+    });	
+}
+
 
 function myHeatMap(props) {
 	var tileLayer;
@@ -13,14 +37,8 @@ function myHeatMap(props) {
 			? L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions)
 			: L.tileLayer.wms(endpoint,tileoptions);
 	}	
-	var heatmapdata = Object.keys(props.facetData).map(function(latlng) {
-		return {
-			lat : latlng.split(",")[0],
-			lng : latlng.split(',')[1],
-			count : Math.sqrt(props.facetData[latlng]),
-			dist : 0
-		};
-	});
+	var heatmapdata = props.geodata;
+
 	var container = $(props.container);
 	var useragent = navigator.userAgent;
 	$(container).html('<div id="mapframe"></div>');
@@ -59,17 +77,17 @@ function myHeatMap(props) {
 $(function(){
 	$('.heatmapContainer').each(function() {
 		var that = $(this);
-		const facetData = JSON.parse(that.attr('data-facetdata'));
+		const geodata = cleanFacetDataGeolocation(JSON.parse(that.attr('data-facetdata')));
                 const tileProvider = JSON.parse(that.attr('data-tileprovider'));
                 const smallMap = myHeatMap({
                 	container : this,
-                	facetData : facetData,
+                	geodata : geodata,
                 	tileprovider : tileProvider
                 });
                 smallMap.on('click', function(e) {
                         var height = $(window).height() * 0.66;
                         var width = $(window).width() * 0.66;
-                        const querystring = encodeURI('tileprovider=' + JSON.stringify(tileProvider) + '&data='+JSON.stringify(facetData) );
+                        const querystring = encodeURI('tileprovider=' + JSON.stringify(tileProvider) + '&geodata='+JSON.stringify(geodata) );
                 // http://fancyapps.com/fancybox/3/docs/#iframe
                         $.fancybox.open({
                                 type : 'iframe',

@@ -10,21 +10,12 @@ L.Path.include({_transform:function(t){if(this._renderer){if(t){this._renderer.t
 var myHeatMap = function(props) {
 	var params = {};
 	window.location.search.substr(1).split('&').forEach(function(p){
+		console.log(p);
 		const k = p.split('=')[0];
 		params[k]=decodeURI(p.split('=')[1]); 	
 	});
 	const tileprovider = JSON.parse(params.tileprovider);
-	const foodata = JSON.parse(params.data);
-	const positions = Object.keys(foodata);
-	var data = positions.map(function(latlng) {
-                        return {
-                                lat : latlng.split(",")[0],
-                                lng : latlng.split(',')[1],
-                                value : Math.sqrt(foodata[latlng]),
-                                dist : 0,
-                                count : foodata[latlng]
-                        }
-	});
+	const geodata = JSON.parse(params.geodata);
 	var nearestPoint= {lat:53.5665673,lng:9.9824308};
 	var tileLayer;
 	if (tileprovider.type=='wms') {
@@ -51,10 +42,10 @@ var myHeatMap = function(props) {
 	});
 	heatmapLayer.setData({
                 max : 4,
-                data : data
+                data : geodata
         });
-	const bounds = L.latLngBounds(positions.map(function(p) {
-		return new L.latLng(p.split(','));
+	const bounds = L.latLngBounds(geodata.map(function(p) {
+		return new L.latLng([p.lat,p.lng]);
 	}));
 	var map = new L.Map('map', {
 		layers : [tileLayer,heatmapLayer],

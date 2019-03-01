@@ -31,7 +31,7 @@ $srs =  GeneralUtility::_GP('srs');
 $size =  GeneralUtility::_GP('retina')*256;
 $bbox =  GeneralUtility::_GP('bbox');
 
-$querystring= 'antialias=full&service=WMS&request=GetMap&styles=&version=1.1.1&transparent=false&format=image/png';
+$querystring= 'service=WMS&request=GetMap&styles=&version=1.1.1&transparent=true&format=image/png';
 $querystring .= '&bbox='.$bbox.'&srs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
 
 $url= $endpoint . '?' . $querystring;
@@ -47,4 +47,6 @@ if (!file_exists($cache) || filemtime($cache)+TTL<  time()) {
 
 header('Content-type: image/png');
 echo file_get_contents($cache);
+error_log("URL=");
+error_log($url);
 exit;
