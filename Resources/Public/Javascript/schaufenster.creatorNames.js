@@ -78,6 +78,7 @@ $(function() {
 
         // facettes
         $('.facet-id-Author .facetList li').not('.facetShowAll').each(function() {
+            return;
             var that = $(this);
             var html = that.html();
             var parts = that.text().trim().match(/^(.*?),\s(.*?)\s([\d]+)/);
