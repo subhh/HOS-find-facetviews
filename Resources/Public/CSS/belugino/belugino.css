@@ -15,25 +15,6 @@ li:before {
     margin-top: 0em;
 }
 
-.facet-id-resourceType,.facet-id-type [class^="bel-"], [class*=" bel-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: belugino!important;
-  speak: none;
-  color : darkred;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  font-size:42px;
-  line-height: 0.25;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  display: inline-table;
-  vertical-align: bottom;
-}
-
 .resultList [class^="bel-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: belugino!important;

@@ -77,11 +77,12 @@ function myHeatMap(props) {
 	return map;
 };
 
+/////////
 $(function() {
 	$('.heatmapContainer').each(function() {
 		var that = $(this);
 		const geodata = cleanFacetDataGeolocation(JSON.parse(that.attr('data-facetdata')));
-                const tileProvider = JSON.parse(that.attr('data-tileprovider'));
+                const tileProvider = that.data('tileprovider');
                 const smallMap = myHeatMap({
                 	container : this,
                 	geodata : geodata,
@@ -91,7 +92,10 @@ $(function() {
                 smallMap.on('click', function(e) {
                         var height = $(window).height() * 0.66;
                         var width = $(window).width() * 0.66;
-                        const querystring = encodeURI('tileprovider=' + JSON.stringify(tileProvider) + '&geodata='+JSON.stringify(geodata) );
+                        const querystring = encodeURI('tileprovider=' 
+                        	+ JSON.stringify(tileProvider) 
+                        	+ '&geodata='+JSON.stringify(geodata)+'&link='
+                        	+ escape(that.data('link')) );
                 // http://fancyapps.com/fancybox/3/docs/#iframe
                         $.fancybox.open({
                                 type : 'iframe',

@@ -226,9 +226,9 @@ $(function(){
         const filename = that.attr('value') + '_big.png';
         that.find('a').qtip({
             position: {
-                target : 'mouse'
-                //my : 'left center',
-                //at : 'top left'
+                
+                my : 'left center',
+                at : 'top right'
             },
             content: {
                 text : '<img width="240" src="/fileadmin/assets/collections/'+ filename+'">'},

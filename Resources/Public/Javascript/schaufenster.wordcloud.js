@@ -1,5 +1,6 @@
 ! function(jQuery) {
 		var words=[];
+		var link;
 		function getWords(foo, max) {
 			var words = [];
 			Object.keys(foo).forEach(function(w,i){
@@ -15,9 +16,14 @@
                 
 		$(function() {
 			$('.WordcloudContainer').each(function(){
-				const words = getWords(JSON.parse($(this).attr('data-clouddata')),$(this).attr('data-maxvalues'));
+				const words = getWords($(this).data('clouddata'),$(this).data('maxvalues'));
+				link= $(this).data('link'); // for bigcloud 
 				$(this).append('<a href="javascript:"><div id="wordcloud" height="160" width="100%" /></a>');
-				d3.wordcloud().size([280, 200]).font($(this).attr('data-fontfamily')).selector('#wordcloud').words(words).onwordclick(openBigBubble).start();
+				d3.wordcloud().size([280, 200]).font($(this).data('fontfamily'))
+					.selector('#wordcloud')
+					.words(words)
+					.onwordclick(openBigBubble)
+					.start();
 		// https://github.com/wvengen/d3-wordcloud
 		function openBigBubble(d, i) {
 			var W = ($(window).width() - 300) * 0.95,
@@ -33,9 +39,9 @@
 				onShow : function(e) {
 					$("iframe").each(function() {
 						$(this).one("load", function(){
-						var $this=  $(this)[0];
+						var that =  $(this)[0];
 						setTimeout(function(){
-							$this.contentWindow.start(words,W,H);},2);
+						that.contentWindow.startRendering(words, link);},2);
 					        });
 					});
 				}

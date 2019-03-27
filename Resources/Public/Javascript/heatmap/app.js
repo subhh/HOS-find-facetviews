@@ -15,6 +15,7 @@ var myHeatMap = function(props) {
 	});
 	const tileprovider = JSON.parse(params.tileprovider);
 	const geodata = JSON.parse(params.geodata);
+	const link = unescape(params.link);
 	var nearestPoint= {lat:53.5665673,lng:9.9824308};
 	var tileLayer;
 	if (tileprovider.type=='wms') {
@@ -91,13 +92,12 @@ var myHeatMap = function(props) {
 			
 	});
 	circle.on('click',function(){
-		const link = "/suche/?tx_find_find%5Bfacet%5D%5BGeolocation%5D%5B###NEEDLE###%5D=1&tx_find_find%5Bcontroller%5D=Search#tx_find";
-		top.location= link.replace('###NEEDLE###',nearestPoint.lat+ ','+nearestPoint.lng);
+		top.location= link.replace('%25s',nearestPoint.lat+ ','+nearestPoint.lng);
 	});		
 	map.fitBounds(bounds);
 	map.zoomIn();
 	$(function(){
-		L.control.scalefactor().addTo(map);		
+		//L.control.scalefactor().addTo(map);		
 	});
 	L.control.betterscale({
 		metric:true,

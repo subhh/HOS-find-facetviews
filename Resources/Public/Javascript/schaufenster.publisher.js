@@ -1,8 +1,9 @@
 $(function() {
     $('.PieContainer').each(function() {
         const that = $(this);
-        const maxValues  = that.attr('data-maxvalues') || 12;
-        const rowdata = JSON.parse(that.attr('data-piedata'));
+        const maxValues  = that.data('maxvalues') || 12;
+        const rowdata = that.data('piedata');
+        const link = that.data('link');
         var values = [];
         var colors = [];
         var labels = [];
@@ -21,11 +22,11 @@ $(function() {
             labels: labels
         };
         that.append('<canvas height="'+that.attr('data-pieheight')+'" width="100%" id="canvaspublisher"/>');
-        renderCanvas(piedata);
+        renderCanvas(piedata,link);
     });
     
    
-    function renderCanvas(piedata) {
+    function renderCanvas(piedata,link) {
     try {
         function onPieClick(event, elem) {
             if (elem[0] != undefined) {
@@ -38,8 +39,6 @@ $(function() {
         };
 
         function startNextSearch(label) {
-            console.log(label);
-            var link = "?tx_find_find[controller]=Search&tx_find_find[facet][publisher][###NEEDLE###]=1#tx_find";
             $.toast({
                 message: 'Suche nach Veröffentlichungen des Herausgebers „' + label + '“', // this is the only required field
                 timeout: 3000, // sepcify time in ms after the toast closes. set to false or 0 to disable
@@ -47,7 +46,8 @@ $(function() {
                     text: 'OK', // the button text, will be transformed into uppercase automatically
                 }
             });
-            self.location = link.replace('###NEEDLE###', encodeURI(label));
+            console.log(link);
+            self.location = link.replace('%25s', encodeURI(label));
         }
 
         var ctx = $("#canvaspublisher")[0].getContext("2d");
