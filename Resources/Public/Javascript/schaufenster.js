@@ -218,3 +218,23 @@ function renderMapview(id,doc,tileprovider) {
            icon: Marker
       }).addTo(map).bindPopup(popupContent).openPopup();
 }
+
+/* Hovering of collections */
+$(function(){
+    $('.facet-id-collection li').each(function(){
+        const that = $(this);
+        const filename = that.attr('value') + '_big.png';
+        that.find('a').qtip({
+            position: {
+                target : 'mouse'
+                //my : 'left center',
+                //at : 'top left'
+            },
+            content: {
+                text : '<img width="240" src="/fileadmin/assets/collections/'+ filename+'">'},
+                style: {
+                    classes: 'qtip-light qtip-shadow'
+                    }
+                }); 
+    });
+});
