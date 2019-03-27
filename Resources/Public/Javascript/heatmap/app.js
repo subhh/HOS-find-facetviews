@@ -10,7 +10,6 @@ L.Path.include({_transform:function(t){if(this._renderer){if(t){this._renderer.t
 var myHeatMap = function(props) {
 	var params = {};
 	window.location.search.substr(1).split('&').forEach(function(p){
-		console.log(p);
 		const k = p.split('=')[0];
 		params[k]=decodeURI(p.split('=')[1]); 	
 	});
@@ -73,22 +72,22 @@ var myHeatMap = function(props) {
 	circle.on('dragend',function(){
 			var count =0;
 		    	// looking for nearest point:
-		    	data.forEach(function(item) {
+		    	geodata.forEach(function(item) {
 				item.dist = map.distance({
 					lat : item.lat,
 					lng : item.lng
 					}, circle.getLatLng());
 			});
-			data.sort(function(a, b) {
+			geodata.sort(function(a, b) {
 				return a.dist > b.dist;
 			});
 			nearestPoint = {
-				lat : data[0].lat,
-				lng : data[0].lng
+				lat : geodata[0].lat,
+				lng : geodata[0].lng
 			};
 			circle.setLatLng(nearestPoint);
 			tooltipp.openTooltip();
-			tooltipp.setTooltipContent(data[0].count +' Dokumente von diesem Standort');
+			tooltipp.setTooltipContent(geodata[0].count +' Dokumente von diesem Standort');
 			
 	});
 	circle.on('click',function(){
