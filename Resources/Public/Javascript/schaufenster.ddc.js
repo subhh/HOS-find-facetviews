@@ -24,11 +24,13 @@ var ddc_de = getDDC();
 $(function() {
     /* Fancifizierung der DDC */
     var facets = {};
+    var link;
     var preselectedDDC = getPreselectedDDC();
     // Collecting all DDC:
     $('.DDCContainer').each(function() {
         var that = $(this);
-        const ddcdata = JSON.parse(that.attr('data-ddcdata'));
+        const ddcdata = that.data('ddcdata');
+        link = that.data('link');
         Object.keys(ddcdata).forEach(function(ddc){
             const count = ddcdata[ddc];
             if (!ddc) return;
@@ -53,13 +55,10 @@ $(function() {
             data: data
         }
     });
-});    
 });
 
 
-
 function FacetsToTree(DDC, facets, preselectedDDC) {
-    var DDC_LINK = '?tx_find_find[facet][Fachgebiet][###NEEDLE###]=1&tx_find_find[controller]=Search';
     var data = [];
 
     function createHTML(ddc, limit) {
@@ -67,7 +66,7 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
             return ddc_de[ddc].trunc(limit);
         const fett  = (preselectedDDC==ddc) ? 'style="font-weight:bold"':'';
         return '<a '+fett+' href="' +
-            DDC_LINK.replace('###NEEDLE###', ddc) +
+            link.replace('%25s', ddc) +
             '" title="' +
             ddc_de[ddc] +
             '">' +
@@ -86,7 +85,7 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
             // top level 1x
             data.push({
                 a_attr: {
-                    href: DDC_LINK.replace('###NEEDLE###', level1),
+                    href: link.replace('%25s', level1),
                     onclick: function() {
                         $.toast({
                             message: "Suche gestartet"
@@ -107,7 +106,7 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
         if (!level2Node) {
             level1Node.children.push({
                 a_attr: {
-                    href: DDC_LINK.replace('###NEEDLE###', level2)
+                    href: link.replace('%25s', level2)
                 },
                 name: level2,
                 text: createHTML(level2, 26),
@@ -122,7 +121,7 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
         if (level3) {
             level2Node.children.push({
                 a_attr: {
-                    href: DDC_LINK.replace('###NEEDLE###', level3)
+                    href: link.replace('%25s', level3)
                 },
                 name: level3,
                 text: createHTML(level3, 23)
@@ -148,6 +147,12 @@ function FacetsToTree(DDC, facets, preselectedDDC) {
     }
     return data;
 }
+
+    
+});
+
+
+
 
 function getDDC() {
    return {
