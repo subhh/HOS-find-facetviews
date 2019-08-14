@@ -1,12 +1,14 @@
 var FIELDS = {
-    all: "überall …",
-    titles: 'Titel',
-    authors: 'Schriftschaffende',
-      
+    all: "in allen Feldern …",
+    titles: 'Dokumententitel',
+    subjects: 'Schlagwort',
+    authors: 'AutorIn',
+    publishers: "HerausgeberIn/Verlag",
+    fulltext : "Volltext (experimentell)"
 }
 
 $(function() {
-    //$('.searchForm').prepend('<a href="/de/suchen-entdecken/discovery/" title="Zurück zum Start der Suche" class="bel-haus" id="home-button" onclick="self.location=\"de/suchen-entdecken/discovery/\";"> </a>')
+    $('.searchForm').prepend('<a href="/suche/" title="Zurück zum Start der Suche" class="bel-haus" id="home-button" onclick="self.location=\"/suche/\";"> </a>')
     // inserting fieldselectbox:
     var params = getQueries();
     var needle = $('#c1-field-all').val();
@@ -14,13 +16,11 @@ $(function() {
        var suchURL = '?tx_find_find[q][all]=%23%23%23NEEDLE%23%23%23';
     }
     var selectedInput = params.field || 'all';
-    
     /* building the SELECTOR */
-    var selectHTML = '<div style="height:40px;width:200px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' +
+    var selectHTML = '<div style="width:240px;margin:5px 10px 0 0" class="custom-select fieldContainer fieldType-Hidden field-mode-simple">' +
         '<select id="searchfieldselector">';
-    
     Object.keys(FIELDS).forEach(function(field) {
-        const selected = (field == selectedInput) ? 'selected' : '';
+        var selected = (field == selectedInput) ? 'selected' : '';
         selectHTML += '<option value="' + field + '" ' + selected + '>' + FIELDS[field] + '</option>'
     });
     selectHTML += '</select></div>';

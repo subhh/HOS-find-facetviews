@@ -36,4 +36,3 @@ ExtensionUtility::registerPlugin(
     'FacetViews'
 );
 ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'FacetViews');
-ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Project', 'HamburgOpenScience');

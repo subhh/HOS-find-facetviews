@@ -16,7 +16,7 @@ function cleanFacetDataGeolocation(foo) {
  return latlng.map(function(item){
 	return {	lat : item.key.split(",")[0],
 		lng : item.key.split(',')[1],
-		value : Math.round(2*Math.sqrt(Math.sqrt(item.count))),
+		value : Math.round(Math.sqrt(item.count)),
 		count : item.count
 	};
     });	
@@ -46,13 +46,13 @@ function myHeatMap(props) {
 	container.css("width", props.width);
 	container.css("height", props.height || 220);
 	var heatmapLayer = new HeatmapOverlay({
-		"radius" : 0.005,
+		"radius" : 0.006,
 		"maxOpacity" : .8,
 		"scaleRadius" : true,
 		"useLocalExtrema" : false,
 		"latField" : 'lat',
 		"lngField" : 'lng',
-		"valueField" : 'value'
+		"valueField" : 'cou[Ant'
 	});
 	const bounds = L.latLngBounds(heatmapdata.map(function(p) {
 		return new L.latLng(p.lat, p.lng);
@@ -61,20 +61,19 @@ function myHeatMap(props) {
 		layers : [tileLayer, heatmapLayer],
 		dragging : true,
 		zoom : 11,
-		maxZoom:13,
-		minZoom:10,
+		maxZoom:11,
+		minZoom:11,
 		center : {lat:53.5665673,lng:9.9824308},
 		crs : L.CRS[tileprovider.crs.replace(':','')],
 		touchZoom : false,
 		zoomControl : props.zoomControl
 	});
-	map.fitBounds(bounds);
+//	map.fitBounds(bounds);
 	heatmapLayer.setData({
 		max : 4,
 		data : heatmapdata
 	});
-//	map.zoomOut();
-//	map.zoomOut();
+//	map.zoomIn();
 	return map;
 };
 

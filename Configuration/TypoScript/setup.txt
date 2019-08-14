@@ -1,10 +1,10 @@
-
+page = PAGE
+page.100 < styles.content.get
 config {
 	contentObjectExceptionHandler = 0
 }
 
-plugin.tx_find {
-    settings {
+plugin.tx_find.settings {
         connections {
            default {
              options {
@@ -22,24 +22,22 @@ plugin.tx_find {
 	  extra3  = rightsOA	
 	  extra4  = id	
 	}
-	jumpToPage = 281
-	ajax {
-		autocomplete = 42
-	}
-	languageRootPath = EXT:hosfindfacetviews/Resources/Private/Language/
+
         paging {
-            perPage = 23
+            perPage = 25
             maximumPerPage = 1000
-            detailPagePaging = 3
+            detailPagePaging = 1
         }
-   }
-   features.requireCHashArgumentForActionArguments = 0	
 }
 
-page = PAGE
+
 page {
- includeJSFooter {
-    13=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/jQuery.AutoLink.js
+ includeJS {
+//    3=EXT:hosfindfacetviews/Resources/Private/Language/ISO-639-1.de.json
+//    4=EXT:hosfindfacetviews/Resources/Private/Language/locallang-facets.json
+    0=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jquery/3.3.1/jquery.min.js
+//    1=EXT:hosfindfacetviews/Resources/Public/ddc_de.js
+//   2=EXT:hosfindfacetviews/Resources/Public/Cloudfare/spin.js/2.3.2/spin.min.js
     5=EXT:hosfindfacetviews/Resources/Public/Cloudfare/qtip2/3.0.3/jquery.qtip.min.js
     6=EXT:hosfindfacetviews/Resources/Public/Cloudfare/flot/0.8.3/jquery.flot.js
     7=EXT:hosfindfacetviews/Resources/Public/Cloudfare/flot/0.8.3/jquery.flot.selection.js
@@ -48,7 +46,7 @@ page {
     10=EXT:hosfindfacetviews/Resources/Public/Cloudfare/fancybox/3.3.5/jquery.fancybox.min.js
     11=EXT:hosfindfacetviews/Resources/Public/Cloudfare/webui-popover/2.1.15/jquery.webui-popover.js
     12=EXT:hosfindfacetviews/Resources/Public/Cloudfare/leaflet/1.3.1/leaflet.js
-
+    13=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/jQuery.AutoLink.js
     14=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/heatmap.js
     15=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/heatmap-leaflet.js
     16=EXT:hosfindfacetviews/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.js
@@ -56,6 +54,7 @@ page {
     18=EXT:hosfindfacetviews/Resources/Public/Javascript/d3.wordcloud.js
     20=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jstree/3.2.1/jstree.min.js
     21=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jquery-cookie/1.4.1/jquery.cookie.min.js
+#    29=EXT:hosfindfacetviews/Resources/Public/Cloudfare/bodymovin/4.13.0/bodymovin.js
     30=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.js
     31=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.searchfield.js
     32=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.ddc.js
@@ -63,7 +62,10 @@ page {
     34=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.heatmap.js
     35=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.publisher.js
     36=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.mapdetailpage.js
-    38=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.creatorNames.js
+//		37=typo3temp/hosfindfacetviews/ORCIDCACHE.js
+		38=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.creatorNames.js
+    39=EXT:find/Resources/Public/JavaScript/geohash.js
+    40=EXT:find/Resources/Public/JavaScript/find.js
  }
  includeCSS {
         4=EXT:hosfindfacetviews/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.css
@@ -82,18 +84,13 @@ page {
 }
 
 
+plugin.tx_find.settings.languageRootPath = EXT:hosfindfacetviews/Resources/Private/Language
 plugin.tx_scriptmerger {
        javascript {
-        	compress.enable = 1
+        	compress.enable = 0
 		doNotRemoveInDocInHead = 1
 	}
 	css {
 		compress.enable = 0
 	}
-}
-
-tx_find_page {
-	debug = 0
-    	no_cache = 1
-	typeNum < plugin.tx_find.settings.ajax.autocomplete
 }
