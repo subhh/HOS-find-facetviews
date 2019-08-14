@@ -10,22 +10,26 @@ function getOpenAccessIcon(label) {
 }
 
 $(function() {
-    $('body').show();
-    $('body').append('<div class="alpha">αlpha</div>');
-    /* Resolving language labels: */
-
-
+    
+    // decimal separator in facetCounts:
+    $('.facetCount').each(function() {
+      var that = $(this);
+      var v = parseInt(that.text());
+      if (v>1000) {
+         v= v/1000;
+      }
+      that.text(v);
+    });
+    
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
         var that = $(this);
-
         that.text(that.text().trim());
     });
-
     // autolinking URLs:
     $('span').each(function() {
         var that = $(this);
-        that.autolink();
+//        that.autolink();
     });
 
     // URNung:
@@ -35,7 +39,7 @@ $(function() {
         identifier.html('<a href="https://nbn-resolving.org/' + link + '">' + link + '</a>');
     }
     
-    // Auto verlinkung
+    // Auto verlinkung der Schlagworte
     $('.field-subject').each(function() {
         var that = $(this);
         var prop = that.text();
@@ -59,7 +63,7 @@ $(function() {
         that.html(link.replace('###NEEDLE###', encodeURI(ddc)) + ' (' + ddctext + ')');
     });
 
-    $('.facetShowAll a').html('<span style="font-size:8pt">… zeige alle Facetten</span>');
+    $('.facetShowAll a').html('<span style="font-size:8pt">Zeige mehr</span>');
     $('.fieldLabel[for="c-field-Suche"]').each(function() {
         var that = $(this);
         that.html('<a title="Zurück zur ungefilterten Suche" href="/suche/">' + that.text() + '</a>')
@@ -100,7 +104,7 @@ $(function() {
     }
     $('.previewButton').click(function(){
         var that = $(this);
-        const tileprovider = JSON.parse($('.resultList').attr('data-tileprovider'));
+
         const container = that.parent().parent().children().last();
         //container.css('height',0);
         if (that.text()=='▼') {
@@ -108,82 +112,36 @@ $(function() {
           //  container.animate({height:container.outerHeight(true)},400)
             const url = '/?eID=detail&document=' + that.attr('data-id').replace('document_','')+ '&pid='+that.attr('data-pid');
             $.getJSON(url,function(doc){
+                const tileprovider = $('.heatmapContainer').data('tileprovider');
                 that.text('▲');
-                   const mapid = 'mapview_'+ 999999999*Math.random(); 
-                   var html ='<dl style="min-height:300px;;padding:0 10px 0 0;">';
+                
+                 const mapid = 'mapview_'+ 999999999*Math.random(); 
+                   var html ='<div style="min-height:360px;overflow:hidden;width:100%">' +
+                   '<dl style="float:left;width:49%;padding:0 10px 10px 0;">';
                    if (doc.publisher) html+= '<dt>Herausgeber</dt><dd>'+doc.publisher+'</dd>'
                    if (doc.resourceType) html+= '<dt>Ressourcentyp</dt><dd>'+doc.resourceType+'</dd>';
                   if (doc.language) html+= '<dt>Sprache</dt><dd>'+doc.language+'</dd>'
                    html +=  '<dt>Jahr der Veröffentlichung</dt><dd>'+doc.publicationYear+'</dd>';
                    if (doc.abstract) html+= '<dt>Inhalt</dt><dd>'+doc.abstract+'</dd>'
                    if (doc.rights) html+= '<dt>Lizenz</dt><dd>'+doc.rights+'</dd>'
-                    if (doc.url) {
-                     html+= '<dt>Link</dt><dd><ul>'+renderLinks(doc.url)+'</ul></dd>'
-                   }
-                   html += '</dl>\n\n<div style="display:table-cell;height:420px;width:45%" id="'+mapid+'"></div>';
+                   html += '</dl>\n<div  id="'+mapid+'"  style="float:left;background-color:#08659BAC;min-height:460px;width:49%;border:1px dotted silver">'
+                   + '</div></div>';
                    container.html(html);
-                   $('.screenshot_preview').each(function() {
-                       const that = $(this);
-                       const id = 'preview_' + Math.random()*999999999;
-                       return;
-                       that.qtip({
-                         content: {
-                            text: function(event,api) {
-                                 $.ajax({
-                                  url: '/typo3conf/ext/hosfindfacetviews/Resources/Public/screencapture.php' ,
-                                  type: 'POST',
-                                  data: { 
-                                   url :  that.attr('href')
-                                  },
-                                  error : function() {
-                                      console.log('error');
-                                  },
-                                  success: function(data) {
-                                      const img = $('.webpreview');
-                                      img.attr('src',data).attr('width',200).attr('height',160);
-                                      
-                                }
-                                });
-                                return '<img class="webpreview" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/ajax-loader.gif" width="32" height="32" data-id="'+id+'"/>';
-                            }
-                        },
-                        style: {classes: 'qtip-dark qtip-shadow'}
-                    });
-                });
-                renderMapview(mapid,doc,tileprovider);
+              renderMapview(mapid,doc,tileprovider);
             })
         } else {
           that.text('▼');
           container.html('');        
         }    
     });
-
-    //$('#c3').append('<img style="cursor:pointer;position:absolute;top:0;right:0;filter:grayscale(0);" width=90 src="/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/color.jpg" id="colortoggler"/>');
-    $('[title!=""]').qtip();
-    (function() { /*  Handling of coloring/graying */
-        var COLORING = 'COLORINGFLAG';
-
-        function setColoring() {
-            (!!$.cookie(COLORING)) ?
-            $('body').addClass('grayscale'): $('body').removeClass('grayscale');
-        }
-        $('#colortoggler').click(function() {
-            (!!$.cookie(COLORING)) ?
-            $.removeCookie(COLORING): $.cookie(COLORING, '1', {
-                expires: 777
-            });
-            setColoring();
-        });
-        setColoring();
-    })();
+    $('main').fadeTo(100,1.0);
 });
 
 
 
 function renderMapview(id,doc,tileprovider) {
     const latlng= doc.geoLocationPoint;
-
-   if (tileprovider.type=='wms') {
+    if (tileprovider.type=='wms') {
                 const endpoint = tileprovider.endpoint + tileprovider.service;
                 const tileoptions = {
                         layers : tileprovider.layers,
@@ -204,37 +162,19 @@ function renderMapview(id,doc,tileprovider) {
    
    const map = L.map(id,mapoptions).setView(latlng.split(','), 12);
    
-  var collection = Collections[doc.collection];
-  var icon =  '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '.png';
-  var logoUrl= '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '_big.png';
+  //var collection = Collections[doc.collection];
+  //var icon =  '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '.png';
+  var logoUrl= '/fileadmin/discovery/assets/collections/' + encodeURI(doc.collection) + '_big.png';
+  
   var Marker = L.icon({
-       iconUrl: icon,
+     //  iconUrl: icon,
        popupAnchor:  [0, -20],
        iconSize:     [48, 48],
   });
-  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="240" /><br/><br/>';
+  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="280" height="90"/><br/><br/>';
   var popupContent = logo + doc.title;
        L.marker(latlng.split(','), {
-           icon: Marker
+    //       icon: Marker
       }).addTo(map).bindPopup(popupContent).openPopup();
 }
 
-/* Hovering of collections */
-$(function(){
-    $('.facet-id-collection li').each(function(){
-        const that = $(this);
-        const filename = that.attr('value') + '_big.png';
-        that.find('a').qtip({
-            position: {
-                
-                my : 'left center',
-                at : 'top right'
-            },
-            content: {
-                text : '<img width="240" src="/fileadmin/assets/collections/'+ filename+'">'},
-                style: {
-                    classes: 'qtip-light qtip-shadow'
-                    }
-                }); 
-    });
-});
