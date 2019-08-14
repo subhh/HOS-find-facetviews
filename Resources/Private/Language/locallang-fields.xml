@@ -18,8 +18,8 @@
                         <label index="field.title.plural">Titel</label>
                         <label index="field.title">Titel</label>
                         <label index="field.title.plural">Titel</label>
-                        <label index="field.resourceType">Ressoursentyp</label>
-                        <label index="field.resourceType.plural">Ressoursentypen</label>
+                        <label index="field.resourceType">Ressourcentyp</label>
+                        <label index="field.resourceType.plural">Ressourcentypen</label>
                         <label index="field.publicationYear">Erscheinungsjahr</label>
                         <label index="field.publicationYear.plural">Erscheinungsjahre</label>
                         <label index="field.abstract.plural">Zusammenfassungen</label>
