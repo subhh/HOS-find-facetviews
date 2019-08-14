@@ -15,7 +15,7 @@ BLUE4= #ACD5E0
 .tx_find .facets {
   float:left!important;
   clear:left!important;
-  width:360px!important
+  width:300px!important
 }
 
 
@@ -40,14 +40,13 @@ BLUE4= #ACD5E0
 }
 
 .inputType-text {
-    width: 300px;
-    line-height: 22px;
+    width: 240px;
+    line-height: 17.5px;
     font-weight: 400;
     display:none;
     background-color:white!important;
-    padding-bottom:9px !important;
-    padding-top:9px!important;
-    font-size: 18px;
+    padding: 10.5px 0px!important;
+    font-size: 16px;
     border: 1px solid #BCBCBC;
     color: #4E7985!important;
     margin: 2px 10px 0 0;
@@ -59,6 +58,7 @@ BLUE4= #ACD5E0
 }
 
 .controls select {
+//    padding: 10px 12px 10px 2px;
     font-size: 20px;
     border: 1px solid #BCBCBC;
     color: #4E7985;
@@ -68,8 +68,10 @@ BLUE4= #ACD5E0
 .submit {margin: 0 15px 0 0 !important;
     margin-top:3px!important;
     padding: 9px 12px 9px 12px;
+    //background: url(../button_shadow_large.png) repeat-x bottom #39A7D8;
     height:46px!important;
     width:190px;
+   // border-radius: 6px;
     color : #FFFFFF;
     font-size: 14px;
     text-shadow: 0px 1px 1px #1F6687;
@@ -78,7 +80,7 @@ BLUE4= #ACD5E0
 }
 
 .tx_find .results ol.resultList {
-  margin: 0  0 0 360px!important;
+  margin: 0  0 0 300px!important;
   padding-right: 3em;
   padding-top:1em;
   list-style-type: none;
@@ -162,7 +164,7 @@ iframe,.webui-popover-content,webui-popover {
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover
 {
   border: 1px solid #000;
-  background:#4E7985;
+  background:darkblue;
 }
 
 
@@ -176,7 +178,8 @@ iframe,.webui-popover-content,webui-popover {
   display: none; /*hide original SELECT element:*/
 }
 .select-selected {
-  //background: url(/typo3conf/ext/find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb!important;
+  background: url(/typo3conf/ext/find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb!important;
+  color: darkblue!important
 }
 /*style the arrow inside the select element:*/
 .select-selected:after {
@@ -187,38 +190,25 @@ iframe,.webui-popover-content,webui-popover {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: #4E7985 transparent transparent transparent;
+  border-color: darkblue transparent transparent transparent;
 }
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent darkblue transparent;
   top: 18px;
 }
-
 /*style the items (options), including the selected item:*/
-.select-selected {
+.select-items div,.select-selected {
   color: #fff;
-  width: 200px;
-  padding: 7px 10px 10px 10px;
-  margin:-7px 0 -7px -13px;
-  border: 1px solid transparent;
-  background-color: #4E7985;
-  border-color: transparent transparent rgba(0, 0, 0, 1) transparent;
-  cursor: pointer;
-}
-.select-items div {
-  color: #fff;
-  width: 200px;
-  padding: 7px 10px;
+  padding: 8px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 1) transparent;
   cursor: pointer;
 }
-
 /*style items (options):*/
 .select-items {
   position: absolute;
-  background-color: #4E7985;
+  background-color: darkblue;
   top: 100%;
   left: 0;
   right: 0;
@@ -233,7 +223,7 @@ iframe,.webui-popover-content,webui-popover {
 }
 
 .toast{ position:fixed;bottom:0;left:0;right:0;margin:0 auto;display:table;margin:1.5rem auto;padding:1.5rem 2rem;width:500px;-webkit-transform:translateY(200%);-ms-transform:translateY(200%);transform:translateY(200%);-webkit-transition:0.5s all;transition:0.5s
-all;opacity:0;background:#4E7985}
+all;opacity:0;background:darkblue}
 .toast.toast--shown{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:1}
 .toast .toast-close{float:right;cursor:pointer;margin-left:1em;}
 .toast .toast-button{float:right;background:inherit;font-size:1.2em;line-height:1.2em;margin:-0.5em;padding:0.5em;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
@@ -352,7 +342,6 @@ article.detail dd {
 
 .resultProgress {background-color:transparent;border:none}
 .resultProgress span {display:none}
-body {background-color:white;}
-main {opacity:0.1}
-.fieldContainer .inputContainer {margin-left:0px!important}
+body {background-color:white;opacity:0.1}
+.fieldContainer .inputContainer {margin-left:10px!important}
 a:hover {color:#0e2f35}

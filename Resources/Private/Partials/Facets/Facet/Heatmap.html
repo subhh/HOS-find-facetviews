@@ -1,0 +1,20 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+<div class="facetMap-container">
+  <div id="schaufenster_heatmap" 
+    class="heatmapContainer" 
+    data-facetdata="{f:format.json(value:facetData.values)}" 
+    data-fetchmaximum="{facetInfo.fetchMaximum}" 
+    data-tileprovider="{f:format.json(value:facetInfo.tileprovider)}"
+    data-link='{f:uri.action(
+        addQueryString : "TRUE",
+        arguments : "{s:find.facetLinkArguments(facetID:facetInfo.id,
+            facetTerm : \"%s\",
+            activeFacets:config.activeFacets)}",
+        argumentsToBeExcludedFromQueryString :
+        "{0:\"{config.prefixID}[page]\"}",
+        section : "{settings.jumpToID}",
+        noCacheHash : "1"     
+        )}'
+    data-bigmap="{facetInfo.bigMap}"> 
+  </div>
+</div>

@@ -1,0 +1,72 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+  <f:for each="{config.activeFacets.publisher}" as="item">
+     <f:variable name="publisher_facet_active" value="{item.term}" />
+  </f:for>
+  
+  <div class="PieContainer"
+        data-maxvalues="{facetInfo.maxValues}"
+        data-pietype="{facetInfo.pieType}"
+        data-pieheight="{facetInfo.pieHeight}"
+        data-facetdata="{f:format.json(value:facetData.values)}"
+        data-activefacets="{f:format.json(value:config.activeFacets)}"
+        data-facetid="{facetInfo.id}"
+        data-link='<f:if condition="{publisher_facet_active}">
+            <f:then>{f:uri.action(
+              addQueryString : "TRUE",
+              section : "{settings.jumpToID}",
+              argumentsToBeExcludedFromQueryString :
+                "{
+                  0:\"{config.prefixID}[page]\",
+                  1:\"{config.prefixID}[facet][{facetInfo.id}]}\"}",
+                  noCacheHash:"1"
+            )}</f:then>
+            <f:else>{f:uri.action(
+              addQueryString : "TRUE",
+                arguments : "{s:find.facetLinkArguments(
+                facetID : facetInfo.id,
+                facetTerm : \"%s\",
+                activeFacets : config.activeFacets)}",
+                argumentsToBeExcludedFromQueryString : "{
+                    0 : \"{config.prefixID}[page]\",
+                    1 : \"{config.prefixID}[facet][{facetInfo.id}]\"}",
+                section : "{settings.jumpToID}",
+                noCacheHash : "1"
+        )}</f:else>
+        </f:if>'
+         data-filterlink='{f:uri.action(
+              addQueryString : "TRUE",
+              section : "{settings.jumpToID}",
+              argumentsToBeExcludedFromQueryString :"{0:\"{config.prefixID}[page]\",1:\"{config.prefixID}[facet][{facetInfo.id}]}\"}",
+              noCacheHash:"1"
+            )}'
+         data-unfilterlink='{f:uri.action(
+              addQueryString : "TRUE",
+                arguments : "{s:find.facetLinkArguments(
+                facetID : facetInfo.id,
+                facetTerm : \"%s\",
+                activeFacets : config.activeFacets)}",
+                argumentsToBeExcludedFromQueryString:"{0:\"{config.prefixID}[page]\",1:\"{config.prefixID}[facet][{facetInfo.id}]\"}",
+                section : "{settings.jumpToID}",
+                noCacheHash : "1"
+        )}'
+  >
+  </div>
+  <f:if condition="{publisher_facet_active}">
+  <ol class="facetList">
+  <li class="facetActive">
+  <f:link.action
+    addQueryString="TRUE"
+    argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+    section="{settings.jumpToID}"
+    noCacheHash="1"
+    class="icon-cancel facetRemove internal"
+    title="{f:translate(key:'remove filter %s',
+    arguments:{0:publisher_facet_active})}">
+      <span class="facetName">
+        <f:translate
+        key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{publisher_facet_active}" default="{publisher_facet_active}"/>
+      </span>
+  </f:link.action>
+  </li>
+  </ol>
+  </f:if>
