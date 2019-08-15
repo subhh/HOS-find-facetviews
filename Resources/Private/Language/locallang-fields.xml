@@ -22,7 +22,7 @@
                         <label index="field.resourceType.plural">Ressourcentypen</label>
                         <label index="field.publicationYear">Erscheinungsjahr</label>
                         <label index="field.publicationYear.plural">Erscheinungsjahre</label>
-                        <label index="field.abstract.plural">Zusammenfassungen</label>
+                        <label index="field.abstract.plural">Zusammenfassung/en</label>
 		 	<label index="field.abstract">Zusammenfassung</label>
 			<label index="field.rights.plural">Lizenzen</label>
 			<label index="field.rights">Lizenz</label>
