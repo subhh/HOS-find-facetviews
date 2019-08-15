@@ -32,6 +32,12 @@ plugin.tx_find {
             maximumPerPage = 1000
             detailPagePaging = 3
         }
+	sort {
+	    1 {
+        	id = default
+	        sortCriteria = publicationYear desc
+	    }
+	}
    }
    features.requireCHashArgumentForActionArguments = 0	
 }
