@@ -17,15 +17,31 @@
 			</f:if>
 		</dt>
 		<dd class="dd-{field}">
-			<f:render
-				partial="Display/Field/List"
-				arguments="{
-					document:document,
-					results:results,
-					field:field,
-					linkFieldContent:linkFieldContent,
-					linkFacets:linkFacets
-				}"/>
+			<f:if condition="{field} == 'url'">
+                                <f:then>
+                                        <ul class="field-{field}-group">
+                                                <f:for each="{document.fields.url}" as="item">
+                                                        <li>
+                                                                <span class="field-{field}">
+                                                                        <f:link.external uri="{item}" target="_blank">{item}</f:link.external>
+                                                                </span>
+                                                        </li>
+                                                </f:for>
+                                        </ul>
+                                </f:then>
+				<f:else>
+					<f:render
+						partial="Display/Field/List"
+						arguments="{
+							document:document,
+							results:results,
+							field:field,
+							linkFieldContent:linkFieldContent,
+							linkFacets:linkFacets
+						}"/>
+				</f:else>
+				
+			</f:if>
 		</dd>
 	</f:if>
 </f:alias>

@@ -24,7 +24,11 @@ $(function() {
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
         var that = $(this);
-        that.text(that.text().trim());
+        
+        //because links in detail page changed to text
+        if(this.className != 'field-url'){
+            that.text(that.text().trim());
+        } 
     });
     // autolinking URLs:
     $('span').each(function() {
