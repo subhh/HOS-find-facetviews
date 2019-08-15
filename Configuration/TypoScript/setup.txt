@@ -28,7 +28,7 @@ plugin.tx_find {
 	}
 	languageRootPath = EXT:hosfindfacetviews/Resources/Private/Language/
         paging {
-            perPage = 20
+            perPage = 23
             maximumPerPage = 1000
             detailPagePaging = 3
         }
