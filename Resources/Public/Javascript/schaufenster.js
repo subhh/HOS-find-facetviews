@@ -31,9 +31,9 @@ $(function() {
         } 
     });
     // autolinking URLs:
-    $('span').each(function() {
+    $('.leftbox dd span').each(function() {
         var that = $(this);
-//        that.autolink();
+        that.autolink();
     });
 
     // URNung:
