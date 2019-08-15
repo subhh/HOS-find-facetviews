@@ -121,9 +121,6 @@ article.detail dt {
     font-weight: bold;
     color: #4E7985;
 }
-article.detail dt::after {
-    content: ": ";
-}
 
 dd li,dd ul {
     margin : 0;
