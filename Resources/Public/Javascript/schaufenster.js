@@ -13,12 +13,10 @@ $(function() {
     
     // decimal separator in facetCounts:
     $('.facetCount').each(function() {
-      var that = $(this);
-      var v = parseInt(that.text());
-      if (v>1000) {
-         v= v/1000;
-      }
-      that.text(v);
+        var that = $(this);
+        var v = parseInt(that.text());
+        v = v.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+        that.text(v);
     });
     
     /* Removing all whitespaces around spans */
