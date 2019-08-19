@@ -173,7 +173,7 @@ function renderMapview(id,doc,tileprovider) {
        popupAnchor:  [0, -20],
        iconSize:     [48, 48],
   });
-  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="280" height="90"/><br/><br/>';
+  const logo = '<img style="margin:0 0 50 0" src="'+ logoUrl+ '" width="280" height="90" alt="Logo"/><br/><br/>';
   var popupContent = logo + doc.title;
        L.marker(latlng.split(','), {
     //       icon: Marker
