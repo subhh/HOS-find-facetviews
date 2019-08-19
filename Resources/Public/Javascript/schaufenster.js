@@ -98,7 +98,7 @@ $(function() {
                if (!url.match('resolving'))
                   url= url.replace('urn:','https://nbn-resolving.org/urn:');
                const a = '<a title="Link zum externen Dokument" class="screenshot_preview" href="'+url+'">' + url +'</a>';
-               const link = (url.match('\/\/doi\.org')) ? '<li><img src="typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/doi.png" width=14 /> ' + a : '<li>⇢ '+a;
+               const link = (url.match('\/\/doi\.org')) ? '<li><img src="typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/doi.png" width="14" /> ' + a : '<li>⇢ '+a;
                result += link;    
            });
            return result; 
