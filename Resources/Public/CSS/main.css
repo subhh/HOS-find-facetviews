@@ -153,6 +153,9 @@ iframe,.webui-popover-content,webui-popover {
 }
 .ce-textpic {background-color:white;padding:0 0 0 10px}
 
+.leaflet-popup-content {
+   min-width: 301px;
+}
 
 /** CSS for AUTOCOMPLETER */
 
