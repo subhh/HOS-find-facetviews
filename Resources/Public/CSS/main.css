@@ -7,36 +7,28 @@ BLUE4= #ACD5E0
 
 */
 
-* {
-//    font-family: "Roboto Condensed";
-}
-
-
 .tx_find .facets {
-  float:left!important;
-  clear:left!important;
-  width:360px!important
+    float:left!important;
+    clear:left!important;
+    width:360px!important
 }
-
-
 
 #c3 p,#c3 a{
-  color:white
+    color:white
 }
-
 
 .formFields .fieldContainer label {
-  display:none!important
- }
+    display:none!important
+}
 
 .formFields {
-  margin-top:3px!important
+    margin-top:3px!important
 }
 .fieldContainer .inputContainer   {
-   margin-bottom:0!important;
+     margin-bottom:0!important;
 }
 .tx_find article.facet a, .tx_find .facet-type-Tabs a {
-  display:inline!important
+    display:inline!important
 }
 
 .inputType-text {
@@ -54,8 +46,8 @@ BLUE4= #ACD5E0
 }
 
 .tx_find form .submit {
-  height:42px!important;
-  margin: 5px 0 0 0!important
+    height:42px!important;
+    margin: 5px 0 0 0!important
 }
 
 .controls select {
@@ -87,7 +79,6 @@ BLUE4= #ACD5E0
 section.facets {
   padding-top:1.2em;
 }
-
 
 a {
     color: darkblue;
@@ -138,31 +129,35 @@ dd li,dd ul {
 }
 
 .tx_find dd  {
-  margin-top: 0!important;
-  margin-bottom: 0!important;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
 }
 .facets h3 {
-  display:none
+    display:none
 }
 iframe,.webui-popover-content,webui-popover {
-  padding:0!important;
-  overflow:hidden!important
+    padding:0!important;
+    overflow:hidden!important
 }
 .tx_find article.facet h1, .tx_find .facet-type-Tabs h1 {
-  text-transform : none!important
+    text-transform : none!important
 }
 .ce-textpic {background-color:white;padding:0 0 0 10px}
 
 .leaflet-popup-content {
-   min-width: 301px;
+     min-width: 301px;
 }
 
 /** CSS for AUTOCOMPLETER */
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover
-{
-  border: 1px solid #000;
-  background:#4E7985;
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-state-active.ui-button:hover{
+    border: 1px solid #000;
+    background:#4E7985;
 }
 
 
@@ -175,9 +170,9 @@ iframe,.webui-popover-content,webui-popover {
 .custom-select select {
   display: none; /*hide original SELECT element:*/
 }
-.select-selected {
-  //background: url(/typo3conf/ext/find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb!important;
-}
+/*.select-selected {
+  background: url(/typo3conf/ext/find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb!important;
+}*/
 /*style the arrow inside the select element:*/
 .select-selected:after {
   position: absolute;
@@ -293,7 +288,6 @@ margin-bottom:-2px;margin-left:10px}
 .tx_find .results .navigation {margin-bottom:0!important;clear:right}
 
 
-
 .notfoundmessage {
   margin : 50px;
   font-size: 42px;
@@ -303,9 +297,6 @@ margin-bottom:-2px;margin-left:10px}
 /* color of oa switch  */
 .switch-candy a {background-color:#4E7985!important}
 .tx_find .facet-type-Tabs .facetActive {background-color:#94B2BB!important}
-
-
-
 
 
 article.detail dd {
@@ -346,8 +337,6 @@ article.detail dd {
                 float:none;
                 display: block;
         }
-        
-
 }
 
 .resultProgress {background-color:transparent;border:none}
@@ -356,3 +345,4 @@ body {background-color:white;}
 main {opacity:0.1}
 .fieldContainer .inputContainer {margin-left:0px!important}
 a:hover {color:#0e2f35}
+
