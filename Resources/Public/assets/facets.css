@@ -105,28 +105,28 @@
   vertical-align: bottom;
 }
 
-.facet-id-resourcetype li[value='Dissertation'] a:before,
-.results article[data-documenttype='Dissertation']:before {
+.facet-id-resourcetype li[value='Dissertation'] a:before/*,
+.results article[data-documenttype='Dissertation']:before*/ {
   content: '\e9a5'; /* zertifikat */
 }
-.facet-id-resourcetype li[value='Report'] a:before,
-.results article[data-documenttype='Report']:before {
+.facet-id-resourcetype li[value='Report'] a:before/*,
+.results article[data-documenttype='Report']:before*/ {
   content: '\e969'; /* buch */
 }
-.facet-id-resourcetype li[value='Article'] a:before,
-.results article[data-documenttype='Article']:before {
+.facet-id-resourcetype li[value='Article'] a:before/*,
+.results article[data-documenttype='Article']:before*/ {
   content: '\e9aa'; /* artikel */
 }
-.facet-id-resourcetype li[value='Working Paper'] a:before,
-.results article[data-documenttype='Working Paper']:before {
+.facet-id-resourcetype li[value='Working Paper'] a:before/*,
+.results article[data-documenttype='Working Paper']:before*/ {
   content: '\e9aa'; /* artikel */
 }
-.facet-id-resourcetype li[value='Proceedings Part'] a:before,
-.results article[data-documenttype='Proceedings Part']:before {
+.facet-id-resourcetype li[value='Proceedings Part'] a:before/*,
+.results article[data-documenttype='Proceedings Part']:before*/ {
   content: '\e9aa'; /* artikel */
 }
-.facet-id-resourcetype li[value='Periodical Part'] a:before,
-.results article[data-documenttype='Periodical Part']:before {
+.facet-id-resourcetype li[value='Periodical Part'] a:before/*,
+.results article[data-documenttype='Periodical Part']:before*/ {
   content: '\e9aa'; /* artikel */
 }
 .facet-id-resourcetype li[value='Preprint'] a:before {
