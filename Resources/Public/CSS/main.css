@@ -76,6 +76,12 @@ BLUE4= #ACD5E0
   list-style-type: none;
 }
 
+.results .oalogo{
+    height: 15px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
 section.facets {
   padding-top:1.2em;
 }
