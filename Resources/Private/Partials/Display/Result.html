@@ -36,8 +36,6 @@
 								field:settings.standardFields.title,
 								separator:', '
 							}"/>
-						<span>({document.fields.publicationYear})</span>	
-							
 					</f:then>
 					<f:else>
 						ID: {document.id}
@@ -48,14 +46,15 @@
 		</h1>
 		<f:format.htmlentitiesDecode>
 		<p>
-				<f:render
+			<f:render
                                 partial="Authorlink"
                                 arguments="{
                                         config:config,
                                         settings:settings,
                                         creatornames:document.creatorName_facet
                         }"/>
-		       |	<f:render
+			<br/><span>({document.fields.publicationYear})</span> - 
+			<f:render
                                 partial="Display/Field/Inline"
                                 arguments="{
                                         config:config,
