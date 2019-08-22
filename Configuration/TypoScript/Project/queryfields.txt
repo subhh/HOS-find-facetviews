@@ -3,7 +3,7 @@ all {
     noescape = 1
     type = Text
     hidden=0
-    query={!type=edismax qf='creatorName^2.0 title^1.5 fulltext^0.8 subject abstract alternativeTitle contributorName identifier otherTitle publisher resourceType seriesInformation subtitle tableOfContents translatedTitle'}(%s)
+    query={!type=edismax qf='creatorName^2.0 title^1.5 fulltext^0.8 internal_subjectText abstract alternativeTitle contributorName identifier otherTitle publisher resourceType seriesInformation subtitle tableOfContents translatedTitle'}(%s)
     autocomplete = 1
     phrase = 1
 }

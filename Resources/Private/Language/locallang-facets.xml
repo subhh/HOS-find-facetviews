@@ -48,7 +48,12 @@
 			<label index="facet.resourcetype">Ressourcentyp</label>
 			<label index="facet.language">Sprache</label>
 
-
+			<label index="facet.institution.dkrz">Deutsches Klimarechenzentrum</label>
+			<label index="facet.institution.haw">HAW Hamburg</label>
+			<label index="facet.institution.hcu">HafenCity Universität</label>
+			<label index="facet.institution.hsu">Helmut-Schmidt-Universität</label>
+			<label index="facet.institution.tuhh">Technische Universität Hamburg</label>
+			<label index="facet.institution.uhh">Universität Hamburg</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -33,9 +33,8 @@
 				noCacheHash="1"
 				class="icon-cancel facetRemove internal"
 				title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}"><span class="facetName"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-				default="{facetTermDisplay}"/><span
-				style="color:white;font-size:2.0em;float:right;margin:2px 3px
-				0 0">×</span></span></f:link.action>
+				default="{facetTermDisplay}"/><span style="color:white;font-size:2.0em;float:right;margin:2px 3px 0 0">×</span></span>
+			</f:link.action>
 		</f:then>
 		<f:else>
 			<f:link.action
@@ -48,9 +47,7 @@
 				internal">{facetInfo.prepend}
 				<f:translate
 					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-					default="{facetTermDisplay}"/>&nbsp;<span
-					class="facetCount">{itemCount}</span>
-	
+					default="{facetTermDisplay}"/>&nbsp;<span class="facetCount">{itemCount}</span>
 			</f:link.action>
 		</f:else>
 	</f:if>

@@ -8,7 +8,7 @@
     display: inline;
 }
 
-.facet-id-collection .facetList li:before {
+.facet-id-institution .facetList li:before {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -18,35 +18,23 @@
     background-repeat: no-repeat;
 }
 
-.facet-id-collection li[value='Publikationen Uni Hamburg']:before {
-    background-image: url(collections/uhh.png);
+.facet-id-institution li[value='uhh']:before {
+    background-image: url(institutions/uhh.png);
 }
-.facet-id-collection li[value='Publikationen UKE Hamburg']:before {
-    background-image: url(collections/uke.png);
+.facet-id-institution li[value='hcu']:before {
+    background-image: url(institutions/hcu.png);
 }
-.facet-id-collection li[value='Publikationen HCU Hamburg']:before {
-    background-image: url(collections/hcu.png);
+.facet-id-institution li[value='hsu']:before {
+    background-image: url(institutions/hsu.png);
 }
-.facet-id-collection li[value='Publikationen HSU']:before {
-    background-image: url(collections/hsu.png);
+.facet-id-institution li[value='tuhh']:before {
+    background-image: url(institutions/tuhh.png);
 }
-.facet-id-collection li[value='Publikationen TU Hamburg']:before {
-    background-image: url(collections/tuhh.png);
+.facet-id-institution li[value='haw']:before {
+    background-image: url(institutions/haw.png);
 }
-.facet-id-collection li[value='Forschungsdaten TU Hamburg']:before {
-    background-image: url(collections/tuhh.png);
-}
-.facet-id-collection li[value='E-Dissertationen Uni Hamburg']:before {
-    background-image: url(collections/uhh.png);
-}
-.facet-id-collection li[value='Publikationen HAW Hamburg']:before {
-    background-image: url(collections/haw.png);
-}
-.facet-id-collection li[value='Deutsches Klimarechenzentrum']:before {
-    background-image: url(collections/dkrz.png);
-}
-.facet-id-collection li[value='copernicus.org']:before {
-    background-image: url(collections/copernicus.png);
+.facet-id-institution li[value='dkrz']:before {
+    background-image: url(institutions/dkrz.png);
 }
 
 /* creators*/ 

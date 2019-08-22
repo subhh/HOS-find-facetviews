@@ -142,7 +142,7 @@ $(function() {
 
 
 function renderMapview(id,doc,tileprovider) {
-    const latlng= doc.geoLocationPoint;
+    const latlng= doc.internal_geoLocation_facet;
     if (tileprovider.type=='wms') {
                 const endpoint = tileprovider.endpoint + tileprovider.service;
                 const tileoptions = {

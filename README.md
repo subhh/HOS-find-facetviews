@@ -33,7 +33,7 @@ Now you can add new type inside `plugin.tx_find.settings` section of typoscript:
 plugin.tx_find.settings.facets.heatmap {
    type = Heatmap
    fetchMaximum = 1000
-   field = geoLocationPoint 
+   field = internal_geoLocation_facet
    tileProvider = https://stamen-tiles-c.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png
    dsvgo = 1
    attribution = Map tiles by <a title="Design by Stamen Design" href="https://stamen.com/maps/">Stamen Design</a>, CC BY 3.0

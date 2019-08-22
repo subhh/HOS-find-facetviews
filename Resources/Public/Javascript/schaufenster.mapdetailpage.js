@@ -1,7 +1,7 @@
 function createMapView(fields,tileprovider) {
   /* creating map */
   if (!fields) return;
-  const latlng = fields.geoLocationPoint.split(',');
+  const latlng = fields.internal_geoLocation_facet.split(',');
   const endpoint = tileprovider.endpoint + tileprovider.service;
   const tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, {
         layers : tileprovider.layers,
@@ -23,7 +23,7 @@ function createMapView(fields,tileprovider) {
    
    const logo = '<img src="'+ ASSETS + encodeURI(fields.collection) + '_big.png" />';
    const popupContent = logo +'<p><i>'+fields.creatorName.join(', ')+'</i></p><p><hb>' +fields.title.join(', ')+'</b></p>';
-   L.marker(fields.geoLocationPoint.split(','), {
+   L.marker(fields.internal_geoLocation_facet.split(','), {
           icon: Marker
       }).addTo(Map).bindPopup(popupContent).openPopup();
    const X =  parseFloat(Map._size.x)/2;

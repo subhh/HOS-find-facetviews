@@ -20,12 +20,12 @@
 } 
 
 2 {
-                id=collection
+                id=institution
                 displayDefault = 25
-                query = (collection:"%s")
-                field = collection
+                query = (internal_institution_id:"%s")
+                field = internal_institution_id
                 type = List
-                bigicon = fileadmin/assets/collections/%s_big.png
+                bigicon = fileadmin/assets/institution/%s_big.png
            }
 
 
@@ -33,7 +33,7 @@
 heatmap {
             id = heatmap
             type = Heatmap
-            field = geoLocationPoint
+            field = internal_geoLocation_facet
             bigMap = 1  
             dsvgo = 1
             sortOrder = index
