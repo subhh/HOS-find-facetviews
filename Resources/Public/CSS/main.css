@@ -69,6 +69,19 @@ BLUE4= #ACD5E0
     text-transform: lowercase;
 }
 
+#tx_find .listPager{
+    float: right;
+    margin-right: 0;
+}
+
+#tx_find .navigation,
+#tx_find .navigation select{
+    color: #4E7985;
+}
+#discover-anz{
+    padding-left: 1em;
+}
+
 .tx_find .results ol.resultList {
   margin: 0  0 0 360px!important;
   padding-right: 3em;
@@ -101,7 +114,6 @@ a:link, a:visited {
 }
 .facets {
     padding:5px;
-    margin-left:5px;
     background-color: white
 }
 article p {

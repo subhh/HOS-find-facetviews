@@ -137,6 +137,10 @@ $(function() {
         }    
     });
     $('main').fadeTo(100,1.0);
+
+    $("#discover-handle select").change(function() {
+        $("#tx_find form").submit();
+    });
 });
 
 

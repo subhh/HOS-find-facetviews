@@ -1,4 +1,20 @@
 <div class="navigation top">
+    <span id="discover-handle">
+    <!-- acativated at /ext/find/Classes/Service/SolrServiceProvider.php at line 949 -->
+    <span class="resultCountPicker">
+        <label for="c{config.uid}-resultCountSelect">
+            <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.count"/>
+        </label>
+        <f:form.select id="c{config.uid}-resultCountSelect" name="count" options="{config.resultCountOptions.menu}" value="{config.resultCountOptions.selected}"/>
+    </span>
+
+    <span id="discover-anz" class="sortOrder">
+        <label for="c{config.uid}-sortSelect">
+            <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.sort"/>
+         </label>
+         <f:form.select id="c{config.uid}-sortSelect" name="sort" options="{config.sortOptions.menu}" value="{config.sortOptions.selected}"/>
+    </span>
+    </span>
     <f:render partial="Pager/ListPager" arguments="{_all}"/>
    <!--   <div style="border:
             1px silver solid;height:15px;background-color:#ddd" class="resultProgress">
