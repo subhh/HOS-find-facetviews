@@ -166,7 +166,7 @@ function renderMapview(id,doc,tileprovider) {
    
   //var collection = Collections[doc.collection];
   //var icon =  '/typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/' +collection + '.png';
-  var logoUrl= '/fileadmin/discovery/assets/collections/' + encodeURI(doc.collection) + '_big.png';
+  var logoUrl= '/fileadmin/discovery/assets/institutions/' + encodeURI(doc.internal_institution_id) + '_big.png';
   
   var Marker = L.icon({
      //  iconUrl: icon,

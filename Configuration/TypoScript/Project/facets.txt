@@ -20,7 +20,7 @@
 } 
 
 2 {
-                id=institution
+                id=Institution
                 displayDefault = 25
                 query = (internal_institution_id:"%s")
                 field = internal_institution_id

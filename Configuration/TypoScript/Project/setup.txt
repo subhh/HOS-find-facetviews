@@ -3,7 +3,8 @@ plugin.tx_find {
 	connections.default.options {
     	 	host = localhost
      		port = 8983
-     		path = /solr/HOS
+     		#path = /solr/HOS
+     		path = /solr/testcore
    	}
    	detailfacets = creatorName_facet,title,resourceType,publicationYear,abstract,seriesInformation,rights,url 
 	facets {

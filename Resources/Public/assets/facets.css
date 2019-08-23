@@ -4,11 +4,11 @@
     text-decoration: none;
 }
 
-.facet-id-collection .facetList li a {
+.facet-id-Institution .facetList li a {
     display: inline;
 }
 
-.facet-id-institution .facetList li:before {
+.facet-id-Institution .facetList li:before {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -18,22 +18,22 @@
     background-repeat: no-repeat;
 }
 
-.facet-id-institution li[value='uhh']:before {
+.facet-id-Institution li[value='uhh']:before {
     background-image: url(institutions/uhh.png);
 }
-.facet-id-institution li[value='hcu']:before {
+.facet-id-Institution li[value='hcu']:before {
     background-image: url(institutions/hcu.png);
 }
-.facet-id-institution li[value='hsu']:before {
+.facet-id-Institution li[value='hsu']:before {
     background-image: url(institutions/hsu.png);
 }
-.facet-id-institution li[value='tuhh']:before {
+.facet-id-Institution li[value='tuhh']:before {
     background-image: url(institutions/tuhh.png);
 }
-.facet-id-institution li[value='haw']:before {
+.facet-id-Institution li[value='haw']:before {
     background-image: url(institutions/haw.png);
 }
-.facet-id-institution li[value='dkrz']:before {
+.facet-id-Institution li[value='dkrz']:before {
     background-image: url(institutions/dkrz.png);
 }
 
