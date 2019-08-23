@@ -21,7 +21,7 @@ function createMapView(fields,tileprovider) {
        iconSize:     [48, 48],
   });
    
-   const logo = '<img src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" />';
+   const logo = '<img src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
    const popupContent = logo +'<p><i>'+fields.creatorName.join(', ')+'</i></p><p><hb>' +fields.title.join(', ')+'</b></p>';
    L.marker(fields.internal_geoLocation_facet.split(','), {
           icon: Marker
