@@ -84,6 +84,8 @@
 	</div>
 
 	<div class="clear"></div>
-	<f:render partial="Components/NavigationTop" arguments="{_all}"/>
+        <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
+       	    <f:render partial="Components/NavigationTop" arguments="{_all}"/>
+        </f:if>
 	<div class="clear"></div>
 </f:form>
