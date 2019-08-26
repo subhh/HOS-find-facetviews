@@ -50,6 +50,12 @@ BLUE4= #ACD5E0
     margin: 5px 0 0 0!important
 }
 
+#tx_find .searchForm .sortOrder,
+#tx_find .searchForm .resultCountPicker{
+    float: none;
+    margin: 0;
+}
+
 .controls select {
     font-size: 20px;
     border: 1px solid #BCBCBC;
@@ -69,9 +75,25 @@ BLUE4= #ACD5E0
     text-transform: lowercase;
 }
 
+#tx_find.tx_find .results{
+    padding-top: 0;
+}
+
 #tx_find .listPager{
     float: right;
     margin-right: 0;
+}
+
+.navigation{
+    display: none;
+}
+
+body.page-1column #tx_find .navigation{
+    display: block;
+}
+
+#tx_find .navigation{
+    margin-top: 2em;
 }
 
 #tx_find .navigation,

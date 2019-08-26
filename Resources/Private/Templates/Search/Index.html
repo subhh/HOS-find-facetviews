@@ -18,8 +18,7 @@
    <div class="results">
       <f:if condition="{results.numfound} > 0">
          <f:then>
-          <f:render partial="Components/NavigationTop" arguments="{_all}"/>
-	      <f:render partial="Facets/Facets" arguments="{_all}"/>
+	    <f:render partial="Facets/Facets" arguments="{_all}"/>
             
             <ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
                <f:for each="{results.documents}" as="document">
