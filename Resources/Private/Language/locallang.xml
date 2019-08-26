@@ -98,7 +98,7 @@
 
 			<label index="full-text-available">Volltext vorhanden</label>
 
-                        <label index="input.sort">Sorting</label>
+                        <label index="input.sort">Sortierung</label>
                         <label index="input.count">Treffer pro Seite</label>
 		</languageKey>
 
