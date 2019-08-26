@@ -9,7 +9,7 @@
                                                 <f:link.action
                                                         arguments="{page:page.text}"
                                                         addQueryString="TRUE"
-                                                        section="{settings.jumpToID}"
+                                                        section=""
                                                         noCacheHash="1"
                                                         class="icon-right-dir internal"
                                                         title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:page.text}')}"
@@ -29,7 +29,7 @@
 					<f:link.action
 						arguments="{page:pager.previous}"
 						addQueryString="TRUE"
-						section="{settings.jumpToID}"
+						section=""
 						noCacheHash="1"
 						class="icon-left-dir internal"
 						title="{f:translate(key:'Go to previous page of results. (Page %s)', arguments:'{1:pager.previous}')}"
@@ -48,7 +48,7 @@
 					<f:link.action
 						arguments="{page:pager.next}"
 						addQueryString="TRUE"
-						section="{settings.jumpToID}"
+						section=""
 						noCacheHash="1"
 						class="icon-right-dir internal"
 						title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:pager.next}')}"
@@ -66,10 +66,10 @@
 					<f:for each="{pager.pages}" as="page" iteration="pageIterator">
 					<f:if condition="({pager.current} < {page.number}) && ({page.status} == 'edge')">
 						<f:link.action
-        	             	                	arguments="{page:page.text}"
-                	                	        addQueryString="TRUE"
-       	                		                section="{settings.jumpToID}"
-                        	        	        noCacheHash="1"
+                                                        arguments="{page:page.text}"
+                                                        addQueryString="TRUE"
+                                                        section=""
+                                                        noCacheHash="1"
                 	                        	class="icon-right-dir internal"
 		                                        title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:page.text}')}"
 	        	                        >&gt;&gt;
