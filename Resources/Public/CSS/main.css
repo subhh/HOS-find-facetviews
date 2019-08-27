@@ -313,6 +313,10 @@ all;opacity:0;background:#4E7985}
 
   }
 
+#tx_find .results .resultList a[target="_blank"]::before{
+    content: none;
+}
+
 .resourcetype-icon {margin:5px -7px -2px
 10px;font-size:1.9em;}
 
