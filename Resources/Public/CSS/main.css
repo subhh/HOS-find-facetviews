@@ -81,7 +81,7 @@ BLUE4= #ACD5E0
 
 #tx_find .listPager{
     float: right;
-    margin-right: 0;
+    margin-right: 48px;
 }
 
 .navigation{
@@ -152,6 +152,19 @@ article.detail dt {
     font-weight: bold;
     color: #4E7985;
 }
+
+#tx_find.tx_find article.facet .facetActive{
+    background: #ccc;
+    border: 1px solid #ccc;
+    font-weight: normal;
+    text-shadow: inherit;
+}
+
+#tx_find.tx_find article.facet .facetActive a{
+    color: #4e7985;
+}
+
+#tx_find.tx_find article.facet .facetActive
 
 dd li,dd ul {
     margin : 0;
