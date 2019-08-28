@@ -9,8 +9,49 @@ function getOpenAccessIcon(label) {
     }
 }
 
+function getIntWithDot(intString){
+    var intStringWithDot = intString.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+
+    return intStringWithDot;
+}
+
+
+function setResultCounterDecimalSeperator(){
+    var resultCountnewString = $(".top .resultCountnew").text().trim();
+    var regex = /\s+/gi;
+
+    resultCountnewString = resultCountnewString.replace(regex, ' ');
+
+    var splitStringArray = resultCountnewString.split(" ");
+
+    if ( splitStringArray.length > 1){
+        var end = '';
+        var beginOne = '';
+        var beginTwo = '';
+
+        //begin
+        var subSplitStringArray = splitStringArray[0].split("–");
+        if (splitStringArray[0].length > 1){
+
+            beginOne = getIntWithDot(subSplitStringArray[0]);
+            beginTwo = getIntWithDot(subSplitStringArray[1]);
+        }
+
+        //end
+        end = getIntWithDot(splitStringArray[2]);
+
+        //combine
+        var newString = beginOne+'-'+beginTwo+' '+splitStringArray[1]+' '+end;
+
+        //set new text
+        $(".top .resultCountnew").text(newString);
+        $(".bottom .resultCountnew").text(newString);
+    }
+}
+
 $(function() {
-    
+    setResultCounterDecimalSeperator();
+ 
     // decimal separator in facetCounts:
     $('.facetCount').each(function() {
         var that = $(this);
