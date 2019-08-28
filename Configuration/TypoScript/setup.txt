@@ -11,7 +11,7 @@ plugin.tx_find {
                   host = localhost
                   port = 8983
                   #path = /solr/ediss_1.0.19
-                  path = /solr/testcore
+                  path = /solr/HOS
              }
           }
         }
