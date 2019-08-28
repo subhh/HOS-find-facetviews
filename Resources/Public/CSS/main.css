@@ -80,10 +80,16 @@ BLUE4= #ACD5E0
 }
 
 #tx_find .listPager{
-    float: right;
     margin-right: 48px;
 }
 
+#tx_find .top .listPager{
+    float: right;
+}
+
+#tx_find .bottom .listPager{
+    text-align: right;
+}
 .navigation{
     display: none;
 }
