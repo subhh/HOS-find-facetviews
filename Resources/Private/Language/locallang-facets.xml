@@ -33,7 +33,7 @@
 			<label index="facet.language.por">Portugiesisch</label>
 
 
-			<label index="facet.creatorName_facet">Beteiligte Personen</label>
+			<label index="facet.creatorName_facet">Autor/in</label>
 			<label index="facet.title">Titel</label>
 			<label index="facet.abstract">Abstract oder Zusammenfassung</label>
 			<label index="facet.seriesInformation">Erschienen in</label>
@@ -44,7 +44,7 @@
 			<label index="facet.publisher">Herausgebende / Verlag</label>
 			<label index="facet.subject">Schlagworte</label>
 			<label index="facet.ddc">Fachgebiete</label>
-			<label index="facet.creatorname">Beteiligte Personen</label>
+			<label index="facet.creatorname">Autor/in</label>
 			<label index="facet.resourcetype">Ressourcentyp</label>
 			<label index="facet.language">Sprache</label>
 

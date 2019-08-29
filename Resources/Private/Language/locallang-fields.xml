@@ -13,8 +13,8 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="field.creatorName_facet.plural">Beteiligte Person</label>
-                        <label index="field.creatorName_facet">Beteiligte Personen</label>
+			<label index="field.creatorName_facet.plural">Autor/in</label>
+                        <label index="field.creatorName_facet">Autor/in</label>
                         <label index="field.title.plural">Titel</label>
                         <label index="field.title">Titel</label>
                         <label index="field.title.plural">Titel</label>
