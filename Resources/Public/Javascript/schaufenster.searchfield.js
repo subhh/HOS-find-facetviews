@@ -1,7 +1,7 @@
 var FIELDS = {
     all: "überall …",
     titles: 'Titel',
-    authors: 'Schriftschaffende',
+    authors: 'Autor/in',
       
 }
 
