@@ -6,7 +6,7 @@ plugin.tx_find {
      		path = /solr/HOS
      		#path = /solr/testcore
    	}
-   	detailfacets = creatorName_facet,title,resourceType,publicationYear,abstract,seriesInformation,rights,url 
+   	detailfacets = subtitle,url,creatorName,contributorName,publisher,publicationYear,resourceType,subject,abstract,seriesInformation,rights,collection
 	facets {
         	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hosfindfacetviews/Configuration/TypoScript/Project/facets.txt">
    	}
