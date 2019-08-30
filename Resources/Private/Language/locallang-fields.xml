@@ -23,7 +23,6 @@
                         <label index="field.contributorName">Beteiligte Person</label>
                         <label index="field.title.plural">Titel</label>
                         <label index="field.title">Titel</label>
-                        <label index="field.title.plural">Titel</label>
                         <label index="field.resourceType">Ressourcentyp</label>
                         <label index="field.resourceType.plural">Ressourcentypen</label>
                         <label index="field.publicationYear">Erscheinungsjahr</label>
