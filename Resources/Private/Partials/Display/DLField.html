@@ -9,10 +9,17 @@
 		<dt class="dt-{field}">
 			<f:if condition="{s:data.isArray(subject:fieldContent)}">
 				<f:then>
-					<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}.plural" default="{field}"/>:
+					<f:if condition="{fieldContent->f:count()} > 1">
+						<f:then>
+							<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}.plural" default="{field}"/>:
+						</f:then>
+		                                <f:else>
+							<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
+						 </f:else>
+		                        </f:if>
 				</f:then>
 				<f:else>
-				   <f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
+	   		     		<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
 				</f:else>
 			</f:if>
 		</dt>
