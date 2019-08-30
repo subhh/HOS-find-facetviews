@@ -43,12 +43,12 @@
                         <div class="leftbox">
                             <dl>
                                 <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
-                                        <f:for each="{facetfields}" as="field">
+                                    <f:for each="{facetfields}" as="field">
                                         <f:render partial="Display/DLField" 
                                           arguments="{results:results,document:document,field:field}"/>
-                                        </f:for>
-                                        </v:iterator.explode>
-                                        </dl>
+                                    </f:for>
+                                </v:iterator.explode>
+                            </dl>
                         </div>
                         <div class="rightbox"
                                 id="map" 
