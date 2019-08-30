@@ -18,30 +18,35 @@ function getIntWithDot(intString){
 
 function setResultCounterDecimalSeperator(){
     var resultCountnewString = $(".top .resultCountnew").text().trim();
+    if( (resultCountnewString == "") || (resultCountnewString == "keine Treffer") ){
+	$("#tx_find .navigation").css("display", "none");
+	return false;
+    }
+
     var regex = /\s+/gi;
 
     resultCountnewString = resultCountnewString.replace(regex, ' ');
-
     var splitStringArray = resultCountnewString.split(" ");
 
     if ( splitStringArray.length > 1){
         var end = '';
-        var beginOne = '';
-        var beginTwo = '';
+        var begin = '';
 
         //begin
         var subSplitStringArray = splitStringArray[0].split("–");
-        if (splitStringArray[0].length > 1){
 
-            beginOne = getIntWithDot(subSplitStringArray[0]);
-            beginTwo = getIntWithDot(subSplitStringArray[1]);
+        if (subSplitStringArray.length > 1){
+            begin = getIntWithDot(subSplitStringArray[0])+'-'+getIntWithDot(subSplitStringArray[1]);
+        }else{
+	    begin = splitStringArray[0];
         }
-
         //end
-        end = getIntWithDot(splitStringArray[2]);
-
-        //combine
-        var newString = beginOne+'-'+beginTwo+' '+splitStringArray[1]+' '+end;
+        if ( splitStringArray.length > 2){
+            end = getIntWithDot(splitStringArray[2]);
+        }
+        
+        //combine - if results <100 end is empty
+        var newString = begin+' '+splitStringArray[1]+' '+end;
 
         //set new text
         $(".top .resultCountnew").text(newString);
