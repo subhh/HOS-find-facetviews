@@ -13,10 +13,6 @@
     <f:variable name="filter" value="{item.term}" />
 </f:for>
 
- 
-<style>.facets .facet-id-OpenAccess h1 {display:none}</style> 
-<f:if condition="{facetData.values->f:count()}>1" >
-<f:then>
 <div class="tx_discovery_3stateswitch"
         data-toast="{facetInfo.toast}">
   <link href="{facetInfo.csspath}" rel="stylesheet" />
@@ -72,6 +68,4 @@ $('.tx_discovery_3stateswitch label').click(function(e) {
 });
 });
 </script>
-</f:then>
-</f:if>
 </f:alias>

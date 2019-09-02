@@ -13,9 +13,9 @@
                    Close=zugriffsbeschränkt
             }
             labels {
-                   Open = Open Access
+                   Open = Open
                    All = Alle Dokumente
-                   Close = Restricted Access 
+                   Close = Closed / Unbekannt 
             }
 } 
 

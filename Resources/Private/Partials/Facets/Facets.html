@@ -11,8 +11,9 @@
 				<f:translate key="Jump to results"/>
 			</a>
 		</h3>
+		<!--
 		<f:render partial="Facets/FilterCockpit" arguments="{_all}"/>
-		 
+		 -->
 		<f:for each="{config.facets}" as="facetInfo" key="facetKey">
 			<f:if condition="{facetInfo.hidden}!=1">
 				<f:render
