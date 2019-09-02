@@ -1,0 +1,234 @@
+/* Collections  */
+
+.facet a {
+    text-decoration: none;
+}
+
+.facet-id-Institution .facetList li a {
+    display: inline;
+}
+
+.facet-id-Institution .facetList li:before {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    content: ' ';
+    margin-right: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.facet-id-Institution li[value='uhh']:before {
+    background-image: url(institutions/uhh.png);
+}
+.facet-id-Institution li[value='hcu']:before {
+    background-image: url(institutions/hcu.png);
+}
+.facet-id-Institution li[value='hsu']:before {
+    background-image: url(institutions/hsu.png);
+}
+.facet-id-Institution li[value='tuhh']:before {
+    background-image: url(institutions/tuhh.png);
+}
+.facet-id-Institution li[value='haw']:before {
+    background-image: url(institutions/haw.png);
+}
+.facet-id-Institution li[value='dkrz']:before {
+    background-image: url(institutions/dkrz.png);
+}
+
+/* creators*/ 
+/*
+.facet-id-creatorname li[value] a:before {
+     content: '👤';
+     font-size: 16px;
+     position: relative;
+}
+*/
+
+/* resourcetype */
+.facet-id-resourcetype li[value]  a:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: belugino!important;
+  speak: none;
+  color : #4E7985;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size:36px;
+  height: 24px;
+  line-height: 22px;
+  position:relative;
+  left: 8px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.results li article {
+ position:relative;
+}
+
+.results li article:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: belugino!important;
+  speak: none;
+  color : #4E7985;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size:72px;
+  height: 48px;
+  line-height: 44px;
+  position:absolute;
+  left: -20px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.facet-id-resourcetype li[value='Dissertation'] a:before/*,
+.results article[data-documenttype='Dissertation']:before*/ {
+  content: '\e9a5'; /* zertifikat */
+}
+.facet-id-resourcetype li[value='Report'] a:before/*,
+.results article[data-documenttype='Report']:before*/ {
+  content: '\e969'; /* buch */
+}
+.facet-id-resourcetype li[value='Article'] a:before/*,
+.results article[data-documenttype='Article']:before*/ {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Working Paper'] a:before/*,
+.results article[data-documenttype='Working Paper']:before*/ {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Proceedings Part'] a:before/*,
+.results article[data-documenttype='Proceedings Part']:before*/ {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Periodical Part'] a:before/*,
+.results article[data-documenttype='Periodical Part']:before*/ {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Preprint'] a:before {
+  content: '\e9b0'; /* schreiben */
+} 
+.facet-id-resourcetype li[value='Book'] a:before {
+  content: '\e969'; /* buch */
+}
+.facet-id-resourcetype li[value='Book Part'] a:before {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Research Paper'] a:before {
+  content: '\e9aa'; /* artikel */
+}
+.facet-id-resourcetype li[value='Conference Object'] a:before {
+  content: '\e9a8'; /* leer */
+}
+.facet-id-resourcetype li[value='Master Thesis'] a:before {
+  content: '\e9a5'; /* zertifikat */
+}
+.facet-id-resourcetype li[value='Bachelor Thesis'] a:before {
+  content: '\e9a5'; /* zertifikat */
+}
+.facet-id-resourcetype li[value='Other'] a:before {
+  content: '\e9a8'; /* leer */
+}
+.facet-id-resourcetype li[value='Habilitation'] a:before {
+  content: '\e9a5'; /* zertifikat */
+}
+.facet-id-resourcetype li[value='Course Material'] a:before {
+  content: '\e9b0'; /* schreiben */
+}
+.facet-id-resourcetype li[value='Lecture'] a:before {
+  content: '\e99e'; /* mkombo07 */
+}
+.facet-id-resourcetype li[value='Study Thesis'] a:before {
+  content: '\e9a5'; /* zertifikat */
+}
+.facet-id-resourcetype li[value='Proceedings'] a:before {
+  content: '\e969'; /* buch */
+}
+.facet-id-resourcetype li[value='Journal'] a:before {
+  content: '\e965'; /* zeit */
+}
+.facet-id-resourcetype li[value='Dataset'] a:before {
+  content: '\e9c8'; /* tabelle */
+}
+.facet-id-resourcetype li[value='Festschrift'] a:before {
+  content: '\e9a1'; /* torte */
+}
+.facet-id-resourcetype li[value='Poster'] a:before {
+  content: '\e981'; /* foto */
+}
+.facet-id-resourcetype li[value='Presentation'] a:before {
+  content: '\e9b7'; /* pcfilm */
+}
+.facet-id-resourcetype li[value='Interactive Resource'] a:before {
+  content: '\e962'; /* belpapier */
+}
+.facet-id-resourcetype li[value='Learning Object'] a:before {
+  content: '\e962'; /* belpapier */
+}
+.facet-id-resourcetype li[value='Technical Report'] a:before {
+  content: '\e969'; /* buch */
+}
+.facet-id-resourcetype li[value='Journal Issue'] a:before {
+  content: '\e965'; /* zeit */
+}
+.facet-id-resourcetype li[value='Thesis'] a:before {
+  content: '\e9a5'; /* zertifikat */
+}
+
+
+/* languages*/
+/*
+.facet-id-language li[value='de'] a:before {
+  content: '🇩🇪';
+}
+.facet-id-language li[value='en'] a:before {
+  content: '🇬🇧';
+}
+.facet-id-language li[value='fr'] a:before {
+  content: '🇫🇷';
+}
+.facet-id-language li[value='es'] a:before {
+  content: '🇪🇸';
+}
+.facet-id-language li[value='ru'] a:before {
+  content: '🇷🇺';
+}
+.facet-id-language li[value='it'] a:before {
+  content: '🇮🇹';
+}
+.facet-id-language li[value='pt'] a:before {
+  content: '🇵🇹';
+}
+.facet-id-language li[value='nl'] a:before {
+  content: '🇳🇱';
+}
+.facet-id-language li[value='zh'] a:before {
+  content: '🇨🇳';
+}
+.facet-id-language li[value='el'] a:before {
+  content: '🇬🇷';
+}
+.facet-id-language li[value='pl'] a:before {
+  content: '🇵🇱';
+}
+.facet-id-language li[value='tk'] a:before {
+  content: '🇹🇷';
+}
+.facet-id-language li[value='no'] a:before {
+  content: '🇳🇴';
+}
+.facet-id-language li[value='ja'] a:before {
+  content: '🇯🇵';
+}*/

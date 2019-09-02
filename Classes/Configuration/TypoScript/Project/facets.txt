@@ -1,6 +1,6 @@
 
 1 {
-            id = Zugriff
+            id = OpenAccess
             hiddenheader = 1
             field = rightsOA
             type = Threestateswitch
@@ -13,7 +13,7 @@
                    Close=zugriffsbeschränkt
             }
             labels {
-                   Open = Open Access
+                   Open = Open
                    All = Alle Dokumente
                    Close = Closed / Unbekannt 
             }
