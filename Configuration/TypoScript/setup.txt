@@ -50,7 +50,7 @@ plugin.tx_find {
             }
             3 {
 		id = Relevanz
-		sortCriteria = relevance
+		sortCriteria = score desc
             }
 	}
    }
