@@ -13,6 +13,11 @@ BLUE4= #ACD5E0
     width:360px!important
 }
 
+#tx_find.tx_find article.facet .facetActive,
+#tx_find.tx_find .facet-type-Tabs .facetActive{
+    border-radius: unset;
+}
+
 #c3 p,#c3 a{
     color:white
 }
