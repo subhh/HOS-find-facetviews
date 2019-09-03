@@ -48,6 +48,12 @@
 			<label index="facet.resourcetype">Ressourcentyp</label>
 			<label index="facet.language">Sprache</label>
 
+
+			<label index="facet.Zugriff.open">Open Access</label>
+			<label index="facet.Zugriff.all">Alle Dokumente</label>
+			<label index="facet.Zugriff.close">Closed / Unbekannt</label>
+			
+
 			<label index="facet.Institution.dkrz">Deutsches Klimarechenzentrum</label>
 			<label index="facet.Institution.haw">HAW Hamburg</label>
 			<label index="facet.Institution.hcu">HafenCity Universität</label>

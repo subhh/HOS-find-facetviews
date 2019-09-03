@@ -2,14 +2,14 @@
 
 <f:alias map="{
   valueOpen:'{facetInfo.values.Open}',
-  labelOpen:'{facetInfo.labels.Open}',
+  valueClose:'{facetInfo.values.Close}',
   valueAll:'{facetInfo.values.All}',
-  labelAll:'{facetInfo.labels.All}',
-  labelClose:'{facetInfo.labels.Close}', 
-  valueClose:'{facetInfo.values.Close}'
+  labelAll:'{f:translate(key:\'LLL:{settings.languageRootPath}locallang-facets.xml:facet.Zugriff.all\')}',
+  labelClose:'{f:translate(key:\'LLL:{settings.languageRootPath}locallang-facets.xml:facet.Zugriff.close\')}',
+  labelOpen:'{f:translate(key:\'LLL:{settings.languageRootPath}locallang-facets.xml:facet.Zugriff.open\')}' 
 }">
 
-<f:for each="{config.activeFacets.OpenAccess}" as="item">
+<f:for each="{config.activeFacets.Zugriff}" as="item">
     <f:variable name="filter" value="{item.term}" />
 </f:for>
 
@@ -28,7 +28,6 @@
         noCacheHash : "1"
 )}' name="state-d" type="radio" <f:if condition="{filter}=={valueOpen}">checked</f:if>> 
     <label for="on" value="{valueOpen}">{labelOpen}</label>
- 
     <input id="na" data-link='{f:uri.action(
         addQueryString : "TRUE",
         argumentsToBeExcludedFromQueryString :
