@@ -27,7 +27,7 @@
         section : "{settings.jumpToID}",
         noCacheHash : "1"
 )}' name="state-d" type="radio" <f:if condition="{filter}=={valueOpen}">checked</f:if>> 
-    <label for="on" value="{valueOpen}">{labelOpen}</label>
+    <label style="cursor:pointer" for="on" value="{valueOpen}">{labelOpen}</label>
     <input id="na" data-link='{f:uri.action(
         addQueryString : "TRUE",
         argumentsToBeExcludedFromQueryString :
@@ -35,7 +35,7 @@
         section : "{settings.jumpToID}",
         noCacheHash : "1"
 )}' name="state-d" type="radio" <f:if condition="{filter}=={valueAll} || {filter}==''">checked</f:if>>
-    <label for="na" value="{valueAll}">{labelAll}</label>
+    <label style="cursor:pointer" for="na" value="{valueAll}">{labelAll}</label>
 
 
     <input id="off" data-link='{f:uri.action(
@@ -47,7 +47,7 @@
         section : "{settings.jumpToID}",
         noCacheHash : "1"
 )}' name="state-d" type="radio" <f:if condition="{filter}=={valueClose}">checked</f:if>>
-    <label for="off" value="{valueClose}">{labelClose}</label><a></a>
+    <label style="cursor:pointer" for="off" value="{valueClose}">{labelClose}</label><a></a>
   </div>
 </div>
 

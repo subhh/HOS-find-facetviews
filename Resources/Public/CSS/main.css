@@ -416,3 +416,6 @@ main {opacity:0.1}
 .fieldContainer .inputContainer {margin-left:0px!important}
 a:hover {color:#0e2f35}
 
+.tx_find ul li {
+  margin-bottom:0;
+} 
