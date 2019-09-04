@@ -20,12 +20,12 @@
 } 
 
 2 {
-                id=Institution
+                id=Quellsystem 
                 displayDefault = 25
-                query = (internal_institution_id:"%s")
-                field = internal_institution_id
+                query = (collection:"%s")
+                field = collection
                 type = List
-                bigicon = fileadmin/assets/institution/%s_big.png
+                bigicon = fileadmin/assets/collection/%s_big.png
            }
 
 
