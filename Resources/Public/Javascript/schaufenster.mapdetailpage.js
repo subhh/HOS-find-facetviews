@@ -21,11 +21,15 @@ function createMapView(fields,tileprovider) {
        iconSize:     [48, 48],
   });
    
-   const logo = '<img src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
+   const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
    const popupContent = logo +'<p><i>'+fields.creatorName.join(', ')+'</i></p><p><hb>' +fields.title.join(', ')+'</b></p>';
-   L.marker(fields.internal_geoLocation_facet.split(','), {
+   const pin =L.marker(fields.internal_geoLocation_facet.split(','), {
           icon: Marker
-      }).addTo(Map).bindPopup(popupContent).openPopup();
+      }).addTo(Map);
+   const popup = L.popup({maxWidth:190});
+   popup.setContent(popupContent);   
+   pin.bindPopup(popup).openPopup();
+   
    const X =  parseFloat(Map._size.x)/2;
    const Y = parseFloat(Map._size.y)
    Map.setView(Map.layerPointToLatLng(L.point(X, Y-360)));

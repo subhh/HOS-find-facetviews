@@ -206,9 +206,6 @@ iframe,.webui-popover-content,webui-popover {
 }
 .ce-textpic {background-color:white;padding:0 0 0 10px}
 
-.leaflet-popup-content {
-     min-width: 301px;
-}
 
 /** CSS for AUTOCOMPLETER */
 
@@ -369,19 +366,19 @@ article.detail dd {
       margin: 0;
       padding: 0 0 0 20px;
 }
-
+ 
 @media (min-width:920px) {
         article.detail .group {
                 display : flex
         }
 
         article.detail .leftbox {
-                flex :2
+                flex : 2
         }
 
         article.detail .rightbox {
                 flex:1;
-                padding-left:25px;
+                padding-left:15px;
                 max-height:480px;
                 min-height:400px   
         }
