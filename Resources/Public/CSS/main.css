@@ -196,9 +196,7 @@ dd li,dd ul {
     margin-top: 0!important;
     margin-bottom: 0!important;
 }
-.facets h3 {
-    display:none
-}
+
 iframe,.webui-popover-content,webui-popover {
     padding:0!important;
     overflow:hidden!important
@@ -348,10 +346,10 @@ margin-bottom:-2px;margin-left:10px}
 
 .facets article {border-top:black;background-color:white;padding:0}
 
-.facets article h1 {color:white;padding:3px;border-radius:
-0px;background-color:#4E7985;margin-bottom:10px!important}
-
-
+.facets article h3 {color:white;padding:3px;border-radius:
+0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:10px!important}
+.facets .facet-id-Zugriff h3 {display:none}
+.invisible {display:none}
 
 .tx_find .results .navigation {margin-bottom:0!important;clear:right}
 
