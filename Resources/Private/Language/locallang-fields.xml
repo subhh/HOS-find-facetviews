@@ -40,7 +40,7 @@
                         <label index="field.subject.plural">Schlagworte</label>
                         <label index="field.subject">Schlagwort</label>
                         <label index="field.url.plural">Links</label>
-                        <label index="url">Link</label>
+                        <label index="field.url">Link</label>
 		</languageKey>
 	</data>
 </T3locallang>
