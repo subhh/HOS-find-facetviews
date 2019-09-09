@@ -1,9 +1,7 @@
-const MAXCREATORS = 10, MAXTITLE=200;
+const MAXCREATORS = 8, MAXTITLE=200;
 
 
-
-
- function createMapView(fields,tileprovider) {
+function createMapView(fields,tileprovider) {
    /* helper functions for limitation of popup height */
    function getCreatorsString(creators) {
      if (typeof creators == 'string') {
@@ -23,6 +21,11 @@ const MAXCREATORS = 10, MAXTITLE=200;
   /* creating map */
   if (!fields) return;
   const latlng = fields.internal_geoLocation_facet.split(',');
+  if (fields.collection == 'Forschungsinformationssystem UKE') {
+     fields.internal_institution_id='uke'; 
+     fields.internal_geoLocation_facet = '53.5909502,9.972821';
+     
+  }
   const endpoint = tileprovider.endpoint + tileprovider.service;
   const tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, {
         layers : tileprovider.layers,
@@ -41,7 +44,6 @@ const MAXCREATORS = 10, MAXTITLE=200;
        popupAnchor:  [0, -20],
        iconSize:     [48, 48],
   });
-   
    const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
    const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';
    const pin =L.marker(fields.internal_geoLocation_facet.split(','), {
@@ -50,7 +52,6 @@ const MAXCREATORS = 10, MAXTITLE=200;
    const popup = L.popup({maxWidth:200});
    popup.setContent(popupContent);   
    pin.bindPopup(popup).openPopup();
-   
    const X =  parseFloat(Map._size.x)/2;
    const Y = parseFloat(Map._size.y)
    Map.setView(Map.layerPointToLatLng(L.point(X, Y-360)));
