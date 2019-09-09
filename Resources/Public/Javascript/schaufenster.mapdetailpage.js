@@ -1,4 +1,25 @@
-function createMapView(fields,tileprovider) {
+const MAXCREATORS = 10, MAXTITLE=200;
+
+
+
+
+ function createMapView(fields,tileprovider) {
+   /* helper functions for limitation of popup height */
+   function getCreatorsString(creators) {
+     if (typeof creators == 'string') {
+       return creators;
+     }
+     if (creators.length<MAXCREATORS) {
+       return creators.join(', ');
+     }
+     return creators.slice(0,MAXCREATORS).join(', ') + '&nbsp;…';
+   }
+   
+   function getTitleString(title) {
+        return title.length<MAXTITLE ? title : title.substr(0,MAXTITLE) + '&nbsp;…';
+   }
+
+  
   /* creating map */
   if (!fields) return;
   const latlng = fields.internal_geoLocation_facet.split(',');
@@ -22,11 +43,11 @@ function createMapView(fields,tileprovider) {
   });
    
    const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
-   const popupContent = logo +'<p><i>'+fields.creatorName.join(', ')+'</i></p><p><hb>' +fields.title.join(', ')+'</b></p>';
+   const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';
    const pin =L.marker(fields.internal_geoLocation_facet.split(','), {
           icon: Marker
       }).addTo(Map);
-   const popup = L.popup({maxWidth:190});
+   const popup = L.popup({maxWidth:200});
    popup.setContent(popupContent);   
    pin.bindPopup(popup).openPopup();
    
