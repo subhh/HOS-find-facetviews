@@ -18,6 +18,13 @@
     margin-right: 2px;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 4px;
+    position: absolute;
+    left: 5px;
+}
+@media (max-width:768px) {
+.facet-id-Quellsystem .facetList li:before,
+.facet-id-Institution .facetList li:before { left: 0;}
 }
 
 .facet-id-Institution li[value='uhh']:before {

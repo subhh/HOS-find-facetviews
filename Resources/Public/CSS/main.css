@@ -10,7 +10,17 @@ BLUE4= #ACD5E0
 .tx_find .facets {
     float:left!important;
     clear:left!important;
-    width:360px!important
+    width:33%!important
+}
+
+#facetsonoff {display:none;}
+@media (max-width:992px) {
+.tx_find .facets {width:40%!important}
+}
+@media (max-width:768px) {
+.tx_find .facets {width:100%!important; display:none; padding:0;}
+body.facetson .tx_find .facets {display:block;}
+#facetsonoff {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4E7985;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
 }
 
 #tx_find.tx_find article.facet .facetActive,
@@ -116,10 +126,19 @@ body.page-1column #tx_find .navigation{
 }
 
 .tx_find .results ol.resultList {
-  margin: 0  0 0 360px!important;
-  padding-right: 3em;
+  margin: 0  0 0 33% !important;
+  padding-right: 0;
+  padding-left: 0;
   padding-top:1em;
   list-style-type: none;
+}
+@media (max-width:992px) {
+  .tx_find .results ol.resultList{margin: 0  0 0 40% !important;}
+  .tx_find .results ol.resultList article > div{margin-left:24px !important}
+}
+@media (max-width:768px) {
+  .tx_find .results ol.resultList{margin: 0 !important;}
+  .tx_find .results ol.resultList article > div{margin-left:0 !important}
 }
 
 .results .oalogo{
@@ -141,8 +160,7 @@ a:link, a:visited {
 }
 
 .resultList, .detail {
-    padding:10px;
-    margin:10px;
+    margin-top:20px;
     background-color: white;
 }
 .facets {
@@ -153,7 +171,6 @@ article p {
     margin-top:5px;
 }
 article.detail dl {
-    padding: 0.5em;
 }
 article.detail dt {
     float: left;
@@ -343,8 +360,11 @@ margin-bottom:-2px;margin-left:10px}
 
 .facets article {border-top:black;background-color:white;padding:0}
 
+
 .facets article h3 {color:white;padding:3px;border-radius:
 0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:10px!important}
+.facets article h3 {color:rgba(0,0,0,.9);padding:0;border-radius:
+0px;background-color:#fff;font-size:1.1em;font-weight:bold;margin-bottom:10px!important}
 .facets .facet-id-Zugriff h3 {display:block}
 .invisible {display:none}
 
@@ -364,7 +384,9 @@ margin-bottom:-2px;margin-left:10px}
 
 article.detail dd {
       margin: 0;
-      padding: 0 0 0 20px;
+          padding: 0 0 0.5em 0.5em;
+          margin: 0 0 0 10px;
+      padding: 0 0 4px 20px;
 }
  
 @media (min-width:920px) {
@@ -385,9 +407,11 @@ article.detail dd {
         article.detail dd {
           margin: 0 0 0 20px;
           padding: 0 0 0.5em 0.5em;
+      padding: 0 0 4px 20px;
        }
 }
 
+/*
 @media (min-width:680px) {
         article.detail .leftbox {
                 display: block;
@@ -403,6 +427,7 @@ article.detail dd {
                 display: block;
         }
 }
+*/
 
 .resultProgress {background-color:transparent;border:none}
 .resultProgress span {display:none}

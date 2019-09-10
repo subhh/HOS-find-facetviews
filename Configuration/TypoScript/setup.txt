@@ -24,6 +24,8 @@ plugin.tx_find {
 	  extra4  = id	
 	}
 	jumpToPage = 281
+	searchresultPage = 281
+	helperPage = 308
 	ajax {
 		autocomplete = 42
 	}

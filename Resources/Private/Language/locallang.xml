@@ -52,12 +52,16 @@
 			<label index="free-accessible">free accessible</label>
 
 			<label index="input.sort">sorting</label>
+	
 			<label index="input.count">hits per page</label>
+			<label index="helperpage">Help to search</label>
+			<label index="helperpagetitle">Link zu Hilfe. Dort erfahren Sie mehr über die Bedienung dder Suche</label>
 		</languageKey>
 
 		<languageKey index="de" type="array">
+		<label index="helperpage">Hilfe zur Suche</label>
 			<label index="Missing type in configuration for queryField %s.">Fehler: Fehlender type in der Konfiguration für queryField »%s«.</label>
-			
+			<label index="helperpagetitle">Link zu Hilfe. Dort erfahren Sie mehr über die Bedienung dder Suche</label>
 			<label index="extended Search">erweiterte Suche</label>
 			<label index="basic Search">einfache Suche</label>
 			<label index="Search">Suchen</label>
