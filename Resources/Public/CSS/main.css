@@ -447,3 +447,10 @@ a:hover {color:#0e2f35}
   display : inline-block;
 }
 .tx_find .inputContainer .inputType-text {width:200px}
+
+.tx_find em.highlight {
+
+    font-weight: bold!important;
+    color: #0e2f35!important;
+    font-style: normal!important;
+}
