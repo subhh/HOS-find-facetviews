@@ -362,9 +362,9 @@ margin-bottom:-2px;margin-left:10px}
 
 
 .facets article h3 {color:white;padding:3px;border-radius:
-0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:10px!important}
-.facets article h3 {color:rgba(0,0,0,.9);padding:0;border-radius:
-0px;background-color:#fff;font-size:1.1em;font-weight:bold;margin-bottom:10px!important}
+0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:8px!important}
+
+
 .facets .facet-id-Zugriff h3 {display:block}
 .invisible {display:none}
 
@@ -438,4 +438,12 @@ a:hover {color:#0e2f35}
 
 .tx_find ul li {
   margin-bottom:0;
-} 
+}
+
+.tx_find .helperpage {
+  padding: 0 0 0 25px;
+  height:42px;
+  margin: 15px 0 10px 0;
+  display : inline-block;
+}
+.tx_find .inputContainer .inputType-text {width:200px}
