@@ -19,7 +19,7 @@ BLUE4= #ACD5E0
 }
 @media (max-width:768px) {
 .tx_find .facets {width:100%!important; display:none; padding:0;}
-body.facetson .tx_find .facets {display:block;}
+body.facetson .tx_find .facets {display:block; float:none !important;}
 #facetsonoff {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4E7985;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
 }
 
@@ -173,10 +173,7 @@ article p {
 article.detail dl {
 }
 article.detail dt {
-    float: left;
     clear: left;
-    width: 190px;
-    text-align: right;
     font-weight: bold;
     color: #4E7985;
 }
@@ -360,10 +357,12 @@ margin-bottom:-2px;margin-left:10px}
 
 .facets article {border-top:black;background-color:white;padding:0}
 
-
+/*
 .facets article h3 {color:white;padding:3px;border-radius:
 0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:8px!important}
-
+*/
+.facets article h3 {color:rgba(0,0,0,.9);padding:0;border-radius:
+0px;background-color:#fff;font-size:1.1em;font-weight:bold;margin-bottom:10px!important}
 
 .facets .facet-id-Zugriff h3 {display:block}
 .invisible {display:none}
