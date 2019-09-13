@@ -20,10 +20,12 @@ function createMapView(fields,tileprovider) {
   
   /* creating map */
   if (!fields) return;
-  const latlng = fields.internal_geoLocation_facet.split(',');
+  var  latlng = fields.internal_geoLocation_facet.split(',');
+  
+  // Faking of other geolocation :
   if (fields.collection == 'Forschungsinformationssystem UKE') {
-     fields.internal_institution_id='uke'; 
-     fields.internal_geoLocation_facet = '53.5909502,9.972821';
+     fields.internal_institution_id='uke';  // for icon 
+     latlng = [53.5909502,9.972821]; //for position of pin and center of map
      
   }
   const endpoint = tileprovider.endpoint + tileprovider.service;
@@ -46,7 +48,7 @@ function createMapView(fields,tileprovider) {
   });
    const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
    const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';
-   const pin =L.marker(fields.internal_geoLocation_facet.split(','), {
+   const pin =L.marker(latlng, {
           icon: Marker
       }).addTo(Map);
    const popup = L.popup({maxWidth:200});
