@@ -137,6 +137,9 @@ $(function() {
         that.html(that.html().replace(/&lt;/gm,'<').replace(/&gt;/gm	,'>'));
     }); 
 
+    $('#facetsonoff').on('click',function(){toggleFacets()});
+
+
     function renderLinks(links) {
        if (Array.isArray(links)) {
            var result="";
@@ -190,6 +193,17 @@ $(function() {
 });
 
 
+
+function toggleFacets() {
+  if ($('body').hasClass('facetson'))
+  {
+    $('body').removeClass('facetson');
+  }
+  else
+  {
+    $('body').addClass('facetson');
+  }
+};
 
 function renderMapview(id,doc,tileprovider) {
     const latlng= doc.internal_geoLocation_facet;

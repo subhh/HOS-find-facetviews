@@ -20,8 +20,55 @@ BLUE4= #ACD5E0
 @media (max-width:768px) {
 .tx_find .facets {width:100%!important; display:none; padding:0;}
 body.facetson .tx_find .facets {display:block; float:none !important;}
-#facetsonoff {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4E7985;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
+#facetsonoff1 {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4E7985;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
+#facetsonoff {display:block; cursor:pointer; height:42px; line-height:42px; font-size:14px; background: url(../../../../find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d4 #b4b4b4 #b4b4b4 #d4d4d4;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    font-weight: bold;
+    margin: 20px 0!important;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;}
+.tx_find form .formFields {float:none !important;}
+.tx_find form .fieldContainer.fieldType-Text {float:none;}
+.tx_find .inputContainer .inputType-text {width:100% !important;}
+.tx_find form .fieldContainer{width:auto !important;}
+.tx_find form .fieldContainer .select-selected{width:auto;}
+.tx_find form .controls {float:none !important;}
+.tx_find form .controls .fieldContainer{width:100% !important;}
+.tx_find form .controls .custom-select {padding-right:0; margin-top:4px;}
+.tx_find form .controls .select-items div{width:auto;}
+.tx_find form .submit {float:none; width:100%; margin-top:8px !important;}
+#tx_find .navigation.top {margin-top:0;}
+.tx_find article.facet-id-heatmap {display:none;}
+
+.tx_find .facet-id-Zugriff .switch-toggle label {padding:3px;}
 }
+
+.tx_find .results ol.resultList {
+  padding-left: 0 !important;
+}
+
+.tx_find .results ol.resultList h3 {
+  margin: 0;
+  font-size: 120%;
+  line-height: 120%;
+}
+
+.tx_find article.facet .facetList li, .tx_find .facet-type-Tabs .facetList li, .tx_find article.facet .facetList .facet-type-Tabs ol li.facetActive, .tx_find .facet-type-Tabs ol article.facet .facetList li.facetActive, .tx_find .facet-type-Tabs .facetList ol li.facetActive, .tx_find .facet-type-Tabs ol .facetList li.facetActive {
+  padding-left: 0 !important;
+  text-indent: 0 !important;
+}
+
+.tx_find article.facet-id-Quellsystem .facetList li {
+  padding-left: 30px !important;
+  min-height: 32px;
+}
+
 
 #tx_find.tx_find article.facet .facetActive,
 #tx_find.tx_find .facet-type-Tabs .facetActive{
@@ -357,11 +404,11 @@ margin-bottom:-2px;margin-left:10px}
 
 .facets article {border-top:black;background-color:white;padding:0}
 
-/*
+
 .facets article h3 {color:white;padding:3px;border-radius:
 0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:8px!important}
-*/
-.facets article h3 {color:rgba(0,0,0,.9);padding:0;border-radius:
+
+.facets article h3 {color:rgba(0,0,0,.6);padding:0;border-radius:
 0px;background-color:#fff;font-size:1.1em;font-weight:bold;margin-bottom:10px!important}
 
 .facets .facet-id-Zugriff h3 {display:block}
