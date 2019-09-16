@@ -1,5 +1,5 @@
 var FIELDS = {
-    all: "überall …",
+    all: "in allen Daten",
     titles: 'Titel',
     authors: 'Autor/in',
       
