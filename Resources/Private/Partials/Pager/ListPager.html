@@ -1,6 +1,10 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <div class="pager listPager">
-	<f:alias map="{pager:'{s:find.pageList(currentPage:arguments.page, perPage:settings.paging.perPage, resultCount:results.numfound)}'}">
+	<!-- original: settings.paging.perPage for perPage -->
+	<f:alias map="{pager:'{s:find.pageList(
+		currentPage:arguments.page, 
+		perPage:config.count,  
+		resultCount:results.numfound)}'}">
 		<span class="first">
                         <f:if condition="{pager.previous}">
                                 <f:then>
@@ -13,7 +17,8 @@
                                                         noCacheHash="1"
                                                         class="icon-right-dir internal"
                                                         title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:page.text}')}"
-                                                >&lt;&lt;
+                                                >
+                                                &lt;&lt;&nbsp;
                                                 </f:link.action>
                                         </f:if>
                                         </f:for>
@@ -72,7 +77,7 @@
                                                         noCacheHash="1"
                 	                        	class="icon-right-dir internal"
 		                                        title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:page.text}')}"
-	        	                        >&gt;&gt;
+	        	                        >&nbsp;&gt;&gt;
                 	               		</f:link.action>
 					</f:if>
 					</f:for>

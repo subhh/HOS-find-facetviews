@@ -17,15 +17,17 @@ function getIntWithDot(intString){
 
 
 function setResultCounterDecimalSeperator(){
+    const SEP = /([0-9]+)([\D]+)([0-9]+)/;
+    
     var resultCountnewString = $(".top .resultCountnew").text().trim();
     if( (resultCountnewString == "") || (resultCountnewString == "keine Treffer") ){
 	$("#tx_find .navigation").css("display", "none");
 	return false;
     }
 
-    var regex = /\s+/gi;
+    const REGEX = /\s+/gi;
 
-    resultCountnewString = resultCountnewString.replace(regex, ' ');
+    resultCountnewString = resultCountnewString.replace(REGEX, ' ');
     var splitStringArray = resultCountnewString.split(" ");
 
     if ( splitStringArray.length > 1){
@@ -33,10 +35,11 @@ function setResultCounterDecimalSeperator(){
         var begin = '';
 
         //begin
-        var subSplitStringArray = splitStringArray[0].split("–");
-
+        
+        var subSplitStringArray = splitStringArray[0].match(SEP);
+        if (!subSplitStringArray) return;
         if (subSplitStringArray.length > 1){
-            begin = getIntWithDot(subSplitStringArray[0])+'-'+getIntWithDot(subSplitStringArray[1]);
+            begin = getIntWithDot(subSplitStringArray[1])+subSplitStringArray[2]+getIntWithDot(subSplitStringArray[3]);
         }else{
 	    begin = splitStringArray[0];
         }
