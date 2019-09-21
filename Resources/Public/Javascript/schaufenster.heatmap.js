@@ -89,7 +89,6 @@ $(function() {
                 	geodata : geodata,
                 	tileprovider : tileProvider
                 });
-                
                 smallMap.on('click', function(e) {
                         var height = $(window).height() * 0.66;
                         var width = $(window).width() * 0.66;

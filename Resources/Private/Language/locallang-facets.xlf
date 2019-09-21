@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-18T14:23:40Z" product-name="hosfindfacetviews">
+		<header/>
+		<body>
+			<trans-unit id="facet.collection.Publikationen%20HSU">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.de">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.en">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.fr">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.es">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.ru">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.it">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.pt">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.nl">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.zh">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.el">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.pl">
+				<source>Polish</source>
+			</trans-unit>
+			<trans-unit id="facet.language.tk">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.no">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.ja">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.fin">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.language.por">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.creatorName_facet">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="facet.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="facet.abstract">
+				<source>Abstract</source>
+			</trans-unit>
+			<trans-unit id="facet.seriesInformation">
+				<source>Erschienen in</source>
+			</trans-unit>
+			<trans-unit id="facet.collection">
+				<source>Collection</source>
+			</trans-unit>
+			<trans-unit id="facet.Quellsystem">
+				<source>Source system</source>
+			</trans-unit>
+			<trans-unit id="facet.openaccess">
+				<source>OpenAccess</source>
+			</trans-unit>
+			<trans-unit id="facet.publicationYear">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.heatmap">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="facet.publisher">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.subject">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.ddc">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet.creatorname">
+				<source>Autor/in</source>
+			</trans-unit>
+			<trans-unit id="facet.resourcetype">
+				<source>Resource type</source>
+			</trans-unit>
+			<trans-unit id="facet.language">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="facet.Zugriff.open">
+				<source>Open Access</source>
+			</trans-unit>
+			<trans-unit id="facet.Zugriff.all">
+				<source>All documents</source>
+			</trans-unit>
+			<trans-unit id="facet.Zugriff.close">
+				<source>Closed / Unbekannt</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.dkrz">
+				<source>Deutsches Klimarechenzentrum</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.haw">
+				<source>HAW Hamburg</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.hcu">
+				<source>HafenCity Universität</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.hsu">
+				<source>Helmut-Schmidt-Universität</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.tuhh">
+				<source>Technische Universität Hamburg</source>
+			</trans-unit>
+			<trans-unit id="facet.Institution.uhh">
+				<source>Universität Hamburg</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

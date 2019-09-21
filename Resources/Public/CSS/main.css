@@ -500,3 +500,7 @@ a:hover {color:#0e2f35}
     color: #0e2f35!important;
     font-style: normal!important;
 }
+.qtip-content {
+    font-size:1.5em;
+    line-height: 1.5em
+}

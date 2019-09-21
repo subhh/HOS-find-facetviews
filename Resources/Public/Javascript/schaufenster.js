@@ -59,7 +59,15 @@ function setResultCounterDecimalSeperator(){
 
 $(function() {
     setResultCounterDecimalSeperator();
- 
+        $('[title!=""]').qtip({
+        position: {
+          my: 'top-left',
+          at : 'center-center'
+        },
+        style: {
+          classes : 'qtip-dark'
+        }
+    }); 
     // decimal separator in facetCounts:
     $('.facetCount').each(function() {
         var that = $(this);

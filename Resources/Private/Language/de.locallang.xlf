@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T11:07:56Z" product-name="hosfindfacetviews">
+		<header/>
+		<body>
+			<trans-unit id="missingtype">
+				<source>Error: Missing type in configuration for queryField »%s«.</source>
+				<target>Fehler: Fehlender type in der Konfiguration für queryField »%s«.</target>
+			</trans-unit>
+			<trans-unit id="extendedsearch">
+				<source>extended Search</source>
+				<target>erweiterte Suche</target>
+			</trans-unit>
+			<trans-unit id="basicsearch">
+				<source>basic Search</source>
+				<target>einfache Suche</target>
+			</trans-unit>
+			<trans-unit id="search">
+				<source>Search</source>
+				<target>Suchen</target>
+			</trans-unit>
+			<trans-unit id="jump2results">
+				<source>jump to results</source>
+				<target>zu den Suchergebnissen springen</target>
+			</trans-unit>
+			<trans-unit id="noresults">
+				<source>no results</source>
+				<target>keine Treffer</target>
+			</trans-unit>
+			<trans-unit id="1result">
+				<source>1 result</source>
+				<target>1 Treffer</target>
+			</trans-unit>
+			<trans-unit id="results">
+				<source>results</source>
+				<target>Treffer</target>
+			</trans-unit>
+			<trans-unit id="error">
+				<source>Error</source>
+				<target>Fehler</target>
+			</trans-unit>
+			<trans-unit id="of">
+				<source>of</source>
+				<target>von</target>
+			</trans-unit>
+			<trans-unit id="goprev">
+				<source>Go to previous page of results. (Page %s)</source>
+				<target>Zur vorigen Ergebnisseite gehen. (Seite %s)</target>
+			</trans-unit>
+			<trans-unit id="gonext">
+				<source>Go to next page of results. (Page %s)</source>
+				<target>Zur folgenden Ergebnisseite gehen. (Seite %s)</target>
+			</trans-unit>
+			<trans-unit id="filter">
+				<source>Filter by %s</source>
+				<target>Filtern nach %s</target>
+			</trans-unit>
+			<trans-unit id="alledatasetswith">
+				<source>Show all records with %1$s »%2$s«.</source>
+				<target>Alle Datensätze mit %1$s »%2$s« zeigen.</target>
+			</trans-unit>
+			<trans-unit id="allrecords">
+				<source>All records</source>
+				<target>Alle Datensätze</target>
+			</trans-unit>
+			<trans-unit id="query">
+				<source>Query</source>
+				<target>Abfrage</target>
+			</trans-unit>
+			<trans-unit id="restrictedto">
+				<source>with</source>
+				<target>mit</target>
+			</trans-unit>
+			<trans-unit id="and">
+				<source>and</source>
+				<target>und</target>
+			</trans-unit>
+			<trans-unit id="result">
+				<source>result</source>
+				<target>Treffer</target>
+			</trans-unit>
+			<trans-unit id="previous">
+				<source>previous</source>
+				<target>voriger Treffer</target>
+			</trans-unit>
+			<trans-unit id="next">
+				<source>next</source>
+				<target>nächster Treffer</target>
+			</trans-unit>
+			<trans-unit id="Return2resultslist">
+				<source>Return to results list</source>
+				<target>Zurück zur Ergebnisliste</target>
+			</trans-unit>
+			<trans-unit id="facets">
+				<source>Facets</source>
+				<target>Facetten</target>
+			</trans-unit>
+			<trans-unit id="removefilter">
+				<source>remove filter</source>
+				<target>Filter aufheben</target>
+			</trans-unit>
+			<trans-unit id="removefilter%">
+				<source>remove filter “%s”</source>
+				<target>Filter „%s“ aufheben</target>
+			</trans-unit>
+			<trans-unit id="showall">
+				<source>show all</source>
+				<target>alle zeigen</target>
+			</trans-unit>
+			<trans-unit id="hidehidden">
+				<source>collapse list</source>
+				<target>zeige weniger</target>
+			</trans-unit>
+			<trans-unit id="show Detail Page">
+				<source>Details</source>
+				<target>Details</target>
+			</trans-unit>
+			<trans-unit id="yourquerycouldnotbeexecuted.">
+				<source>Your query could not be executed.</source>
+				<target>Ihre Abfrage konnte nicht ausgeführt werden.</target>
+			</trans-unit>
+			<trans-unit id="re-runthequerywithescapedterms.">
+				<source>Re-run the query with escaped terms.</source>
+				<target>Abfrage mit maskierten Steuerzeichen wiederholen.</target>
+			</trans-unit>
+			<trans-unit id="yourquerytooktoolong.">
+				<source>Your query took too long and was cancelled. Try re-running the query or using a simpler one. If your query is simple already, please get in touch with us and tell us what you tried to do.</source>
+				<target>Ihre Abfrage dauerte zu lange und wurde abgebrochen. Bitte versuchen Sie, die Seite neuzuladen oder stellen Sie eine einfachere Abfrage. Falls Ihre Abfrage bereits einfach war, schicken Sie uns bitte eine Nachricht mit der Abfrage, damit wir das Problem lösen können.</target>
+			</trans-unit>
+			<trans-unit id="free-accessible">
+				<source>free accessible</source>
+				<target>frei zugänglich</target>
+			</trans-unit>
+			<trans-unit id="input.sort">
+				<source>sorting</source>
+				<target>Sortierung</target>
+			</trans-unit>
+			<trans-unit id="input.count">
+				<source>hits per page</source>
+				<target>Treffer pro Seite</target>
+			</trans-unit>
+			<trans-unit id="helperpage">
+				<source>Help to search</source>
+				<target>Hilfe zur Suche</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

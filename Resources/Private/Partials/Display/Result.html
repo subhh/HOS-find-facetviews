@@ -15,6 +15,7 @@
 		<h3>
 		<f:format.htmlentitiesDecode>
 			<f:link.action
+				title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xml:resultlist_title', arguments:{0:facetText})}"
 				action="detail"
 				arguments="{id:document.id}"
 				section=""
@@ -53,7 +54,8 @@
                                         settings:settings,
                                         creatornames:document.creatorName_facet
                         }"/>
-			<br/><span>{document.fields.publicationYear}</span> - 
+			<br/><span
+                        title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:resultlist_year',arguments:{0:document.fields.publicationYear} )}">{document.fields.publicationYear}</span> - 
 			<f:render
                                 partial="Display/Field/Inline"
                                 arguments="{
@@ -61,7 +63,7 @@
                                         results:results,
                                         document:document,
                                         field:settings.standardFields.extra2,
-                                        separator:', '
+                                        separator:'; '
 			}"/>
 			<!-- schleera: OpenAccess -->
 			<f:if condition="{document.fields.rightsOA} == 'Open Access'" >

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-20T16:50:49Z" product-name="hosfindfacetviews">
+		<header/>
+		<body>
+			<trans-unit id="searchslot_helperpage">
+				<source>See page with detailed help</source>
+			</trans-unit>
+			<trans-unit id="facetfilterenabler">
+				<source>By clicking the result will filtered. You will only get results filtered by %s %s</source>
+			</trans-unit>
+			<trans-unit id="pubyearfilterenabler">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="oaopen">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="oaall">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="oaclosed">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="resultlist_title">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="resultlist_author">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="detailpage_link">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="searchslot_hint">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="searchslot_button">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="facet_heatmap">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="resultlist_year">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

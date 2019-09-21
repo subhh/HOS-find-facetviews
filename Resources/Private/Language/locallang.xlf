@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-18T11:07:56Z" product-name="hosfindfacetviews">
+		<header/>
+		<body>
+			<trans-unit id="missingtype">
+				<source>Error: Missing type in configuration for queryField »%s«.</source>
+			</trans-unit>
+			<trans-unit id="extendedsearch">
+				<source>extended Search</source>
+			</trans-unit>
+			<trans-unit id="basicsearch">
+				<source>basic Search</source>
+			</trans-unit>
+			<trans-unit id="search">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="jump2results">
+				<source>jump to results</source>
+			</trans-unit>
+			<trans-unit id="noresults">
+				<source>no results</source>
+			</trans-unit>
+			<trans-unit id="1result">
+				<source>1 result</source>
+			</trans-unit>
+			<trans-unit id="results">
+				<source>results</source>
+			</trans-unit>
+			<trans-unit id="error">
+				<source>Error</source>
+			</trans-unit>
+			<trans-unit id="of">
+				<source>of</source>
+			</trans-unit>
+			<trans-unit id="goprev">
+				<source>Go to previous page of results. (Page %s)</source>
+			</trans-unit>
+			<trans-unit id="gonext">
+				<source>Go to next page of results. (Page %s)</source>
+			</trans-unit>
+			<trans-unit id="filter">
+				<source>Filter by %s</source>
+			</trans-unit>
+			<trans-unit id="alledatasetswith">
+				<source>Show all records with %1$s »%2$s«.</source>
+			</trans-unit>
+			<trans-unit id="allrecords">
+				<source>All records</source>
+			</trans-unit>
+			<trans-unit id="query">
+				<source>Query</source>
+			</trans-unit>
+			<trans-unit id="restrictedto">
+				<source>with</source>
+			</trans-unit>
+			<trans-unit id="and">
+				<source>and</source>
+			</trans-unit>
+			<trans-unit id="result">
+				<source>result</source>
+			</trans-unit>
+			<trans-unit id="previous">
+				<source>previous</source>
+			</trans-unit>
+			<trans-unit id="next">
+				<source>next</source>
+			</trans-unit>
+			<trans-unit id="Return2resultslist">
+				<source>Return to results list</source>
+			</trans-unit>
+			<trans-unit id="facets">
+				<source>Facets</source>
+			</trans-unit>
+			<trans-unit id="removefilter">
+				<source>remove filter</source>
+			</trans-unit>
+			<trans-unit id="removefilter%">
+				<source>remove filter “%s”</source>
+			</trans-unit>
+			<trans-unit id="showall">
+				<source>show all</source>
+			</trans-unit>
+			<trans-unit id="hidehidden">
+				<source>collapse list</source>
+			</trans-unit>
+			<trans-unit id="show Detail Page">
+				<source>Details</source>
+			</trans-unit>
+			<trans-unit id="yourquerycouldnotbeexecuted.">
+				<source>Your query could not be executed.</source>
+			</trans-unit>
+			<trans-unit id="re-runthequerywithescapedterms.">
+				<source>Re-run the query with escaped terms.</source>
+			</trans-unit>
+			<trans-unit id="yourquerytooktoolong.">
+				<source>Your query took too long and was cancelled. Try re-running the query or using a simpler one. If your query is simple already, please get in touch with us and tell us what you tried to do.</source>
+			</trans-unit>
+			<trans-unit id="free-accessible">
+				<source>free accessible</source>
+			</trans-unit>
+			<trans-unit id="input.sort">
+				<source>sorting</source>
+			</trans-unit>
+			<trans-unit id="input.count">
+				<source>hits per page</source>
+			</trans-unit>
+			<trans-unit id="helperpage">
+				<source>Help to search</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
