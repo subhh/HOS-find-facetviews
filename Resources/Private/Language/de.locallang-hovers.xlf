@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-20T16:50:49Z" product-name="hosfindfacetviews">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-23T07:47:08Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
-			<trans-unit id="searchslot_helperpage">
-				<source>See page with detailed help</source>
-				<target>Seite mit ausführlicher Hilfe</target>
-			</trans-unit>
 			<trans-unit id="facetfilterenabler">
 				<source>By clicking the result will filtered. You will only get results filtered by %s %s</source>
 				<target>Suchergebnis auf Auswahl beschränken </target>
 			</trans-unit>
 			<trans-unit id="pubyearfilterenabler">
 				<source></source>
-				<target>Suchergebnis auf Auswahl beschränken </target>
+				<target>Suchergebnis auf Erscheinungsjahr beschränken </target>
 			</trans-unit>
 			<trans-unit id="oaopen">
 				<source></source>

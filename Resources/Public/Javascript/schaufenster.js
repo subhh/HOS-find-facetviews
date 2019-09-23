@@ -59,10 +59,9 @@ function setResultCounterDecimalSeperator(){
 
 $(function() {
     setResultCounterDecimalSeperator();
-        $('[title!=""]').qtip({
+        $('.tx_find [title!=""]').qtip({
         position: {
-          my: 'top-left',
-          at : 'center-center'
+          at : 'center-bottom'
         },
         style: {
           classes : 'qtip-dark'
@@ -75,6 +74,8 @@ $(function() {
         v = v.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
         that.text(v);
     });
+   
+    
     
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {

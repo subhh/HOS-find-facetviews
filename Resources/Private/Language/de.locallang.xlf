@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T11:07:56Z" product-name="hosfindfacetviews">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-23T07:48:42Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
 			<trans-unit id="missingtype">
@@ -45,11 +45,11 @@
 			</trans-unit>
 			<trans-unit id="goprev">
 				<source>Go to previous page of results. (Page %s)</source>
-				<target>Zur vorigen Ergebnisseite gehen. (Seite %s)</target>
+				<target>Zurück (Seite %s)</target>
 			</trans-unit>
 			<trans-unit id="gonext">
 				<source>Go to next page of results. (Page %s)</source>
-				<target>Zur folgenden Ergebnisseite gehen. (Seite %s)</target>
+				<target>Weiter (Seite %s)</target>
 			</trans-unit>
 			<trans-unit id="filter">
 				<source>Filter by %s</source>
@@ -97,11 +97,11 @@
 			</trans-unit>
 			<trans-unit id="removefilter">
 				<source>remove filter</source>
-				<target>Filter aufheben</target>
+				<target>Auswahl aufheben</target>
 			</trans-unit>
 			<trans-unit id="removefilter%">
 				<source>remove filter “%s”</source>
-				<target>Filter „%s“ aufheben</target>
+				<target>Auswahl „%s“ aufheben</target>
 			</trans-unit>
 			<trans-unit id="showall">
 				<source>show all</source>
