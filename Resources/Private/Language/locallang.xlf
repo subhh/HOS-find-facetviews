@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-23T07:48:42Z" product-name="hosfindfacetviews">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-24T11:17:30Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
 			<trans-unit id="missingtype">
@@ -107,6 +107,9 @@
 			</trans-unit>
 			<trans-unit id="helperpage">
 				<source>Help to search</source>
+			</trans-unit>
+			<trans-unit id="noresult">
+				<source>Sorry, no results could be found for your search.</source>
 			</trans-unit>
 		</body>
 	</file>

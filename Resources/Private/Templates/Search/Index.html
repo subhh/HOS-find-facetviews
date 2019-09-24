@@ -31,7 +31,9 @@
             <f:for each="{arguments.q}" as="what" key='where'>
                <f:if condition="{what} !=  ''">
                   <h3 class="notfoundmessage">
-                       Es konnten leider keine Ergebnisse für Ihre Suchanfrage „{what}“ gefunden werden.
+                     <f:translate  key="LLL:{settings.languageRootPath}locallang.xlf:noresult"
+                     />
+ 
                  </h3>
                </f:if>
             </f:for>
