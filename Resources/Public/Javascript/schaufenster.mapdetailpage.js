@@ -28,7 +28,8 @@ function createMapView(fields,tileprovider) {
      latlng = [53.5909502,9.972821]; //for position of pin and center of map
   }
   // Ticket #140
-  if (fields.collection.match(/UHH/)) {
+  console.log(fields.collection);
+  if (fields.collection.match(/ UHH/)) {
      latlng = [53.5630101,9.9870572]; //for position of pin and center of map  
   }
   
