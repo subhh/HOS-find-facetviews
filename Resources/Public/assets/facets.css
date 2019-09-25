@@ -47,34 +47,27 @@
 }
 
 /* for collections/Quellsystem */
-.facet-id-Quellsystem li[value='Forschungsinformationssystem UHH']:before {
+
+.facet-id-Quellsystem li[value*=' UHH']:before {
     background-image: url(collections/uhh.png);
 }
-.facet-id-Quellsystem li[value='Forschungsinformationssystem UKE']:before {
+
+.facet-id-Quellsystem li[value~='UKE']:before {
     background-image: url(collections/uke.png);
 }
-.facet-id-Quellsystem li[value='E-Dissertationen der UHH']:before {
-    background-image: url(collections/uhh.png);
-}
-.facet-id-Quellsystem li[value='Hochschulschriftenserver der HAW Hamburg']:before {
+.facet-id-Quellsystem li[value~='HAW']:before {
     background-image: url(collections/haw.png);
 }
-.facet-id-Quellsystem li[value='Forschungsdaten DKRZ']:before {
+.facet-id-Quellsystem li[value~='DKRZ']:before {
     background-image: url(collections/dkrz.png);
 }
-.facet-id-Quellsystem li[value='Open-Access-Publikationen TUHH']:before {
-    background-image: url(collections/tuhh.png);
-}
-.facet-id-Quellsystem li[value='Volltextserver der HSU']:before {
+.facet-id-Quellsystem li[value~='HSU']:before {
     background-image: url(collections/hsu.png);
 }
-.facet-id-Quellsystem li[value='Volltextserver der HCU']:before {
+.facet-id-Quellsystem li[value~='HCU']:before {
     background-image: url(collections/hcu.png);
 }
-.facet-id-Quellsystem li[value='Forschungsdatenrepositorium der UHH']:before {
-    background-image: url(collections/uhh.png);
-}
-.facet-id-Quellsystem li[value='TUHH @ Zenodo']:before {
+.facet-id-Quellsystem li[value~='TUHH']:before {
     background-image: url(collections/tuhh.png);
 }
 
