@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-24T11:17:30Z" product-name="hosfindfacetviews">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-26T08:25:01Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
 			<trans-unit id="missingtype">
@@ -35,6 +35,12 @@
 			</trans-unit>
 			<trans-unit id="goprev">
 				<source>Go to previous page of results. (Page %s)</source>
+			</trans-unit>
+			<trans-unit id="golast">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="gofirst">
+				<source></source>
 			</trans-unit>
 			<trans-unit id="gonext">
 				<source>Go to next page of results. (Page %s)</source>

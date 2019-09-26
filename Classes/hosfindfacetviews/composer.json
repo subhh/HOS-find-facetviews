@@ -1,0 +1,25 @@
+{
+  "name": "subhh/hosfindfacetviews",
+  "description": "Discovery portal for HamburgOpenScience: extension of Typo3find of subugoe",
+  "type": "typo3-cms-extension",
+  "keywords" : ["TYPO3 CMS","Hamburg Open Science","Discovery"],
+  "license": ["GPL-2.0+"],
+  "version" : "0.1.1",
+  "state" : "stable",
+  "maintainers": [
+            {
+                "name": "Staats- und Universitätsbibliothek Carl von Ossietzky, Hamburg",
+                "avatar": "https://secure.gravatar.com/avatar/b3bc58170a7c6b76ccb4e523a03b1269"
+            }
+        ],
+  "authors" : [
+  {
+      "name" : "Dipl.-Ing. Rainer Schleevoigt",
+      "email" : "rainer.schleevoigt@sub.uni-hamburg.de",
+      "avatar": "https://secure.gravatar.com/avatar/b3bc58170a7c6b76ccb4e523a03b1269",
+      "role" : "Developer"
+    }
+  ],
+  "require": {
+  }
+}

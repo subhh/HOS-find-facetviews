@@ -1,0 +1,71 @@
+{namespace s=Subugoe\Find\ViewHelpers}
+
+<f:alias map="{
+  valueOpen:'{facetInfo.values.Open}',
+  labelOpen:'{facetInfo.labels.Open}',
+  valueAll:'{facetInfo.values.All}',
+  labelAll:'{facetInfo.labels.All}',
+  labelClose:'{facetInfo.labels.Close}', 
+  valueClose:'{facetInfo.values.Close}'
+}">
+
+<f:for each="{config.activeFacets.OpenAccess}" as="item">
+    <f:variable name="filter" value="{item.term}" />
+</f:for>
+
+<div class="tx_discovery_3stateswitch"
+        data-toast="{facetInfo.toast}">
+  <link href="{facetInfo.csspath}" rel="stylesheet" />
+  <div class="switch-toggle switch-3 switch-candy">
+  
+    <input id="on" data-link='{f:uri.action(
+        addQueryString : "TRUE",
+        arguments : "{s:find.facetLinkArguments(facetID:facetInfo.id,
+        facetTerm:valueOpen, activeFacets:config.activeFacets)}",
+        argumentsToBeExcludedFromQueryString :
+        "{0:\"{config.prefixID}[page]\",1:\"{config.prefixID}[facet][{facetInfo.id}]}\"}",
+        section : "{settings.jumpToID}",
+        noCacheHash : "1"
+)}' name="state-d" type="radio" <f:if condition="{filter}=={valueOpen}">checked</f:if>> 
+    <label for="on" value="{valueOpen}">{labelOpen}</label>
+ 
+    <input id="na" data-link='{f:uri.action(
+        addQueryString : "TRUE",
+        argumentsToBeExcludedFromQueryString :
+        "{0:\"{config.prefixID}[page]\",1:\"{config.prefixID}[facet][{facetInfo.id}]}\"}",
+        section : "{settings.jumpToID}",
+        noCacheHash : "1"
+)}' name="state-d" type="radio" <f:if condition="{filter}=={valueAll} || {filter}==''">checked</f:if>>
+    <label for="na" value="{valueAll}">{labelAll}</label>
+
+
+    <input id="off" data-link='{f:uri.action(
+        addQueryString : "TRUE",
+        arguments : "{s:find.facetLinkArguments(facetID:facetInfo.id,
+        facetTerm:valueClose, activeFacets:config.activeFacets)}",
+        argumentsToBeExcludedFromQueryString :
+        "{0:\"{config.prefixID}[page]\",1:\"{config.prefixID}[facet][{facetInfo.id}]}\"}",
+        section : "{settings.jumpToID}",
+        noCacheHash : "1"
+)}' name="state-d" type="radio" <f:if condition="{filter}=={valueClose}">checked</f:if>>
+    <label for="off" value="{valueClose}">{labelClose}</label><a></a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+$('.tx_discovery_3stateswitch label').click(function(e) {
+      const that = $(this);
+      const link = $('#'+that.attr('for')).data('link');
+      const elem = $('.tx_discovery_3stateswitch');
+      const filter = $(this)[0].innerText;
+      if ($.toast) 
+        $.toast({
+              message: elem.attr('data-toast').replace('%s',filter),
+              timeout: 3000, 
+        });
+    self.location = link;;
+});
+});
+</script>
+</f:alias>

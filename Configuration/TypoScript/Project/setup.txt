@@ -18,8 +18,13 @@ plugin.tx_find {
 	    20 = EXT:hosfindfacetviews/Resources/Public/assets/facets.css
 	}
 	pid = 281
+	socialmeta {
+		image = https://openscience.hamburg.de/typo3conf/ext/demotemplate/Resources/Public/Images/logo.png
+		site  = openscience.hamburg.de
+		sitename = Hamburg Open Science
+    	}
     }	
-
+    	
     view {
         partialRootPaths {
             20 = EXT:hosfindfacetviews/Resources/Private/Partials

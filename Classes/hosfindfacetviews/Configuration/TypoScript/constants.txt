@@ -1,0 +1,12 @@
+plugin.tx_schaufenster {
+    settings {
+        connections {
+            default {
+                options {
+                    # cat=plugin.tx_find/connections/default; type=string; label=Path to the solr core in u
+                    path = /solr/HOS
+                }
+            }
+        }
+    }
+}

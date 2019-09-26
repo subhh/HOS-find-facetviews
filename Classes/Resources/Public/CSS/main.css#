@@ -1,0 +1,347 @@
+/*
+
+BLUE1= #4E7985
+BLUE2= #659BAC
+BLUE3= #94B2BB
+BLUE4= #ACD5E0
+
+*/
+
+* {
+//    font-family: "Roboto Condensed";
+}
+
+
+.tx_find .facets {
+  float:left!important;
+  clear:left!important;
+  width:300px!important
+}
+
+
+
+#c3 p,#c3 a{
+  color:white
+}
+
+
+.formFields .fieldContainer label {
+  display:none!important
+ }
+
+.formFields {
+  margin-top:3px!important
+}
+.fieldContainer .inputContainer   {
+   margin-bottom:0!important;
+}
+.tx_find article.facet a, .tx_find .facet-type-Tabs a {
+  display:inline!important
+}
+
+.inputType-text {
+    width: 240px;
+    line-height: 17.5px;
+    font-weight: 400;
+    display:none;
+    background-color:white!important;
+    padding: 10.5px 0px!important;
+    font-size: 16px;
+    border: 1px solid #BCBCBC;
+    color: #4E7985!important;
+    margin: 2px 10px 0 0;
+}
+
+.tx_find form .submit {
+  height:42px!important;
+  margin: 5px 0 0 0!important
+}
+
+.controls select {
+//    padding: 10px 12px 10px 2px;
+    font-size: 20px;
+    border: 1px solid #BCBCBC;
+    color: #4E7985;
+    margin-left: 0;
+    margin-right: 15px;
+}
+.submit {margin: 0 15px 0 0 !important;
+    margin-top:3px!important;
+    padding: 9px 12px 9px 12px;
+    //background: url(../button_shadow_large.png) repeat-x bottom #39A7D8;
+    height:46px!important;
+    width:190px;
+   // border-radius: 6px;
+    color : #FFFFFF;
+    font-size: 14px;
+    text-shadow: 0px 1px 1px #1F6687;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.tx_find .results ol.resultList {
+  margin: 0  0 0 300px!important;
+  padding-right: 3em;
+  padding-top:1em;
+  list-style-type: none;
+}
+
+section.facets {
+  padding-top:1.2em;
+}
+
+
+a {
+    color: darkblue;
+}
+a:link, a:visited {
+    color: #4E7985;
+    text-decoration: none;
+}
+
+.resultList, .detail {
+    padding:10px;
+    margin:10px;
+    background-color: white;
+}
+.facets {
+    padding:5px;
+    margin-left:5px;
+    background-color: white
+}
+article p {
+    margin-top:5px;
+}
+article.detail dl {
+    padding: 0.5em;
+}
+article.detail dt {
+    float: left;
+    clear: left;
+    width: 190px;
+    text-align: right;
+    font-weight: bold;
+    color: #4E7985;
+}
+article.detail dt::after {
+    content: ": ";
+}
+
+dd li,dd ul {
+    margin : 0;
+    padding : 0;
+    list-style-type: none;
+}
+.previewDetails dt {color:#4E7985}
+.previewDetails dd {padding-right:15px}
+
+
+.awesome-marker svg {
+    font-size: 14px;
+    margin-top: 15px;
+    color:white
+}
+
+.tx_find dd  {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+.facets h3 {
+  display:none
+}
+iframe,.webui-popover-content,webui-popover {
+  padding:0!important;
+  overflow:hidden!important
+}
+.tx_find article.facet h1, .tx_find .facet-type-Tabs h1 {
+  text-transform : none!important
+}
+.ce-textpic {background-color:white;padding:0 0 0 10px}
+
+
+/** CSS for AUTOCOMPLETER */
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-state-active.ui-button:hover
+{
+  border: 1px solid #000;
+  background:darkblue;
+}
+
+
+/* =================================================*/
+ /* ******   CSS for SELECTOR
+ the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background: url(/typo3conf/ext/find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb!important;
+  color: darkblue!important
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: darkblue transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent darkblue transparent;
+  top: 18px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 1) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: darkblue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toast{ position:fixed;bottom:0;left:0;right:0;margin:0 auto;display:table;margin:1.5rem auto;padding:1.5rem 2rem;width:500px;-webkit-transform:translateY(200%);-ms-transform:translateY(200%);transform:translateY(200%);-webkit-transition:0.5s all;transition:0.5s
+all;opacity:0;background:darkblue}
+.toast.toast--shown{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:1}
+.toast .toast-close{float:right;cursor:pointer;margin-left:1em;}
+.toast .toast-button{float:right;background:inherit;font-size:1.2em;line-height:1.2em;margin:-0.5em;padding:0.5em;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
+.toast .toast-button:hover{background:#514951;}
+.toast .toast-button:active{background:#6b626b;}
+.toast-text {color:white}
+.toast-button, .toast-close {color:silver}
+.grayscale {
+    -webkit-filter: grayscale(99%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(99%);
+}
+
+/*
+#home-button {
+  position:absolute;
+  font-size:100px;
+  color:#4E7985;
+  line-height:0.55;
+  cursor:pointer
+}
+*/
+
+.schaufenster_synonymbar {
+  line-height:1.4em;
+  margin:10px 0 0 125px;
+  width:750px;);
+  font-size:0.77em;
+  display: none;
+
+  }
+
+.resourcetype-icon {margin:5px -7px -2px
+10px;font-size:1.9em;}
+
+.openaccess-icon {margin:5px 0 -3px -5px;font-size:2.0em;line-height:10px}
+
+.facetCollection {width:23px;border:1px solid silver}
+
+.resultCollection {
+width:15px;border:1px solid #ddd;
+margin-bottom:-2px;margin-left:10px}
+
+
+.icon-right-open {display:none}
+.field-rightsOA  {display:inline!important}
+
+.previewButton {color:#4E7985;cursor:context-menu;margin-left:10px}
+.previewDetails {display:table;width:100%}
+
+.facets article {border-top:black;background-color:white;padding:0}
+
+.facets article h1 {color:white;padding:3px;border-radius:
+0px;background-color:#4E7985;margin-bottom:10px!important}
+
+
+
+.tx_find .results .navigation {margin-bottom:0!important;clear:right}
+
+
+
+.notfoundmessage {
+  margin : 50px;
+  font-size: 42px;
+  color: #888;
+
+}
+/* color of oa switch  */
+.switch-candy a {background-color:#4E7985!important}
+.tx_find .facet-type-Tabs .facetActive {background-color:#94B2BB!important}
+
+
+
+
+
+article.detail dd {
+      margin: 0;
+      padding: 0 0 0 20px;
+}
+
+@media (min-width:920px) {
+        article.detail .group {
+                display : flex
+        }
+
+        article.detail .leftbox {
+                flex :1
+        }
+
+        article.detail .rightbox {
+                flex:1;
+                padding-left:25px;
+                min-height:480px   
+        }
+        article.detail dd {
+          margin: 0 0 0 20px;
+          padding: 0 0 0.5em 0.5em;
+       }
+}
+
+@media (min-width:680px) {
+        article.detail .leftbox {
+                display: block;
+        }
+        article.detail .rightbox {
+                display : block;
+                 min-height:480px
+        }
+        article.detail .leftbox dt {
+                text-align:left;
+                float:none;
+                display: block;
+        }
+        
+
+}
+
+.resultProgress {background-color:transparent;border:none}
+.resultProgress span {display:none}
+body {background-color:white;opacity:0.1}
+.fieldContainer .inputContainer {margin-left:10px!important}
+a:hover {color:#0e2f35}

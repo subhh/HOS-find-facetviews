@@ -15,25 +15,23 @@
         <v:page.header.meta additionalAttributes="{property: 'og:description'}" 
         	content="{document.fields.title.0}" />
         <v:page.header.meta additionalAttributes="{property: 'og:title'}" 
-        	content="👤{document.fields.creatorName.0}{document.fields.contributorName.0}" />
+        	content="{document.fields.creatorName.0}{document.fields.contributorName.0}" />
         <v:page.header.meta additionalAttributes="{property: 'og:image'}" 
-        	content="https://hosdev.sub.uni-hamburg.de/typo3conf/ext/discovery/Resources/Public/hoslogo.png"
+        	content="{settings.socialmeta.image}"
         	/>
-        <v:page.header.meta additionalAttributes="{property: 'og:type'}" content="website" />
-        <v:page.header.meta additionalAttributes="{property: 'og:site_name'}" 
-        	content="{config.pageTitle}" />
-        <v:page.header.meta name="twitter:card" content="summary" />
-        <v:page.header.meta name="twitter:site" content="openscience.hamburg.de" />
-        <v:page.header.meta name="twitter:domain" content="openscience.hamburg.de" />
-        <v:page.header.meta name="twitter:creator" 
-        	content="👤{document.fields.creatorName.0}{document.fields.contributorName.0}" />
+        	
+        <v:page.header.meta name="twitter:image" content="{settings.socialmeta.image}" />	
+        <v:page.header.meta name="twitter:site"  content="{settings.socialmeta.sitename}" />
+        <v:page.header.meta name="twitter:domain" content="{settings.socialmeta.site}" />
+        <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
+        
+        
         <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
         <f:render partial="Page/Standard" arguments="{_all}"/>
 
 <style>
 .breadcrumb {display:none}
 </style>
-
         <article class="detail">
           <h1><f:format.htmlentitiesDecode>
                 <f:render partial="Display/Field/Inline" 
