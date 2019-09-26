@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-26T10:51:19Z" product-name="hosfindfacetviews">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-26T13:11:34Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
 			<trans-unit id="goprev">
 				<source></source>
-				<target>Zurück (Seite %s)</target>
+				<target>Zurück</target>
 			</trans-unit>
 			<trans-unit id="golast">
 				<source></source>
-				<target>Letzte Seite</target>
+				<target>Zur letzten Seite</target>
 			</trans-unit>
 			<trans-unit id="gofirst">
 				<source></source>
-				<target>Erste Seite</target>
+				<target>Zur ersten Seite</target>
 			</trans-unit>
 			<trans-unit id="gonext">
 				<source>Go to next page of results. (Page %s)</source>
-				<target>Weiter (Seite %s)</target>
+				<target>Weiter</target>
 			</trans-unit>
 			<trans-unit id="facetfilterenabler">
 				<source>By clicking the result will filtered. You will only get results filtered by %s %s</source>
@@ -37,7 +37,7 @@
 			</trans-unit>
 			<trans-unit id="oaclosed">
 				<source></source>
-				<target>Suchergebnis auf Closed Access / unbekannt beschränken</target>
+				<target>Suchergebnis auf Closed Access / Unbekannt beschränken</target>
 			</trans-unit>
 			<trans-unit id="resultlist_title">
 				<source></source>
