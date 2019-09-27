@@ -28,7 +28,6 @@ function createMapView(fields,tileprovider) {
      latlng = [53.5909502,9.972821]; //for position of pin and center of map
   }
   // Ticket #140
-  console.log(fields.collection);
   if (fields.collection.match(/ UHH/)) {
      latlng = [53.5630101,9.9870572]; //for position of pin and center of map  
   }
@@ -49,7 +48,7 @@ function createMapView(fields,tileprovider) {
    var Marker = L.icon({
        iconUrl: ASSETS + fields.internal_institution_id + '.png',
        popupAnchor:  [0, -20],
-       iconSize:     [48, 48],
+       iconSize:     [25, 25],
   });
    const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
    const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';

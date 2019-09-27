@@ -11,8 +11,8 @@
 
 .facet-id-Quellsystem .facetList li:before,
 .facet-id-Institution .facetList li:before {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
     display: inline-block;
     content: ' ';
     margin-right: 2px;
@@ -27,56 +27,31 @@
 .facet-id-Institution .facetList li:before { left: 0;}
 }
 
-.facet-id-Institution li[value='uhh']:before {
-    background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png') -118px -10px;
-}
-.facet-id-Institution li[value='hcu']:before {
- background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png') -118px -124px;
-}
-.facet-id-Institution li[value='hsu']:before {
- background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png') -10px -124px;
-}
-.facet-id-Institution li[value='tuhh']:before {
- background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png') -226px -10px;
-}
-.facet-id-Institution li[value='haw']:before {
- background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png')
-    -226px -124px;
-}
-.facet-id-Institution li[value='dkrz']:before {
- background:
-    url('typo3conf/ext/hosfindfacetviews/Resources/Public/assets/collections/collections.png')
-    -334px -10px;
-}
-
 /* for collections/Quellsystem */
 
 .facet-id-Quellsystem li[value*=' UHH']:before {
-    background-image: url(collections/uhh.png);
+  background: url('collections.png') -0px -125px;
 }
 
-.facet-id-Quellsystem li[value~='UKE']:before {
-    background-image: url(collections/uke.png);
+
+.facet-id-Quellsystem li[value~='UKE']:before { 
+  background: url('collections.png') -0px -150px;
+
 }
 .facet-id-Quellsystem li[value~='HAW']:before {
-    background-image: url(collections/haw.png);
+ background: url('collections.png') -0px -100px;
 }
 .facet-id-Quellsystem li[value~='DKRZ']:before {
-    background-image: url(collections/dkrz.png);
+ background: url('collections.png') -0px -0px;
 }
 .facet-id-Quellsystem li[value~='HSU']:before {
-    background-image: url(collections/hsu.png);
+ background: url('collections.png') -0px -50px;
 }
 .facet-id-Quellsystem li[value~='HCU']:before {
-    background-image: url(collections/hcu.png);
+ background: url('collections.png') -0px -75px;
 }
 .facet-id-Quellsystem li[value~='TUHH']:before {
-    background-image: url(collections/tuhh.png);
+ background: url('collections.png') -0px -25px;
 }
 
 /* creators*/ 
