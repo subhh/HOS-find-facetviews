@@ -10,6 +10,7 @@ if (!file_exists($CACHEFOLDER)) {
 if (!file_exists($cache) || filemtime($cache)+TTL<  time()) {
     file_put_contents($cache,file_get_contents($url));
 }
+error_log($url);
 header('Content-type: image/png');
 echo file_get_contents($cache);
 exit;

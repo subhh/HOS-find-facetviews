@@ -25,14 +25,16 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 const TTL = 24*3600*100;
 $CACHEFOLDER = 'typo3temp/wmszwischenspeicher';
-$endpoint = GeneralUtility::_GP('endpoint');
+$endpoint = "https://geodienste.hamburg.de/HH_WMS_Geobasiskarten_GB";//GeneralUtility::_GP('endpoint');
+
 $layers =  GeneralUtility::_GP('layers');
 $srs =  GeneralUtility::_GP('srs');
 $size =  GeneralUtility::_GP('retina')*256;
 $bbox =  GeneralUtility::_GP('bbox');
 
-$querystring= 'service=WMS&request=GetMap&styles=&version=1.1.1&transparent=true&format=image/png';
-$querystring .= '&bbox='.$bbox.'&srs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
+$querystring= 'service=WMS&request=GetMap&styles=&version=1.1.3&transparent=true&format=image/png';
+$querystring .= '&bbox='.$bbox.'&crs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
+
 
 $url= $endpoint . '?' . $querystring;
 $cache = $CACHEFOLDER .'/' . md5($url) . '.png';
@@ -42,6 +44,7 @@ if (!file_exists($CACHEFOLDER)) {
 // not exists or older then a week
 if (!file_exists($cache) || filemtime($cache)+TTL<  time()) {
     file_put_contents($cache,file_get_contents($url));
+    error_log($url);
 }
 //header("Content-type: text/plain");
 

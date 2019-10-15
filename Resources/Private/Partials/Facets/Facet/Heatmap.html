@@ -20,8 +20,10 @@
     data-bigmap="{facetInfo.bigMap}"> 
   </div>
 
+
 <f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
 		<f:then>
+
 			<f:link.action
 				addQueryString="TRUE"
 				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"

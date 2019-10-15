@@ -33,9 +33,7 @@ function myHeatMap(props) {
 	        	retina : tileprovider.size.replace('@','').replace('x','') || 1,
 	        	attribution : ''//props.tileprovider.attribution
 	        }; 
-		tileLayer = tileprovider.dsvgo || true 
-			? L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions)
-			: L.tileLayer.wms(endpoint,tileoptions);
+		tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions);
 	} else {
 	}
 		
@@ -84,6 +82,7 @@ $(function() {
 		var that = $(this);
 		const geodata = cleanFacetDataGeolocation(JSON.parse(that.attr('data-facetdata')));
                 const tileProvider = that.data('tileprovider');
+                const link = that.data('link');
                 const smallMap = myHeatMap({
                 	container : this,
                 	geodata : geodata,
@@ -95,7 +94,7 @@ $(function() {
                         const querystring = encodeURI('tileprovider=' 
                         	+ JSON.stringify(tileProvider) 
                         	+ '&geodata='+JSON.stringify(geodata)+'&link='
-                        	+ escape(that.data('link')) );
+                        	+ escape(link));
                 // http://fancyapps.com/fancybox/3/docs/#iframe
                         $.fancybox.open({
                                 type : 'iframe',

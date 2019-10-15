@@ -91,9 +91,11 @@ var myHeatMap = function(props) {
 			tooltipp.setTooltipContent(geodata[0].count +' Dokumente von diesem Standort');
 			
 	});
-	circle.on('click',function(){
+	circle.on('click',function() {
+		console.log(link);
 		top.location= link.replace('%25s',nearestPoint.lat+ ','+nearestPoint.lng);
 	});		
+	 console.log(link);
 	map.fitBounds(bounds);
 	map.zoomIn();
 	$(function(){
