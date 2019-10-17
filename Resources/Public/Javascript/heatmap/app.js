@@ -70,22 +70,19 @@ var myHeatMap = function(props) {
 	circle.on('dragstart',function(){
 		tooltipp.closeTooltip();	
 	});
-	circle.on('dragend',function(){
+	circle.on('dragend',function(e){
 			var count =0;
 		    	// looking for nearest point:
 		    	geodata.forEach(function(item) {
-				item.dist = map.distance({
-					lat : item.lat,
-					lng : item.lng
-					}, circle.getLatLng());
+				item.dist = map.distance(L.latLng(item.lat,item.lng),circle.getLatLng());
 			});
-			geodata.sort(function(a, b) {
-				return a.dist > b.dist;
+			
+			var sortedList = geodata.sort(function(a, b) {
+				return a.dist - b.dist;
 			});
-			nearestPoint = {
-				lat : geodata[0].lat,
-				lng : geodata[0].lng
-			};
+			console.log(sortedList);	
+			const nearestPoint = L.latLng(sortedList[0].lat,sortedList[0].lng);
+			//alert(nearestPoint);	
 			circle.setLatLng(nearestPoint);
 			tooltipp.openTooltip();
 			tooltipp.setTooltipContent(geodata[0].count +' Dokumente von diesem Standort');
