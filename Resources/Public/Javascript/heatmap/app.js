@@ -70,6 +70,7 @@ var myHeatMap = function(props) {
 	circle.on('dragstart',function(){
 		tooltipp.closeTooltip();	
 	});
+	var nearestPoint;
 	circle.on('dragend',function(e){
 			var count =0;
 		    	// looking for nearest point:
@@ -80,19 +81,16 @@ var myHeatMap = function(props) {
 			var sortedList = geodata.sort(function(a, b) {
 				return a.dist - b.dist;
 			});
-			console.log(sortedList);	
-			const nearestPoint = L.latLng(sortedList[0].lat,sortedList[0].lng);
-			//alert(nearestPoint);	
+			nearestPoint = L.latLng(sortedList[0].lat,sortedList[0].lng);
 			circle.setLatLng(nearestPoint);
 			tooltipp.openTooltip();
 			tooltipp.setTooltipContent(geodata[0].count +' Dokumente von diesem Standort');
 			
 	});
 	circle.on('click',function() {
-		console.log(link);
-		top.location= link.replace('%25s',nearestPoint.lat+ ','+nearestPoint.lng);
+		const needle = encodeURI('[heatmap][%s]');			
+		top.location= link.replace(needle,'[heatmap]['+nearestPoint.lat+ ',' + nearestPoint.lng+']');
 	});		
-	 console.log(link);
 	map.fitBounds(bounds);
 	map.zoomIn();
 	$(function(){
