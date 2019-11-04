@@ -1,27 +1,27 @@
 function cleanFacetDataGeolocation(foo) {
- const list = Object.keys(foo).map(function(latlng){
- 	return {
- 		key : latlng,
- 		count:foo[latlng]
- 		};
- });
- const latlng  = list.filter(function(item){
- 	return (item.key.split(',')==null) ? false:true
- }).filter(function(item){
- 	const lat = item.key.split(',')[0];
- 	const lng = item.key.split(',')[1];
- 	return (!isNaN(parseFloat(lat)) && !isNaN(parseFloat(lng))) ? true : false;
+	const list = Object.keys(foo).map(function(latlng) {
+		return {
+			key : latlng,
+			count : foo[latlng]
+		};
+	});
+	const latlng = list.filter(function(item) {
+		return (item.key.split(',') == null) ? false : true;
+	}).filter(function(item) {
+		const lat = item.key.split(',')[0];
+		const lng = item.key.split(',')[1];
+		return (!isNaN(parseFloat(lat)) && !isNaN(parseFloat(lng))) ? true : false;
 
- });
- return latlng.map(function(item){
-	return {	lat : item.key.split(",")[0],
-		lng : item.key.split(',')[1],
-		value : Math.round(2*Math.sqrt(Math.sqrt(item.count))),
-		count : item.count
-	};
-    });	
+	});
+	return latlng.map(function(item) {
+		return {
+			lat : item.key.split(",")[0],
+			lng : item.key.split(',')[1],
+			value : Math.round(20 * Math.sqrt(item.count)),
+			count : item.count
+		};
+	});
 }
-
 
 function myHeatMap(props) {
 	var tileLayer;
@@ -34,9 +34,7 @@ function myHeatMap(props) {
 	        	attribution : ''//props.tileprovider.attribution
 	        }; 
 		tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, tileoptions);
-	} else {
-	}
-		
+	} 
 	var heatmapdata = props.geodata;
 	var container = $(props.container);
 	var useragent = navigator.userAgent;
@@ -71,8 +69,6 @@ function myHeatMap(props) {
 		max : 4,
 		data : heatmapdata
 	});
-//	map.zoomOut();
-//	map.zoomOut();
 	return map;
 };
 
@@ -95,7 +91,6 @@ $(function() {
                         	+ JSON.stringify(tileProvider) 
                         	+ '&geodata='+JSON.stringify(geodata)+'&link='
                         	+ escape(link));
-                // http://fancyapps.com/fancybox/3/docs/#iframe
                         $.fancybox.open({
                                 type : 'iframe',
                                 src : '/typo3conf/ext/hosfindfacetviews/Resources/Public/Javascript/heatmap/?'+querystring,
@@ -107,8 +102,5 @@ $(function() {
                                         showCloseButton : true,
                         });
                 });
-
-		
 	});
-
 });

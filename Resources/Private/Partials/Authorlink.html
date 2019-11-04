@@ -8,7 +8,8 @@
 	            arguments="{s:find.facetLinkArguments(facetID:'creatorname',
 	            facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"
 	            noCacheHash="1"
-	            >  {creatorname}<f:if condition="{iterator.isLast}"><f:then></f:then><f:else><f:if condition="{iterator.index} < 2 "><f:then>;</f:then><f:else></f:else></f:if></f:else></f:if>
+	            >{creatorname}<f:if condition="{iterator.isLast}"><f:then></f:then><f:else><f:if condition="{iterator.index} <
+	            >5 "><f:then>;</f:then><f:else></f:else></f:if></f:else></f:if>
 	            </f:link.action>	
 	</f:if>  
 </f:for>

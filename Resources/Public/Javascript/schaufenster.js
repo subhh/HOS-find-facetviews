@@ -74,9 +74,6 @@ $(function() {
         v = v.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
         that.text(v);
     });
-   
-    
-    
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
         var that = $(this);
@@ -98,21 +95,6 @@ $(function() {
         var link = identifier.text();
         identifier.html('<a href="https://nbn-resolving.org/' + link + '">' + link + '</a>');
     }
-    /*    
-    // Auto verlinkung der Schlagworte
-    $('.field-subject').each(function() {
-        var that = $(this);
-        var prop = that.text();
-        var link = '<a href="?tx_find_find%5Bfacet%5D%5BSubjects%5D%5B###NEEDLE###%5D=1&tx_find_find%5Bcontroller%5D=Search#tx_find">' + prop + '</a>';
-        that.html(link.replace('###NEEDLE###', encodeURI(prop)));
-    });*/
-
-    $('.field-publisher_facet').each(function() {
-        var that = $(this);
-        var prop = that.text();
-        var link = '<a href="?tx_find_find[facet][publisher][###NEEDLE###]=1&tx_find_find[controller]=Search#tx_find">' + prop + '</a>';
-        that.html(link.replace('###NEEDLE###', encodeURI(prop)));
-    });
 
 
     $('.field-subject_ddc').each(function() {

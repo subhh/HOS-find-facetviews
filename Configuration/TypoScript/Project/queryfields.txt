@@ -7,6 +7,13 @@ all {
     autocomplete = 1
     phrase = 1
 }
+geofilter {
+	id = geoLocationPoint
+	type = Hidden
+	hidden = 1
+	noescape = 1
+}
+
 title {
     id = titles
     noescape = 1
@@ -25,6 +32,7 @@ authors {
     autocompleteDictionary=creatorName
     phrase = 1
 }
+
 /*
 subjects {
     id = subjects
@@ -35,6 +43,7 @@ subjects {
     autocompleteDictionary=subject
     phrase = 1
       }
+
 publishers {
     id = publishers
     noescape = 1
@@ -44,6 +53,7 @@ publishers {
     autocompleteDictionary=publisher
     phrase = 1
       }
+
 fulltext {
     id = fulltext
     noescape = 1
