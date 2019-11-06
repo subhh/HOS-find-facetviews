@@ -4,6 +4,7 @@ defined('TYPO3_MODE') || die('Access denied.');
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['tile'] = 'EXT:'.$_EXTKEY . '/eID/GetTile.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['sitemap'] = 'EXT:'. $_EXTKEY.'/eID/Sitemap.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['orcid'] = 'EXT:'.$_EXTKEY.'/eID/Orcid.php';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['altmetrics'] = 'EXT:'.$_EXTKEY.'/eID/AltMetrics.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['detail'] = 'EXT:'. $_EXTKEY.'/eID/Detail.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['wms'] = 'EXT:'. $_EXTKEY.'/eID/GetWMS.php';
 

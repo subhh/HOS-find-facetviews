@@ -66,7 +66,35 @@ $(function() {
         style: {
           classes : 'qtip-dark'
         }
-    }); 
+    });
+    // altmetrics
+    $('.detail').each(function() {
+         const that = $(this); 
+         const url = that.data('altermetrics_url');
+         var am = {type:null,id:null};
+         var m;
+         console.log(url)
+         if (m = url.match(/doi.org\/(.*)/)) {
+           am.type = 'doi';
+           am.id = m[1];            
+        }
+         else if (m = url.match(/\/pubmed\/([\d]+)/)) {
+            am.type = 'pmi';
+            am.id=m[1];
+         }
+          else if (m = url.match(/ISBN:(.*)/)) {
+            am.type = 'isbn';
+            am.id=m[1];
+         }
+         console.log(am);
+         
+         $.ajax({url: '?eID=altmetrics&type='+am.type+'&id='+am.id}).then(function(content) {
+             const image = '<a href="'+content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
+             $('h1').prepend(image);
+             
+        });
+    });     
+     
     // decimal separator in facetCounts:
     $('.facetCount').each(function() {
         var that = $(this);

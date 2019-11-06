@@ -1,11 +1,14 @@
 const ORCID_ENABLED = false;
 
+const ORCID = '/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png';
+
 const ORCID_ENDPOINT = 'https://orcid.org/';
 const M = '👤'; 
 if (!OrcidCache) {
   var OrcidCache={};
 }
 $(function() {
+    
     /* Avatar malen */
     $('.field-creatorName_facet,.field-creatorName').each(function() {
         var that = $(this);
