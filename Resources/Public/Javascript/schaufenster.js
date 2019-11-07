@@ -70,30 +70,36 @@ $(function() {
     // altmetrics
     $('.detail').each(function() {
          const that = $(this); 
-         const url = that.data('altermetrics_url');
+         const urls = that.data('altermetrics_url');
          var am = {type:null,id:null};
          var m;
-         console.log(url)
-         if (m = url.match(/doi.org\/(.*)/)) {
+         urls.forEach(function(url) {
+         if (m = url.match(/doi\.org\/(.*)/)) {
            am.type = 'doi';
            am.id = m[1];            
         }
-         else if (m = url.match(/\/pubmed\/([\d]+)/)) {
-            am.type = 'pmi';
+         else if (m = url.match(/pubmed\/([\d]+)/)) {
+            am.type = 'pmid';
             am.id=m[1];
          }
           else if (m = url.match(/ISBN:(.*)/)) {
             am.type = 'isbn';
             am.id=m[1];
-         }
-         console.log(am);
-         
+         }});
          $.ajax({url: '?eID=altmetrics&type='+am.type+'&id='+am.id}).then(function(content) {
-             const image = '<a href="'+content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
+             const image = '<a title="Externer Link zur Altmetrics-Seite" href="'+content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
              $('h1').prepend(image);
              
         });
     });     
+    
+    // Handling of long creatorName lists:
+    $('ul.field-creatorName-group').each(function(){
+       const that = $(this);
+       console.log(that.children().length);
+    });
+    
+    
      
     // decimal separator in facetCounts:
     $('.facetCount').each(function() {

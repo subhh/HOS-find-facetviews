@@ -25,6 +25,10 @@
  * ************************************************************* */
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Utility\EidUtility;
+function get_http_response_code($url) {
+    $headers = get_headers($url);
+    return substr($headers[0], 9, 3);
+}
 $opts = [
     "http" => [
         "method" => "GET",
@@ -34,6 +38,7 @@ $opts = [
 $type = GeneralUtility::_GET('type');
 $id   = GeneralUtility::_GET('id');
 $url = 'https://api.altmetric.com/v1/'.$type.'/'.$id;
-$raw = file_get_contents($url, false, stream_context_create($opts));
+
+$raw = @file_get_contents($url, false, stream_context_create($opts));
 header('Content-type: application/json');
-echo($raw);
+echo( $raw? $raw: '{}');

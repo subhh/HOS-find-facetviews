@@ -26,6 +26,7 @@
 		<dd class="dd-{field}">
 			<f:if condition="{field} == 'url'">
                                 <f:then>
+
                                         <ul class="field-{field}-group">
                                                 <f:for each="{document.fields.url}" as="item">
                                                         <li>
@@ -36,6 +37,23 @@
                                                 </f:for>
                                         </ul>
                                 </f:then>
+                                
+                                <f:else if="{field} == 'creatorName'">
+                                 	<f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable> 		
+                                 	<f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable> 		
+                                 	<ul class="field-{field}-group">
+						<f:for each="{creatornames}" as="creatorname" iteration="nameiterator"> 
+							<f:variable name="orcid" value="{orcids.{nameiterator.index}}"></f:variable> 
+                                                        <li>
+							<f:if condition="{orcid} && {orcid} != '-'}">
+							  <a href="{orcid}" target="orcid" class="orcidlink"><img  style="width:14px;vertical-align:baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
+							</f:if>
+							<span class="field-{field}">{creatorname}</span>
+                                                        </li>
+                                                </f:for>
+                                        </ul>                                
+                                </f:else>
+			
 				<f:else>
 					<f:render
 						partial="Display/Field/List"

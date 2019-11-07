@@ -33,9 +33,9 @@
 .breadcrumb {display:none}
 </style>
         <article class="detail"
-        data-altermetrics_url="{results.documents.0.url.1}">
+        data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
           <h1><f:format.htmlentitiesDecode>
-                <f:render partial="Display/Field/Inline" 
+                <f:render partial="Display/Field/Inline" 	
                     arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
                 </f:format.htmlentitiesDecode></h1>
                 <div class="group">

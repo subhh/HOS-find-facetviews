@@ -1,15 +1,13 @@
 <f:for each="{creatornames}" as="creatorname" iteration="iterator"> 
 	<f:variable name="total" value="{iterator.total}"></f:variable> 
-
-	<f:for each="{orcids}" as="orcid" iteration="orciditerator">
-	<f:if condition="{iterator.index}=={orciditerator.index} && {orcid} != '-'}"><f:then>
-		<f:variable name="orcidurl" value="{orcid}"></f:variable></f:then></f:if></f:for>
+	<f:variable name="orcid" value="{orcids.{iterator.index}}"></f:variable> 
 
 	<f:if condition="{iterator.index} < 7">
-	        <f:if condition="{orcidurl}">
-	        	<a href="{orcidurl}" target="orcid" class="orcidlink"><img
+	        <f:if condition="{orcid}  && {orcid} != '-'}"><f:then>
+	        	<a href="{orcid}" target="orcid" class="orcidlink"><img
 	        	style="width:14px;vertical-align:
 	        	baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
+	        </f:then>
 	        </f:if>
 		<f:link.action
         	    addQueryString="FALSE"
