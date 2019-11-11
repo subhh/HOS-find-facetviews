@@ -1,11 +1,18 @@
 {namespace s=Subugoe\Find\ViewHelpers}
+
+
+<f:variable name="facetactive" value='<f:if condition="{config.queryString} ==
+\"*:*\""><f:then>false</f:then><f:else>true</f:else></f:if>'
+/>
+<f:variable name="title" value="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:facet_heatmap')}" />
 <div class="facetMap-container">
   <div id="schaufenster_heatmap" 
     class="heatmapContainer" 
     style="cursor:zoom-in"
-    title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:facet_heatmap')}"
+    title="<f:if condition='{facetactive}'><f:then></f:then><f:else>{title}</f:else></f:if>"
     data-facetdata="{f:format.json(value:facetData.values)}" 
-    data-fetchmaximum="{facetInfo.fetchMaximum}" 
+    data-fetchmaximum="{facetInfo.fetchMaximum}"
+    data-facetactive="{facetactive}"
     data-tileprovider="{f:format.json(value:facetInfo.tileprovider)}"
     data-link='{f:uri.action(
         addQueryString : "TRUE",
@@ -20,21 +27,30 @@
     data-bigmap="{facetInfo.bigMap}"> 
   </div>
 
-
-<f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
+  <!-- 
+      wenn mal Zeit ist:
+      1. bessere Bedingung
+      2. argumentsToBeExcludedFromQueryString ist jetzt fest codiert, muss
+      generalisiert werden schleera
+      
+      Ursache: internal_geoLocation kann nichts als Facette genommen werden,
+      da es vom Viewhelper als echte Geoposition falsch prozessiert wird. So
+      ist die Facette (internal_geoLocation_facet) in der Facette und dann
+      wird die Suche mit internal_geoLocation gestartet und das verträgt der
+      Mechanismus nicht.
+  -->
+  <f:if condition="{facetactive}">
 		<f:then>
-
-			<f:link.action
-				addQueryString="TRUE"
-				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
-				section=""
-				noCacheHash="TRUE"
-				class="icon-cancel facetRemove internal"
-			>	
-				<span style=";position: relative; top: 4px;padding-left: 0.2em;">
-				Geofilter deaktivieren</span></span>
-			</f:link.action>
+		<f:link.action
+                    addQueryString="TRUE"
+                    argumentsToBeExcludedFromQueryString="{ 1 :'tx_find_find[q][internal_geoLocation]'}"
+                    section=""
+                    noCacheHash="TRUE"
+                    class="icon-cancel facetRemove internal"><span style=";position: relative; top: 4px;padding-left: 0.2em;">Geofilter deaktivieren</span></f:link.action>
 		</f:then>
-</f:if>
+		<f:else>
+		
+		</f:else>
+   </f:if>
 
 </div>

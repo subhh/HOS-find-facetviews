@@ -38,20 +38,32 @@
                                         </ul>
                                 </f:then>
                                 
+                                
                                 <f:else if="{field} == 'creatorName'">
-                                 	<f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable> 		
+					<f:comment>Renders creatorNames</f:comment>       
+					<f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable> 		
                                  	<f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable> 		
+					<f:variable name="MAXCOUNT" value="7"></f:variable>
+
                                  	<ul class="field-{field}-group">
-						<f:for each="{creatornames}" as="creatorname" iteration="nameiterator"> 
-							<f:variable name="orcid" value="{orcids.{nameiterator.index}}"></f:variable> 
-                                                        <li>
+						<f:for each="{creatornames}" as="creatorname" iteration="it"> 
+							<f:variable name="total" value="{it.total}"></f:variable>
+							<f:variable name="orcid" value="{orcids.{it.index}}"></f:variable> 
+                                                        <li<f:if condition="{it.index+1}>{MAXCOUNT}"> style="display:none"</f:if>>
 							<f:if condition="{orcid} && {orcid} != '-'}">
 							  <a href="{orcid}" target="orcid" class="orcidlink"><img  style="width:14px;vertical-align:baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
 							</f:if>
-							<span class="field-{field}">{creatorname}</span>
+								<span class="field-{field}">{creatorname}</span>
                                                         </li>
                                                 </f:for>
-                                        </ul>                                
+                                                <f:if condition="{total}>{MAXCOUNT}">
+                                                <li class="facetShowAll"
+                                                style="display:list-item;cursor:pointer">
+                                                   <span style="font-size:8pt">Zeige mehr ({total}) …</span>
+                                                </li>	
+                                                </f:if> 
+                                        </ul>                             
+                                           
                                 </f:else>
 			
 				<f:else>
@@ -65,7 +77,7 @@
 							linkFacets:linkFacets
 						}"/>
 				</f:else>
-				
+				/Users/fuerst 
 			</f:if>
 		</dd>
 	</f:if>

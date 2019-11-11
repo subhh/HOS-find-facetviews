@@ -7,8 +7,9 @@ all {
     autocomplete = 1
     phrase = 1
 }
+
 geofilter {
-	id = geoLocationPoint
+	id = internal_geoLocation
 	type = Hidden
 	hidden = 1
 	noescape = 1

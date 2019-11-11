@@ -67,6 +67,7 @@ $(function() {
           classes : 'qtip-dark'
         }
     });
+    
     // altmetrics
     $('.detail').each(function() {
          const that = $(this); 
@@ -94,9 +95,13 @@ $(function() {
     });     
     
     // Handling of long creatorName lists:
-    $('ul.field-creatorName-group').each(function(){
+    $('ul.field-creatorName-group .facetShowAll').click(function(){
        const that = $(this);
-       console.log(that.children().length);
+       var ul = that.parent();
+       $('li',ul).each(function(){
+          $(this).show();
+       })
+       that.hide();
     });
     
     

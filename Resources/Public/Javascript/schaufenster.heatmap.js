@@ -78,13 +78,16 @@ $(function() {
 		var that = $(this);
 		const geodata = cleanFacetDataGeolocation(JSON.parse(that.attr('data-facetdata')));
                 const tileProvider = that.data('tileprovider');
+                
                 const link = that.data('link');
+                console.log(that.data('facetactive'));
+                const clickable = !that.data('facetactive');
                 const smallMap = myHeatMap({
                 	container : this,
                 	geodata : geodata,
                 	tileprovider : tileProvider
                 });
-                smallMap.on('click', function(e) {
+                if (clickable) smallMap.on('click', function(e) {
                         var height = $(window).height() * 0.66;
                         var width = $(window).width() * 0.66;
                         const querystring = encodeURI('tileprovider=' 

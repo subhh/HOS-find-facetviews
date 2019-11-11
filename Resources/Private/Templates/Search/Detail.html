@@ -35,11 +35,11 @@
         <article class="detail"
         data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
           <h1><f:format.htmlentitiesDecode>
-                <f:render partial="Display/Field/Inline" 	
-                    arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
-                </f:format.htmlentitiesDecode></h1>
-                <div class="group">
-                        <div class="leftbox">
+                <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
+                </f:format.htmlentitiesDecode>
+          </h1>
+          <div class="group">
+                <div class="leftbox">
                             <dl>
                                 <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
                                     <f:for each="{facetfields}" as="field">
@@ -48,13 +48,13 @@
                                     </f:for>
                                 </v:iterator.explode>
                             </dl>
-                        </div>
-                        <div class="rightbox"
-                                id="map" 
-                                style="height-min:500px"
-                                data-tileprovider="{f:format.json(value:settings.facets.heatmap.tileprovider)}"
-                                data-fields="{f:format.json(value:document.fields)}">
-                        </div>
                 </div>
-        </article>
+                <div class="rightbox"
+                        id="map" 
+                        style="height-min:500px"
+                        data-tileprovider="{f:format.json(value:settings.facets.heatmap.tileprovider)}"
+                        data-fields="{f:format.json(value:document.fields)}">
+                </div>
+        </div>
+    </article>
 </f:section>

@@ -1,5 +1,5 @@
 
-1 {
+ACL {
             id = Zugriff
             hiddenheader = 1
             field = rightsOA
@@ -19,7 +19,7 @@
             }
 } 
 
-2 {
+SRC {
                 id=Quellsystem 
                 displayDefault = 25
                 query = (collection:"%s")
@@ -30,9 +30,10 @@
 
 
 
-heatmap {
+GEO {
             id = heatmap
-            type = Heatmap
+            displayDefault = 99999
+	    type = Heatmap
             field = internal_geoLocation_facet
             bigMap = 1  
             dsvgo = 1
@@ -53,9 +54,7 @@ heatmap {
             }
             fetchMaximum = 1000
         }
-       
-
-3 {
+YEAR {
              id = publicationYear
              type = ListReverse
    	     maxValues = 5
@@ -68,40 +67,7 @@ heatmap {
              minYear = 1958
   }
 
-5        {
-             id = publisher
-             query = (publisher_facet:"%s")
-             excludeOwnFilter = 1
-             hidden = 1
-             field = publisher_facet
-                 type = Pie
-                pieType = doughnut
-                maxValues = 5
-                pieHeight = 100  
-}
-
-6 {
-                type = Wordcloud
-                cloudHeight = 100
-                maxValues = 5
-                hidden = 1
-                fontFamily = Roboto Condensed   
-                id = Schlagworte
-                query = (subject:"%s")
-                field = subject
-}
-
-7 {
-             id = ddc
-             displayDefault = 12
-             hidden = 1
-
-             type=DDC
-             query = (subject_ddc:"%s")
-             field = subject_ddc
-}
-
-8  {
+AUTHOR  {
              id = creatorname
              displayDefault = 5
              query = (creatorName_facet:"%s")
@@ -111,16 +77,7 @@ heatmap {
              autocomplete = 0
  }
 
-9 {
-            id = resourcetype
-            field = resourceType
-            type = List
-             maxValues = 5
-	    displayDefault = 5
-            hidden=1
-            query = (resourceType:"%s")
-      }
-10 {
+LANG {
             id=language
             field = language
             hidden = 0

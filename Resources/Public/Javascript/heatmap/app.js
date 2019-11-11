@@ -68,12 +68,9 @@ var myHeatMap = function(props) {
 		const filter = '['+selectedBounds._southWest.lat+','+selectedBounds._southWest.lng 
 			+ '%20TO%20'
 			+ selectedBounds._northEast.lat + ',' + selectedBounds._northEast.lng + ']';
-		const geofilter = 'tx_find_find%5Bq%5D%5DgeoLocationPoint%5D=' + filter + '&';	
+		const geofilter = 'tx_find_find%5Bq%5D%5Binternal_geoLocation%5D=' + filter + '&';	
                 const needle = 'tx_find_find%5Bfacet%5D%5Bheatmap%5D%5B%25s%5D=1&';
-                console.log(geofilter);
                 const currentlink = link.replace(needle,geofilter);
-                console.log(currentlink)
- 
                 top.location=currentlink;
         });
 	$(function(){
