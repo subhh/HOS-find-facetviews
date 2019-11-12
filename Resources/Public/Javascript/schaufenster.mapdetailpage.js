@@ -35,7 +35,7 @@ function createMapView(fields,tileprovider) {
   const endpoint = tileprovider.endpoint + tileprovider.service;
   const tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, {
         layers : tileprovider.layers,
-        retina : tileprovider.size.replace('@','').replace('x','') || 1,
+        retina : tileprovider.size ? tileprovider.size.replace('@','').replace('x','') || 1: 2,
         attribution : 'Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung'
   });
   const Map = L.map('map',{

@@ -19,13 +19,10 @@
         <v:page.header.meta additionalAttributes="{property: 'og:image'}" 
         	content="{settings.socialmeta.image}"
         	/>
-        	
         <v:page.header.meta name="twitter:image" content="{settings.socialmeta.image}" />	
         <v:page.header.meta name="twitter:site"  content="{settings.socialmeta.sitename}" />
         <v:page.header.meta name="twitter:domain" content="{settings.socialmeta.site}" />
         <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
-        
-        
         <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
         <f:render partial="Page/Standard" arguments="{_all}"/>
 
@@ -52,7 +49,7 @@
                 <div class="rightbox"
                         id="map" 
                         style="height-min:500px"
-                        data-tileprovider="{f:format.json(value:settings.facets.heatmap.tileprovider)}"
+                        data-tileprovider="{f:format.json(value:settings.facets.GEO.tileprovider)}"
                         data-fields="{f:format.json(value:document.fields)}">
                 </div>
         </div>

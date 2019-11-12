@@ -4,7 +4,7 @@
 
 	<f:if condition="{iterator.index} < 7">
 	        <f:if condition="{orcid}  && {orcid} != '-'}"><f:then>
-	        	<a href="{orcid}" target="orcid" class="orcidlink"><img
+	        	<a href="{orcid}" rel="noreferrer" target="orcid" class="orcidlink"><img
 	        	style="width:14px;vertical-align:
 	        	baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
 	        </f:then>
@@ -12,6 +12,7 @@
 		<f:link.action
         	    addQueryString="FALSE"
 	            section=""
+	            rel="noreferrer"
 	            title="{f:translate(arguments:{0:creatorname},key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:resultlist_author')}"
 	            arguments="{s:find.facetLinkArguments(facetID:'creatorname',
 	            facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"

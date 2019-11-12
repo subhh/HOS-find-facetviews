@@ -41,7 +41,6 @@ GEO {
             tileprovider  {
 	           type = wms
 	           endpoint = https://geodienste.hamburg.de/
-	      //     service  = HH_WMS_DISK60 
   		   service = HH_WMS_Geobasiskarten_GB		        
    		   layers  = 6,10,18,26,2,14,2,30
 	           crs = EPSG:3857

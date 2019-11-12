@@ -73,7 +73,7 @@ $(function() {
           if (orcids.length)
               for (var i = 0; i < orcids.length; i++) {
                   var orcid = orcids[i];
-                  that.append(' <a href="'+ ORCID_ENDPOINT + orcid + '" orcid="' + orcid + '" ><img src="https://orcid.org/sites/default/files/images/orcid_16x16(1).gif" /></a>');
+                  that.append(' <a rel="noreferrer" href="'+ ORCID_ENDPOINT + orcid + '" orcid="' + orcid + '" ><img src="https://orcid.org/sites/default/files/images/orcid_16x16(1).gif" /></a>');
                   addOrcidPreview($('[orcid=' + orcid + ']'), orcid);
               }
           else that.html(M+ html);

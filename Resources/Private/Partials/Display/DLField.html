@@ -51,7 +51,7 @@
 							<f:variable name="orcid" value="{orcids.{it.index}}"></f:variable> 
                                                         <li<f:if condition="{it.index+1}>{MAXCOUNT}"> style="display:none"</f:if>>
 							<f:if condition="{orcid} && {orcid} != '-'}">
-							  <a href="{orcid}" target="orcid" class="orcidlink"><img  style="width:14px;vertical-align:baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
+							  <a rel="noreferrer" href="{orcid}" target="orcid" class="orcidlink"><img  style="width:14px;vertical-align:baseline;margin-right:-3px;margin-bottom:-2px" src="/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png" /></a>
 							</f:if>
 								<span class="field-{field}">{creatorname}</span>
                                                         </li>
@@ -77,7 +77,6 @@
 							linkFacets:linkFacets
 						}"/>
 				</f:else>
-				/Users/fuerst 
 			</f:if>
 		</dd>
 	</f:if>
