@@ -25,6 +25,8 @@
  * ************************************************************* */
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Utility\EidUtility;
+
+
 // http://members.orcid.org/api/tutorial/search-orcid-registry
 function getOptionsFromTS() {
   /** @var TypoScriptFrontendController  $tsfc */
@@ -52,9 +54,11 @@ function getOptionsFromTS() {
   }
   return "";
 }
+
 $CACHEFOLDER = 'typo3temp/discovery/';
 $FilenameOfJsonCache = $CACHEFOLDER . 'ORCIDCACHE';
 $FilenameOfJavascriptCache = $CACHEFOLDER . 'ORCIDCACHE.js';
+
 if (!file_exists($CACHEFOLDER)) {
     mkdir($CACHEFOLDER);
 }
@@ -64,12 +68,14 @@ if (!file_exists($FilenameOfJsonCache)) {
 if (!file_exists($FilenameOfJavascriptCache)) {
     file_put_contents($FilenameOfJavascriptCache,"var OrcidCache={};");
 }
+
 $opts = [
     "http" => [
         "method" => "GET",
-        "header" => "Accept: application/json\r\nAuthorization type: Bearer\r\nAccess token: ".getOptionsFromTS()['accesstoken'],
+        "header" => "Accept: application/json\r\nAuthorization type: Bearer\r\nAccess token: 2b23b44c-1590-414c-bdb3-37a36b5e5c23"
     ]
 ];
+
 $action = GeneralUtility::_GET('action');
 switch ($action) {
   case 'search':
@@ -92,6 +98,7 @@ switch ($action) {
     $url = 'https://pub.orcid.org/v2.1/'.$orcid.'/'.$action;
   break;
 }
+
 $PaylodFromORCID_Server = file_get_contents($url, false, stream_context_create($opts));
 // very long time waiting …………
 header('Content-type: application/json');

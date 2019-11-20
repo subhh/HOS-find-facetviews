@@ -23,9 +23,28 @@ plugin.tx_find {
 		site  = openscience.hamburg.de
 		sitename = Hamburg Open Science
     	}
+	features {
+		altmetrics  {
+			enabled = 1
+			externalLink = 1	
+		}
+		orcid {
+			enabled = 1
+			externalLink = 1
+			style = width:16px;margin-right:3px;
+			image = typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png	
+		}
+		externalLinks {
+		        preview {
+                        	enabled = 1 
+			}
+		}
+
+	}
     }	
     	
     view {
+	
         partialRootPaths {
             20 = EXT:hosfindfacetviews/Resources/Private/Partials
         }
@@ -41,12 +60,6 @@ plugin.tx_find.settings.facets.heatmap.tileprovider.service = HH_WMS_Kombi_DISK_
 plugin.tx_find.settings.facets.heatmap.tileprovider.layers = 6,10,18,26,2,14,22
 
 plugin.tx_find.settings.facets.heatmap.tileprovider.crs = EPSG:3857
-
-
-
-
-
-plugin.tx_hosfindfacetviews.settings.orcid.oauth.accesstoken=2b23b44c-1590-414c-bdb3-37a36b5e5c23
 
 config.tx_realurl_enable = 1
 config.absRefPrefix = /

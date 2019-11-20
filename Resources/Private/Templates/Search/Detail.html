@@ -30,7 +30,11 @@
 .breadcrumb {display:none}
 </style>
         <article class="detail"
-        data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
+         <f:if condition="{settings.features.altmetrics.enabled}">
+                 <f:then>
+                         data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
+                 </f:then>
+          </f:if>
           <h1><f:format.htmlentitiesDecode>
                 <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
                 </f:format.htmlentitiesDecode>

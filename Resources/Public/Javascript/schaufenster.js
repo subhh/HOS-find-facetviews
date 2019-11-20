@@ -16,6 +16,51 @@ function getIntWithDot(intString){
 }
 
 
+function getOG() {
+   const that=$(this);
+   $.ajax({
+     url:'?eID=og&site='+ encodeURIComponent(that.attr('href'))
+     }).done(function(og){
+          console.log(og);
+          });
+}
+
+
+function addPreviewToUrl() {
+        const that= $(this);
+	that.css('opacity',0.7);
+	const imageurl = '?eID=thumbnail&site='+ encodeURIComponent(that.attr('href')); 
+	$.ajax(imageurl).done(function(){
+	    that.css('opacity',1);
+	    console.log(imageurl + ' cached');
+	    
+        const BERT = '/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/bert.gif';
+	const id = (''+Math.random()).replace('0.','экстернlink_');
+
+	const text = '<b>Externer Link</b><br/><img width="100%" src="'+BERT+'" />';
+	that.qtip({
+	        prerender:true,
+		content: {
+			text:function(event,api){
+				$.ajax({ url: imageurl }).done(function(img) {
+					const txt = text.replace(BERT,img);
+					api.set('content.text',txt)
+				});
+				return text;
+			}
+		},
+		position: {
+                 target: 'mouse', // Position at the mouse...
+             adjust: { mouse: false } // ...but don't follow it!
+    },
+		style : {classes:'qtip-dark'}
+	});
+	    
+        }); // precaching
+
+}
+
+
 function setResultCounterDecimalSeperator(){
     const SEP = /([0-9]+)([\D]+)([0-9]+)/;
     
@@ -63,11 +108,15 @@ $(function() {
         position: {
           at : 'center-bottom'
         },
+         position: {
+                 target: 'mouse', // Position at the mouse...
+             adjust: { mouse: false }} ,
         style: {
           classes : 'qtip-dark'
         }
     });
-    
+ //   $('.field-url-group .field-url a').each(getOG);
+    $('.field-url a.externalLinkHasPreview').each(addPreviewToUrl);
     // altmetrics
     $('.detail').each(function() {
          const that = $(this); 
@@ -102,6 +151,16 @@ $(function() {
           $(this).show();
        })
        that.hide();
+       $('ul.field-creatorName-group .facetShowLess').show();
+    });
+    $('ul.field-creatorName-group .facetShowLess').click(function(){
+       const that = $(this);
+       var ul = that.parent();
+       $('li.hiddenli').each(function(){
+          $(this).hide();
+       })
+       that.hide();
+       $('ul.field-creatorName-group .facetShowAll').show();
     });
     
     
@@ -169,26 +228,9 @@ $(function() {
         var that = $(this);
         that.html(that.html().replace(/&lt;/gm,'<').replace(/&gt;/gm	,'>'));
     }); 
-
     $('#facetsonoff').on('click',function(){toggleFacets()});
-
-
-    function renderLinks(links) {
-       if (Array.isArray(links)) {
-           var result="";
-           links.forEach(function(url){
-               if (!url.match('resolving'))
-                  url= url.replace('urn:','https://nbn-resolving.org/urn:');
-               const a = '<a title="Link zum externen Dokument" class="screenshot_preview" href="'+url+'">' + url +'</a>';
-               const link = (url.match('\/\/doi\.org')) ? '<li><img src="typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/doi.png" width="14" /> ' + a : '<li>⇢ '+a;
-               result += link;    
-           });
-           return result; 
-       }    
-    }
     $('.previewButton').click(function(){
         var that = $(this);
-
         const container = that.parent().parent().children().last();
         //container.css('height',0);
         if (that.text()=='▼') {

@@ -7,6 +7,8 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['orcid'] = 'EXT:'.$_EXTKEY.'/eI
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['altmetrics'] = 'EXT:'.$_EXTKEY.'/eID/AltMetrics.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['detail'] = 'EXT:'. $_EXTKEY.'/eID/Detail.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['wms'] = 'EXT:'. $_EXTKEY.'/eID/GetWMS.php';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['thumbnail'] = 'EXT:'. $_EXTKEY.'/eID/Thumbnail.php';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['og'] = 'EXT:'. $_EXTKEY.'/eID/OpenGraph.php';
 
 $TYPO3_CONF_VARS['EXTCONF']['realurl'] =  array(
         '_DEFAULT' => array(
