@@ -31,25 +31,16 @@ $layers =  GeneralUtility::_GP('layers');
 $srs =  GeneralUtility::_GP('srs');
 $size =  GeneralUtility::_GP('retina')*256;
 $bbox =  GeneralUtility::_GP('bbox');
+$key = 'wms_'. $bbox;
+
 
 $querystring= 'service=WMS&request=GetMap&styles=&version=1.1.3&transparent=true&format=image/png';
 $querystring .= '&bbox='.$bbox.'&crs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
-
-
 $url= $endpoint . '?' . $querystring;
-$cache = $CACHEFOLDER .'/' . md5($url) . '.png';
-if (!file_exists($CACHEFOLDER)) {
-    mkdir($CACHEFOLDER, 0777, true);
-}
-// not exists or older then a week
-if (!file_exists($cache) || filemtime($cache)+TTL<  time()) {
-    file_put_contents($cache,file_get_contents($url));
-    error_log($url);
-}
-//header("Content-type: text/plain");
+
+if (!apc_fetch($key)) apc_add($key,base64_encode(file_get_contents($url)),TTL);
 
 header('Content-type: image/png');
-echo file_get_contents($cache);
-error_log("URL=");
-error_log($url);
+echo base64_decode(apc_fetch($key));
 exit;
+?>

@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'rainer.schleevoigt@sub.uni-hamburg.de',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
-    'version' => '0.1.4',
+    'version' => '0.1.6',
     'constraints' => [
         'depends' => [
             'find' => '^3.1.1',
@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'SubHH\\Schaufenster\\' => 'Classes'
+            'Subhh\\Hosfindfacetviews\\' => 'Classes'
         ]
     ],
 ];

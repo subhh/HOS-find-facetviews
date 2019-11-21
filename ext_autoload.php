@@ -1,8 +1,8 @@
 <?php
 
-use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+//use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-return [
-    'OpenGraph' => ExtensionManagementUtility::extPath('hosfindfacetviews') . 'Resources/Private/Library/OpenGraph.php'
-];
+//return [
+//    'OpenGraph' => ExtensionManagementUtility::extPath('hosfindfacetviews') . 'Classes/Utility/OpenGraph/OpenGraph.php'
+//];
 ?>

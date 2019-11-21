@@ -27,8 +27,9 @@ function getOG() {
 
 
 function addPreviewToUrl() {
+        console.log('######');
         const that= $(this);
-	that.css('opacity',0.7);
+	that.css('opacity',0.8);
 	const imageurl = '?eID=thumbnail&site='+ encodeURIComponent(that.attr('href')); 
 	$.ajax(imageurl).done(function(){
 	    that.css('opacity',1);
@@ -137,9 +138,10 @@ $(function() {
             am.id=m[1];
          }});
          $.ajax({url: '?eID=altmetrics&type='+am.type+'&id='+am.id}).then(function(content) {
-             const image = '<a title="Externer Link zur Altmetrics-Seite" href="'+content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
-             $('h1').prepend(image);
-             
+             const id = ('altmetricslink_'+ Math.random()).replace('.','');
+             const link = '<a id="'+id+'" href="' + content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
+             $('h1').prepend(link);
+             $('#'+id).each(addPreviewToUrl);
         });
     });     
     
