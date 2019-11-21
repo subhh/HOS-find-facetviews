@@ -14,8 +14,7 @@
 	Original can be found at https://github.com/scottmac/opengraph/blob/master/OpenGraph.php
    
 */
-class OpenGraph implements Iterator
-{
+class OpenGraphLib implements Iterator {
   /**
    * There are base schema's based on type, this is just
    * a map so that the schema can be obtained

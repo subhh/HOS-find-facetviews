@@ -38,7 +38,7 @@ function addPreviewToUrl() {
         const BERT = '/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/bert.gif';
 	const id = (''+Math.random()).replace('0.','экстернlink_');
 
-	const text = '<b>Externer Link</b><br/><img width="100%" src="'+BERT+'" />';
+	const text = 'Externer Link, keine Gewähr für den Inhalt<br/><img width="100%" src="'+BERT+'" />';
 	that.qtip({
 	        prerender:true,
 		content: {
