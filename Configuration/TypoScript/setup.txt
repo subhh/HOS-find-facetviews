@@ -61,10 +61,6 @@ plugin.tx_find {
 
 page = PAGE
 page {
- includeJS {
-	10=https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
-	10.external=1
- }
  includeJSFooter {
     
     13=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/jQuery.AutoLink.js

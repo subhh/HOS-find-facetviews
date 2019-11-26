@@ -64,20 +64,6 @@ plugin.tx_find.settings.facets.heatmap.tileprovider.crs = EPSG:3857
 config.tx_realurl_enable = 1
 config.absRefPrefix = /
 
-plugin.tx_scriptmerger {
-   javascript {
-     compress.enable = 0
-     minify.enable = 0
-     merge.enable = 1
-     parseBody =1
-    }
-    css {
-       merge.enable = 1
-       compress.enable = 0
-       addContentInDocument = 0
-    }
-}
-
 tx_find_page = PAGE
 tx_find_page {
     typeNum < plugin.tx_find.settings.ajax.autocomplete

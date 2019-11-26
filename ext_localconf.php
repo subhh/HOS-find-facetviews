@@ -8,6 +8,8 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['altmetrics'] = 'EXT:'.$_EXTKEY
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['detail'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/Detail.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['wms'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/GetWMS.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['thumbnail'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/Thumbnail.php';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['solr'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/GetSolr.php';
+
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['og'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/GetOpenGraph.php';
 
 $TYPO3_CONF_VARS['EXTCONF']['realurl'] =  array(
