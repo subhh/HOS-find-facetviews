@@ -6,7 +6,7 @@ ACL {
             type = Threestateswitch
             csspath = typo3conf/ext/hosfindfacetviews/Resources/Public/CSS/toggle-switch.css 
             toast = Publikationen vom Typ: „%s“
-            query=(rightsOA:%s)
+            query=(rightsOA:"%s")
             values {
                    Open=Open Access
                    All=Open Access,zugriffsbeschränkt
