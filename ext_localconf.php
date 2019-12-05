@@ -3,7 +3,7 @@ defined('TYPO3_MODE') || die('Access denied.');
 
 //$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['tile'] = 'EXT:'.$_EXTKEY . '/eID/GetTile.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['sitemap'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/Sitemap.php';
-$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['orcid'] = 'EXT:'.$_EXTKEY.'/Classes/Utility/Ajax/Orcid.php';
+// $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['orcid'] = 'EXT:'.$_EXTKEY.'/Classes/Utility/Ajax/Orcid.php';
 // $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['altmetrics'] = 'EXT:'.$_EXTKEY.'/Classes/Utility/Ajax/AltMetrics.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['detail'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/Detail.php';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['wms'] = 'EXT:'. $_EXTKEY.'/Classes/Utility/Ajax/GetWMS.php';
