@@ -27,10 +27,6 @@ function createMapView(fields,tileprovider) {
      fields.internal_institution_id='uke';  // for icon 
      latlng = [53.5909502,9.972821]; //for position of pin and center of map
   }
-  // Ticket #140
-  if (fields.collection.match(/ UHH/)) {
-     latlng = [53.5630101,9.9870572]; //for position of pin and center of map  
-  }
   
   const endpoint = tileprovider.endpoint + tileprovider.service;
   const tileLayer =  L.tileLayer.wms( '/?eID=wms&endpoint='+ endpoint, {
