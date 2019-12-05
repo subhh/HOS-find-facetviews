@@ -105,17 +105,17 @@ function setResultCounterDecimalSeperator(){
 
 $(function() {
     setResultCounterDecimalSeperator();
-        $('.tx_find [title!=""]').qtip({
-        position: {
-          at : 'center-bottom'
-        },
-         position: {
-                 target: 'mouse', // Position at the mouse...
-             adjust: { mouse: false }} ,
-        style: {
-          classes : 'qtip-dark'
-        }
-    });
+    //     $('.tx_find [title!=""]').qtip({
+    //     position: {
+    //       at : 'center-bottom'
+    //     },
+    //      position: {
+    //              target: 'mouse', // Position at the mouse...
+    //          adjust: { mouse: false }} ,
+    //     style: {
+    //       classes : 'qtip-dark'
+    //     }
+    // });
  //   $('.field-url-group .field-url a').each(getOG);
     $('.field-url a.externalLinkHasPreview').each(addPreviewToUrl);
     // altmetrics
