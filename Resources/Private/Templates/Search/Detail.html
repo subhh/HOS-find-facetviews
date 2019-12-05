@@ -25,10 +25,6 @@
         <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
         <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
         <f:render partial="Page/Standard" arguments="{_all}"/>
-
-<style>
-.breadcrumb {display:none}
-</style>
         <article class="detail"
          <f:if condition="{settings.features.altmetrics.enabled}">
                  <f:then>
