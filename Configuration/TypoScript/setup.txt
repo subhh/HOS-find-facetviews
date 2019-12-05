@@ -87,7 +87,7 @@ page {
     34=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.heatmap.js
     35=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.publisher.js
     36=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.mapdetailpage.js
-    38=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.creatorNames.js
+    // 38=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.creatorNames.js
  }
  includeCSS {
         4=EXT:hosfindfacetviews/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.css
