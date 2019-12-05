@@ -38,17 +38,20 @@
       ist die Facette (internal_geoLocation_facet) in der Facette und dann
       wird die Suche mit internal_geoLocation gestartet und das verträgt der
       Mechanismus nicht.
-  -->
-  <f:if condition="{facetactive}">
+    -->
+  <f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
 		<f:then>
-		<f:link.action
-                    addQueryString="TRUE"
-                    argumentsToBeExcludedFromQueryString="{ 1 :'tx_find_find[q][internal_geoLocation]'}"
-                    section=""
-                    noCacheHash="TRUE"
-                    class="icon-cancel facetRemove internal"><span style=";position: relative; top: 4px;padding-left: 0.2em;">Geofilter deaktivieren</span></f:link.action>
+
+			<f:link.action
+				addQueryString="TRUE"
+				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+				section=""
+				noCacheHash="1"
+				class="icon-cancel facetRemove internal"
+			>	
+				<span style=";position: relative; top: 4px;padding-left: 0.2em;">
+				Geofilter deaktivieren</span></span>
+			</f:link.action>
 		</f:then>
-		<f:else>
-		</f:else>
-   </f:if>
+</f:if>
 </div>
