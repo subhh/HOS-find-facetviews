@@ -1,0 +1,3 @@
+[submodule "Resources/Public/Javascript/heatmap/leaflet-shades"]
+	path = Resources/Public/Javascript/heatmap/leaflet-shades
+	url = https://github.com/mkong0216/leaflet-shades.git
