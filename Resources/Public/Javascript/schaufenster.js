@@ -118,32 +118,6 @@ $(function() {
     // });
  //   $('.field-url-group .field-url a').each(getOG);
     $('.field-url a.externalLinkHasPreview').each(addPreviewToUrl);
-    // altmetrics
-    $('.detail').each(function() {
-         const that = $(this); 
-         const urls = that.data('altermetrics_url');
-         var am = {type:null,id:null};
-         var m;
-         urls.forEach(function(url) {
-         if (m = url.match(/doi\.org\/(.*)/)) {
-           am.type = 'doi';
-           am.id = m[1];            
-        }
-         else if (m = url.match(/pubmed\/([\d]+)/)) {
-            am.type = 'pmid';
-            am.id=m[1];
-         }
-          else if (m = url.match(/ISBN:(.*)/)) {
-            am.type = 'isbn';
-            am.id=m[1];
-         }});
-         $.ajax({url: '?eID=altmetrics&type='+am.type+'&id='+am.id}).then(function(content) {
-             const id = ('altmetricslink_'+ Math.random()).replace('.','');
-             const link = '<a id="'+id+'" href="' + content.details_url+'" taget="altmetrics"><img width=42 src="'+content.images.small+ '" /></a>';
-             $('h1').prepend(link);
-             $('#'+id).each(addPreviewToUrl);
-        });
-    });     
     
     // Handling of long creatorName lists:
     $('ul.field-creatorName-group .facetShowAll').click(function(){
