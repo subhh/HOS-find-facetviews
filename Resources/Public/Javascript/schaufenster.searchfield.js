@@ -113,13 +113,6 @@ $(function() {
                     }
                 }
                 h.click();
-                $.toast({
-                    message: 'Suche im Bereich „' + FIELDS[selectedInput] + "“", // this is the only required field
-                    timeout: 3000, // sepcify time in ms after the toast closes. set to false or 0 to disable
-                    button: {
-                        text: 'OK', // the button text, will be transformed into uppercase automatically
-                    }
-                });
             });
             b.appendChild(c);
         }
