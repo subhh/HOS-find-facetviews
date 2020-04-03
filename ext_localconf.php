@@ -36,3 +36,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] =  array(
            ),
         ),
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\Subugoe\Find\Service\SolrServiceProvider::class] = [
+    'className' => \Subhh\Hosfindfacetviews\Service\SolrServiceProvider::class
+];
