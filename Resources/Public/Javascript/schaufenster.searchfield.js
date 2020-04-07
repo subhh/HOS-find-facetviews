@@ -5,6 +5,11 @@ var FIELDS = {
       
 }
 
+function removeHiddenFacetInputs () {
+    // Deselect facet if form is send
+    $('.hidden_facet').remove();
+}
+
 $(function() {
     //$('.searchForm').prepend('<a href="/de/suchen-entdecken/discovery/" title="Zurück zum Start der Suche" class="bel-haus" id="home-button" onclick="self.location=\"de/suchen-entdecken/discovery/\";"> </a>')
     // inserting fieldselectbox:
@@ -31,8 +36,13 @@ $(function() {
     $('#searchfieldselector').on('change', function(evt, item) {
         selectedInput = this.value;
         renderInputFields();
+        removeHiddenFacetInputs();
     });
     renderInputFields();
+
+    $('.inputType-text').on('change', function () {
+        removeHiddenFacetInputs();
+    });
 
     function renderInputFields() {
         $('.formFields .inputType-text').each(function() {
