@@ -115,6 +115,18 @@
 				<source>Link</source>
 				<target>Link</target>
 			</trans-unit>
+			<trans-unit id="field.select.authors">
+				<source>Authors</source>
+				<target>Autor/in</target>
+			</trans-unit>
+			<trans-unit id="field.select.titles">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="field.select.all">
+				<source>All data</source>
+				<target>In allen Daten</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

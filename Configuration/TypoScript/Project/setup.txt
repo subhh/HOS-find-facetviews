@@ -13,6 +13,8 @@ plugin.tx_find {
 
 	mainQueryOperator = AND
 
+   	useCombinedFields = 1
+
 	queryFields {
 		<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hosfindfacetviews/Configuration/TypoScript/Project/queryfields.txt">
 	}

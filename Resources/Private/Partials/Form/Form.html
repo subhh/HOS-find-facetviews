@@ -24,27 +24,49 @@
 	</f:for>
 
 	<div class="formFields">
-		<f:for each="{settings.queryFields}" as="fieldInfo">
-			<f:if condition="{fieldInfo.type}">
-				<f:then>
-					<f:if condition="{s:logic.or(conditions:'{
-						0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
-						1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
-					}')}">
-						<div class="fieldContainer fieldType-{fieldInfo.type} field-{fieldInfo.id} field-mode-{f:if(condition:'{fieldInfo.extended}', then:'extended', else:'simple')}">
-							<f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
-								<f:render partial="Form/Fields/{fieldInfo.type}" arguments="{_all}"/>
-							</f:alias>
-						</div>
+		<f:if condition="{settings.useCombinedFields}">
+			<f:then>
+				<f:form.textfield
+						id="combinedTextField"
+						class="inputType-text"
+						name="q[all]"
+						placeholder="{f:translate(key:'LLL:{settings.languageRootPath}locallang-form.xml:input.{fieldInfo.id}.placeholder')}"
+						additionalAttributes=""/>
+				<f:form.select id="combinedSelectField" name="searchFieldSelection" class="select-selected removeSelectStyle searchSelect">
+					<f:for each="{settings.queryFields}" as="fieldInfo">
+						<f:if condition="{fieldInfo.hidden}!=1 && {fieldInfo.id}!='default' && {fieldInfo.id}!='extended'">
+							<f:form.select.option value="{fieldInfo.id}"><f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.select.{fieldInfo.id}"/></f:form.select.option>
+						</f:if>
+					</f:for>
+				</f:form.select>
+			</f:then>
+			<f:else>
+				<f:for each="{settings.queryFields}" as="fieldInfo">
+					<f:if condition="{fieldInfo.type}">
+						<f:then>
+							<f:if condition="{s:logic.or(conditions:'{
+								0:\"{s:logic.not(condition:fieldInfo.hidden)}\",
+								1:\"{s:data.valueForKey(array:arguments.q, key:fieldInfo.id)}\"
+							}')}">
+								<div class="fieldContainer fieldType-{fieldInfo.type} field-{fieldInfo.id} field-mode-{f:if(condition:'{fieldInfo.extended}', then:'extended', else:'simple')}">
+									<f:alias map="{queryParameter:'{s:data.valueForKey(array:config.query, key:fieldInfo.id)}'}">
+										<f:render partial="Form/Fields/{fieldInfo.type}" arguments="{_all}"/>
+									</f:alias>
+								</div>
+							</f:if>
+						</f:then>
+						<f:else>
+							<div class="fieldContainer error">
+								<f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
+							</div>
+						</f:else>
 					</f:if>
-				</f:then>
-				<f:else>
-					<div class="fieldContainer error">
-						<f:translate key="Missing type in configuration for queryField %s." arguments="{0:fieldInfo.id}"/>
-					</div>
-				</f:else>
-			</f:if>
-		</f:for>
+				</f:for>
+
+			</f:else>
+		</f:if>
+
+
 	</div>
 
 	<div class="controls">
