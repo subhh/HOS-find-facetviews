@@ -27,6 +27,10 @@
 				<source></source>
 				<target>Französisch</target>
 			</trans-unit>
+                        <trans-unit id="facet.language.fre">
+				<source></source>
+				<target>Französisch</target>
+			</trans-unit>
 			<trans-unit id="facet.language.es">
 				<source></source>
 				<target>Kastillisch (Spanisch)</target>
