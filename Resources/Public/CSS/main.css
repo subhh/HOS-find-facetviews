@@ -109,7 +109,7 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
 
 .tx_find form .submit {
     height:42px!important;
-    margin: 5px 0 0 0!important
+    margin: 5px 0 0 10px !important
 }
 
 #tx_find .searchForm .sortOrder,
@@ -510,6 +510,7 @@ transform: scale(0.7, 0.7);
     -webkit-appearance: none;
     appearance: none;
     border: none;
+    margin: 0;
 }
 
 .searchSelect {
