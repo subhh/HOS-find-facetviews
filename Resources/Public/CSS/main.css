@@ -97,7 +97,7 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
     width: 300px;
     line-height: 22px;
     font-weight: 400;
-    display:none;
+    /*display:none;*/
     background-color:white!important;
     padding-bottom:9px !important;
     padding-top:9px!important;
@@ -109,7 +109,7 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
 
 .tx_find form .submit {
     height:42px!important;
-    margin: 5px 0 0 0!important
+    margin: 5px 0 0 10px !important
 }
 
 #tx_find .searchForm .sortOrder,
@@ -503,4 +503,16 @@ a:hover {color:#0e2f35}
 }
 .leaflet-popup {	
 transform: scale(0.7, 0.7);
+}
+
+.removeSelectStyle {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    margin: 0;
+}
+
+.searchSelect {
+    padding: 9px 10px 9px 10px;
 }
