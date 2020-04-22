@@ -25,7 +25,7 @@ $( document ).ready(function() {
     // refill search form with last search
     var selectField, searchTerm;
     selectField = getUrlParameter('tx_find_find%5BsearchFieldSelection%5D');
-    searchTerm = getUrlParameter('q%5B' + selectField + '%5D');
+    searchTerm = getUrlParameter('tx_find_find%5Bq%5D%5B' + selectField + '%5D');
 
     if (selectField && searchTerm) {
         $('#combinedTextField').attr('name', 'q[' + selectField + ']').val(searchTerm);
