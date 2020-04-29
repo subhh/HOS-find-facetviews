@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
     // change name attribute
     $('#combinedSelectField').on('change', function (event) {
-        $('#combinedTextField').attr('name', 'q[' + $(this).val() + ']');
+        $('#combinedTextField').attr('name', 'tx_find_find[q][' + $(this).val() + ']');
         removeHiddenFacetInputs();
     });
 
