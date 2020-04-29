@@ -28,7 +28,7 @@ $( document ).ready(function() {
     searchTerm = getUrlParameter('tx_find_find%5Bq%5D%5B' + selectField + '%5D');
 
     if (selectField && searchTerm) {
-        $('#combinedTextField').attr('name', 'q[' + selectField + ']').val(searchTerm);
+        $('#combinedTextField').attr('name', 'tx_find_find[q][' + selectField + ']').val(searchTerm);
         $('#combinedSelectField').val(selectField);
     }
 
