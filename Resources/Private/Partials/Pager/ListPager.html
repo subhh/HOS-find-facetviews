@@ -10,75 +10,75 @@
                                 <f:then>
                                         <f:for each="{pager.pages}" as="page" iteration="pageIterator">
                                         <f:if condition="({pager.current} > {page.number}) && ({page.status} == 'edge')">
-                                                <f:link.action
-                                                        arguments="{page:page.text}"
-                                                        addQueryString="TRUE"
-                                                        section=""
-                                                        noCacheHash="1"
-                                                        class="icon-right-dir internal"
-                                                        title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gofirst')}"
-                                                >
-                                                &lt;&lt;&nbsp;
-                                                </f:link.action>
+                                            <f:link.action
+                                                arguments="{page:page.text}"
+                                                addQueryString="TRUE"
+                                                section=""
+                                                noCacheHash="1"
+                                                class="icon-right-dir internal"
+                                                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gofirst')}"
+                                            >
+                                                &#x23ea;&#xfe0e;
+                                            </f:link.action>
                                         </f:if>
                                         </f:for>
                                 </f:then>
                                 <f:else>
-                                        <a class="icon-left-dir"></a>
+                                    <a class="icon-left-dir"></a>
                                 </f:else>
                         </f:if>
                 </span>
 		<span class="previous">
-			<f:if condition="{pager.previous}">
-				<f:then>
-					<f:link.action
-						arguments="{page:pager.previous}"
-						addQueryString="TRUE"
-						section=""
-						noCacheHash="1"
-						class="icon-left-dir internal"
-						 title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:goprev', 
-                                                        arguments:'{1:pager.previous}')}"
-					>&lt;
-					</f:link.action>
-				</f:then>
-				<f:else>
-					<a class="icon-left-dir"></a>
-				</f:else>
-			</f:if>
+		    <f:if condition="{pager.previous}">
+			<f:then>
+			    <f:link.action
+				arguments="{page:pager.previous}"
+				addQueryString="TRUE"
+				section=""
+				noCacheHash="1"
+				class="icon-left-dir internal"
+				           title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:goprev', 
+                                           arguments:'{1:pager.previous}')}"
+			    >&#x23f4;&#xfe0e;
+			    </f:link.action>
+			</f:then>
+			<f:else>
+			    <a class="icon-left-dir"></a>
+			</f:else>
+		    </f:if>
 		</span>
 		<f:render partial="Components/ResultCount" arguments="{_all}"/>
 		<span class="next">
-			<f:if condition="{pager.next}">
-				<f:then>
-					<f:link.action
-						arguments="{page:pager.next}"
-						addQueryString="TRUE"
-						section=""
-						noCacheHash="1"
-						class="icon-right-dir internal"
- title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gonext', 
-                                                        arguments:'{1:pager.next}')}">&gt;
-					</f:link.action>
-				</f:then>
-				<f:else>
-					<a class="icon-right-dir"></a>
-				</f:else>
-			</f:if>
+		    <f:if condition="{pager.next}">
+			<f:then>
+			    <f:link.action
+				arguments="{page:pager.next}"
+				addQueryString="TRUE"
+				section=""
+				noCacheHash="1"
+				class="icon-right-dir internal"
+                                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gonext', 
+                                           arguments:'{1:pager.next}')}">&#x23f5;&#xfe0e;
+			    </f:link.action>
+			</f:then>
+			<f:else>
+			    <a class="icon-right-dir"></a>
+			</f:else>
+		    </f:if>
 		</span>
 		<span class="last">
-			<f:if condition="{pager.next}">
-                                <f:then>
-					<f:for each="{pager.pages}" as="page" iteration="pageIterator">
-					<f:if condition="({pager.current} < {page.number}) && ({page.status} == 'edge')">
-						<f:link.action
-                                                        arguments="{page:page.text}"
-                                                        addQueryString="TRUE"
-                                                        section=""
-                                                        noCacheHash="1"
-                	                        	class="icon-right-dir internal"
-                	                        	 title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:golast')}"
-	        	                        >&nbsp;&gt;&gt;
+		    <f:if condition="{pager.next}">
+                        <f:then>
+			    <f:for each="{pager.pages}" as="page" iteration="pageIterator">
+				<f:if condition="({pager.current} < {page.number}) && ({page.status} == 'edge')">
+				    <f:link.action
+                                        arguments="{page:page.text}"
+                                        addQueryString="TRUE"
+                                        section=""
+                                        noCacheHash="1"
+                	                class="icon-right-dir internal"
+                	                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:golast')}"
+	        	            >&#x23e9;&#xfe0e;
                 	               		</f:link.action>
 					</f:if>
 					</f:for>

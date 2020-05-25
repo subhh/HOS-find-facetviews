@@ -26,6 +26,15 @@ Einrichtung {
   type = List
 }
 
+Medientyp {
+  id = Medientyp
+  displayDefault = 25
+  query = (resourceType:"%s")
+  field = resourceType
+  type = List
+  sortOrder = index
+}
+
 GEO {
             id = heatmap
             displayDefault = 99999

@@ -1,101 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
-		<header/>
-		<body>
-			<trans-unit id="field.creatorName_facet.plural">
-				<source>Autor/in</source>
-			</trans-unit>
-			<trans-unit id="field.creatorName_facet">
-				<source>Author</source>
-			</trans-unit>
-			<trans-unit id="field.creatorName.plural">
-				<source>Authors</source>
-			</trans-unit>
-			<trans-unit id="field.creatorName">
-				<source>Author</source>
-			</trans-unit>
-			<trans-unit id="field.collection.plural">
-				<source>Source system</source>
-			</trans-unit>
-			<trans-unit id="field.collection">
-				<source>Source systems</source>
-			</trans-unit>
-			<trans-unit id="field.contributorName.plural">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.contributorName">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.title.plural">
-				<source>Titles</source>
-			</trans-unit>
-			<trans-unit id="field.title">
-				<source>Title</source>
-			</trans-unit>
-			<trans-unit id="field.resourceType">
-				<source>Resource type</source>
-			</trans-unit>
-			<trans-unit id="field.resourceType.plural">
-				<source>Resource types</source>
-			</trans-unit>
-			<trans-unit id="field.publicationYear">
-				<source>Publication year</source>
-			</trans-unit>
-			<trans-unit id="field.publicationYear.plural">
-				<source>Publication years</source>
-			</trans-unit>
-			<trans-unit id="field.publisher.plural">
-				<source>Publisher</source>
-			</trans-unit>
-			<trans-unit id="field.publisher">
-				<source>Publishers</source>
-			</trans-unit>
-			<trans-unit id="field.abstract.plural">
-				<source>Summaries</source>
-			</trans-unit>
-			<trans-unit id="field.abstract">
-				<source>Summary</source>
-			</trans-unit>
-			<trans-unit id="field.rights.plural">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.rights">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.seriesInformation.plural">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.seriesInformation">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="field.subtitle.plural">
-				<source>Subtitles</source>
-			</trans-unit>
-			<trans-unit id="field.subtitle.">
-				<source>Subtitle</source>
-			</trans-unit>
-			<trans-unit id="field.subject.plural">
-				<source>Keyword</source>
-			</trans-unit>
-			<trans-unit id="field.subject">
-				<source>Keywords</source>
-			</trans-unit>
-			<trans-unit id="field.url.plural">
-				<source>Links</source>
-			</trans-unit>
-			<trans-unit id="field.url">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="field.select.authors">
-				<source>Authors</source>
-			</trans-unit>
-			<trans-unit id="field.select.titles">
-				<source>Title</source>
-			</trans-unit>
-			<trans-unit id="field.select.all">
-				<source>All data</source>
-			</trans-unit>
-		</body>
-	</file>
+        <file source-language="en" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
+                <header/>
+                <body>
+                        <trans-unit id="field.creatorName_facet.plural">
+                                <source>Autor/in</source>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName_facet">
+                                <source>Author</source>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName.plural">
+                                <source>Authors</source>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName">
+                                <source>Author</source>
+                        </trans-unit>
+                        <trans-unit id="field.collection.plural">
+                                <source>Source system</source>
+                        </trans-unit>
+                        <trans-unit id="field.collection">
+                                <source>Source systems</source>
+                        </trans-unit>
+                        <trans-unit id="field.contributorName.plural">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.contributorName">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.description">
+                          <source>Description</source>
+                        </trans-unit>
+                        <trans-unit id="field.title.plural">
+                                <source>Titles</source>
+                        </trans-unit>
+                        <trans-unit id="field.title">
+                                <source>Title</source>
+                        </trans-unit>
+                        <trans-unit id="field.resourceType">
+                                <source>Resource type</source>
+                        </trans-unit>
+                        <trans-unit id="field.resourceType.plural">
+                                <source>Resource types</source>
+                        </trans-unit>
+                        <trans-unit id="field.publicationYear">
+                                <source>Publication year</source>
+                        </trans-unit>
+                        <trans-unit id="field.publicationYear.plural">
+                                <source>Publication years</source>
+                        </trans-unit>
+                        <trans-unit id="field.publisher.plural">
+                                <source>Publisher</source>
+                        </trans-unit>
+                        <trans-unit id="field.publisher">
+                                <source>Publishers</source>
+                        </trans-unit>
+                        <trans-unit id="field.abstract.plural">
+                                <source>Summaries</source>
+                        </trans-unit>
+                        <trans-unit id="field.abstract">
+                                <source>Summary</source>
+                        </trans-unit>
+                        <trans-unit id="field.rights.plural">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.rights">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.seriesInformation.plural">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.seriesInformation">
+                                <source></source>
+                        </trans-unit>
+                        <trans-unit id="field.subtitle.plural">
+                                <source>Subtitles</source>
+                        </trans-unit>
+                        <trans-unit id="field.subtitle.">
+                                <source>Subtitle</source>
+                        </trans-unit>
+                        <trans-unit id="field.subject.plural">
+                                <source>Keyword</source>
+                        </trans-unit>
+                        <trans-unit id="field.subject">
+                                <source>Keywords</source>
+                        </trans-unit>
+                        <trans-unit id="field.url.plural">
+                                <source>Links</source>
+                        </trans-unit>
+                        <trans-unit id="field.url">
+                                <source>Link</source>
+                        </trans-unit>
+                </body>
+        </file>
 </xliff>
