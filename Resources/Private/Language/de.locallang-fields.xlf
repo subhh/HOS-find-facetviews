@@ -1,120 +1,124 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
-		<header/>
-		<body>
-			<trans-unit id="field.creatorName_facet.plural">
-				<source>Autor/in</source>
-				<target>Autor/in</target>
-			</trans-unit>
-			<trans-unit id="field.creatorName_facet">
-				<source>Author</source>
-				<target>Autor/in</target>
-			</trans-unit>
-			<trans-unit id="field.creatorName.plural">
-				<source>Authors</source>
-				<target>Autor/in</target>
-			</trans-unit>
-			<trans-unit id="field.creatorName">
-				<source>Author</source>
-				<target>Autor/in</target>
-			</trans-unit>
-			<trans-unit id="field.collection.plural">
-				<source>Source system</source>
-				<target>Quellsysteme</target>
-			</trans-unit>
-			<trans-unit id="field.collection">
-				<source>Source systems</source>
-				<target>Quellsystem</target>
-			</trans-unit>
-			<trans-unit id="field.contributorName.plural">
-				<source></source>
-				<target>Beteiligte Personen</target>
-			</trans-unit>
-			<trans-unit id="field.contributorName">
-				<source></source>
-				<target>Beteiligte Person</target>
-			</trans-unit>
-			<trans-unit id="field.title.plural">
-				<source>Titles</source>
-				<target>Titel</target>
-			</trans-unit>
-			<trans-unit id="field.title">
-				<source>Title</source>
-				<target>Titel</target>
-			</trans-unit>
-			<trans-unit id="field.resourceType">
-				<source>Resource type</source>
-				<target>Ressourcentyp</target>
-			</trans-unit>
-			<trans-unit id="field.resourceType.plural">
-				<source>Resource types</source>
-				<target>Ressourcentypen</target>
-			</trans-unit>
-			<trans-unit id="field.publicationYear">
-				<source>Publication year</source>
-				<target>Erscheinungsjahr</target>
-			</trans-unit>
-			<trans-unit id="field.publicationYear.plural">
-				<source>Publication years</source>
-				<target>Erscheinungsjahre</target>
-			</trans-unit>
-			<trans-unit id="field.publisher.plural">
-				<source>Publisher</source>
-				<target>Verlage/Körperschaften</target>
-			</trans-unit>
-			<trans-unit id="field.publisher">
-				<source>Publishers</source>
-				<target>Verlag/Körperschaft</target>
-			</trans-unit>
-			<trans-unit id="field.abstract.plural">
-				<source>Summaries</source>
-				<target>Zusammenfassung/en</target>
-			</trans-unit>
-			<trans-unit id="field.abstract">
-				<source>Summary</source>
-				<target>Zusammenfassung</target>
-			</trans-unit>
-			<trans-unit id="field.rights.plural">
-				<source></source>
-				<target>Lizenzen</target>
-			</trans-unit>
-			<trans-unit id="field.rights">
-				<source></source>
-				<target>Lizenz</target>
-			</trans-unit>
-			<trans-unit id="field.seriesInformation.plural">
-				<source></source>
-				<target>Reihen</target>
-			</trans-unit>
-			<trans-unit id="field.seriesInformation">
-				<source></source>
-				<target>Reihe</target>
-			</trans-unit>
-			<trans-unit id="field.subtitle.plural">
-				<source>Subtitles</source>
-				<target>Untertitel</target>
-			</trans-unit>
-			<trans-unit id="field.subtitle.">
-				<source>Subtitle</source>
-				<target>Untertitel</target>
-			</trans-unit>
-			<trans-unit id="field.subject.plural">
-				<source>Keyword</source>
-				<target>Schlagworte</target>
-			</trans-unit>
-			<trans-unit id="field.subject">
-				<source>Keywords</source>
-				<target>Schlagwort</target>
-			</trans-unit>
-			<trans-unit id="field.url.plural">
-				<source>Links</source>
-				<target>Links</target>
-			</trans-unit>
-			<trans-unit id="field.url">
-				<source>Link</source>
-				<target>Link</target>
-			</trans-unit>
-		</body>
-	</file>
+        <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
+                <header/>
+                <body>
+                        <trans-unit id="field.creatorName_facet.plural">
+                                <source>Autor/in</source>
+                                <target>Autor/in</target>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName_facet">
+                                <source>Author</source>
+                                <target>Autor/in</target>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName.plural">
+                                <source>Authors</source>
+                                <target>Autor/in</target>
+                        </trans-unit>
+                        <trans-unit id="field.creatorName">
+                                <source>Author</source>
+                                <target>Autor/in</target>
+                        </trans-unit>
+                        <trans-unit id="field.collection.plural">
+                                <source>Source system</source>
+                                <target>Quellsysteme</target>
+                        </trans-unit>
+                        <trans-unit id="field.collection">
+                                <source>Source systems</source>
+                                <target>Quellsystem</target>
+                        </trans-unit>
+                        <trans-unit id="field.contributorName.plural">
+                                <source></source>
+                                <target>Beteiligte Personen</target>
+                        </trans-unit>
+                        <trans-unit id="field.contributorName">
+                                <source></source>
+                                <target>Beteiligte Person</target>
+                        </trans-unit>
+                        <trans-unit id="field.description">
+                          <source>Description</source>
+                          <target>Beschreibung</target>
+                        </trans-unit>
+                        <trans-unit id="field.title.plural">
+                                <source>Titles</source>
+                                <target>Titel</target>
+                        </trans-unit>
+                        <trans-unit id="field.title">
+                                <source>Title</source>
+                                <target>Titel</target>
+                        </trans-unit>
+                        <trans-unit id="field.resourceType">
+                                <source>Resource type</source>
+                                <target>Ressourcentyp</target>
+                        </trans-unit>
+                        <trans-unit id="field.resourceType.plural">
+                                <source>Resource types</source>
+                                <target>Ressourcentypen</target>
+                        </trans-unit>
+                        <trans-unit id="field.publicationYear">
+                                <source>Publication year</source>
+                                <target>Erscheinungsjahr</target>
+                        </trans-unit>
+                        <trans-unit id="field.publicationYear.plural">
+                                <source>Publication years</source>
+                                <target>Erscheinungsjahre</target>
+                        </trans-unit>
+                        <trans-unit id="field.publisher.plural">
+                                <source>Publisher</source>
+                                <target>Verlage/Körperschaften</target>
+                        </trans-unit>
+                        <trans-unit id="field.publisher">
+                                <source>Publishers</source>
+                                <target>Verlag/Körperschaft</target>
+                        </trans-unit>
+                        <trans-unit id="field.abstract.plural">
+                                <source>Summaries</source>
+                                <target>Zusammenfassung/en</target>
+                        </trans-unit>
+                        <trans-unit id="field.abstract">
+                                <source>Summary</source>
+                                <target>Zusammenfassung</target>
+                        </trans-unit>
+                        <trans-unit id="field.rights.plural">
+                                <source></source>
+                                <target>Lizenzen</target>
+                        </trans-unit>
+                        <trans-unit id="field.rights">
+                                <source></source>
+                                <target>Lizenz</target>
+                        </trans-unit>
+                        <trans-unit id="field.seriesInformation.plural">
+                                <source></source>
+                                <target>Reihen</target>
+                        </trans-unit>
+                        <trans-unit id="field.seriesInformation">
+                                <source></source>
+                                <target>Reihe</target>
+                        </trans-unit>
+                        <trans-unit id="field.subtitle.plural">
+                                <source>Subtitles</source>
+                                <target>Untertitel</target>
+                        </trans-unit>
+                        <trans-unit id="field.subtitle.">
+                                <source>Subtitle</source>
+                                <target>Untertitel</target>
+                        </trans-unit>
+                        <trans-unit id="field.subject.plural">
+                                <source>Keyword</source>
+                                <target>Schlagworte</target>
+                        </trans-unit>
+                        <trans-unit id="field.subject">
+                                <source>Keywords</source>
+                                <target>Schlagwort</target>
+                        </trans-unit>
+                        <trans-unit id="field.url.plural">
+                                <source>Links</source>
+                                <target>Links</target>
+                        </trans-unit>
+                        <trans-unit id="field.url">
+                                <source>Link</source>
+                                <target>Link</target>
+                        </trans-unit>
+                </body>
+        </file>
 </xliff>
