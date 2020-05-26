@@ -23,7 +23,7 @@
 				target="_blank"
 				class="internal no-change"
 				onclick="{f:if(
-					condition:'{settings.paging.detailPagePaging == 1}',
+					condition:'{settings.paging.detailPagePaging}',
 					then:'return tx_find.detailViewWithPaging(this);'
 				)}">
 				<f:if condition="{s:data.valueForKey(array:document.fields, key:settings.standardFields.title)}">
