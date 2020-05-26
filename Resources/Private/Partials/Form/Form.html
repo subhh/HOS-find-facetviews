@@ -109,7 +109,11 @@
 	
 	<div class="clear"></div>
         <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
-       	    <f:render partial="Components/NavigationTop" arguments="{_all}"/>
+			<f:if condition="{arguments.action}!='detail'">
+				<f:then>
+					<f:render partial="Components/NavigationTop" arguments="{_all}"/>
+				</f:then>
+			</f:if>
         </f:if>
 	<div class="clear"></div>
 </f:form>
