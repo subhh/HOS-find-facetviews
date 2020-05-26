@@ -65,6 +65,8 @@ plugin.tx_find {
 	    data < plugin.tx_find.settings.dataFields.detail
 	}
 
+	detailfacets = subtitle,url,creatorName,contributorName,publisher,publicationYear,resourceType,subject,abstract,description,seriesInformation,rights,collection
+
    }
    features.requireCHashArgumentForActionArguments = 0	
 }
