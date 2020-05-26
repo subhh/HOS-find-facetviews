@@ -88,7 +88,16 @@
                                 <source>Links</source>
                         </trans-unit>
                         <trans-unit id="field.url">
-                                <source>Link</source>
+                          <source>Link</source>
+                        </trans-unit>
+                        <trans-unit id="field.select.authors">
+                          <source>Authors</source>
+                        </trans-unit>
+                        <trans-unit id="field.select.titles">
+                          <source>Title</source>
+                        </trans-unit>
+                        <trans-unit id="field.select.all">
+                          <source>All data</source>
                         </trans-unit>
                 </body>
         </file>
