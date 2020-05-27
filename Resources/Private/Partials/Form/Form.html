@@ -101,13 +101,13 @@
 					</f:else>
 				</f:if>
 			</f:if>
-			<!-- schleera added 20190909 -->
-			<f:render partial="Components/HelperPage.html" arguments="{_all}"/>
 		</f:groupedFor>
 		
 	</div>
 	
 	<div class="clear"></div>
+        <f:render partial="Components/HelperPage.html" arguments="{_all}"/>
+        <div class="clear"></div>
         <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
        	    <f:render partial="Components/NavigationTop" arguments="{_all}"/>
         </f:if>
