@@ -483,12 +483,6 @@ a:hover {color:#0e2f35}
   margin-bottom:0;
 }
 
-.tx_find .helperpage {
-  padding: 0 0 0 25px;
-  height:42px;
-  margin: 15px 0 10px 0;
-  display : inline-block;
-}
 .tx_find .inputContainer .inputType-text {width:200px}
 
 .tx_find em.highlight {
