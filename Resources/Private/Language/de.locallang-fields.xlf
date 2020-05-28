@@ -39,6 +39,10 @@
                           <source>Description</source>
                           <target>Beschreibung</target>
                         </trans-unit>
+                        <trans-unit id="field.description.plural">
+                          <source>Description</source>
+                          <target>Beschreibung</target>
+                        </trans-unit>
                         <trans-unit id="field.title.plural">
                                 <source>Titles</source>
                                 <target>Titel</target>
