@@ -3,182 +3,243 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-26T13:11:02Z" product-name="hosfindfacetviews">
 		<header/>
 		<body>
-			<trans-unit id="facet.collection.Publikationen%20HSU">
-				<source></source>
-				<target>Publikationen HSU</target>
-			</trans-unit>
-			<trans-unit id="facet.language.de">
-				<source></source>
-				<target>Deutsch</target>
-			</trans-unit>
-                        <trans-unit id="facet.language.ger">
-				<source></source>
-				<target>Deutsch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.en">
-				<source></source>
-				<target>Englisch</target>
-			</trans-unit>
-                        <trans-unit id="facet.language.eng">
-				<source></source>
-				<target>Englisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.fr">
-				<source></source>
-				<target>Französisch</target>
-			</trans-unit>
-                        <trans-unit id="facet.language.fre">
-				<source></source>
-				<target>Französisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.es">
-				<source></source>
-				<target>Kastillisch (Spanisch)</target>
-			</trans-unit>
-			<trans-unit id="facet.language.ru">
-				<source></source>
-				<target>Russisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.it">
-				<source></source>
-				<target>Italienisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.pt">
-				<source></source>
-				<target>Portugiesisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.nl">
-				<source></source>
-				<target>Niederländisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.zh">
-				<source></source>
-				<target>Mandarin (Chinesisch)</target>
-			</trans-unit>
-			<trans-unit id="facet.language.el">
-				<source></source>
-				<target>Griechisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.pl">
-				<source>Polish</source>
-				<target>Polnisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.tk">
-				<source></source>
-				<target>Türkisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.no">
-				<source></source>
-				<target>Norwegisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.ja">
-				<source></source>
-				<target>Japanisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.fin">
-				<source></source>
-				<target>Finnisch</target>
-			</trans-unit>
-			<trans-unit id="facet.language.por">
-				<source></source>
-				<target>Portugiesisch</target>
-			</trans-unit>
-			<trans-unit id="facet.creatorName_facet">
-				<source>Author</source>
-				<target>Autor/in</target>
-			</trans-unit>
-			<trans-unit id="facet.title">
-				<source>Title</source>
-				<target>Titel</target>
-			</trans-unit>
-			<trans-unit id="facet.abstract">
-				<source>Abstract</source>
-				<target>Abstract oder Zusammenfassung</target>
-			</trans-unit>
-			<trans-unit id="facet.seriesInformation">
-				<source>Erschienen in</source>
-				<target></target>
-			</trans-unit>
-			<trans-unit id="facet.collection">
-				<source>Collection</source>
-				<target>Sammlung</target>
-			</trans-unit>
-			<trans-unit id="facet.Quellsystem">
-				<source>Source system</source>
-				<target>Quellsystem</target>
-			</trans-unit>
-			<trans-unit id="facet.openaccess">
-				<source>OpenAccess</source>
-				<target>OpenAccess</target>
-			</trans-unit>
-			<trans-unit id="facet.publicationYear">
-				<source></source>
-				<target>Erscheinungsjahr</target>
-			</trans-unit>
-			<trans-unit id="facet.heatmap">
-				<source>Map</source>
-				<target>Karte</target>
-			</trans-unit>
-			<trans-unit id="facet.publisher">
-				<source></source>
-				<target>Herausgebende / Verlag</target>
-			</trans-unit>
-			<trans-unit id="facet.subject">
-				<source></source>
-				<target>Schlagworte</target>
-			</trans-unit>
-			<trans-unit id="facet.ddc">
-				<source></source>
-				<target>Fachgebiete</target>
-			</trans-unit>
-			<trans-unit id="facet.creatorname">
-				<source>Autor/in</source>
-				<target></target>
-			</trans-unit>
-			<trans-unit id="facet.resourcetype">
-				<source>Resource type</source>
-				<target>Ressourcentyp</target>
-			</trans-unit>
-			<trans-unit id="facet.language">
-				<source>Language</source>
-				<target>Sprache</target>
-			</trans-unit>
-			<trans-unit id="facet.Zugriff.open">
-				<source>Open Access</source>
-				<target>Open Access</target>
-			</trans-unit>
-			<trans-unit id="facet.Zugriff.all">
-				<source>All documents</source>
-				<target>Alle Dokumente</target>
-			</trans-unit>
-			<trans-unit id="facet.Zugriff.close">
-				<source>Closed / Unbekannt</source>
-				<target>Closed / Unbekannt</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.dkrz">
-				<source>Deutsches Klimarechenzentrum</source>
-				<target>Deutsches Klimarechenzentrum</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.haw">
-				<source>HAW Hamburg</source>
-				<target>HAW Hamburg</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.hcu">
-				<source>HafenCity Universität</source>
-				<target>HafenCity Universität</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.hsu">
-				<source>Helmut-Schmidt-Universität</source>
-				<target>Helmut-Schmidt-Universität</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.tuhh">
-				<source>Technische Universität Hamburg</source>
-				<target>Technische Universität Hamburg</target>
-			</trans-unit>
-			<trans-unit id="facet.Institution.uhh">
-				<source>Universität Hamburg</source>
-				<target>Universität Hamburg</target>
-			</trans-unit>
+		  <trans-unit id="facet.collection.Publikationen%20HSU">
+		    <source></source>
+		    <target>Publikationen HSU</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.de">
+		    <source></source>
+		    <target>Deutsch</target>
+		  </trans-unit>
+                  <trans-unit id="facet.language.ger">
+		    <source></source>
+		    <target>Deutsch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.en">
+		    <source></source>
+		    <target>Englisch</target>
+		  </trans-unit>
+                  <trans-unit id="facet.language.eng">
+		    <source></source>
+		    <target>Englisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.fr">
+		    <source></source>
+		    <target>Französisch</target>
+		  </trans-unit>
+                  <trans-unit id="facet.language.fre">
+		    <source></source>
+		    <target>Französisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.es">
+		    <source></source>
+		    <target>Kastillisch (Spanisch)</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.ru">
+		    <source></source>
+		    <target>Russisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.it">
+		    <source></source>
+		    <target>Italienisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.pt">
+		    <source></source>
+		    <target>Portugiesisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.nl">
+		    <source></source>
+		    <target>Niederländisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.zh">
+		    <source></source>
+		    <target>Mandarin (Chinesisch)</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.el">
+		    <source></source>
+		    <target>Griechisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.pl">
+		    <source>Polish</source>
+		    <target>Polnisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.tk">
+		    <source></source>
+		    <target>Türkisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.no">
+		    <source></source>
+		    <target>Norwegisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.ja">
+		    <source></source>
+		    <target>Japanisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.fin">
+		    <source></source>
+		    <target>Finnisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language.por">
+		    <source></source>
+		    <target>Portugiesisch</target>
+		  </trans-unit>
+		  <trans-unit id="facet.creatorName_facet">
+		    <source>Author</source>
+		    <target>Autor/in</target>
+		  </trans-unit>
+		  <trans-unit id="facet.title">
+		    <source>Title</source>
+		    <target>Titel</target>
+		  </trans-unit>
+		  <trans-unit id="facet.abstract">
+		    <source>Abstract</source>
+		    <target>Abstract oder Zusammenfassung</target>
+		  </trans-unit>
+		  <trans-unit id="facet.seriesInformation">
+		    <source>Erschienen in</source>
+		    <target></target>
+		  </trans-unit>
+		  <trans-unit id="facet.collection">
+		    <source>Collection</source>
+		    <target>Sammlung</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Quellsystem">
+		    <source>Source system</source>
+		    <target>Quellsystem</target>
+		  </trans-unit>
+		  <trans-unit id="facet.openaccess">
+		    <source>OpenAccess</source>
+		    <target>OpenAccess</target>
+		  </trans-unit>
+		  <trans-unit id="facet.publicationYear">
+		    <source></source>
+		    <target>Erscheinungsjahr</target>
+		  </trans-unit>
+		  <trans-unit id="facet.heatmap">
+		    <source>Map</source>
+		    <target>Karte</target>
+		  </trans-unit>
+		  <trans-unit id="facet.publisher">
+		    <source></source>
+		    <target>Herausgebende / Verlag</target>
+		  </trans-unit>
+		  <trans-unit id="facet.subject">
+		    <source></source>
+		    <target>Schlagworte</target>
+		  </trans-unit>
+		  <trans-unit id="facet.ddc">
+		    <source></source>
+		    <target>Fachgebiete</target>
+		  </trans-unit>
+		  <trans-unit id="facet.creatorname">
+		    <source>Autor/in</source>
+		    <target></target>
+		  </trans-unit>
+		  <trans-unit id="facet.resourcetype">
+		    <source>Resource type</source>
+		    <target>Ressourcentyp</target>
+		  </trans-unit>
+		  <trans-unit id="facet.language">
+		    <source>Language</source>
+		    <target>Sprache</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Zugriff.open">
+		    <source>Open Access</source>
+		    <target>Open Access</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Zugriff.all">
+		    <source>All documents</source>
+		    <target>Alle Dokumente</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Zugriff.close">
+		    <source>Closed / Unbekannt</source>
+		    <target>Closed / Unbekannt</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.dkrz">
+		    <source>Deutsches Klimarechenzentrum</source>
+		    <target>Deutsches Klimarechenzentrum</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.haw">
+		    <source>HAW Hamburg</source>
+		    <target>HAW Hamburg</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.hcu">
+		    <source>HafenCity Universität</source>
+		    <target>HafenCity Universität</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.hsu">
+		    <source>Helmut-Schmidt-Universität</source>
+		    <target>Helmut-Schmidt-Universität</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.tuhh">
+		    <source>Technische Universität Hamburg</source>
+		    <target>Technische Universität Hamburg</target>
+		  </trans-unit>
+		  <trans-unit id="facet.Institution.uhh">
+		    <source>Universität Hamburg</source>
+		    <target>Universität Hamburg</target>
+		  </trans-unit>
+                  <!-- Medientypen DataCite 4 -->
+                  <trans-unit id="facet.resourceType.Audiovisual">
+                    <source>Audiovisual</source>
+                    <target>Audiovisuell</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Collection">
+                    <source>Collection</source>
+                    <target>Sammlung</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.DataPaper">
+                    <source>DataPaper</source>
+                    <target>Datenpublikation</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Dataset">
+                    <source>Dataset</source>
+                    <target>Datensatz</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Event">
+                    <source>Event</source>
+                    <target>Ereignis</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Image">
+                    <source>Image</source>
+                    <target>Bild</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.InteractiveResource">
+                    <source>InteractiveResource</source>
+                    <target>Interaktive Ressource</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Model">
+                    <source>Model</source>
+                    <target>Modell</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.PhysicalObject">
+                    <source>PhysicalObject</source>
+                    <target>Objekt</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Service">
+                    <source>Service</source>
+                    <target>Dienst</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Software">
+                    <source>Software</source>
+                    <target>Software</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Sound">
+                    <source>Sound</source>
+                    <target>Audio</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Text">
+                    <source>Text</source>
+                    <target>Text</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Workflow">
+                    <source>Workflow</source>
+                    <target>Vorgang</target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourceType.Other">
+                    <source>Other</source>
+                    <target>Anderes</target>
+                  </trans-unit>
 		</body>
 	</file>
 </xliff>
