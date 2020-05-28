@@ -35,29 +35,33 @@ Medientyp {
   sortOrder = index
 }
 
-GEO {
-            id = heatmap
-            displayDefault = 99999
-            type = Heatmap
-            field = internal_geoLocation_facet
-            bigMap = 1
-            dsvgo = 1
-            sortOrder = index
-            tileprovider  {
-                   type = wms
-                   endpoint = https://geodienste.hamburg.de/
-                   service = HH_WMS_Geobasiskarten_GB
-                   layers  = 6,10,18,26,2,14,2,30
-                   crs = EPSG:3857
-                   attribution = Map tiles by Landesbetrieb für Geoinformation und Vermessung
-                   version = 1.3.0
-                   format = image/png
-                   size = @1.5x
-                   maxzoom = 14
-                   minzoom = 11
-            }
-            fetchMaximum = 1000
-        }
+# 2020-05-28  David Maus <david.maus@sub.uni-hamburg.de>
+#  * Geofacette für Trefferliste zeitweise deaktiviert
+#    vgl. https://collaborating.tuhh.de/hos/schaufenster/aggregator/-/issues/281
+#
+# GEO {
+#             id = heatmap
+#             displayDefault = 99999
+#             type = Heatmap
+#             field = internal_geoLocation_facet
+#             bigMap = 1
+#             dsvgo = 1
+#             sortOrder = index
+#             tileprovider  {
+#                    type = wms
+#                    endpoint = https://geodienste.hamburg.de/
+#                    service = HH_WMS_Geobasiskarten_GB
+#                    layers  = 6,10,18,26,2,14,2,30
+#                    crs = EPSG:3857
+#                    attribution = Map tiles by Landesbetrieb für Geoinformation und Vermessung
+#                    version = 1.3.0
+#                    format = image/png
+#                    size = @1.5x
+#                    maxzoom = 14
+#                    minzoom = 11
+#             }
+#             fetchMaximum = 1000
+#         }
 YEAR {
              id = publicationYear
              type = ListReverse
