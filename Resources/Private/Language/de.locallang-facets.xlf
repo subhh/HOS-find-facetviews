@@ -1,184 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-26T13:11:02Z" product-name="hosfindfacetviews">
-		<header/>
-		<body>
-		  <trans-unit id="facet.collection.Publikationen%20HSU">
-		    <source></source>
-		    <target>Publikationen HSU</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.de">
-		    <source></source>
-		    <target>Deutsch</target>
-		  </trans-unit>
-                  <trans-unit id="facet.language.ger">
-		    <source></source>
-		    <target>Deutsch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.en">
-		    <source></source>
-		    <target>Englisch</target>
-		  </trans-unit>
-                  <trans-unit id="facet.language.eng">
-		    <source></source>
-		    <target>Englisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.fr">
-		    <source></source>
-		    <target>Französisch</target>
-		  </trans-unit>
-                  <trans-unit id="facet.language.fre">
-		    <source></source>
-		    <target>Französisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.es">
-		    <source></source>
-		    <target>Kastillisch (Spanisch)</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.ru">
-		    <source></source>
-		    <target>Russisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.it">
-		    <source></source>
-		    <target>Italienisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.pt">
-		    <source></source>
-		    <target>Portugiesisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.nl">
-		    <source></source>
-		    <target>Niederländisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.zh">
-		    <source></source>
-		    <target>Mandarin (Chinesisch)</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.el">
-		    <source></source>
-		    <target>Griechisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.pl">
-		    <source>Polish</source>
-		    <target>Polnisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.tk">
-		    <source></source>
-		    <target>Türkisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.no">
-		    <source></source>
-		    <target>Norwegisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.ja">
-		    <source></source>
-		    <target>Japanisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.fin">
-		    <source></source>
-		    <target>Finnisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language.por">
-		    <source></source>
-		    <target>Portugiesisch</target>
-		  </trans-unit>
-		  <trans-unit id="facet.creatorName_facet">
-		    <source>Author</source>
-		    <target>Autor/in</target>
-		  </trans-unit>
-		  <trans-unit id="facet.title">
-		    <source>Title</source>
-		    <target>Titel</target>
-		  </trans-unit>
-		  <trans-unit id="facet.abstract">
-		    <source>Abstract</source>
-		    <target>Abstract oder Zusammenfassung</target>
-		  </trans-unit>
-		  <trans-unit id="facet.seriesInformation">
-		    <source>Erschienen in</source>
-		    <target></target>
-		  </trans-unit>
-		  <trans-unit id="facet.collection">
-		    <source>Collection</source>
-		    <target>Sammlung</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Quellsystem">
-		    <source>Source system</source>
-		    <target>Quellsystem</target>
-		  </trans-unit>
-		  <trans-unit id="facet.openaccess">
-		    <source>OpenAccess</source>
-		    <target>OpenAccess</target>
-		  </trans-unit>
-		  <trans-unit id="facet.publicationYear">
-		    <source></source>
-		    <target>Erscheinungsjahr</target>
-		  </trans-unit>
-		  <trans-unit id="facet.heatmap">
-		    <source>Map</source>
-		    <target>Karte</target>
-		  </trans-unit>
-		  <trans-unit id="facet.publisher">
-		    <source></source>
-		    <target>Herausgebende / Verlag</target>
-		  </trans-unit>
-		  <trans-unit id="facet.subject">
-		    <source></source>
-		    <target>Schlagworte</target>
-		  </trans-unit>
-		  <trans-unit id="facet.ddc">
-		    <source></source>
-		    <target>Fachgebiete</target>
-		  </trans-unit>
-		  <trans-unit id="facet.creatorname">
-		    <source>Autor/in</source>
-		    <target></target>
-		  </trans-unit>
-		  <trans-unit id="facet.resourcetype">
-		    <source>Resource type</source>
-		    <target>Ressourcentyp</target>
-		  </trans-unit>
-		  <trans-unit id="facet.language">
-		    <source>Language</source>
-		    <target>Sprache</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Zugriff.open">
-		    <source>Open Access</source>
-		    <target>Open Access</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Zugriff.all">
-		    <source>All documents</source>
-		    <target>Alle Dokumente</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Zugriff.close">
-		    <source>Closed / Unbekannt</source>
-		    <target>Closed / Unbekannt</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.dkrz">
-		    <source>Deutsches Klimarechenzentrum</source>
-		    <target>Deutsches Klimarechenzentrum</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.haw">
-		    <source>HAW Hamburg</source>
-		    <target>HAW Hamburg</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.hcu">
-		    <source>HafenCity Universität</source>
-		    <target>HafenCity Universität</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.hsu">
-		    <source>Helmut-Schmidt-Universität</source>
-		    <target>Helmut-Schmidt-Universität</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.tuhh">
-		    <source>Technische Universität Hamburg</source>
-		    <target>Technische Universität Hamburg</target>
-		  </trans-unit>
-		  <trans-unit id="facet.Institution.uhh">
-		    <source>Universität Hamburg</source>
-		    <target>Universität Hamburg</target>
-		  </trans-unit>
+        <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-26T13:11:02Z" product-name="hosfindfacetviews">
+                <header/>
+                <body>
+                  <trans-unit id="facet.collection.Publikationen%20HSU">
+                    <source></source>
+                    <target>Publikationen HSU</target>
+                  </trans-unit>
+                  <trans-unit id="facet.creatorName_facet">
+                    <source>Author</source>
+                    <target>Autor/in</target>
+                  </trans-unit>
+                  <trans-unit id="facet.title">
+                    <source>Title</source>
+                    <target>Titel</target>
+                  </trans-unit>
+                  <trans-unit id="facet.abstract">
+                    <source>Abstract</source>
+                    <target>Abstract oder Zusammenfassung</target>
+                  </trans-unit>
+                  <trans-unit id="facet.seriesInformation">
+                    <source>Erschienen in</source>
+                    <target></target>
+                  </trans-unit>
+                  <trans-unit id="facet.collection">
+                    <source>Collection</source>
+                    <target>Sammlung</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Quellsystem">
+                    <source>Source system</source>
+                    <target>Quellsystem</target>
+                  </trans-unit>
+                  <trans-unit id="facet.openaccess">
+                    <source>OpenAccess</source>
+                    <target>OpenAccess</target>
+                  </trans-unit>
+                  <trans-unit id="facet.publicationYear">
+                    <source></source>
+                    <target>Erscheinungsjahr</target>
+                  </trans-unit>
+                  <trans-unit id="facet.heatmap">
+                    <source>Map</source>
+                    <target>Karte</target>
+                  </trans-unit>
+                  <trans-unit id="facet.publisher">
+                    <source></source>
+                    <target>Herausgebende / Verlag</target>
+                  </trans-unit>
+                  <trans-unit id="facet.subject">
+                    <source></source>
+                    <target>Schlagworte</target>
+                  </trans-unit>
+                  <trans-unit id="facet.ddc">
+                    <source></source>
+                    <target>Fachgebiete</target>
+                  </trans-unit>
+                  <trans-unit id="facet.creatorname">
+                    <source>Autor/in</source>
+                    <target></target>
+                  </trans-unit>
+                  <trans-unit id="facet.resourcetype">
+                    <source>Resource type</source>
+                    <target>Ressourcentyp</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language">
+                    <source>Language</source>
+                    <target>Sprache</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Zugriff.open">
+                    <source>Open Access</source>
+                    <target>Open Access</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Zugriff.all">
+                    <source>All documents</source>
+                    <target>Alle Dokumente</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Zugriff.close">
+                    <source>Closed / Unbekannt</source>
+                    <target>Closed / Unbekannt</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.dkrz">
+                    <source>Deutsches Klimarechenzentrum</source>
+                    <target>Deutsches Klimarechenzentrum</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.haw">
+                    <source>HAW Hamburg</source>
+                    <target>HAW Hamburg</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.hcu">
+                    <source>HafenCity Universität</source>
+                    <target>HafenCity Universität</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.hsu">
+                    <source>Helmut-Schmidt-Universität</source>
+                    <target>Helmut-Schmidt-Universität</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.tuhh">
+                    <source>Technische Universität Hamburg</source>
+                    <target>Technische Universität Hamburg</target>
+                  </trans-unit>
+                  <trans-unit id="facet.Institution.uhh">
+                    <source>Universität Hamburg</source>
+                    <target>Universität Hamburg</target>
+                  </trans-unit>
                   <!-- Medientypen DataCite 4 -->
                   <trans-unit id="facet.Medientyp.Audiovisual">
                     <source>Audiovisual</source>
@@ -240,6 +164,572 @@
                     <source>Other</source>
                     <target>Anderes</target>
                   </trans-unit>
-		</body>
-	</file>
+                  <!-- ISO 639-1 Sprachcodes -->
+                  <trans-unit id="facet.language.aa">
+                    <source></source>
+                    <target>Afar</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ab">
+                    <source></source>
+                    <target>Abchasisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.af">
+                    <source></source>
+                    <target>Afrikaans</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.am">
+                    <source></source>
+                    <target>Amharisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ar">
+                    <source></source>
+                    <target>Arabisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.as">
+                    <source></source>
+                    <target>Assamesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ay">
+                    <source></source>
+                    <target>Aymara</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.az">
+                    <source></source>
+                    <target>Aserbaidschanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ba">
+                    <source></source>
+                    <target>Baschkirisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.be">
+                    <source></source>
+                    <target>Belorussisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.bg">
+                    <source></source>
+                    <target>Bulgarisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.bh">
+                    <source></source>
+                    <target>Biharisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.bi">
+                    <source></source>
+                    <target>Bislamisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.bn">
+                    <source></source>
+                    <target>Bengalisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.bo">
+                    <source></source>
+                    <target>Tibetanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.br">
+                    <source></source>
+                    <target>Bretonisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ca">
+                    <source></source>
+                    <target>Katalanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.co">
+                    <source></source>
+                    <target>Korsisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.cs">
+                    <source></source>
+                    <target>Tschechisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.cy">
+                    <source></source>
+                    <target>Walisisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.da">
+                    <source></source>
+                    <target>Dänisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.de">
+                    <source></source>
+                    <target>Deutsch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.dz">
+                    <source></source>
+                    <target>Dzongkha/ Bhutani</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.el">
+                    <source></source>
+                    <target>Griechisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.en">
+                    <source></source>
+                    <target>Englisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.eo">
+                    <source></source>
+                    <target>Esperanto</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.es">
+                    <source></source>
+                    <target>Spanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.et">
+                    <source></source>
+                    <target>Estnisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.eu">
+                    <source></source>
+                    <target>Baskisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fa">
+                    <source></source>
+                    <target>Persisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fi">
+                    <source></source>
+                    <target>Finnisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fj">
+                    <source></source>
+                    <target>Fiji</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fo">
+                    <source></source>
+                    <target>Färöisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fr">
+                    <source></source>
+                    <target>Französisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.fy">
+                    <source></source>
+                    <target>Friesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ga">
+                    <source></source>
+                    <target>Irisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.gd">
+                    <source></source>
+                    <target>Schottisches Gälisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.gl">
+                    <source></source>
+                    <target>Galizisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.gn">
+                    <source></source>
+                    <target>Guarani</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.gu">
+                    <source></source>
+                    <target>Gujaratisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ha">
+                    <source></source>
+                    <target>Haussa</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.he">
+                    <source></source>
+                    <target>Hebräisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.hi">
+                    <source></source>
+                    <target>Hindi</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.hr">
+                    <source></source>
+                    <target>Kroatisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.hu">
+                    <source></source>
+                    <target>Ungarisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.hy">
+                    <source></source>
+                    <target>Armenisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ia">
+                    <source></source>
+                    <target>Interlingua</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.id">
+                    <source></source>
+                    <target>Indonesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ie">
+                    <source></source>
+                    <target>Interlingue</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ik">
+                    <source></source>
+                    <target>Inupiak</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.is">
+                    <source></source>
+                    <target>Isländisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.it">
+                    <source></source>
+                    <target>Italienisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.iu">
+                    <source></source>
+                    <target>Inuktitut (Eskimo)</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.iw">
+                    <source></source>
+                    <target>Hebräisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ja">
+                    <source></source>
+                    <target>Japanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ji">
+                    <source></source>
+                    <target>Jiddish</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.jv">
+                    <source></source>
+                    <target>Javanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ka">
+                    <source></source>
+                    <target>Georgisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.kk">
+                    <source></source>
+                    <target>Kasachisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.kl">
+                    <source></source>
+                    <target>Kalaallisut</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.km">
+                    <source></source>
+                    <target>Kambodschanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.kn">
+                    <source></source>
+                    <target>Kannada</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ko">
+                    <source></source>
+                    <target>Koreanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ks">
+                    <source></source>
+                    <target>Kaschmirisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ku">
+                    <source></source>
+                    <target>Kurdisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ky">
+                    <source></source>
+                    <target>Kirgisisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.la">
+                    <source></source>
+                    <target>Lateinisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ln">
+                    <source></source>
+                    <target>Lingala</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.lo">
+                    <source></source>
+                    <target>Laotisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.lt">
+                    <source></source>
+                    <target>Litauisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.lv">
+                    <source></source>
+                    <target>Lettisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mg">
+                    <source></source>
+                    <target>Malagasisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mi">
+                    <source></source>
+                    <target>Maorisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mk">
+                    <source></source>
+                    <target>Mazedonisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ml">
+                    <source></source>
+                    <target>Malajalam</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mn">
+                    <source></source>
+                    <target>Mongolisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mo">
+                    <source></source>
+                    <target>Moldavisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mr">
+                    <source></source>
+                    <target>Marathi</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ms">
+                    <source></source>
+                    <target>Malaysisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.mt">
+                    <source></source>
+                    <target>Maltesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.my">
+                    <source></source>
+                    <target>Burmesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.na">
+                    <source></source>
+                    <target>Nauruisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ne">
+                    <source></source>
+                    <target>Nepalesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.nl">
+                    <source></source>
+                    <target>Holländisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.no">
+                    <source></source>
+                    <target>Norwegisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.oc">
+                    <source></source>
+                    <target>Okzitanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.om">
+                    <source></source>
+                    <target>Oromo</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.or">
+                    <source></source>
+                    <target>Oriya</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.pa">
+                    <source></source>
+                    <target>Pundjabisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.pl">
+                    <source></source>
+                    <target>Polnisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ps">
+                    <source></source>
+                    <target>Paschtu</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.pt">
+                    <source></source>
+                    <target>Portugiesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.qu">
+                    <source></source>
+                    <target>Quechua</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.rm">
+                    <source></source>
+                    <target>Rätoromanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.rn">
+                    <source></source>
+                    <target>Kirundisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ro">
+                    <source></source>
+                    <target>Rumänisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ru">
+                    <source></source>
+                    <target>Russisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.rw">
+                    <source></source>
+                    <target>Kijarwanda</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sa">
+                    <source></source>
+                    <target>Sanskrit</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sd">
+                    <source></source>
+                    <target>Zinti</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sg">
+                    <source></source>
+                    <target>Sango</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sh">
+                    <source></source>
+                    <target>Serbokroatisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.si">
+                    <source></source>
+                    <target>Singhalesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sk">
+                    <source></source>
+                    <target>Slowakisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sl">
+                    <source></source>
+                    <target>Slowenisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sm">
+                    <source></source>
+                    <target>Samoanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sn">
+                    <source></source>
+                    <target>Schonisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.so">
+                    <source></source>
+                    <target>Somalisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sq">
+                    <source></source>
+                    <target>Albanisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sr">
+                    <source></source>
+                    <target>Serbisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ss">
+                    <source></source>
+                    <target>Swasiländisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.st">
+                    <source></source>
+                    <target>Sesothisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.su">
+                    <source></source>
+                    <target>Sudanesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sv">
+                    <source></source>
+                    <target>Schwedisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.sw">
+                    <source></source>
+                    <target>Suaheli</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ta">
+                    <source></source>
+                    <target>Tamilisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.te">
+                    <source></source>
+                    <target>Tegulu</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tg">
+                    <source></source>
+                    <target>Tadschikisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.th">
+                    <source></source>
+                    <target>Thai</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ti">
+                    <source></source>
+                    <target>Tigrinja</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tk">
+                    <source></source>
+                    <target>Turkmenisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tl">
+                    <source></source>
+                    <target>Tagalog</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tn">
+                    <source></source>
+                    <target>Sezuan</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.to">
+                    <source></source>
+                    <target>Tongaisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tr">
+                    <source></source>
+                    <target>Türkisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ts">
+                    <source></source>
+                    <target>Tsongaisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tt">
+                    <source></source>
+                    <target>Tatarisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.tw">
+                    <source></source>
+                    <target>Twi</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ug">
+                    <source></source>
+                    <target>Uigur</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.uk">
+                    <source></source>
+                    <target>Ukrainisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.ur">
+                    <source></source>
+                    <target>Urdu</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.uz">
+                    <source></source>
+                    <target>Usbekisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.vi">
+                    <source></source>
+                    <target>Vietnamesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.vo">
+                    <source></source>
+                    <target>Volapük</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.wo">
+                    <source></source>
+                    <target>Wolof</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.xh">
+                    <source></source>
+                    <target>Xhosa</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.yi">
+                    <source></source>
+                    <target>Jiddish</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.yo">
+                    <source></source>
+                    <target>Joruba</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.za">
+                    <source></source>
+                    <target>Zhuang</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.zh">
+                    <source></source>
+                    <target>Chinesisch</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.zu">
+                    <source></source>
+                    <target>Zulu</target>
+                  </trans-unit>
+
+                </body>
+        </file>
 </xliff>
