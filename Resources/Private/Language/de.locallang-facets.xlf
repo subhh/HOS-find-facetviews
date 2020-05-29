@@ -165,6 +165,14 @@
                     <target>Anderes</target>
                   </trans-unit>
                   <!-- ISO 639-1 Sprachcodes -->
+                  <trans-unit id="facet.language.other">
+                    <source></source>
+                    <target>Andere</target>
+                  </trans-unit>
+                  <trans-unit id="facet.language.multi">
+                    <source></source>
+                    <target>Mehrsprachig</target>
+                  </trans-unit>
                   <trans-unit id="facet.language.aa">
                     <source></source>
                     <target>Afar</target>
