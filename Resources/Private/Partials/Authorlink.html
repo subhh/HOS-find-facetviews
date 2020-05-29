@@ -1,39 +1,31 @@
-<f:for each="{creatornames}" as="creatorname" iteration="iterator"> 
-	<f:variable name="total" value="{iterator.total}"></f:variable> 
-	<f:variable name="orcid" value="{orcids.{iterator.index}}"></f:variable> 
-	<f:if condition="{iterator.index} < 7">
-	        <f:if condition="{settings.features.orcid.enabled} && {orcid}  && {orcid} != '-'}"><f:then>
-	        	<a href="{orcid}" class="orcidlink preview" rel="noreferrer" target="orcid" class="orcidlink"><img
-	        	style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
-	        </f:then>
-	        </f:if>
-		<f:if condition="{settings.features.orcid.externalLink}"><f:then>
-			<f:link.action
-					addQueryString="TRUE"
-					arguments="{s:find.facetLinkArguments(facetID:'creatorname', facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"
-					argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
-					section=""
-					noCacheHash="1"
-					title="{f:translate(
-					key :'LLL:{settings.languageRootPath}locallang-hovers.xlf:facetfilterenabler',
-				        arguments : {0:facetName, 1:facetText}
-				 	)}"
-					class="facetAdd
-				internal">
-				{creatorname}
-				<f:if condition="{iterator.isLast}">
-					<f:then></f:then>
-	            	<f:else>
-						<f:if condition="{iterator.index}<7">
-							<f:then>;</f:then>
-							<f:else></f:else>
-						</f:if>
-					</f:else>
-				</f:if>
-	          </f:link.action>
-	         </f:then>
-	         <f:else>{creatorName}</f:else>
-	         </f:if> 	
-	</f:if>  
+<f:for each="{creatornames}" as="creatorname" iteration="iterator">
+        <f:variable name="total" value="{iterator.total}"></f:variable>
+        <f:variable name="orcid" value="{orcids.{iterator.index}}"></f:variable>
+        <f:if condition="{iterator.index} < 7">
+                <f:if condition="{settings.features.orcid.enabled} && {orcid}  && {orcid} != '-'}"><f:then>
+                        <a href="{orcid}" class="orcidlink preview" rel="noreferrer" target="orcid" class="orcidlink"><img
+                        style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
+                </f:then>
+                </f:if>
+                <f:if condition="{settings.features.orcid.externalLink}"><f:then>
+                    <f:link.action
+                        addQueryString="TRUE"
+                        arguments="{s:find.facetLinkArguments(facetID:'creatorname', facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"
+                        argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
+                        section=""
+                        noCacheHash="1"
+                        title="{f:translate(
+                                        key :'LLL:{settings.languageRootPath}locallang-hovers.xlf:facetfilterenabler',
+                                        arguments : {0:facetName, 1:facetText}
+                                        )}"
+                        class="facetAdd
+                                        internal">
+                        <!-- Achtgeben, dass Semikolon direkt an den Namen anschließt -->
+                        {creatorname}<f:if condition="{iterator.isLast}"><f:then></f:then><f:else><f:if condition="{iterator.index}<7"><f:then>;</f:then><f:else></f:else>/f:if></f:else></f:if>
+                  </f:link.action>
+                 </f:then>
+                 <f:else>{creatorName}</f:else>
+                 </f:if>
+        </f:if>
 </f:for>
 <f:if condition="{total} > 7">…</f:if>
