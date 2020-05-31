@@ -17,9 +17,7 @@
                                                 noCacheHash="1"
                                                 class="icon-right-dir internal"
                                                 title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gofirst')}"
-                                            >
-                                                &#x23ea;&#xfe0e;
-                                            </f:link.action>
+                                            ><i class="fa fa-fast-backward"></i></f:link.action>
                                         </f:if>
                                         </f:for>
                                 </f:then>
@@ -33,14 +31,13 @@
 			<f:then>
 			    <f:link.action
 				arguments="{page:pager.previous}"
-				addQueryString="TRUE"
-				section=""
-				noCacheHash="1"
-				class="icon-left-dir internal"
-				           title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:goprev', 
+				           addQueryString="TRUE"
+				           section=""
+				           noCacheHash="1"
+				           class="icon-left-dir internal"
+				title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:goprev', 
                                            arguments:'{1:pager.previous}')}"
-			    >&#x23f4;&#xfe0e;
-			    </f:link.action>
+			    ><i class="fa fa-caret-left"></i></f:link.action>
 			</f:then>
 			<f:else>
 			    <a class="icon-left-dir"></a>
@@ -58,8 +55,7 @@
 				noCacheHash="1"
 				class="icon-right-dir internal"
                                 title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gonext', 
-                                           arguments:'{1:pager.next}')}">&#x23f5;&#xfe0e;
-			    </f:link.action>
+                                           arguments:'{1:pager.next}')}"><i class="fa fa-caret-right"></i></f:link.action>
 			</f:then>
 			<f:else>
 			    <a class="icon-right-dir"></a>
@@ -78,8 +74,7 @@
                                         noCacheHash="1"
                 	                class="icon-right-dir internal"
                 	                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:golast')}"
-	        	            >&#x23e9;&#xfe0e;
-                	               		</f:link.action>
+	        	            ><i class="fa fa-fast-forward"></i></f:link.action>
 					</f:if>
 					</f:for>
 				</f:then>
