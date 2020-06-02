@@ -6,7 +6,7 @@ jQuery(function($) {
         return source.replace(re, function() {
             var url = arguments[0];
             var a = $('<a></a>').attr({'href': url, 'title':'externer Link, keine Gewähr für den Inhalt','target': '_blank'}).text(url);
-            return url.match(/^https?:\/\/$/) ? url : $('<div></div>').prepend('⇢ ').append(a).html();
+            return url.match(/^https?:\/\/$/) ? url : $('<div></div>').append(a).html();
         });
     };
 
