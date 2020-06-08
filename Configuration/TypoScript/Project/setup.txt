@@ -43,6 +43,14 @@ plugin.tx_find {
 		        preview {
                         	enabled = 1 
 			}
+
+			rendering {
+			    lecture2go {
+			        urlMatch = /lecture2go\.uni-hamburg\.de\/.*\/v\/(\d*)/
+			        partial = Lecture2Go
+			    }
+			}
+
 		}
 
 	}
