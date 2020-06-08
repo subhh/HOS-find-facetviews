@@ -84,6 +84,11 @@
                                         </ul>                             
                                            
                                 </f:else>
+				<f:else if="{field} == 'resourceType'">
+					<f:translate
+						key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{fieldContent->f:format.urlencode()}"
+						default="{fieldContent}"/>
+				</f:else>
 			
 				<f:else>
 					<f:render
