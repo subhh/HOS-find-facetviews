@@ -87,6 +87,10 @@
 				<source>Facets</source>
 				<target>Facetten</target>
 			</trans-unit>
+			<trans-unit id="facetsonoff">
+				<source>Show/hide filters</source>
+				<target>Filter ein-/ausblenden</target>
+			</trans-unit>
 			<trans-unit id="removefilter">
 				<source>remove filter</source>
 				<target>Auswahl aufheben</target>

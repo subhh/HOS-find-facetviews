@@ -66,6 +66,9 @@
 			<trans-unit id="facets">
 				<source>Facets</source>
 			</trans-unit>
+			<trans-unit id="facetsonoff">
+				<source>Show/hide filters</source>
+			</trans-unit>
 			<trans-unit id="removefilter">
 				<source>remove filter</source>
 			</trans-unit>

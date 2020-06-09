@@ -16,7 +16,9 @@
    </s:page.title>
    <f:render partial="Page/Standard" arguments="{_all}"/>
    <div class="results">
-     <div id="facetsonoff">Filter  ein-/ausblenden</div>
+     <div id="facetsonoff">
+        <f:translate  key="LLL:{settings.languageRootPath}locallang.xlf:facetsonoff"/>
+     </div>
       <f:if condition="{results.numfound} > 0">
          <f:then>
 	    <f:render partial="Facets/Facets" arguments="{_all}"/>
