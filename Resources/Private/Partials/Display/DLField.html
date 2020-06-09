@@ -53,17 +53,9 @@
 							<f:variable name="orcid" value="{orcids.{it.index}}"></f:variable> 
                                                         <li<f:if condition="{it.index+1}>{MAXCOUNT}">
 							class="hiddenli"  style="display:none"</f:if>>
-							<f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
-							  <a 
-							  class="orcidlink externallinks preview"
-							  title="{orcid}" 
-							  rel="noreferrer" 
-							  href="{orcid}" 
-							  target="orcid" 
-							  ><img
-							  style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
-							</f:if>
+
 								<span class="field-{field}">{creatorname}</span>
+							<f:render partial="Orcid" arguments="{_all}"/>
                                                         </li>
                                                 </f:for>
                                                 <f:if condition="{total}>{MAXCOUNT}">

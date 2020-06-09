@@ -2,11 +2,6 @@
         <f:variable name="total" value="{iterator.total}"></f:variable>
         <f:variable name="orcid" value="{orcids.{iterator.index}}"></f:variable>
         <f:if condition="{iterator.index} < 7">
-                <f:if condition="{settings.features.orcid.enabled} && {orcid}  && {orcid} != '-'}"><f:then>
-                        <a href="{orcid}" class="orcidlink preview" rel="noreferrer" target="orcid" class="orcidlink"><img
-                        style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
-                </f:then>
-                </f:if>
                 <f:if condition="{settings.features.orcid.externalLink}"><f:then>
                     <f:link.action
                         addQueryString="TRUE"
@@ -21,10 +16,13 @@
                         class="facetAdd
                                         internal">
                         <!-- Achtgeben, dass Semikolon direkt an den Namen anschließt -->
-                        {creatorname}<f:if condition="{iterator.isLast}"><f:then></f:then><f:else><f:if condition="{iterator.index}<7"><f:then>;</f:then><f:else></f:else></f:if></f:else></f:if>
+                        {creatorname}<f:render partial="Orcid" arguments="{_all}"/><f:if condition="{iterator.isLast}"><f:then></f:then><f:else><f:if condition="{iterator.index}<7"><f:then>;</f:then><f:else></f:else></f:if></f:else></f:if>
                   </f:link.action>
                  </f:then>
-                 <f:else>{creatorName}</f:else>
+                 <f:else>
+                     {creatorName}
+                     <f:render partial="Orcid" arguments="{_all}"/>
+                 </f:else>
                  </f:if>
         </f:if>
 </f:for>

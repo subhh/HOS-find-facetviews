@@ -1,0 +1,7 @@
+<f:if condition="{settings.features.orcid.enabled} && {orcid}  && {orcid} != '-'}">
+    <f:then>
+        <a href="{orcid}" class="orcidlink preview" rel="noreferrer" target="orcid" class="orcidlink">
+            <img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" />
+        </a>
+    </f:then>
+</f:if>

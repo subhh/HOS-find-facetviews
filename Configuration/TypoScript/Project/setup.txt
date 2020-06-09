@@ -36,7 +36,7 @@ plugin.tx_find {
 		orcid {
 			enabled = 1
 			externalLink = 1
-			style = width:16px;margin-right:3px;
+			style = width:16px;margin-right:-3px;
 			image = typo3conf/ext/hosfindfacetviews/Resources/Public/assets/orcid.png	
 		}
 		externalLinks {
