@@ -53,11 +53,11 @@
                         </trans-unit>
                         <trans-unit id="field.resourceType">
                                 <source>Resource type</source>
-                                <target>Ressourcentyp</target>
+                                <target>Medientyp</target>
                         </trans-unit>
                         <trans-unit id="field.resourceType.plural">
                                 <source>Resource types</source>
-                                <target>Ressourcentypen</target>
+                                <target>Medientypen</target>
                         </trans-unit>
                         <trans-unit id="field.publicationYear">
                                 <source>Publication year</source>
