@@ -61,7 +61,7 @@
                   </trans-unit>
                   <trans-unit id="facet.resourcetype">
                     <source>Resource type</source>
-                    <target>Ressourcentyp</target>
+                    <target>Medientyp</target>
                   </trans-unit>
                   <trans-unit id="facet.language">
                     <source>Language</source>
