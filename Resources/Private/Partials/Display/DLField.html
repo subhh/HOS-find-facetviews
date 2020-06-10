@@ -59,21 +59,24 @@
 						    	<span style="font-style:italic;font-size:10pt">Zeige mehr(+{total - MAXCOUNT})…</span>
 							</li>
 							<li class="facetShowLess" style="display:list-item;cursor:pointer;display:none">
-							   <span style="font-size:10pt;font-style:italic;"><i>Zeige weniger…</i></span>
+							    <span style="font-size:10pt;font-style:italic;"><i>Zeige weniger…</i></span>
 							</li>
 						</f:if>
 					</ul>
 				</f:else>
+                                <f:else if="{field} == 'resourceType'">
+                                    <f:translatekey="LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{fieldContent->f:format.urlencode()}" default="{fieldContent}"/>
+                                </f:else>
 				<f:else>
-					<f:render
-						partial="Display/Field/List"
-						arguments="{
-							document:document,
-							results:results,
-							field:field,
-							linkFieldContent:linkFieldContent,
-							linkFacets:linkFacets
-						}"/>
+				    <f:render
+					partial="Display/Field/List"
+						 arguments="{
+						 document:document,
+						 results:results,
+						 field:field,
+						 linkFieldContent:linkFieldContent,
+						 linkFacets:linkFacets
+						 }"/>
 				</f:else>
 			</f:if>
 		</dd>
