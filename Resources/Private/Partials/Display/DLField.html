@@ -60,6 +60,9 @@
                                                 </f:for>
                                         </ul>
                                 </f:then>
+                                <f:else if="{field} == 'resourceType'">
+                                    <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{fieldContent->f:format.urlencode()}" default="{fieldContent}"/>
+                                </f:else>
                                 <f:else if="{field} == 'creatorName'">
                                         <f:comment>Renders creatorNames</f:comment>
                                         <f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable>
@@ -73,8 +76,8 @@
                                                         <li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
                                                             <span class="field-{field}">
                                                                 {creatorname}<f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
-								<a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
-								</f:if>
+                                                                <a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
+                                                                </f:if>
                                                             </span>
                                                         </li>
                                                 </f:for>
