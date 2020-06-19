@@ -1,118 +1,111 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <f:comment>
-	Renders a dt/dd pair for the field named field of the document passed.
-	Takes into account whether the field is repeatable or not and uses the
-	appropriate label.
+        Renders a dt/dd pair for the field named field of the document passed.
+        Takes into account whether the field is repeatable or not and uses the
+        appropriate label.
 </f:comment>
 <f:alias map="{fieldContent:'{s:data.valueForKey(array:document.fields, key:field)}'}">
-	<f:if condition="{fieldContent}">
-		<dt class="dt-{field}">
-			<f:if condition="{s:data.isArray(subject:fieldContent)}">
-				<f:then>
-					<f:if condition="{fieldContent->f:count()} > 1">
-						<f:then>
-							<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}.plural" default="{field}"/>:
-						</f:then>
-						<f:else>
-							<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
-						 </f:else>
-					</f:if>
-				</f:then>
-				<f:else>
-					<f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
-				</f:else>
-			</f:if>
-		</dt>
-		<dd class="dd-{field}">
-			<f:if condition="{field} == 'url'">
-				<f:then>
-					<ul class="field-{field}-group">
-						<f:for each="{document.fields.url}" as="item">
-							<li>
-								<f:for each="{settings.features.externalLinks.rendering}" as="renderingOption" key="key">
-									<f:if condition="{renderingOption.urlMatch}">
-										<f:if condition="{v:variable.pregMatch(pattern: '{renderingOption.urlMatch}', subject: '{item}', global: 1)}">
-											<f:then>
-												<v:variable.set name="partialRendering" value="{key}"/>
-												<v:variable.set name="externalId" value="{v:variable.pregMatch(pattern: '{renderingOption.urlMatch}', subject: '{item}', global: 1)}"/>
-												<v:variable.set name="externalId" value="{externalId.0.1}"/>
-											</f:then>
-											<f:else>
-												<v:variable.set name="partialRendering" value="0"/>
-											</f:else>
-										</f:if>
-									</f:if>
-								</f:for>
-								<f:if condition="{partialRendering}">
-									<f:then>
-										<f:render partial="ExternalRendering/{partialRendering}" arguments="{_all}"/>
-										{item}
-									</f:then>
-									<f:else>
-										<span class="field-{field}">
-											<f:link.external
-												class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>'
-												uri="{item}" target="_blank">{item}</f:link.external>
-										</span>
-									</f:else>
+        <f:if condition="{fieldContent}">
+                <dt class="dt-{field}">
+                        <f:if condition="{s:data.isArray(subject:fieldContent)}">
+                                <f:then>
+                                        <f:if condition="{fieldContent->f:count()} > 1">
+                                                <f:then>
+                                                        <f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}.plural" default="{field}"/>:
+                                                </f:then>
+                                                <f:else>
+                                                        <f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
+                                                 </f:else>
+                                        </f:if>
+                                </f:then>
+                                <f:else>
+                                        <f:translate key="LLL:{settings.languageRootPath}locallang-fields.xml:field.{field}" default="{field}"/>:
+                                </f:else>
+                        </f:if>
+                </dt>
+                <dd class="dd-{field}">
+                        <f:if condition="{field} == 'url'">
+                                <f:then>
+                                        <ul class="field-{field}-group">
+                                                <f:for each="{document.fields.url}" as="item">
+                                                        <li>
+                                                                <f:for each="{settings.features.externalLinks.rendering}" as="renderingOption" key="key">
+                                                                        <f:if condition="{renderingOption.urlMatch}">
+                                                                                <f:if condition="{v:variable.pregMatch(pattern: '{renderingOption.urlMatch}', subject: '{item}', global: 1)}">
+                                                                                        <f:then>
+                                                                                                <v:variable.set name="partialRendering" value="{key}"/>
+                                                                                                <v:variable.set name="externalId" value="{v:variable.pregMatch(pattern: '{renderingOption.urlMatch}', subject: '{item}', global: 1)}"/>
+                                                                                                <v:variable.set name="externalId" value="{externalId.0.1}"/>
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                                <v:variable.set name="partialRendering" value="0"/>
+                                                                                        </f:else>
+                                                                                </f:if>
+                                                                        </f:if>
+                                                                </f:for>
+                                                                <f:if condition="{partialRendering}">
+                                                                        <f:then>
+                                                                                <f:render partial="ExternalRendering/{partialRendering}" arguments="{_all}"/>
+                                                                                {item}
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                                <span class="field-{field}">
+                                                                                        <f:link.external
+                                                                                                class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>'
+                                                                                                uri="{item}" target="_blank">{item}</f:link.external>
+                                                                                </span>
+                                                                        </f:else>
+                                                                </f:if>
+                                                        </li>
+                                                </f:for>
+                                        </ul>
+                                </f:then>
+                                <f:else if="{field} == 'creatorName'">
+                                        <f:comment>Renders creatorNames</f:comment>
+                                        <f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable>
+                                        <f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable>
+                                        <f:variable name="MAXCOUNT" value="7"></f:variable>
+                                        <ul class="field-{field}-group">
+                                                <f:for each="{creatornames}" as="creatorname" iteration="it">
+                                                        <f:variable name="total" value="{it.total}"></f:variable>
+                                                        <f:variable name="more" value="{total}-{MAXCOUNT}"></f:variable>
+                                                        <f:variable name="orcid" value="{orcids.{it.index}}"></f:variable>
+                                                        <li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
+                                                            <span class="field-{field}">
+                                                                {creatorname}<f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
+								<a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
 								</f:if>
-							</li>
-						</f:for>
-					</ul>
-				</f:then>
-				<f:else if="{field} == 'creatorName'">
-					<f:comment>Renders creatorNames</f:comment>       
-					<f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable> 		
-					<f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable>
-					<f:variable name="MAXCOUNT" value="7"></f:variable>
-					<ul class="field-{field}-group">
-						<f:for each="{creatornames}" as="creatorname" iteration="it"> 
-							<f:variable name="total" value="{it.total}"></f:variable>
-							<f:variable name="more" value="{total}-{MAXCOUNT}"></f:variable>
-							<f:variable name="orcid" value="{orcids.{it.index}}"></f:variable> 
-							<li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
-								<f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
-									<a
-									class="orcidlink externallinks preview"
-									title="{orcid}"
-									rel="noreferrer"
-									href="{orcid}"
-									target="orcid"
-									>
-								  		<img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" />
-							  		</a>
-								</f:if>
-								<span class="field-{field}">{creatorname}</span>
-							</li>
-						</f:for>
-						<f:if condition="{total}>{MAXCOUNT}">
-						<li class="facetShowAll" style="display:list-item;cursor:pointer">
-						   <span style="font-style:italic;font-size:10pt">
-							   Zeige mehr (+{total - MAXCOUNT})…
-						   </span>
-						</li>
-						<li class="facetShowLess" style="display:list-item;cursor:pointer;display:none">
-						   <span style="font-size:10pt;font-style:italic;">
-							   <i>
-								   Zeige weniger…
-							   </i>
-						   </span>
-						</li>
-						</f:if>
-					</ul>
-				</f:else>
-				<f:else>
-				    <f:render
-					partial="Display/Field/List"
-						 arguments="{
-						 document:document,
-						 results:results,
-						 field:field,
-						 linkFieldContent:linkFieldContent,
-						 linkFacets:linkFacets
-						 }"/>
-				</f:else>
-			</f:if>
-		</dd>
-	</f:if>
+                                                            </span>
+                                                        </li>
+                                                </f:for>
+                                                <f:if condition="{total}>{MAXCOUNT}">
+                                                <li class="facetShowAll" style="display:list-item;cursor:pointer">
+                                                   <span style="font-style:italic;font-size:10pt">
+                                                           Zeige mehr (+{total - MAXCOUNT})…
+                                                   </span>
+                                                </li>
+                                                <li class="facetShowLess" style="display:list-item;cursor:pointer;display:none">
+                                                   <span style="font-size:10pt;font-style:italic;">
+                                                           <i>
+                                                                   Zeige weniger…
+                                                           </i>
+                                                   </span>
+                                                </li>
+                                                </f:if>
+                                        </ul>
+                                </f:else>
+                                <f:else>
+                                    <f:render
+                                        partial="Display/Field/List"
+                                                 arguments="{
+                                                 document:document,
+                                                 results:results,
+                                                 field:field,
+                                                 linkFieldContent:linkFieldContent,
+                                                 linkFacets:linkFacets
+                                                 }"/>
+                                </f:else>
+                        </f:if>
+                </dd>
+        </f:if>
 </f:alias>
