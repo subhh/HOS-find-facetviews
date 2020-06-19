@@ -64,25 +64,23 @@
                                     <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{fieldContent->f:format.urlencode()}" default="{fieldContent}"/>
                                 </f:else>
                                 <f:else if="{field} == 'creatorName'">
-                                        <f:comment>Renders creatorNames</f:comment>
-                                        <f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable>
-                                        <f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable>
-                                        <f:variable name="MAXCOUNT" value="7"></f:variable>
-                                        <ul class="field-{field}-group">
-                                                <f:for each="{creatornames}" as="creatorname" iteration="it">
-                                                        <f:variable name="total" value="{it.total}"></f:variable>
-                                                        <f:variable name="more" value="{total}-{MAXCOUNT}"></f:variable>
-                                                        <f:variable name="orcid" value="{orcids.{it.index}}"></f:variable>
-                                                        <li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
-                                                            <span class="field-{field}">
-                                                                {creatorname}<f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
-                                                                <a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
-                                                                </f:if>
-                                                            </span>
-                                                        </li>
-                                                </f:for>
-                                                <f:if condition="{total}>{MAXCOUNT}">
-                                                <li class="facetShowAll" style="display:list-item;cursor:pointer">
+                                    <f:comment>Renders creatorNames</f:comment>
+                                    <f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable>
+                                    <f:variable name="creatornames" value="{results.documents.0.fields.creatorName}"></f:variable>
+                                    <f:variable name="MAXCOUNT" value="7"></f:variable>
+                                    <ul class="field-{field}-group">
+                                        <f:for each="{creatornames}" as="creatorname" iteration="it">
+                                            <f:variable name="total" value="{it.total}"></f:variable>
+                                            <f:variable name="more" value="{total}-{MAXCOUNT}"></f:variable>
+                                            <f:variable name="orcid" value="{orcids.{it.index}}"></f:variable>
+                                            <li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
+                                                <span class="field-{field}">{creatorname}</span><f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
+                                                    <a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
+                                                </f:if>
+                                            </li>
+                                        </f:for>
+                                        <f:if condition="{total}>{MAXCOUNT}">
+                                            <li class="facetShowAll" style="display:list-item;cursor:pointer">
                                                    <span style="font-style:italic;font-size:10pt">
                                                            Zeige mehr (+{total - MAXCOUNT})…
                                                    </span>
