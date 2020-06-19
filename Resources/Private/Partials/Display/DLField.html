@@ -38,24 +38,21 @@
                                                                                                 <v:variable.set name="externalId" value="{externalId.0.1}"/>
                                                                                         </f:then>
                                                                                         <f:else>
-                                                                                                <v:variable.set name="partialRendering" value="0"/>
+                                                                                            <v:variable.set name="partialRendering" value="0"/>
                                                                                         </f:else>
                                                                                 </f:if>
                                                                         </f:if>
                                                                 </f:for>
-                                                                <f:if condition="{partialRendering}">
+                                                                <span class="field-{field}">
+                                                                    <f:link.external
+                                                                        class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>' uri="{item}" target="_blank">{item}</f:link.external>
+                                                                    <f:if condition="{partialRendering}">
                                                                         <f:then>
-                                                                                <f:render partial="ExternalRendering/{partialRendering}" arguments="{_all}"/>
-                                                                                {item}
+                                                                            <f:render partial="ExternalRendering/{partialRendering}" arguments="{_all}"/>
+                                                                            {item}
                                                                         </f:then>
-                                                                        <f:else>
-                                                                                <span class="field-{field}">
-                                                                                        <f:link.external
-                                                                                                class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>'
-                                                                                                uri="{item}" target="_blank">{item}</f:link.external>
-                                                                                </span>
-                                                                        </f:else>
-                                                                </f:if>
+                                                                    </f:if>
+                                                                </span>
                                                         </li>
                                                 </f:for>
                                         </ul>
