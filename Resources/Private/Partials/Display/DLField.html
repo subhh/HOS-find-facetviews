@@ -44,15 +44,17 @@
                                                                         </f:if>
                                                                 </f:for>
                                                                 <span class="field-{field}">
-                                                                    <f:link.external
-                                                                        class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>' uri="{item}" target="_blank">{item}</f:link.external>
                                                                     <f:if condition="{partialRendering}">
                                                                         <f:then>
                                                                             <details>
-                                                                                <summary>Video ansehen</summary>
+                                                                                <summary>{item}</summary>
                                                                                 <f:render partial="ExternalRendering/{partialRendering}" arguments="{_all}"/>
                                                                             </details>
                                                                         </f:then>
+                                                                        <f:else>
+                                                                            <f:link.external
+                                                                                class='<f:if condition="{settings.features.externalLinks.preview.enabled} && false"><f:then>externalLinkHasPreview</f:then></f:if>' uri="{item}" target="_blank">{item}</f:link.external>
+                                                                        </f:else>
                                                                     </f:if>
                                                                 </span>
                                                         </li>
