@@ -36,8 +36,8 @@
                                                                                                 <v:variable.set name="partialRendering" value="{key}"/>
                                                                                                 <v:variable.set name="externalId" value="{v:variable.pregMatch(pattern: '{renderingOption.urlMatch}', subject: '{item}', global: 1)}"/>
                                                                                                 <v:variable.set name="externalId" value="{externalId.0.1}"/>
-                                                                                                <v:variable.set name="baseUrl" value="{v:variable.pregMatch(pattern: '(https?://[^/]+).*', subject: '{item}', global: 1)}"/>
-                                                                                                <v:variable.set name="baseUrl" value="{baseUrl.0.1}"/>
+                                                                                                <v:variable.set name="baseUrl" value="{v:variable.pregMatch(pattern: '((http|https)://[^/]+)', subject: '{item}', global: 1)}"/>
+                                                                                                <v:variable.set name="baseUrl" value="{baseUrl.0.0}"/>
                                                                                         </f:then>
                                                                                         <f:else>
                                                                                             <v:variable.set name="partialRendering" value="0"/>
