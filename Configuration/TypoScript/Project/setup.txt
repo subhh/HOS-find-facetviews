@@ -46,7 +46,7 @@ plugin.tx_find {
 
 			rendering {
 			    lecture2go {
-			        urlMatch = /lecture2go\.uni-hamburg\.de\/.*\/v\/(\d*)/
+			        urlMatch = /(lecture2go\.uni-hamburg\.de|mediathek\.hfbk\.net|mediathek\.hfmt-hamburg\.de)/\/.*\/v\/(\d*)/
 			        partial = Lecture2Go
 			    }
 			}
