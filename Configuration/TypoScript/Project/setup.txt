@@ -74,6 +74,26 @@ plugin.tx_find.settings.facets.heatmap.tileprovider.layers = 6,10,18,26,2,14,22
 
 plugin.tx_find.settings.facets.heatmap.tileprovider.crs = EPSG:3857
 
+
+plugin.tx_find.settings.facets.restype.map {
+    Audiovisual = fa-film
+    Collection = fa-files-o
+    DataPaper = fa-bar-chart
+    Dataset = fa-database
+    Event = fa-calendar
+    Image = fa-camera
+    InteractiveResource = fa-desktop
+    Model = fa-pie-chart
+    PhysicalObject = fa-cube
+    Service = fa-handshake-o
+    Software = fa-cog
+    Sound = fa-volume-down
+    Text = fa-file-text
+    Workflow = fa-sitemap
+    Other = fa-question-circle-o
+}
+
+
 config.tx_realurl_enable = 1
 config.absRefPrefix = /
 
