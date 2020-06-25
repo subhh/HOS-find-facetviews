@@ -12,41 +12,43 @@
 </f:comment>
 
 <f:section name="main">
-        <v:page.header.meta additionalAttributes="{property: 'og:description'}" 
-        	content="{document.fields.title.0}" />
-        <v:page.header.meta additionalAttributes="{property: 'og:title'}" 
-        	content="{document.fields.creatorName.0}{document.fields.contributorName.0}" />
-        <v:page.header.meta additionalAttributes="{property: 'og:image'}" 
-        	content="{settings.socialmeta.image}"
-        	/>
-        <v:page.header.meta name="twitter:image" content="{settings.socialmeta.image}" />	
-        <v:page.header.meta name="twitter:site"  content="{settings.socialmeta.sitename}" />
-        <v:page.header.meta name="twitter:domain" content="{settings.socialmeta.site}" />
-        <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
-        <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
-        <f:render partial="Page/Standard" arguments="{_all}"/>
-        <article class="detail"
-         <f:if condition="{settings.features.altmetrics.enabled}">
-                 <f:then>
-                         data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
-                 </f:then>
-          </f:if>
-          <h1><f:format.htmlentitiesDecode>
-                <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
-                </f:format.htmlentitiesDecode>
-          </h1>
-          <div class="group">
-                <div class="leftbox">
-                            <dl>
-                                <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
-                                    <f:for each="{facetfields}" as="field">
-                                        <f:render partial="Display/DLField" 
-                                          arguments="{results:results,document:document,field:field}"/>
-                                    </f:for>
-                                </v:iterator.explode>
-                            </dl>
-                </div>
-                <div class="rightbox">&nbsp;</div>
+    <v:page.header.meta additionalAttributes="{property: 'og:description'}"
+        content="{document.fields.title.0}" />
+    <v:page.header.meta additionalAttributes="{property: 'og:title'}"
+        content="{document.fields.creatorName.0}{document.fields.contributorName.0}" />
+    <v:page.header.meta additionalAttributes="{property: 'og:image'}"
+        content="{settings.socialmeta.image}" />
+    <v:page.header.meta name="twitter:image" content="{settings.socialmeta.image}" />
+    <v:page.header.meta name="twitter:site"  content="{settings.socialmeta.sitename}" />
+    <v:page.header.meta name="twitter:domain" content="{settings.socialmeta.site}" />
+    <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
+    <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
+    <f:render partial="Page/Standard" arguments="{_all}"/>
+    <article class="detail"
+    <f:if condition="{settings.features.altmetrics.enabled}">
+        <f:then>
+            data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
+        </f:then>
+    </f:if>
+    <h1>
+        <span style="position:absolute;color:#4e7984;" class="resourcetype-icon fa {settings.facets.restype.map.{document.fields.resourceType}}"></span>
+        <div style="margin-left:90px">
+        <f:format.htmlentitiesDecode>
+            <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
+        </f:format.htmlentitiesDecode>
+    </h1>
+    <div class="group">
+        <div class="leftbox">
+            <dl>
+                <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
+                    <f:for each="{facetfields}" as="field">
+                        <f:render partial="Display/DLField"
+                            arguments="{results:results,document:document,field:field}"/>
+                    </f:for>
+                </v:iterator.explode>
+            </dl>
+        </div>
+        <div class="rightbox">&nbsp;</div>
                 <!-- <div class="rightbox"
                      id="map" 
                      style="height-min:500px"
