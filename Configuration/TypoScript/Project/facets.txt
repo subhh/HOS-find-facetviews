@@ -32,7 +32,6 @@ Medientyp {
   query = (resourceType:"%s")
   field = resourceType
   type = List
-  sortOrder = index
 }
 
 GEO {
