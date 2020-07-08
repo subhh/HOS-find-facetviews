@@ -22,6 +22,11 @@ $( document ).ready(function() {
         removeHiddenFacetInputs();
     });
 
+    // remove active facets if submit button is clicked
+    $('div.controls .submit').on('click', function (event) {
+        removeHiddenFacetInputs();
+    });
+
     // refill search form with last search
     var selectField, searchTerm;
     selectField = getUrlParameter('tx_find_find%5BsearchFieldSelection%5D');
