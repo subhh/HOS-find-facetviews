@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
+        <header/>
+        <body>
+            <trans-unit id="field.IsCitedBy">
+                <source>is cited by</source>
+            </trans-unit>
+            <trans-unit id="field.Cites">
+                <source>cites</source>
+            </trans-unit>
+            <trans-unit id="field.IsSupplementTo">
+                <source>is supplement to</source>
+            </trans-unit>
+            <trans-unit id="field.IsSupplementedBy">
+                <source>is supplemented by</source>
+            </trans-unit>
+            <trans-unit id="field.IsContinuedBy">
+                <source>is continued by</source>
+            </trans-unit>
+            <trans-unit id="field.Continues">
+                <source>continues</source>
+            </trans-unit>
+            <trans-unit id="field.IsDescribedBy">
+                <source>is described by</source>
+            </trans-unit>
+            <trans-unit id="field.Describes">
+                <source>describes</source>
+            </trans-unit>
+            <trans-unit id="field.HasMetadata">
+                <source>has metadata</source>
+            </trans-unit>
+            <trans-unit id="field.IsMetadataFor">
+                <source>is metadata for</source>
+            </trans-unit>
+            <trans-unit id="field.HasVersion">
+                <source>has version</source>
+            </trans-unit>
+            <trans-unit id="field.IsVersionOf">
+                <source>is version of</source>
+            </trans-unit>
+            <trans-unit id="field.IsNewVersionOf">
+                <source>is new version of</source>
+            </trans-unit>
+            <trans-unit id="field.IsPreviousVersionOf">
+                <source>is previous version of</source>
+            </trans-unit>
+            <trans-unit id="field.IsPartOf">
+                <source>is part of</source>
+            </trans-unit>
+            <trans-unit id="field.HasPart">
+                <source>has part</source>
+            </trans-unit>
+            <trans-unit id="field.IsReferencedBy">
+                <source>is referenced by</source>
+            </trans-unit>
+            <trans-unit id="field.References">
+                <source>references</source>
+            </trans-unit>
+            <trans-unit id="field.IsDocumentedBy">
+                <source>is documented by</source>
+            </trans-unit>
+            <trans-unit id="field.Documents">
+                <source>documents</source>
+            </trans-unit>
+            <trans-unit id="field.IsCompiledBy">
+                <source>is compiled by</source>
+            </trans-unit>
+            <trans-unit id="field.Compiles">
+                <source>compiles</source>
+            </trans-unit>
+            <trans-unit id="field.IsVariantFormOf">
+                <source>is variant form of</source>
+            </trans-unit>
+            <trans-unit id="field.IsOriginalFormOf">
+                <source>is original form of</source>
+            </trans-unit>
+            <trans-unit id="field.IsIdenticalTo">
+                <source>is identical to</source>
+            </trans-unit>
+            <trans-unit id="field.IsReviewedBy">
+                <source>is reviewed by</source>
+            </trans-unit>
+            <trans-unit id="field.Reviews">
+                <source>reviews</source>
+            </trans-unit>
+            <trans-unit id="field.IsDerivedFrom">
+                <source>is derived from</source>
+            </trans-unit>
+            <trans-unit id="field.IsSourceOf">
+                <source>is source of</source>
+            </trans-unit>
+            <trans-unit id="field.IsRequiredBy">
+                <source>is required by</source>
+            </trans-unit>
+            <trans-unit id="field.Requires">
+                <source>requires</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
