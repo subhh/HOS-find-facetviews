@@ -5,7 +5,7 @@
                 <f:if condition="{settings.features.orcid.externalLink}"><f:then>
                     <f:link.action
                         addQueryString="TRUE"
-                        arguments="{s:find.facetLinkArguments(facetID:'creatorname', facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"
+                        arguments="{s:find.facetLinkArguments(facetID:'creatorname', facetTerm:'{creatorname -> f:format.stripTags()}', activeFacets:config.activeFacets)}"
                         argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
                         section=""
                         noCacheHash="1"
