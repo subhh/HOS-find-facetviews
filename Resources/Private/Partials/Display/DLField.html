@@ -77,7 +77,18 @@
                                             <f:variable name="more" value="{total}-{MAXCOUNT}"></f:variable>
                                             <f:variable name="orcid" value="{orcids.{it.index}}"></f:variable>
                                             <li<f:if condition="{it.index+1}>{MAXCOUNT}">class="hiddenli"  style="display:none"</f:if>>
-                                                <span class="field-{field}">{creatorname}</span><f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
+                                                <span class="field-{field}">
+                                                    <f:link.action
+                                                        action="index"
+                                                        addQueryString="TRUE"
+                                                        arguments="{s:find.facetLinkArguments(facetID:'creatorname', facetTerm:'{creatorname}', activeFacets:config.activeFacets)}"
+                                                        argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]', 1:'tx_find_find[id]'}"
+                                                        section=""
+                                                        noCacheHash="1"
+                                                    >
+                                                        {creatorname}
+                                                    </f:link.action>
+                                                </span><f:if condition="{settings.features.orcid.enabled} && {orcid} && {orcid} != '-'}">
                                                     <a class="orcidlink externallinks preview" title="{orcid}" rel="noreferrer" href="{orcid}" target="orcid"><img style="{settings.features.orcid.style}" src="{settings.features.orcid.image}" /></a>
                                                 </f:if>
                                             </li>
