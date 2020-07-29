@@ -5,18 +5,6 @@
         </h3>
         <div class="facetList" style="background-color:#ccc;padding-left: 0.2em;">
             <ol>
-                <li class="active-facet-reset">
-                    <f:link.action
-                            addQueryString="TRUE"
-                            argumentsToBeExcludedFromQueryString="{1: 'tx_find_find[facet]'}"
-                            section="{settings.jumpToID}"
-                            noCacheHash="1"
-                            class=""
-                            title="alle Filter zurücksetzen">
-                        <span style="color:#9D1F1F;font-size: 1.0em;font-weight: bold;">Alle Filter zurücksetzen</span>
-                    </f:link.action>
-                </li>
-
                 <f:for each="{config.facets}" as="facetInfo" key="facetKey">
                     <f:if condition="{facetInfo.hidden}!=1">
                         <v:variable.set value="{s:data.valueForKey(array:results.components.facetset.facets, key:facetInfo.id)}" name="facetData" />
