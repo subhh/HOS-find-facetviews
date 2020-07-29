@@ -151,9 +151,8 @@ $(function() {
     /* Removing all whitespaces around spans */
     $('dd span').each(function() {
         var that = $(this);
-        
         //because links in detail page changed to text
-        if(this.className != 'field-url'){
+        if(this.className != 'field-url' && this.className != 'field-creatorName'){
             that.text(that.text().trim());
         } 
     });
