@@ -5,6 +5,9 @@
 </f:comment>
 <f:if condition="{results.components.facetset.facets}">
 	<section class="facets">
+
+		<f:render partial="Facets/ActiveFacets" arguments="{_all}"/>
+
 		<h3 class="invisible">
 			<f:translate key="Facets"/>
 			<a href="#c{config.uid}-resultList">

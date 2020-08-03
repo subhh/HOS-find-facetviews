@@ -1,0 +1,32 @@
+<f:if condition="{arguments.facet}">
+    <article class="facet ctg-facet active-facets">
+        <h3>
+            Aktive Facetten
+        </h3>
+        <div class="facetList" style="background-color:#ccc;padding-left: 0.2em;">
+            <ol>
+                <f:for each="{config.facets}" as="facetInfo" key="facetKey">
+                    <f:if condition="{facetInfo.hidden}!=1">
+                        <v:variable.set value="{s:data.valueForKey(array:results.components.facetset.facets, key:facetInfo.id)}" name="facetData" />
+                        <f:for each="{facetData.values}" as="itemCount" key="facetTerm" iteration="iterator">
+                            <f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
+                                <li>
+                                    <f:link.action
+                                            addQueryString="TRUE"
+                                            argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+                                            section="{settings.jumpToID}"
+                                            noCacheHash="1"
+                                            class=""
+                                            title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}">
+                                        <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                        <span style="color:#9D1F1F;font-size:2.0em;margin:2px 3px 0 0;position: relative; top: 4px;padding-left: 0.2em;">×</span>
+                                    </f:link.action>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </f:if>
+                </f:for>
+            </ol>
+        </div>
+    </article>
+</f:if>
