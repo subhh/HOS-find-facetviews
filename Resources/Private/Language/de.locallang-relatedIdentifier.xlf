@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-09-18T09:37:01Z" product-name="hosfindfacetviews">
+        <header/>
+        <body>
+            <trans-unit id="field.IsCitedBy">
+                <source>is cited by</source>
+                <target>Zitiert von</target>
+            </trans-unit>
+            <trans-unit id="field.Cites">
+                <source>cites</source>
+                <target>Zitiert</target>
+            </trans-unit>
+            <trans-unit id="field.IsSupplementTo">
+                <source>is supplement to</source>
+                <target>Unterstützt</target>
+            </trans-unit>
+            <trans-unit id="field.IsSupplementedBy">
+                <source>is supplemented by</source>
+                <target>Unterstützt durch</target>
+            </trans-unit>
+            <trans-unit id="field.IsContinuedBy">
+                <source>is continued by</source>
+                <target>Fortgeführt von</target>
+            </trans-unit>
+            <trans-unit id="field.Continues">
+                <source>continues</source>
+                <target>Führt fort</target>
+            </trans-unit>
+            <trans-unit id="field.IsDescribedBy">
+                <source>is described by</source>
+                <target>Beschrieben von</target>
+            </trans-unit>
+            <trans-unit id="field.Describes">
+                <source>describes</source>
+                <target>Beschreibt</target>
+            </trans-unit>
+            <trans-unit id="field.HasMetadata">
+                <source>has metadata</source>
+                <target>Metadatenquelle</target>
+            </trans-unit>
+            <trans-unit id="field.IsMetadataFor">
+                <source>is metadata for</source>
+                <target>Stellt Metadaten für</target>
+            </trans-unit>
+            <trans-unit id="field.HasVersion">
+                <source>has version</source>
+                <target>Version</target>
+            </trans-unit>
+            <trans-unit id="field.IsVersionOf">
+                <source>is version of</source>
+                <target>Version von</target>
+            </trans-unit>
+            <trans-unit id="field.IsNewVersionOf">
+                <source>is new version of</source>
+                <target>Neue Version von</target>
+            </trans-unit>
+            <trans-unit id="field.IsPreviousVersionOf">
+                <source>is previous version of</source>
+                <target>Vorgänger von</target>
+            </trans-unit>
+            <trans-unit id="field.IsPartOf">
+                <source>is part of</source>
+                <target>Teil von</target>
+            </trans-unit>
+            <trans-unit id="field.HasPart">
+                <source>has part</source>
+                <target>Ist Teil von</target>
+            </trans-unit>
+            <trans-unit id="field.IsReferencedBy">
+                <source>is referenced by</source>
+                <target>Referenziert von</target>
+            </trans-unit>
+            <trans-unit id="field.References">
+                <source>references</source>
+                <target>Referenziert</target>
+            </trans-unit>
+            <trans-unit id="field.IsDocumentedBy">
+                <source>is documented by</source>
+                <target>Dokumentiert durch</target>
+            </trans-unit>
+            <trans-unit id="field.Documents">
+                <source>documents</source>
+                <target>Dokumentiert</target>
+            </trans-unit>
+            <trans-unit id="field.IsCompiledBy">
+                <source>is compiled by</source>
+                <target>Kompiliert durch</target>
+            </trans-unit>
+            <trans-unit id="field.Compiles">
+                <source>compiles</source>
+                <target>Kompiliert</target>
+            </trans-unit>
+            <trans-unit id="field.IsVariantFormOf">
+                <source>is variant form of</source>
+                <target>Variante von</target>
+            </trans-unit>
+            <trans-unit id="field.IsOriginalFormOf">
+                <source>is original form of</source>
+                <target>Original von</target>
+            </trans-unit>
+            <trans-unit id="field.IsIdenticalTo">
+                <source>is identical to</source>
+                <target>Identisch mit</target>
+            </trans-unit>
+            <trans-unit id="field.IsReviewedBy">
+                <source>is reviewed by</source>
+                <target>Reviewt durch</target>
+            </trans-unit>
+            <trans-unit id="field.Reviews">
+                <source>reviews</source>
+                <target>Reviewt</target>
+            </trans-unit>
+            <trans-unit id="field.IsDerivedFrom">
+                <source>is derived from</source>
+                <target>Abgeleitet von</target>
+            </trans-unit>
+            <trans-unit id="field.IsSourceOf">
+                <source>is source of</source>
+                <target>Quelle von</target>
+            </trans-unit>
+            <trans-unit id="field.IsRequiredBy">
+                <source>is required by</source>
+                <target>Benötigt von</target>
+            </trans-unit>
+            <trans-unit id="field.Requires">
+                <source>requires</source>
+                <target>Benötigt</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

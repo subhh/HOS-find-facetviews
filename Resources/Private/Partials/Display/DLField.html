@@ -66,6 +66,13 @@
                                 <f:else if="{field} == 'resourceType'">
                                     <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{fieldContent->f:format.urlencode()}" default="{fieldContent}"/>
                                 </f:else>
+                                <f:else if="{field} == 'relatedIdentifier'">
+                                    <f:for each="{fieldContent}" as="identifier" iteration="iterator">
+                                        <f:variable name="relatedIdentifierRelationType" value="{results.documents.0.fields.relatedIdentifierRelationType.{iterator.index}}"></f:variable>
+                                        <f:variable name="relatedIdentifierType" value="{results.documents.0.fields.relatedIdentifierType.{iterator.index}}"></f:variable>
+                                        <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType} {identifier}
+                                    </f:for>
+                                </f:else>
                                 <f:else if="{field} == 'creatorName'">
                                     <f:comment>Renders creatorNames</f:comment>
                                     <f:variable name="orcids" value="{results.documents.0.fields.creatorNameURI}"></f:variable>
