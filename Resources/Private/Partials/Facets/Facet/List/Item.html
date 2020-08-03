@@ -52,6 +52,7 @@
 				 	)}"
 				class="facetAdd
 				internal">{facetInfo.prepend}
+				<i class="fa {settings.facets.restype.map.{facetTermDisplay}}"></i>
 				<f:translate
 					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
 					default="{facetTermDisplay}"/>&nbsp;<span class="facetCount">{itemCount}</span>
