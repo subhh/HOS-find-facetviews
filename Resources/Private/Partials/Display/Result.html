@@ -47,14 +47,17 @@
 		</h3>
 		<f:format.htmlentitiesDecode>
 		<p class="listofcreatorsinresultlist">
-			<f:render
-                                partial="Authorlink"
-                                arguments="{
-                                        config:config,
-                                        settings:settings,
-                                        creatornames:document.creatorName_facet,
-                                        orcids:document.creatorNameURI
-                        }"/>
+
+			<f:alias map="{highlightedFieldContent:'{s:find.highlightField(results:results,document:document,field:\'creatorName\')}'}">
+				<f:render
+					partial="Authorlink"
+					arguments="{
+						config:config,
+						settings:settings,
+						creatornames:highlightedFieldContent,
+						orcids:document.creatorNameURI
+					}"/>
+			</f:alias>
 			<br/><span
                         title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:resultlist_year',arguments:{0:document.fields.publicationYear} )}">{document.fields.publicationYear}</span> - 
 			<f:render
