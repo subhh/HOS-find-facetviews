@@ -51,6 +51,10 @@
                                 <source>Title</source>
                                 <target>Titel</target>
                         </trans-unit>
+                        <trans-unit id="field.relatedIdentifier">
+                                <source>Relations</source>
+                                <target>Beziehungen</target>
+                        </trans-unit>
                         <trans-unit id="field.resourceType">
                                 <source>Resource type</source>
                                 <target>Medientyp</target>
