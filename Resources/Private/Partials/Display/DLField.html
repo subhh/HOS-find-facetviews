@@ -1,5 +1,4 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-{namespace hos=Subhh\Hosfindfacetviews\ViewHelpers}
 <f:comment>
         Renders a dt/dd pair for the field named field of the document passed.
         Takes into account whether the field is repeatable or not and uses the
@@ -71,15 +70,7 @@
                                     <f:for each="{fieldContent}" as="identifier" iteration="iterator">
                                         <f:variable name="relatedIdentifierRelationType" value="{results.documents.0.fields.relatedIdentifierRelationType.{iterator.index}}"></f:variable>
                                         <f:variable name="relatedIdentifierType" value="{results.documents.0.fields.relatedIdentifierType.{iterator.index}}"></f:variable>
-                                        <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType}
-                                        <f:if condition="{hos:isUrl(string: '{identifier}')}">
-                                            <f:then>
-                                                <f:link.external uri="{s:format.strip(string: '{identifier}')}">Link</f:link.external>
-                                            </f:then>
-                                            <f:else>
-                                                {identifier}
-                                            </f:else>
-                                        </f:if>
+                                        <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType} {identifier}
                                     </f:for>
                                 </f:else>
                                 <f:else if="{field} == 'creatorName'">
