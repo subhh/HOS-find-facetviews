@@ -18,7 +18,14 @@
                                             noCacheHash="1"
                                             class=""
                                             title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}">
-                                        <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                        <f:if condition="{facetInfo.id} == 'heatmap'">
+                                            <f:then>
+                                                Geofilter
+                                            </f:then>
+                                            <f:else>
+                                                <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                            </f:else>
+                                        </f:if>
                                         <span style="color:#9D1F1F;font-size:2.0em;margin:2px 3px 0 0;position: relative; top: 4px;padding-left: 0.2em;">×</span>
                                     </f:link.action>
                                 </li>
