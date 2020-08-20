@@ -19,7 +19,7 @@ title {
     id = titles
     noescape = 1
     type = Text
-    query=(title:%s)
+    query=title:(%s)
     autocomplete = 1
     autocompleteDictionary=title
     phrase = 1
@@ -28,7 +28,7 @@ authors {
     id = authors
     noescape = 1
     type = Text
-    query=(creatorName:%s)
+    query=creatorName:(%s)
     autocomplete = 1
     autocompleteDictionary=creatorName
     phrase = 1
