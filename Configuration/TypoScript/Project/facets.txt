@@ -19,11 +19,49 @@ ACL {
 }
 
 Einrichtung {
-  id = Einrichtung
-  displayDefault = 25
-  query = (internal_institution:"%s")
-  field = internal_institution
-  type = List
+    id = Einrichtung
+    displayDefault = 25
+    query = (internal_institution:"%s")
+    field = internal_institution
+    type = ListIcon
+    icons {
+        1 {
+            id = Universität Hamburg
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/uhh.png
+        }
+        2 {
+            id = Universitätsklinikum Hamburg-Eppendorf
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/uke.png
+        }
+        3 {
+            id = Technische Universität Hamburg
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/tuhh.png
+        }
+        4 {
+            id = Hochschule für Angewandte Wissenschaften Hamburg
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/haw.png
+        }
+        5 {
+            id = Weitere Datenquellen
+            icon =
+        }
+        6 {
+            id = Helmut-Schmidt-Universität Hamburg
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/hsu.png
+        }
+        7 {
+            id = HafenCity Universität Hamburg
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/hcu.png
+        }
+        8 {
+            id = Deutsches Klimarechenzentrum
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/dkrz.png
+        }
+        9 {
+            id = Hamburg Open Science
+            icon =
+        }
+    }
 }
 
 Medientyp {
