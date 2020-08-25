@@ -70,7 +70,20 @@
                                     <f:for each="{fieldContent}" as="identifier" iteration="iterator">
                                         <f:variable name="relatedIdentifierRelationType" value="{results.documents.0.fields.relatedIdentifierRelationType.{iterator.index}}"></f:variable>
                                         <f:variable name="relatedIdentifierType" value="{results.documents.0.fields.relatedIdentifierType.{iterator.index}}"></f:variable>
-                                        <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType} {identifier}
+                                        <f:if condition="{relatedIdentifierType}=='DOI'">
+                                            <f:then>
+                                                DOI - <a href="https://doi.org/{identifier->s:format.strip()}">{identifier}</a>
+                                            </f:then>
+                                            <f:else if="{relatedIdentifierType}=='URN'">
+                                                URN - <a href="https://nbn-resolving.de/{identifier->s:format.strip()}">{identifier}</a>
+                                            </f:else>
+                                            <f:else if="{relatedIdentifierType}=='anyURI'">
+                                                anyURI - <a href="{identifier->s:format.strip()}">{identifier}</a>
+                                            </f:else>
+                                            <f:else>
+                                                <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType} {identifier}
+                                            </f:else>
+                                        </f:if>
                                     </f:for>
                                 </f:else>
                                 <f:else if="{field} == 'creatorName'">
