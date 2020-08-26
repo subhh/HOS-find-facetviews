@@ -22,6 +22,18 @@
 			<f:form.hidden class="hidden_facet" name="facet[{facetID}][{facetValue}]" value="1"/>
 		</f:for>
 	</f:for>
+	
+	<f:for each="{config.facets}" as="facet" key="facetID">
+		<f:if condition="{facet.activeOnSearch}">
+			<f:then>
+				<f:if condition="{results.components.facetset.facets.{facetID}.values}">
+					<f:then>
+						<f:form.hidden class="active_facets" name="facet[{facetID}][{facet.activeValue}]" value="1"/>
+					</f:then>
+				</f:if>
+			</f:then>
+		</f:if>
+	</f:for>
 
 	<div class="formFields">
 		<f:if condition="{settings.useCombinedFields}">

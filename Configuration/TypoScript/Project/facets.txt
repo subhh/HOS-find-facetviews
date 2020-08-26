@@ -18,6 +18,15 @@ ACL {
             }
 }
 
+Qualifikationsarbeit {
+    id = Qualifikationsarbeit
+    query = internal_qualifikationsarbeit:"%s"
+    field = internal_qualifikationsarbeit
+    type = Switch
+    text = Qualifikationsarbeit ausschließen
+    activeOnSearch = 1
+    activeValue = 1
+}
 Einrichtung {
   id = Einrichtung
   displayDefault = 25
