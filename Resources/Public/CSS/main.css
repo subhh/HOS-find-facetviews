@@ -181,11 +181,13 @@ body.page-1column #tx_find .navigation{
 }
 @media (max-width:992px) {
   .tx_find .results ol.resultList{margin: 0  0 0 40% !important;}
-  .tx_find .results ol.resultList article > div{margin-left:24px !important}
+  .tx_find .results ol.resultList article > div{margin-left:60px !important}
+  .resourcetype-icon {left:0 !important;}
 }
 @media (max-width:768px) {
   .tx_find .results ol.resultList{margin: 0 !important;}
-  .tx_find .results ol.resultList article > div{margin-left:0 !important}
+  .tx_find .results ol.resultList article > div{margin-left:44px !important}
+    .resourcetype-icon {left:0 !important;}
 }
 
 .results .oalogo{
