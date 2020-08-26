@@ -78,7 +78,7 @@
                                                 URN <a href="https://nbn-resolving.de/{identifier->s:format.strip()}">{identifier}</a>
                                             </f:else>
                                             <f:else if="{relatedIdentifierType}=='anyURI'">
-                                                anyURI <a href="{identifier->s:format.strip()}">{identifier}</a>
+                                                URL <a href="{identifier->s:format.strip()}">{identifier}</a>
                                             </f:else>
                                             <f:else>
                                                 <f:translate key="LLL:{settings.languageRootPath}locallang-relatedIdentifier.xml:field.{relatedIdentifierRelationType}" default="{relatedIdentifierRelationType}"/>: {relatedIdentifierType} {identifier}
