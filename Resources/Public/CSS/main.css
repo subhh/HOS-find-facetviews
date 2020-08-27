@@ -112,6 +112,10 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
     margin: 5px 0 0 10px !important
 }
 
+.searchForm {
+    margin: 1rem;
+}
+
 #tx_find .searchForm .sortOrder,
 #tx_find .searchForm .resultCountPicker{
     float: none;
