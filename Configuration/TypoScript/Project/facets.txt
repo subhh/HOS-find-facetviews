@@ -51,7 +51,7 @@ Einrichtung {
             icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/haw.png
         }
         5 {
-            id = Weitere Datenquellen
+            id = Weitere Einrichtungen
             icon =
         }
         6 {
