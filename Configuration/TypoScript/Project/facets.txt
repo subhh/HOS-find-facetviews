@@ -70,6 +70,14 @@ Einrichtung {
             id = Hamburg Open Science
             icon =
         }
+        10 {
+             id = Hochschule für bildende Künste Hamburg
+             icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/hfbk_big.png
+        }
+        11 {
+             id = Hochschule für Musik und Theater Hamburg
+             icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/hfmt_big.png
+        }
     }
 }
 
