@@ -7,9 +7,10 @@
 
 <f:variable name="facetText"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}" default="{facetTerm}"/></f:variable>
 <f:variable name="facetName"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}"/></f:variable>
+<f:variable name="facetIsActive">{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}</f:variable>
 
 <li class='index-{iterator.cycle} count-{itemCount}
-	<f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
+        <f:if condition="{facetIsActive}">
 		<f:then>facetActive</f:then>
 	</f:if>
 	<f:if condition="{facetInfo.displayDefault}">
@@ -27,17 +28,28 @@
 	value="{facetTerm}"
 	label="{f:translate(key:'LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}', default:facetTerm)}"
 	count="{itemCount}">
-	<f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
+<span class="facet">
+        <span class="facet-icon">
+          <f:if condition="{facetInfo.id} == 'Medientyp'">
+	    <i class="fa {settings.facets.restype.map.{facetTermDisplay}}"></i>
+          </f:if>
+          <f:if condition="{facetInfo.id} == 'Einrichtung'">
+            <f:for each="{facetInfo.icons}" as="iconInfo" key="iconKey" iteration="iconIterator">
+                <f:if condition="{iconInfo.id}=={facetTerm}">
+                    <f:then>
+                      <img src="{iconInfo.icon}" width="32" style="margin-top: 0.2rem;"/>
+                    </f:then>
+                </f:if>
+            </f:for>
+          </f:if>
+        </span>
+        <span class="facet-term">
+
+	<f:if condition="{facetIsActive}">
 		<f:then>
-			<f:link.action
-				addQueryString="TRUE"
-				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
-				section=""
-				noCacheHash="1"
-				class="icon-cancel facetRemove internal"
-				title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}"><span class="facetName"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-				default="{facetTermDisplay}"/><span style="color:#9D1F1F;font-size:2.0em;margin:2px 3px 0 0;position: relative; top: 4px;padding-left: 0.2em;">×</span></span>
-			</f:link.action>
+    		 <f:translate
+					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
+					default="{facetTermDisplay}"/>
 		</f:then>
 		<f:else>
 			<f:link.action
@@ -51,13 +63,31 @@
 				        arguments : {0:facetName, 1:facetText} 	
 				 	)}"
 				class="facetAdd
-				internal">{facetInfo.prepend}
-				<i class="fa {settings.facets.restype.map.{facetTermDisplay}}"></i>
-				<f:translate
+				internal">
+    		 <f:translate
 					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-					default="{facetTermDisplay}"/>&nbsp;<span class="facetCount">{itemCount}</span>
-			</f:link.action>
+					default="{facetTermDisplay}"/>
+</f:link.action>
+
 		</f:else>
 	</f:if>
-	
+        </span>
+
+	<span class="facet-count">
+           <f:if condition="{facetIsActive}">
+             <f:then>
+			<f:link.action
+				addQueryString="TRUE"
+				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+				section=""
+				noCacheHash="1"
+				class="icon-cancel facetRemove internal"
+				title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}">
+                           <i class="fa fa-trash"></i>
+			</f:link.action>
+             </f:then>
+             <f:else>{itemCount}</f:else>
+           </f:if>
+        </span>
+</span>
 </li>

@@ -7,11 +7,17 @@
                <f:if condition="{arguments.facet.{facetInfo.id}}">
                  <f:for each="{arguments.facet.{facetInfo.id}}" as="facetCount" key="facetTerm">
                    <li>
+<span class="facet">
+<span class="facet-icon"></span>
+<span class="facet-term">
+                       <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+</span>
+<span class="facet-count">
                      <f:link.action addQueryString="true" section="{settings.jumpToID}" title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}" noCacheHash="1"
                                     argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
-                       <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
-                       <span style="color:#9D1F1F;font-size:2.0em;margin:2px 3px 0 0;position: relative; top: 4px;padding-left: 0.2em;">×</span>
-                     </f:link.action>
+<i class="fa fa-trash"></i>
+</f:link.action>      
+</span>
                    </li>
                  </f:for>
                </f:if>

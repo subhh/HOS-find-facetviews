@@ -32,7 +32,7 @@ Einrichtung {
     displayDefault = 25
     query = (internal_institution:"%s")
     field = internal_institution
-    type = ListIcon
+    type = List
     icons {
         1 {
             id = Universität Hamburg

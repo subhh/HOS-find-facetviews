@@ -7,6 +7,19 @@ BLUE4= #ACD5E0
 
 */
 
+.facetList .facet {
+  display: grid;
+  grid-template-columns: 2rem 9fr 1fr;
+  column-gap: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  align-items: start;
+  border-bottom: thin solid #eee;
+}
+
+.facet i {
+  font-size: 1.5rem;
+}
+
 .tx_find .facets {
     float:left!important;
     clear:left!important;
