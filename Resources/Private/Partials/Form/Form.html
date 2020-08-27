@@ -9,7 +9,9 @@
 
 	Adds an error message to the page if an error occured.
 </f:comment>
-<f:render partial="Form/QueryError.html" arguments="{_all}"/>
+<f:if condition="!{inputOnly}">
+  <f:render partial="Form/QueryError.html" arguments="{_all}"/>
+</f:if>
 <f:form name="c{config.uid}-form"
 		method="get"
 		action="index"
