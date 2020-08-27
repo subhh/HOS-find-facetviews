@@ -86,7 +86,9 @@
                            <i class="fa fa-trash"></i>
 			</f:link.action>
              </f:then>
-             <f:else>{itemCount}</f:else>
+             <f:else>
+               <f:format.number decimals="0" thousandsSeparator=".">{itemCount}</f:format.number>
+             </f:else>
            </f:if>
         </span>
 </span>
