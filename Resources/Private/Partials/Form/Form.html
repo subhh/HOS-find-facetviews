@@ -88,9 +88,7 @@
 	</div>
 
 	<div class="controls">
-          <f:if condition="!{inputOnly}">
-	    <f:form.submit value="{f:translate(key:'Search')}" class="submit"/>
-          </f:if>
+	  <f:form.submit value="{f:translate(key:'OK')}" class="submit"/>
 
 		<f:groupedFor each="{settings.queryFields}" as="fieldsByType" groupBy="extended" groupKey="extended">
 			<f:if condition="{0:extended} == {0:1}">
