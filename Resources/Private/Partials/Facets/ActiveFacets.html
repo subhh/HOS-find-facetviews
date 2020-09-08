@@ -1,3 +1,4 @@
+{namespace hos=Subhh\Hosfindfacetviews\ViewHelpers}
 <f:if condition="{arguments.facet}">
   <article class="facet ctg-facet active-facets">
     <h3>Aktive Facetten</h3>
@@ -27,7 +28,7 @@
                   </span>
                   <span class="facet-count">
                     <f:link.action addQueryString="true" section="{settings.jumpToID}" title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}" noCacheHash="1"
-                                   argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
+                                   argumentsToBeExcludedFromQueryString="{hos:facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
                       <i class="fa fa-trash"></i>
                     </f:link.action>      
                   </span>
