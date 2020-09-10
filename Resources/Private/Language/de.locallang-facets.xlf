@@ -75,7 +75,7 @@
                     <source>All documents</source>
                     <target>Alle Dokumente</target>
                   </trans-unit>
-                  <trans-unit id="facet.Zugriff.close">
+                  <trans-unit id="facet.Zugriff.zugriffsbeschr%C3%A4nkt'">
                     <source>Closed / Unbekannt</source>
                     <target>Closed / Unbekannt</target>
                   </trans-unit>

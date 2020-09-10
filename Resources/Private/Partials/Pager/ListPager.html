@@ -1,87 +1,54 @@
 {namespace s=Subugoe\Find\ViewHelpers}
-<div class="pager listPager">
-	<!-- original: settings.paging.perPage for perPage -->
-	<f:alias map="{pager:'{s:find.pageList(
-		currentPage:arguments.page, 
-		perPage:config.count,  
-		resultCount:results.numfound)}'}">
-		<span class="first">
-                        <f:if condition="{pager.previous}">
-                                <f:then>
-                                        <f:for each="{pager.pages}" as="page" iteration="pageIterator">
-                                        <f:if condition="({pager.current} > {page.number}) && ({page.status} == 'edge')">
-                                            <f:link.action
-                                                arguments="{page:page.text}"
-                                                addQueryString="TRUE"
-                                                section=""
-                                                noCacheHash="1"
-                                                class="icon-right-dir internal"
-                                                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gofirst')}"
-                                            ><i class="fa fa-angle-double-left"></i></f:link.action>
-                                        </f:if>
-                                        </f:for>
-                                </f:then>
-                                <f:else>
-                                    <a class="icon-left-dir"></a>
-                                </f:else>
-                        </f:if>
-                </span>
-		<span class="previous">
-		    <f:if condition="{pager.previous}">
-			<f:then>
-			    <f:link.action
-				arguments="{page:pager.previous}"
-				           addQueryString="TRUE"
-				           section=""
-				           noCacheHash="1"
-				           class="icon-left-dir internal"
-				title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:goprev', 
-                                           arguments:'{1:pager.previous}')}"
-			    ><i class="fa fa-angle-left"></i></f:link.action>
-			</f:then>
-			<f:else>
-			    <a class="icon-left-dir"></a>
-			</f:else>
-		    </f:if>
-		</span>
-		<f:render partial="Components/ResultCount" arguments="{_all}"/>
-		<span class="next">
-		    <f:if condition="{pager.next}">
-			<f:then>
-			    <f:link.action
-				arguments="{page:pager.next}"
-				addQueryString="TRUE"
-				section=""
-				noCacheHash="1"
-				class="icon-right-dir internal"
-                                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:gonext', 
-                                           arguments:'{1:pager.next}')}"><i class="fa fa-angle-right"></i></f:link.action>
-			</f:then>
-			<f:else>
-			    <a class="icon-right-dir"></a>
-			</f:else>
-		    </f:if>
-		</span>
-		<span class="last">
-		    <f:if condition="{pager.next}">
+<nav>
+    <ul class="pagination">
+        <f:alias map="{pager:'{s:find.pageList(currentPage:arguments.page, perPage:config.count, resultCount:results.numfound)}'}">
+            <f:if condition="{pager.previous}">
+                <f:then>
+                    <li class="page-item">
+                        <f:link.action
+                            arguments="{page:pager.previous}"
+                            addQueryString="TRUE"
+                            section="{settings.jumpToID}"
+                            noCacheHash="1"
+                            class="page-link"
+                            title="{f:translate(key:'Go to previous page of results. (Page %s)', arguments:'{1:pager.previous}')}">
+                            <i class="fa fa-angle-left"></i>
+                        </f:link.action>
+                    </li>
+                </f:then>
+            </f:if>
+            <f:for each="{pager.pages}" as="page">
+                <li class="page-item {f:if(condition:'{page.current}', then:'active')} {f:if(condition:'{page.gap}', then:'gap')}">
+                    <f:if condition="{current:page.current, gap:page.gap} == {current:FALSE , gap:FALSE}">
                         <f:then>
-			    <f:for each="{pager.pages}" as="page" iteration="pageIterator">
-				<f:if condition="({pager.current} < {page.number}) && ({page.status} == 'edge')">
-				    <f:link.action
-                                        arguments="{page:page.text}"
-                                        addQueryString="TRUE"
-                                        section=""
-                                        noCacheHash="1"
-                	                class="icon-right-dir internal"
-                	                title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-hovers.xlf:golast')}"
-	        	            ><i class="fa fa-angle-double-right"></i></f:link.action>
-					</f:if>
-					</f:for>
-				</f:then>
-				<f:else>
-                                        <a class="icon-right-dir"></a>
-				</f:else>
-			</f:if>
-		</span>
-	</f:alias>
-</div>
+                            <f:link.action
+                                arguments="{page:page.number}"
+                                addQueryString="TRUE"
+                                section="{settings.jumpToID}"
+                                noCacheHash="1"
+                                class="page-link">
+                                {page.text}
+                            </f:link.action>
+                        </f:then>
+                        <f:else>
+                            <a class="page-link" href="#">{page.text}</a>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+            <f:if condition="{pager.next}">
+                <li class="page-item">
+                    <f:link.action
+                        arguments="{page:pager.next}"
+                        addQueryString="TRUE"
+                        section="{settings.jumpToID}"
+                        noCacheHash="1"
+                        class="page-link"
+                        title="{f:translate(key:'Go to next page of results. (Page %s)', arguments:'{1:pager.next}')}">
+                        <i class="fa fa-angle-right"></i>
+                    </f:link.action>
+                </li>
+            </f:if>
+        </f:alias>
+    </ul>
+</nav>

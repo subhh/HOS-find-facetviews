@@ -9,39 +9,39 @@
    This result display is sufficient for basic result lists.
 </f:comment>
 <f:section name="main">
-   <s:page.title>
-      <f:render partial="Components/QueryString" arguments="{query:arguments.q, facets:config.activeFacets}"/>
-      –
-      {config.pageTitle}
-   </s:page.title>
-   <f:render partial="Page/Standard" arguments="{_all}"/>
-   <div class="results">
-     <div id="facetsonoff">Filter  ein-/ausblenden</div>
+    <s:page.title>
+        <f:render partial="Components/QueryString" arguments="{query:arguments.q, facets:config.activeFacets}"/>
+        –
+        {config.pageTitle}
+    </s:page.title>
+    <f:render partial="Page/Standard" arguments="{_all}"/>
+    <div class="tx_results">
       <f:if condition="{results.numfound} > 0">
          <f:then>
-	    <f:render partial="Facets/Facets" arguments="{_all}"/>
-            
-            <ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
-               <f:for each="{results.documents}" as="document">
-                  <f:render partial="Display/Result" arguments="{_all}"/>
-               </f:for>
-            </ol>
+           <f:render partial="Facets/Facets" arguments="{_all}"/>
+           <div>
+             <ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
+                 <f:for each="{results.documents}" as="document">
+                     <f:render partial="Display/Result" arguments="{_all}"/>
+                 </f:for>
+             </ol>
+             <div class="navigation-bottom">
+                 <f:render partial="Pager/ListPager" arguments="{_all}"/>
+             </div>
+           </div>
          </f:then>
          <f:else>
-            <f:for each="{arguments.q}" as="what" key='where'>
+           <div></div>
+           <div>
+             <f:for each="{arguments.q}" as="what" key='where'>
                <f:if condition="{what} !=  ''">
-                  <h3 class="notfoundmessage">
-                     <f:translate  key="LLL:{settings.languageRootPath}locallang.xlf:noresult"
-                     />
- 
+                 <h3 class="notfoundmessage">
+                   <f:translate  key="LLL:{settings.languageRootPath}locallang.xlf:noresult"/>
                  </h3>
                </f:if>
-            </f:for>
+             </f:for>
+           </div>
          </f:else>
       </f:if>
-      <div class="navigation bottom">
-         <f:render partial="Pager/ListPager" arguments="{_all}"/>
-      </div>
    </div>
-   <!-- END results -->
 </f:section>

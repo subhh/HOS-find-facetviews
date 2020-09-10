@@ -1,37 +1,37 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <f:comment>
-	Creates a facet list item with a link to select or deselect the facet
-	depending on its current status.
-	Determines whether the item should be hidden and adds CSS classes accordingly.
+        Creates a facet list item with a link to select or deselect the facet
+        depending on its current status.
+        Determines whether the item should be hidden and adds CSS classes accordingly.
 </f:comment>
 
-<f:variable name="facetText"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}" default="{facetTerm}"/></f:variable>
+<f:variable name="facetText"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/></f:variable>
 <f:variable name="facetName"><f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}"/></f:variable>
 <f:variable name="facetIsActive">{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}</f:variable>
 
 <li class='index-{iterator.cycle} count-{itemCount}
         <f:if condition="{facetIsActive}">
-		<f:then>facetActive</f:then>
-	</f:if>
-	<f:if condition="{facetInfo.displayDefault}">
-		<f:then>
-			<f:if condition="{iterator.cycle} > {facetInfo.displayDefault}">
-				<f:then>hidden</f:then>
-			</f:if>
-		</f:then>
-		<f:else>
-			<f:if condition="{iterator.cycle} > {settings.facetDefaults.displayDefault}">
-				<f:then>hidden</f:then>
-			</f:if>
-		</f:else>
-	</f:if>'
-	value="{facetTerm}"
-	label="{f:translate(key:'LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}', default:facetTerm)}"
-	count="{itemCount}">
-<span class="facet">
+                <f:then>facetActive</f:then>
+        </f:if>
+        <f:if condition="{facetInfo.displayDefault}">
+                <f:then>
+                        <f:if condition="{iterator.cycle} > {facetInfo.displayDefault}">
+                                <f:then>hidden</f:then>
+                        </f:if>
+                </f:then>
+                <f:else>
+                        <f:if condition="{iterator.cycle} > {settings.facetDefaults.displayDefault}">
+                                <f:then>hidden</f:then>
+                        </f:if>
+                </f:else>
+        </f:if>'
+        value="{facetTerm}"
+        label="{facetText}"
+        count="{itemCount}">
+  <span class="facet">
         <span class="facet-icon">
           <f:if condition="{facetInfo.id} == 'Medientyp'">
-	    <i class="fa {settings.facets.restype.map.{facetTermDisplay}}"></i>
+            <i class="fa {settings.facets.restype.map.{facetTermDisplay}}"></i>
           </f:if>
           <f:if condition="{facetInfo.id} == 'Einrichtung'">
             <f:for each="{facetInfo.icons}" as="iconInfo" key="iconKey" iteration="iconIterator">
@@ -45,46 +45,40 @@
         </span>
         <span class="facet-term">
 
-	<f:if condition="{facetIsActive}">
-		<f:then>
-    		 <f:translate
-					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-					default="{facetTermDisplay}"/>
-		</f:then>
-		<f:else>
-			<f:link.action
-				addQueryString="TRUE"
-				arguments="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}"
-				argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
-				section=""
-				noCacheHash="1"
-				title="{f:translate(
-					key :'LLL:{settings.languageRootPath}locallang-hovers.xlf:facetfilterenabler',
-				        arguments : {0:facetName, 1:facetText} 	
-				 	)}"
-				class="facetAdd
-				internal">
-    		 <f:translate
-					key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTermDisplay->f:format.urlencode()}"
-					default="{facetTermDisplay}"/>
-</f:link.action>
-
-		</f:else>
-	</f:if>
+        <f:if condition="{facetIsActive}">
+          <f:then>
+            {facetText}
+          </f:then>
+          <f:else>
+              <f:link.action
+                  addQueryString="TRUE"
+                  arguments="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}"
+                  argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
+                  section=""
+                  noCacheHash="1"
+                  title="{f:translate(
+                                  key :'LLL:{settings.languageRootPath}locallang-hovers.xlf:facetfilterenabler',
+                                  arguments : {0:facetName, 1:facetText}
+                                  )}"
+                  class="facetAdd internal">
+                  {facetText}
+              </f:link.action>
+          </f:else>
+        </f:if>
         </span>
 
-	<span class="facet-count">
+        <span class="facet-count">
            <f:if condition="{facetIsActive}">
              <f:then>
-			<f:link.action
-				addQueryString="TRUE"
-				argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
-				section=""
-				noCacheHash="1"
-				class="icon-cancel facetRemove internal"
-				title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}">
+                        <f:link.action
+                                addQueryString="TRUE"
+                                argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+                                section=""
+                                noCacheHash="1"
+                                class="icon-cancel facetRemove internal"
+                                title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}">
                            <i class="fa fa-trash"></i>
-			</f:link.action>
+                        </f:link.action>
              </f:then>
              <f:else>
                <f:format.number decimals="0" thousandsSeparator=".">{itemCount}</f:format.number>

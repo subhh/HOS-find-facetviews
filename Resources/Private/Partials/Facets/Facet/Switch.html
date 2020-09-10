@@ -8,23 +8,30 @@
     A potentially configured autocomplete popup is created by the
     Facets/Facet/List/Autocomplete partial.
 </f:comment>
-
-<ol class="facetList{f:if(condition:facetInfo.autocomplete, then:' autocomplete')}">
-    <f:for each="{facetData.values}" as="itemCount" key="facetTerm" iteration="iterator">
-        <f:if condition="{iterator.isFirst} == 1">
-            <f:alias map="{
-          facetTermDisplay:'{f:if(
-            condition:facetInfo.sortPrefixSeparator,
-            then:\"{s:format.regexp(
-                     string:facetTerm,
-                     match:\'/^.*?{facetInfo.sortPrefixSeparator}/\',
-            replace:\'\'
-            )}\",
-            else:facetInfo.text
-            )}'
-            }">
-            <f:render partial="Facets/Facet/List/Item" arguments="{_all}"/>
-            </f:alias>
-        </f:if>
-    </f:for>
+<ol class="facetList">
+    <li>
+        <span class="facet">
+            <span class="facet-icon"></span>
+            <span class="facet-term">
+                <f:if condition="{s:find.facetIsActive(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}">
+                    <f:then>Ohne Qualifikationsarbeiten</f:then>
+                    <f:else>
+                        <f:link.action
+                            addQueryString="TRUE"
+                            arguments="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets)}"
+                            argumentsToBeExcludedFromQueryString="{0:'{config.prefixID}[page]'}"
+                            section=""
+                            noCacheHash="1"
+                            title="{f:translate(
+                                            key :'LLL:{settings.languageRootPath}locallang-hovers.xlf:facetfilterenabler',
+                                            arguments : {0:facetName, 1:facetText}
+                                            )}"
+                            class="facetAdd internal">
+                            Ohne Qualifikationsarbeiten
+                        </f:link.action>
+                    </f:else>
+                </f:if>
+            </span>
+        </span>
+    </li>
 </ol>
