@@ -5,11 +5,24 @@
     </label>
   </div>
   <div class="form-group">
-    <f:form.select class="form-control" id="c{config.uid}-resultCountSelect" name="count" options="{config.resultCountOptions.menu}" value="{config.resultCountOptions.selected}"/>
+    <f:form.select
+      class="form-control"
+      id="c{config.uid}-resultCountSelect"
+      name="count"
+      options="{config.resultCountOptions.menu}"
+      value="{config.resultCountOptions.selected}"
+      additionalAttributes="{'onChange': 'submit()'}"
+      />
     <label for="c{config.uid}-sortSelect">
       <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.sort"/>
     </label>
-    <f:form.select class="form-control" id="c{config.uid}-sortSelect" name="sort" options="{config.sortOptions.menu}" value="{config.sortOptions.selected}"/>
+    <f:form.select
+      class="form-control"
+      id="c{config.uid}-sortSelect"
+      name="sort"
+      options="{config.sortOptions.menu}"
+      value="{config.sortOptions.selected}"
+      additionalAttributes="{'onChange': 'submit()'}"/>
   </div>
 </div>
 <f:render partial="Pager/ListPager" arguments="{_all}"/>
