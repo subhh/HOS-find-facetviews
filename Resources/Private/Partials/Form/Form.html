@@ -18,10 +18,12 @@
         pageUid="{settings.jumpToPage}">
     <div class="wrap-fieldset">
         <fieldset>
-            <legend>Suche nach Publikationen, Forschungsdaten und weiteren Dokumenten</legend>
+            <f:if condition="{inputOnly}">
+                <legend>Suche nach Publikationen, Forschungsdaten und weiteren Dokumenten</legend>
+            </f:if>
             <div>
                 <div>
-                    <f:form.textfield id="combinedTextField" name="q[all]" class="form-control" />
+                    <f:form.textfield placeholder="Suche in {results.numFound->f:format.number(decimals: 0, thousandsSeparator: '.')} Einträgen" id="combinedTextField" name="q[all]" class="form-control" />
                 </div>
                 <f:if condition="!{inputOnly}">
                     <f:then>
@@ -49,7 +51,7 @@
             </f:if>
         </fieldset>
     </div>
-    <f:if condition="!{inputOnly}">
+    <f:if condition="!{inputOnly} && !{disableResultList}">
         <div class="navigation-top">
             <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
                 <f:render partial="Components/NavigationTop" arguments="{_all}"/>

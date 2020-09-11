@@ -9,5 +9,7 @@
    This result display is sufficient for basic result lists.
 </f:comment>
 <f:section name="main">
-   <f:render partial="Page/Standard" arguments="{_all}"/>
+  <f:alias map="{disableResultList:'1'}">
+    <f:render partial="Page/Standard" arguments="{_all}"/>
+  </f:alias>
 </f:section>
