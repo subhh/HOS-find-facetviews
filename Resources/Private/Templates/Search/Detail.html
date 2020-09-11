@@ -23,7 +23,8 @@
     <v:page.header.meta name="twitter:domain" content="{settings.socialmeta.site}" />
     <v:page.header.meta name="twitter:creator" content="@{document.fields.creatorName.0}{document.fields.contributorName.0}" />
     <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
-    <f:render partial="Page/Standard" arguments="{_all}"/>
+    <f:render partial="Page/CSS" arguments="{_all}"/>
+    <f:render partial="Page/JavaScript" arguments="{_all}"/>
     <article class="detail"
     <f:if condition="{settings.features.altmetrics.enabled}">
         <f:then>
