@@ -1,4 +1,5 @@
 {namespace s=Subugoe\Find\ViewHelpers}
+{namespace hos=Subhh\Hosfindfacetviews\ViewHelpers}
 <f:comment>
         Creates a facet list item with a link to select or deselect the facet
         depending on its current status.
@@ -70,13 +71,13 @@
         <span class="facet-count">
            <f:if condition="{facetIsActive}">
              <f:then>
-                        <f:link.action
-                                addQueryString="TRUE"
-                                argumentsToBeExcludedFromQueryString="{s:find.facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
-                                section=""
-                                noCacheHash="1"
-                                class="icon-cancel facetRemove internal"
-                                title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}">
+			<f:link.action
+				addQueryString="TRUE"
+				argumentsToBeExcludedFromQueryString="{hos:facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}"
+				section=""
+				noCacheHash="1"
+				class="icon-cancel facetRemove internal"
+				title="{f:translate(key:'remove filter %s', arguments:{0:facetText})}">
                            <i class="fa fa-trash"></i>
                         </f:link.action>
              </f:then>
