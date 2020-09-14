@@ -1,6 +1,6 @@
 /*
 
-BLUE1= #4E7985
+BLUE1= #4B7581
 BLUE2= #659BAC
 BLUE3= #94B2BB
 BLUE4= #ACD5E0
@@ -122,7 +122,7 @@ BLUE4= #ACD5E0
 @media (max-width:768px) {
 .tx_find .facets {width:100%!important; display:none; padding:0;}
 body.facetson .tx_find .facets {display:block; float:none !important;}
-#facetsonoff1 {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4E7985;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
+#facetsonoff1 {display:block; cursor:pointer; color: white;padding: 3px;border-radius: 0px;background-color: #4B7581;font-size: 1.3em; font-weight: normal;margin: 20px 0!important;}
 #facetsonoff {display:block; cursor:pointer; height:42px; line-height:42px; font-size:14px; background: url(../../../../find/Resources/Public/button_shade_large.png) repeat-x scroll 0 100% #f3f6fb;
     border-style: solid;
     border-width: 1px;
@@ -195,7 +195,7 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
     padding-top:9px!important;
     font-size: 0.95rem;
     border: 1px solid #BCBCBC;
-    color: #4E7985!important;
+    color: #4B7581!important;
     margin: 2px 10px 0 0;
 }
 
@@ -208,7 +208,7 @@ body.facetson .tx_find .facets {display:block; float:none !important;}
 .controls select {
     font-size: 20px;
     border: 1px solid #BCBCBC;
-    color: #4E7985;
+    color: #4B7581;
     margin-left: 0;
     margin-right: 15px;
 }
@@ -242,7 +242,7 @@ body.page-1column #tx_find .navigation{
 
 #tx_find .navigation,
 #tx_find .navigation select{
-    color: #4E7985;
+    color: #4B7581;
 }
 #discover-anz{
     padding-left: 1em;
@@ -278,7 +278,7 @@ a {
     color: darkblue;
 }
 a:link, a:visited {
-    color: #4E7985;
+    color: #4B7581;
     text-decoration: none;
 }
 
@@ -298,7 +298,7 @@ article.detail dl {
 article.detail dt {
     clear: left;
     font-weight: bold;
-    color: #4E7985;
+    color: #4B7581;
 }
 
 #tx_find.tx_find article.facet .facetActive{
@@ -319,7 +319,7 @@ dd li,dd ul {
     padding : 0;
     list-style-type: none;
 }
-.previewDetails dt {color:#4E7985}
+.previewDetails dt {color:#4B7581}
 .previewDetails dd {padding-right:15px}
 
 
@@ -353,7 +353,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-state-active.ui-button:hover{
     border: 1px solid #000;
-    background:#4E7985;
+    background:#4B7581;
 }
 
 
@@ -378,7 +378,7 @@ a.ui-button:active,
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: #4E7985 transparent transparent transparent;
+  border-color: #4B7581 transparent transparent transparent;
 }
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
@@ -393,7 +393,7 @@ a.ui-button:active,
   padding: 7px 10px 10px 10px;
   margin:-7px 0 -7px -13px;
   border: 1px solid transparent;
-  background-color: #4E7985;
+  background-color: #4B7581;
   border-color: transparent transparent rgba(0, 0, 0, 1) transparent;
   cursor: pointer;
 }
@@ -409,7 +409,7 @@ a.ui-button:active,
 /*style items (options):*/
 .select-items {
   position: absolute;
-  background-color: #4E7985;
+  background-color: #4B7581;
   top: 100%;
   left: 0;
   right: 0;
@@ -424,7 +424,7 @@ a.ui-button:active,
 }
 
 .toast{ position:fixed;bottom:0;left:0;right:0;margin:0 auto;display:table;margin:1.5rem auto;padding:1.5rem 2rem;width:500px;-webkit-transform:translateY(200%);-ms-transform:translateY(200%);transform:translateY(200%);-webkit-transition:0.5s all;transition:0.5s
-all;opacity:0;background:#4E7985}
+all;opacity:0;background:#4B7581}
 .toast.toast--shown{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:1}
 .toast .toast-close{float:right;cursor:pointer;margin-left:1em;}
 .toast .toast-button{float:right;background:inherit;font-size:1.2em;line-height:1.2em;margin:-0.5em;padding:0.5em;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
@@ -441,7 +441,7 @@ all;opacity:0;background:#4E7985}
 #home-button {
   position:absolute;
   font-size:100px;
-  color:#4E7985;
+  color:#4B7581;
   line-height:0.55;
   cursor:pointer
 }
@@ -471,14 +471,14 @@ margin-bottom:-2px;margin-left:10px}
 .icon-right-open {display:none}
 .field-rightsOA  {display:inline!important}
 
-.previewButton {color:#4E7985;cursor:context-menu;margin-left:10px}
+.previewButton {color:#4B7581;cursor:context-menu;margin-left:10px}
 .previewDetails {display:table;width:100%}
 
 .facets article {border-top:black;background-color:white;padding:0}
 
 
 .facets article h3 {color:white;padding:3px;border-radius:
-0px;background-color:#4E7985;font-size:1.1em;font-weight:normal;margin-bottom:8px!important}
+0px;background-color:#4B7581;font-size:1.1em;font-weight:normal;margin-bottom:8px!important}
 
 .facets article h3 {color:rgba(0,0,0,.6);padding:0;border-radius:
 0px;background-color:#fff;font-size:1.1em;font-weight:bold;margin-bottom:10px!important}
@@ -493,7 +493,7 @@ margin-bottom:-2px;margin-left:10px}
   color: #888;
 }
 /* color of oa switch  */
-.switch-candy a {background-color:#4E7985!important}
+.switch-candy a {background-color:#4B7581!important}
 .tx_find .facet-type-Tabs .facetActive {background-color:#94B2BB!important}
 
 
