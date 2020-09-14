@@ -25,39 +25,38 @@
     <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
     <f:render partial="Page/CSS" arguments="{_all}"/>
     <f:render partial="Page/JavaScript" arguments="{_all}"/>
-    <article class="detail"
-    <f:if condition="{settings.features.altmetrics.enabled}">
-        <f:then>
-            data-altermetrics_url="{f:format.json(value:results.documents.0.url)}">
-        </f:then>
-    </f:if>
-    <h1>
-        <span style="position:absolute;color:#4e7984;" class="resourcetype-icon fa {settings.facets.restype.map.{document.fields.resourceType}}"></span>
-        <div style="margin-left:90px">
-        <f:format.htmlentitiesDecode>
-            <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
-        </f:format.htmlentitiesDecode>
-    </h1>
-    <div class="group">
-        <div class="leftbox">
-            <dl>
-                <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
-                    <f:for each="{facetfields}" as="field">
-                        <f:render partial="Display/DLField"
-                            arguments="{results:results,document:document,field:field}"/>
-                    </f:for>
-                </v:iterator.explode>
-                <dt>Quelldatensatz</dt>
-                <dd>{document.fields.internal_source_id}</dd>
-            </dl>
+    <article class="detail">
+        <div class="icon">
+            <i class="fa {settings.facets.restype.map.{document.fields.resourceType}}"
+               title="{f:translate(key:'LLL:{settings.languageRootPath}locallang-facets.xml:facet.Medientyp.{document.fields.resourceType}',
+                      default:'{key}')}"></i>
         </div>
-        <div class="rightbox">&nbsp;</div>
-             <div class="rightbox"
-                 id="map"
-                 style="height-min:500px"
-                 data-tileprovider="{f:format.json(value:settings.facets.GEO.tileprovider)}"
-                 data-fields="{f:format.json(value:document.fields)}">
-             </div>
+        <div class="container">
+            <h1>
+                <f:format.htmlentitiesDecode>
+                    <f:render partial="Display/Field/Inline" arguments="{results:results, document:document, field:settings.standardFields.title, separator:','}"/>
+                </f:format.htmlentitiesDecode>
+            </h1>
+            <div class="row">
+                <div class="leftbox col">
+                    <dl>
+                        <v:iterator.explode content="{settings.detailfacets}" glue="," as="facetfields">
+                            <f:for each="{facetfields}" as="field">
+                                <f:render partial="Display/DLField"
+                                          arguments="{results:results,document:document,field:field}"/>
+                            </f:for>
+                        </v:iterator.explode>
+                        <dt>Quelldatensatz</dt>
+                        <dd>{document.fields.internal_source_id}</dd>
+                    </dl>
+                </div>
+                <div class="rightbox col"
+                     id="map"
+                     style="height-min:500px"
+                     data-tileprovider="{f:format.json(value:settings.facets.GEO.tileprovider)}"
+                     data-fields="{f:format.json(value:document.fields)}">
+                </div>
+            </div>
         </div>
     </article>
 </f:section>
