@@ -322,6 +322,25 @@ dd li,dd ul {
 .previewDetails dt {color:#4B7581}
 .previewDetails dd {padding-right:15px}
 
+.internal_metadata {
+    display: none;
+}
+#toggle_internal:checked ~ .internal_metadata {
+    display: block;
+}
+
+.internal_metadata_label {
+    opacity: 0.6;
+}
+
+.internal_metadata_label:hover {
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+}
 
 .awesome-marker svg {
     font-size: 14px;
