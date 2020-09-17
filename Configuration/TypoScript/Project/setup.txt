@@ -6,6 +6,11 @@ plugin.tx_find {
      		path = /solr/HOS
      		#path = /solr/testcore
    	}
+        hightlight {
+            default {
+                snippets = 10
+            }
+        }
    	detailfacets = subtitle,url,creatorName,contributorName,publisher,publicationYear,resourceType,subject,abstract,description,seriesInformation,relatedIdentifier,rights,collection
 	facets {
         	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:hosfindfacetviews/Configuration/TypoScript/Project/facets.txt">
