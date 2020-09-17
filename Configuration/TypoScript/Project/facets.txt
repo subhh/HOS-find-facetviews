@@ -68,7 +68,7 @@ Einrichtung {
         }
         9 {
             id = Hamburg Open Science
-            icon =
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/hos_big.jpg
         }
         10 {
              id = Hochschule für bildende Künste Hamburg
