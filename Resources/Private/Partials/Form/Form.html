@@ -51,11 +51,9 @@
             </f:if>
         </fieldset>
     </div>
-    <f:if condition="!{inputOnly} && !{disableResultList}">
-        <div class="navigation-top">
-            <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
-                <f:render partial="Components/NavigationTop" arguments="{_all}"/>
-            </f:if>
-        </div>
-    </f:if>
+    <div class="navigation-top">
+      <f:if condition="{f:count(subject:config.sortOptions.menu)} > 1">
+        <f:render partial="Components/NavigationTop" arguments="{_all}"/>
+      </f:if>
+    </div>
 </f:form>

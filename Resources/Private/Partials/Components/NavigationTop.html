@@ -1,28 +1,36 @@
-<div class="form-inline">
-  <div class="form-group">
-    <label for="c{config.uid}-resultCountSelect">
-      <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.count"/>
-    </label>
-  </div>
-  <div class="form-group">
-    <f:form.select
-      class="form-control"
-      id="c{config.uid}-resultCountSelect"
-      name="count"
-      options="{config.resultCountOptions.menu}"
-      value="{config.resultCountOptions.selected}"
-      additionalAttributes="{'onChange': 'submit()'}"
-      />
-    <label for="c{config.uid}-sortSelect">
-      <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.sort"/>
-    </label>
-    <f:form.select
-      class="form-control"
-      id="c{config.uid}-sortSelect"
-      name="sort"
-      options="{config.sortOptions.menu}"
-      value="{config.sortOptions.selected}"
-      additionalAttributes="{'onChange': 'submit()'}"/>
-  </div>
-</div>
-<f:render partial="Pager/ListPager" arguments="{_all}"/>
+<f:if condition="{inputOnly} || {disableResultList}">
+    <f:then>
+        <f:form.hidden name="count" value="{config.resultCountOptions.selected}"/>
+        <f:form.hidden name="sort" value="publicationYear desc"/>
+    </f:then>
+    <f:else>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="c{config.uid}-resultCountSelect">
+                    <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.count"/>
+                </label>
+                <f:form.select
+                    class="form-control"
+                    id="c{config.uid}-resultCountSelect"
+                    name="count"
+                    options="{config.resultCountOptions.menu}"
+                    value="{config.resultCountOptions.selected}"
+                    additionalAttributes="{'onChange': 'submit()'}"
+                />
+            </div>
+            <div class="form-group">
+                <label for="c{config.uid}-sortSelect">
+                    <f:translate key="LLL:{settings.languageRootPath}locallang.xml:input.sort"/>
+                </label>
+                <f:form.select
+                    class="form-control"
+                    id="c{config.uid}-sortSelect"
+                    name="sort"
+                    options="{config.sortOptions.menu}"
+                    value="{config.sortOptions.selected}"
+                    additionalAttributes="{'onChange': 'submit()'}"/>
+            </div>
+        </div>
+        <f:render partial="Pager/ListPager" arguments="{_all}"/>
+    </f:else>
+</f:if>
