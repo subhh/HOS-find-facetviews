@@ -11,7 +11,7 @@
                                 <span class="facet">
                                     <span class="facet-icon">
                                         <f:if condition="{facetInfo.id} == 'Medientyp'">
-	                                    <i class="fa {settings.facets.restype.map.{facetTerm}}"></i>
+                                            <i class="fa {settings.facets.restype.map.{facetTerm}}"></i>
                                         </f:if>
                                         <f:if condition="{facetInfo.id} == 'Einrichtung'">
                                             <f:for each="{facetInfo.icons}" as="iconInfo" key="iconKey" iteration="iconIterator">
@@ -24,14 +24,22 @@
                                         </f:if>
                                     </span>
                                     <span class="facet-term">
-                                        <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                        <f:if condition="{facetInfo.id} == 'heatmap'">
+                                            <f:then>
+                                                Geofilter
+                                            </f:then>
+                                            <f:else>
+                                                <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                            </f:else>
+                                        </f:if>
                                     </span>
                                     <span class="facet-count">
                                         <f:link.action addQueryString="true" section="{settings.jumpToID}" title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}" noCacheHash="1"
                                                        argumentsToBeExcludedFromQueryString="{hos:facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
                                             <i class="fa fa-trash"></i>
-                                        </f:link.action>      
+                                        </f:link.action>
                                     </span>
+                                </span>
                             </li>
                         </f:for>
                     </f:if>
