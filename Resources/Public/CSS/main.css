@@ -67,7 +67,7 @@ BLUE4= #ACD5E0
     margin-right: 1rem;
 }
 
-.tx_find .pagination {
+.tx_find nav {
     margin-top: 1rem;
 }
 
@@ -94,10 +94,6 @@ BLUE4= #ACD5E0
 
 .tx_find .tx_results a::before{
     content: none;
-}
-
-.tx_find .pagination {
-    justify-content: right;
 }
 
 .oalogo {

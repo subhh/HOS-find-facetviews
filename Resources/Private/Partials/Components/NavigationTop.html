@@ -1,4 +1,4 @@
-<f:if condition="{inputOnly} || {disableResultList}">
+<f:if condition="{inputOnly} || {disableResultList} || {results.numFound} == 0">
     <f:then>
         <f:form.hidden name="count" value="{config.resultCountOptions.selected}"/>
         <f:form.hidden name="sort" value="publicationYear desc"/>

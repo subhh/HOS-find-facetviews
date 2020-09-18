@@ -1,6 +1,6 @@
 {namespace s=Subugoe\Find\ViewHelpers}
 <nav>
-    <ul class="pagination">
+    <ul class="pagination justify-content-end">
         <f:alias map="{pager:'{s:find.pageList(currentPage:arguments.page, perPage:config.count, resultCount:results.numfound)}'}">
             <f:if condition="{pager.previous}">
                 <f:then>
