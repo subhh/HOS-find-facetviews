@@ -52,7 +52,7 @@ Einrichtung {
         }
         5 {
             id = Weitere Einrichtungen
-            icon =
+            icon = /typo3conf/ext/hosfindfacetviews/Resources/Public/assets/institutions/misc.png
         }
         6 {
             id = Helmut-Schmidt-Universität Hamburg
