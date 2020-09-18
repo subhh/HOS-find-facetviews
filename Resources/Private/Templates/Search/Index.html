@@ -20,6 +20,7 @@
             <div class="tx_results">
                 <f:render partial="Facets/Facets" arguments="{_all}"/>
                 <div>
+                    <p class="pull-right"><strong><f:format.number decimals="0" thousandsSeparator=".">{results.numfound}</f:format.number></strong> Einträge gefunden</p>
                     <ol id="c{config.uid}-resultList" class="resultList" start="{config.counterStart}">
                         <f:for each="{results.documents}" as="document">
                             <f:render partial="Display/Result" arguments="{_all}"/>
