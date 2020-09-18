@@ -24,8 +24,13 @@ class SolrServiceProvider extends \Subugoe\Find\Service\SolrServiceProvider
     {
         parent::createQuery();
         $this->addMainQueryOperator();
+        if ($this->requestArguments['qualifikationsarbeit'] != '1') {
+            $this
+                ->query
+                ->createFilterQuery('qualifikationsarbeit')
+                ->setQuery('internal_qualifikationsarbeit:false');
+        }
     }
-
 
     /*
      * Set configured main query operator. Defaults to 'AND'.

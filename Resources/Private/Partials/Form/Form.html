@@ -23,7 +23,7 @@
             </f:if>
             <div>
                 <div>
-                    <f:form.textfield placeholder="Suche in {results.numFound->f:format.number(decimals: 0, thousandsSeparator: '.')} Einträgen" id="combinedTextField" name="q[all]" class="form-control" />
+                    <f:form.textfield placeholder="Suche in mehr als 100.000 Einträgen" id="combinedTextField" name="q[all]" class="form-control" />
                 </div>
                 <f:if condition="!{inputOnly}">
                     <f:then>
@@ -42,6 +42,12 @@
                 </f:if>
                 <div>
                     <f:form.submit value="{f:translate(key:'Search')}" class="btn btn-primary" />
+                </div>
+            </div>
+            <div>
+                <div class="form-check-inline">
+                    <f:form.checkbox class="form-check-input" checked="{arguments.qualifikationsarbeit} == '1'" value="1" name="qualifikationsarbeit" id="checkbox_qualifikationsarbeit"/>
+                    <label for="checkbox_qualifikationsarbeit" class="form-check-label">Qualifikationsarbeiten einbeziehen</label>
                 </div>
             </div>
             <f:if condition="!{inputOnly}">
