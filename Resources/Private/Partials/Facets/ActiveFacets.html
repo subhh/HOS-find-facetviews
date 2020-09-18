@@ -1,42 +1,42 @@
 {namespace hos=Subhh\Hosfindfacetviews\ViewHelpers}
 <f:if condition="{arguments.facet}">
-  <article class="facet ctg-facet active-facets">
-    <h3>Aktive Facetten</h3>
-    <div class="facetList" style="background-color:#ccc;padding-left: 0.2em;">
-      <ol>
-        <f:for each="{config.facets}" as="facetInfo">
-          <f:if condition="{arguments.facet.{facetInfo.id}}">
-            <f:for each="{arguments.facet.{facetInfo.id}}" as="facetCount" key="facetTerm">
-              <li>
-                <span class="facet">
-                  <span class="facet-icon">
-                    <f:if condition="{facetInfo.id} == 'Medientyp'">
-	              <i class="fa {settings.facets.restype.map.{facetTerm}}"></i>
+    <article class="facet ctg-facet active-facets">
+        <h3>Aktive Facetten</h3>
+        <div class="facetList" style="background-color:#ccc;padding-left: 0.2em;">
+            <ol>
+                <f:for each="{config.facets}" as="facetInfo">
+                    <f:if condition="{arguments.facet.{facetInfo.id}}">
+                        <f:for each="{arguments.facet.{facetInfo.id}}" as="facetCount" key="facetTerm">
+                            <li>
+                                <span class="facet">
+                                    <span class="facet-icon">
+                                        <f:if condition="{facetInfo.id} == 'Medientyp'">
+	                                    <i class="fa {settings.facets.restype.map.{facetTerm}}"></i>
+                                        </f:if>
+                                        <f:if condition="{facetInfo.id} == 'Einrichtung'">
+                                            <f:for each="{facetInfo.icons}" as="iconInfo" key="iconKey" iteration="iconIterator">
+                                                <f:if condition="{iconInfo.id}=={facetTerm}">
+                                                    <f:then>
+                                                        <img src="{iconInfo.icon}" width="32" style="margin-top: 0.2rem;"/>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:for>
+                                        </f:if>
+                                    </span>
+                                    <span class="facet-term">
+                                        <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
+                                    </span>
+                                    <span class="facet-count">
+                                        <f:link.action addQueryString="true" section="{settings.jumpToID}" title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}" noCacheHash="1"
+                                                       argumentsToBeExcludedFromQueryString="{hos:facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
+                                            <i class="fa fa-trash"></i>
+                                        </f:link.action>      
+                                    </span>
+                            </li>
+                        </f:for>
                     </f:if>
-                    <f:if condition="{facetInfo.id} == 'Einrichtung'">
-                      <f:for each="{facetInfo.icons}" as="iconInfo" key="iconKey" iteration="iconIterator">
-                        <f:if condition="{iconInfo.id}=={facetTerm}">
-                          <f:then>
-                            <img src="{iconInfo.icon}" width="32" style="margin-top: 0.2rem;"/>
-                          </f:then>
-                        </f:if>
-                      </f:for>
-                    </f:if>
-                  </span>
-                  <span class="facet-term">
-                    <f:translate key="LLL:{settings.languageRootPath}locallang-facets.xml:facet.{facetInfo.id}.{facetTerm->f:format.urlencode()}" default="{facetTerm}"/>
-                  </span>
-                  <span class="facet-count">
-                    <f:link.action addQueryString="true" section="{settings.jumpToID}" title="{f:translate(key:'remove filter %s', arguments:{0:facetTerm})}" noCacheHash="1"
-                                   argumentsToBeExcludedFromQueryString="{hos:facetLinkArguments(facetID:facetInfo.id, facetTerm:facetTerm, activeFacets:config.activeFacets, mode:'remove')}">
-                      <i class="fa fa-trash"></i>
-                    </f:link.action>      
-                  </span>
-              </li>
-            </f:for>
-          </f:if>
-        </f:for>
-      </ol>
-    </div>
-  </article>
+                </f:for>
+            </ol>
+        </div>
+    </article>
 </f:if>
