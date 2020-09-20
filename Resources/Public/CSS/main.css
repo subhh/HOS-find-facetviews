@@ -83,8 +83,18 @@ BLUE4= #ACD5E0
 
 .tx_find .tx_results {
     width: 100%;
-    display: grid;
-    grid-template-columns: 33% auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tx_find .tx_results > section {
+    flex-basis: 33%;
+    flex-grow: 1;
+}
+
+.tx_find .tx_results > div {
+    flex-basis: 0;
+    flex-grow: 999;
 }
 
 .tx_find .tx_results ol {
