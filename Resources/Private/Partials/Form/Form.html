@@ -39,6 +39,9 @@
                             </f:form.select>
                         </div>
                     </f:then>
+                    <f:else>
+                      <f:form.hidden name="searchFieldSelection" value="all"/>
+                    </f:else>
                 </f:if>
                 <div>
                     <f:form.submit value="{f:translate(key:'Search')}" class="btn btn-primary" />
