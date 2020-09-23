@@ -23,7 +23,7 @@ $( document ).ready(function() {
     });
 
     // remove active facets if submit button is clicked
-    $('div.controls .submit').on('click', function (event) {
+    $('.tx_find :submit').on('click', function (event) {
         removeHiddenFacetInputs();
     });
 
