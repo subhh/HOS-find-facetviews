@@ -16,6 +16,12 @@ namespace Subhh\Hosfindfacetviews\Service;
 
 class SolrServiceProvider extends \Subugoe\Find\Service\SolrServiceProvider
 {
+    public function getDocumentById (string $id)
+    {
+        $this->requestArguments['qualifikationsarbeit'] = 1;
+        return parent::getDocumentById($id);
+    }
+
     /**
      * Creates a blank query, sets up TypoScript filters and adds it to the view.
      *
