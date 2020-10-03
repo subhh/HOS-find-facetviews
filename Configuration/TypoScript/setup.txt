@@ -23,6 +23,12 @@ plugin.tx_find {
 	  extra3  = rightsOA	
 	  extra4  = id	
 	}
+        highlight {
+           default {
+                snippets = 10
+            }
+        }
+
 	jumpToPage = 281
 	searchresultPage = 281
 	helperPage = 308
