@@ -42,8 +42,12 @@ function createMapView(fields,tileprovider) {
        iconUrl: ASSETS + fields.internal_institution_id + '.png',
        popupAnchor:  [0, -20],
        iconSize:     [25, 25],
-  });
-   const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
+   });
+    if (fields.internal_institution_id == 'misc') {
+        const logo = '';
+    } else {
+        const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
+    }
    const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';
    const pin =L.marker(latlng, {
           icon: Marker
