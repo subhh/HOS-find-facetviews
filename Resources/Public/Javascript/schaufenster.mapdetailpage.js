@@ -44,9 +44,9 @@ function createMapView(fields,tileprovider) {
        iconSize:     [25, 25],
    });
     if (fields.internal_institution_id == 'misc') {
-        const logo = '';
+        logo = '';
     } else {
-        const logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
+        logo = '<img width="180" src="'+ ASSETS + encodeURI(fields.internal_institution_id) + '_big.png" alt=""/>';
     }
    const popupContent = logo +'<p><i style="font-style:cursiv">'+ getCreatorsString(fields.creatorName)+'</i></p><p><b>' + getTitleString(fields.title.join(', '))+'</b></p>';
    const pin =L.marker(latlng, {
