@@ -7,6 +7,9 @@ function createMapView(fields,tileprovider) {
      if (typeof creators == 'string') {
        return creators;
      }
+     if (typeof creators == 'undefined') {
+           return '';
+     }
      if (creators.length<MAXCREATORS) {
        return creators.join(', ');
      }
