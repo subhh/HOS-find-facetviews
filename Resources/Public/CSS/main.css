@@ -83,8 +83,8 @@ BLUE4= #ACD5E0
 
 .tx_find .tx_results {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 33% auto;
 }
 
 .tx_find .tx_results ol {
