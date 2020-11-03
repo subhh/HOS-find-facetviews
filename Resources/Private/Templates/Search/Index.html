@@ -16,9 +16,9 @@
     </s:page.title>
     <f:render partial="Page/Standard" arguments="{_all}"/>
     <script>
-     var hosTrackCustom = window.hosTrackCustom || [];
+     _paq = window._paq || [];
      <f:for each="{arguments.facet}" as="facet" key="name">
-       hosTrackCustom.push(['setCustomVariable', 1, 'Facette', '{name}', 'page']);
+     _paq.push(['setCustomVariable', 1, 'Facette', '{name}', 'page']);
      </f:for>
     </script>
     <f:if condition="{results.numfound} > 0">
