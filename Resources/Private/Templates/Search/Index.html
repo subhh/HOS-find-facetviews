@@ -15,6 +15,12 @@
         {config.pageTitle}
     </s:page.title>
     <f:render partial="Page/Standard" arguments="{_all}"/>
+    <script>
+     var hosTrackCustom = window.hosTrackCustom || [];
+     <f:for each="{arguments.facet}" as="facet" key="name">
+       hosTrackCustom.push(['setCustomVariable', 1, 'Facette', '{name}', 'page']);
+     </f:for>
+    </script>
     <f:if condition="{results.numfound} > 0">
         <f:then>
             <div class="tx_results">
