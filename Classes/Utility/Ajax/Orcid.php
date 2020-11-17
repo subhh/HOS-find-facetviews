@@ -52,7 +52,6 @@ function getOptionsFromTS() {
     error_log("Missing TS parameter `plugin.tx_discovery.settings.orcid.oauth.accesstoken`");
     return "";
   }
-  return "";
 }
 
 $CACHEFOLDER = 'typo3temp/discovery/';

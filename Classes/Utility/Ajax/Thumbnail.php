@@ -15,4 +15,3 @@ $site = GeneralUtility::_GET('site');
 	$image = str_replace(array('_','-'),array('/','+'),$image); 
 	echo "data:image/jpeg;base64,".$image;
 
-?>

@@ -40,7 +40,7 @@ class OpenGraph implements Iterator {
    * false on error.
    *
    * @param $URI    URI to page to parse for Open Graph data
-   * @return OpenGraph
+   * @return bool|OpenGraph
    */
 	static public function fetch($URI) {
         $curl = curl_init($URI);
@@ -64,7 +64,7 @@ class OpenGraph implements Iterator {
    * the document is at least well formed.
    *
    * @param $HTML    HTML to parse
-   * @return OpenGraph
+   * @return bool|OpenGraph
    */
 	static private function _parse($HTML) {
 		$old_libxml_error = libxml_use_internal_errors(true);
@@ -129,9 +129,11 @@ class OpenGraph implements Iterator {
    * Example:
    * $graph->title
    *
-   * @param $key    Key to fetch from the lookup
+   * @param mixed $key    Key to fetch from the lookup
+   * @return int|mixed|string
    */
-	public function __get($key) {
+  public function __get($key) {
+
 		if (array_key_exists($key, $this->_values)) {
 			return $this->_values[$key];
 		}
@@ -143,6 +145,8 @@ class OpenGraph implements Iterator {
 				}
 			}
 		}
+
+		return '';
 	}
   /**
    * Return all the keys found on the page
@@ -156,6 +160,7 @@ class OpenGraph implements Iterator {
    * Helper method to check an attribute exists
    *
    * @param $key
+   * @return bool
    */
 	public function __isset($key) {
 		return array_key_exists($key, $this->_values);

@@ -28,8 +28,6 @@ use Solarium\Client;
 use Solarium\Exception\HttpException;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Utility\EidUtility;
-use Solarium\QueryType\Select\Query\Query as Select;
-
 
 function getSettingsFromTS() {
   /** @var TypoScriptFrontendController  $tsfc */
@@ -64,16 +62,13 @@ function getConnectionSettings($settings) {
   ];
 }
 
-function LLL($file,$path) {
+function LLL($xmlPath) {
   GeneralUtility::readLLXMLfile($xmlPath, 'default');
 }
 
 // getting document id:
 $documentId = GeneralUtility::_GP('document');
 
-//$settings = getSettingsFromTS()['connections']['default']['options'];
-//print_r($settings);
-//exit;
 $connectionSettings = getConnectionSettings(getSettingsFromTS()['connections']['default']['options']);
 
 $solrClient = GeneralUtility::makeInstance(Solarium\Client::class,$connectionSettings);

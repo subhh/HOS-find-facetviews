@@ -64,6 +64,9 @@ class FacetLinkArgumentsViewHelper extends AbstractViewHelper
      * passing it to f.link.action’s »arguments«
      * or »argumentsToBeExcludedFromQueryString«.
      *
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
      * @return array
      */
     public static function renderStatic(

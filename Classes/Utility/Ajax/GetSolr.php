@@ -53,7 +53,6 @@ function getOptionsFromTS() {
     error_log("Missing TS parameter `plugin.tx_find.settings.connections.options`");
     return "";
   }
-  return "";
 }
 
 $opts = getOptionsFromTS();

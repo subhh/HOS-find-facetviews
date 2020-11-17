@@ -14,4 +14,3 @@ class GetOpenGraph {
              return json_encode($graph);
        }
  }
-?>

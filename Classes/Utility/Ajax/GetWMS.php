@@ -43,4 +43,3 @@ if (!apc_fetch($key)) apc_add($key,base64_encode(file_get_contents($url)),TTL);
 header('Content-type: image/png');
 echo base64_decode(apc_fetch($key));
 exit;
-?>
