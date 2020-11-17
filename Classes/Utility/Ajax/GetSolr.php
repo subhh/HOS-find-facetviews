@@ -26,7 +26,9 @@
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Utility\EidUtility;
 
-
+/**
+ * @return array
+ */
 function getOptionsFromTS() {
   /** @var TypoScriptFrontendController  $tsfc */
   $tsfc = GeneralUtility::makeInstance(
@@ -51,7 +53,7 @@ function getOptionsFromTS() {
     return $token; 
   } catch (Exception $e) {
     error_log("Missing TS parameter `plugin.tx_find.settings.connections.options`");
-    return "";
+    return [];
   }
 }
 
