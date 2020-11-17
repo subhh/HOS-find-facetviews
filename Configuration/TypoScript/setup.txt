@@ -83,13 +83,11 @@ page {
     15=EXT:hosfindfacetviews/Resources/Public/Javascript/vendor/heatmap-leaflet.js
     16=EXT:hosfindfacetviews/Resources/Public/Leaflet.awesomemarkers/leaflet.awesome-markers.js
     17=EXT:hosfindfacetviews/Resources/Public/Cloudfare/Chart.js/2.7.2/Chart.bundle.min.js
-    18=EXT:hosfindfacetviews/Resources/Public/Javascript/d3.wordcloud.js
     20=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jstree/3.2.1/jstree.min.js
     21=EXT:hosfindfacetviews/Resources/Public/Cloudfare/jquery-cookie/1.4.1/jquery.cookie.min.js
     30=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.js
     31=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.searchfield.js
     32=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.ddc.js
-    33=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.wordcloud.js
     34=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.heatmap.js
     35=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.publisher.js
     36=EXT:hosfindfacetviews/Resources/Public/Javascript/schaufenster.mapdetailpage.js
