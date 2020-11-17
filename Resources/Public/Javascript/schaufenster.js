@@ -15,17 +15,6 @@ function getIntWithDot(intString){
     return intStringWithDot;
 }
 
-
-function getOG() {
-   const that=$(this);
-   $.ajax({
-     url:'?eID=og&site='+ encodeURIComponent(that.attr('href'))
-     }).done(function(og){
-          console.log(og);
-          });
-}
-
-
 function addPreviewToUrl() {
         console.log('######');
         const that= $(this);
@@ -116,7 +105,6 @@ $(function() {
     //       classes : 'qtip-dark'
     //     }
     // });
- //   $('.field-url-group .field-url a').each(getOG);
     $('.field-url a.externalLinkHasPreview').each(addPreviewToUrl);
     
     // Handling of long creatorName lists:
