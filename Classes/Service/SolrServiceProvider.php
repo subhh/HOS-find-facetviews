@@ -38,6 +38,12 @@ class SolrServiceProvider extends \Subugoe\Find\Service\SolrServiceProvider
         }
     }
 
+    protected function addSortStringForQuery ($sortString)
+    {
+        parent::addSortStringForQuery($sortString);
+        $this->query->addSort('random_' . date('Y-m-d'), 'asc');
+    }
+
     /*
      * Set configured main query operator. Defaults to 'AND'.
      */
