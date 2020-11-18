@@ -33,13 +33,13 @@ $size =  GeneralUtility::_GP('retina')*256;
 $bbox =  GeneralUtility::_GP('bbox');
 $key = 'wms_'. $bbox;
 
-
-$querystring= 'service=WMS&request=GetMap&styles=&version=1.1.3&transparent=true&format=image/png';
+$querystring= 'service=WMS&request=GetMap&styles=&version=1.3.0&transparent=true&format=image/png';
 $querystring .= '&bbox='.$bbox.'&crs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
 $url= $endpoint . '?' . $querystring;
 
-if (!apc_fetch($key)) apc_add($key,base64_encode(file_get_contents($url)),TTL);
+//if (!apc_fetch($key)) apc_add($key,base64_encode(file_get_contents($url)),TTL);
 
 header('Content-type: image/png');
-echo base64_decode(apc_fetch($key));
+echo file_get_contents($url);
+//echo base64_decode(apc_fetch($key));
 exit;
