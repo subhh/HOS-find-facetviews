@@ -51,7 +51,7 @@ preg_match('{HTTP\/\S*\s(\d{3})}', $http_response_header[0], $match);
 $status = (int) $match[1];
 
 if ($status >= 400) {
-    error_log("Geodienst nicht erreichbar ( " . $url . " )", 0);
+    error_log("Geodienst nicht erreichbar Code: " . $status . " ( " . $url . " )", 0);
 } else {
     echo $response;
 }
