@@ -15,42 +15,6 @@ function getIntWithDot(intString){
     return intStringWithDot;
 }
 
-function addPreviewToUrl() {
-        console.log('######');
-        const that= $(this);
-	that.css('opacity',0.8);
-	const imageurl = '?eID=thumbnail&site='+ encodeURIComponent(that.attr('href')); 
-	$.ajax(imageurl).done(function(){
-	    that.css('opacity',1);
-	    console.log(imageurl + ' cached');
-	    
-        const BERT = '/typo3conf/ext/hosfindfacetviews/Resources/Public/assets/bert.gif';
-	const id = (''+Math.random()).replace('0.','экстернlink_');
-
-	const text = 'Externer Link, keine Gewähr für den Inhalt<br/><img width="100%" src="'+BERT+'" />';
-	that.qtip({
-	        prerender:true,
-		content: {
-			text:function(event,api){
-				$.ajax({ url: imageurl }).done(function(img) {
-					const txt = text.replace(BERT,img);
-					api.set('content.text',txt)
-				});
-				return text;
-			}
-		},
-		position: {
-                 target: 'mouse', // Position at the mouse...
-             adjust: { mouse: false } // ...but don't follow it!
-    },
-		style : {classes:'qtip-dark'}
-	});
-	    
-        }); // precaching
-
-}
-
-
 function setResultCounterDecimalSeperator(){
     const SEP = /([0-9]+)([\D]+)([0-9]+)/;
     
@@ -105,7 +69,6 @@ $(function() {
     //       classes : 'qtip-dark'
     //     }
     // });
-    $('.field-url a.externalLinkHasPreview').each(addPreviewToUrl);
     
     // Handling of long creatorName lists:
     $('ul.field-creatorName-group .facetShowAll').click(function(){
