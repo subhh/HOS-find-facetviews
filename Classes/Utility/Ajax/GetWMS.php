@@ -37,22 +37,24 @@ $querystring= 'service=WMS&request=GetMap&styles=&version=1.3.0&transparent=true
 $querystring .= '&bbox='.$bbox.'&crs='.$srs.'&layers='.$layers .'&width='.$size .'&height='.$size;
 $url= $endpoint . '?' . $querystring;
 
-header('Content-type: image/png');
+$key = base64_encode($url);
 
-$context = stream_context_create([
-    "http" => [
-        "ignore_errors" => true
-    ],
-]);
+$response = apc_fetch($key);
+if ($response === false) {
+    $context = stream_context_create(["http" => ["ignore_errors" => true]]);
+    $response = file_get_contents($url, false, $context);
 
-$response = file_get_contents($url, false, $context);
+    preg_match('{HTTP\/\S*\s(\d{3})}', $http_response_header[0], $match);
+    $status = (int) $match[1];
 
-preg_match('{HTTP\/\S*\s(\d{3})}', $http_response_header[0], $match);
-$status = (int) $match[1];
+    if ($status >= 400 || !$response) {
+        error_log("Geodienst nicht erreichbar Code: " . $status . " ( " . $url . " )", 0);
+        http_response_code(502);
+        exit();
+    }
 
-if ($status >= 400) {
-    error_log("Geodienst nicht erreichbar Code: " . $status . " ( " . $url . " )", 0);
-} else {
-    echo $response;
+    apc_add($key, $response, TTL);
 }
-exit;
+
+header('Content-type: image/png');
+echo $response;
