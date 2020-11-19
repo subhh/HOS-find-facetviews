@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file date="2020-11-19T08:48:37Z" source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="hosfindfacetviews">
+    <header/>
+    <body>
+      <trans-unit id="input.sort-default">
+        <source>Neue zuerst</source>
+      </trans-unit>
+      <trans-unit id="input.sort-pubyear_asc">
+        <source>Ältere zuerst</source>
+      </trans-unit>
+      <trans-unit id="input.sort-score">
+        <source>Relevanz</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

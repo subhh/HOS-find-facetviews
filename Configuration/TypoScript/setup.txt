@@ -49,15 +49,15 @@ plugin.tx_find {
         }
 	sort {
 	    1 {
-        	id = Neue zuerst
+        	id = default
 	        sortCriteria = publicationYear desc
 	    }
             2 {
-		id = Ältere zuerst
+		id = pubyear_asc
 		sortCriteria = publicationYear asc
             }
             3 {
-		id = Relevanz
+		id = score
 		sortCriteria = score desc
             }
 	}
