@@ -35,6 +35,12 @@ if (!$response) {
         exit();
     }
 
+    if (ord($response[0]) !== 137) {
+        error_log("Geodienst liefert keine PNG-Grafik ( " . $url . " )", 0);
+        http_response_code(502);
+        exit();
+    }
+
     apc_add($cacheKey, $response, $cacheTtl);
 }
 
