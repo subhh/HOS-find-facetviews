@@ -25,6 +25,9 @@
     <s:page.title>{document.fields.id} – {config.pageTitle}</s:page.title>
     <f:render partial="Page/CSS" arguments="{_all}"/>
     <f:render partial="Page/JavaScript" arguments="{_all}"/>
+    <script>
+     _paq.push(['trackEvent', 'COUNTER5', 'Searches_Platform']);
+    </script>
     <article class="detail">
         <div class="icon">
             <i class="fa {settings.facets.restype.map.{document.fields.resourceType}}"

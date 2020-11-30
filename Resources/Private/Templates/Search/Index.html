@@ -20,6 +20,7 @@
      <f:for each="{arguments.facet}" as="facet" key="name">
      _paq.push(['setCustomVariable', 1, 'Facette', '{name}', 'page']);
      </f:for>
+     _paq.push(['trackEvent', 'COUNTER5', 'Searches_Platform']);
     </script>
     <f:if condition="{results.numfound} > 0">
         <f:then>
