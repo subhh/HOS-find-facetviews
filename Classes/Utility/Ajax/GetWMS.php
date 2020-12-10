@@ -30,13 +30,13 @@ if (!$response) {
     preg_match('{HTTP\/\S*\s(\d{3})}', $http_response_header[0], $match);
     $status = (int) $match[1];
     if ($status >= 400 || !$response) {
-        error_log("Geodienst nicht erreichbar Code: " . $status . " ( " . $url . " )", 0);
+        error_log("Geodienst nicht erreichbar Code: " . $status . " ( " . $requestUrl . " )", 0);
         http_response_code(502);
         exit();
     }
 
     if (ord($response[0]) !== 137) {
-        error_log("Geodienst liefert keine PNG-Grafik ( " . $url . " )", 0);
+        error_log("Geodienst liefert keine PNG-Grafik ( " . $requestUrl . " )", 0);
         http_response_code(502);
         exit();
     }
